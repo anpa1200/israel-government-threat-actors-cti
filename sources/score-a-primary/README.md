@@ -34,4 +34,8 @@ These sources are suitable as anchor references for actor profiles, detections, 
 | `SRC-UNIT42-AGRIUS` | Agonizing Serpens / Agrius targeting Israeli sectors | https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/ |
 | `SRC-META-ARIDVIPER` | Arid Viper technical threat report | https://about.fb.com/wp-content/uploads/2021/04/Technical-threat-report-Arid-Viper-April-2021.pdf |
 | `SRC-MANDIANT-OT-HACKTIVISTS` | Hacktivist targeting of OT systems | https://cloud.google.com/blog/topics/threat-intelligence/hacktivists-targeting-ot-systems/ |
-
+| `SRC-PUSH-STRYKER-HANDALA` | Stryker/Handala identity weaponization | https://pushsecurity.com/blog/stryker-handala-report |
+| `SRC-ARCTIC-EPIC-FURY` | Operation Epic Fury cyber-risk escalation | https://arcticwolf.com/resources/blog/heightened-cyber-risk-following-february-2026-us-israel-iran-escalation/ |
+| `SRC-CISA-AA26-097A` | Rockwell/Allen-Bradley PLC exploitation advisory | https://media.defense.gov/2026/Apr/07/2003907538/-1/-1/0/AA26-097A-IRANIAN-AFFILIATED-CYBER-ACTORS-EXPLOIT-PROGRAMMABLE-LOGIC-CONTROLLERS-ACROSS-US-CRITICAL-INFRASTRUCTURE_508C.PDF |
+| `SRC-OPI-CYBER-TOUFAN` | Cyber Toufan attack playbook | https://op-c.net/blog/cyber-toufan-attack-playbook/ |
+| `SRC-CP-MOIS-CRIME` | Iranian MOIS actors and cyber crime connection | https://research.checkpoint.com/2026/iranian-mois-actors-the-cyber-crime-connection/ |

@@ -1,0 +1,32 @@
+title: Vulnerable Driver Load Associated With Wiper Preparation
+id: 2a1a2eb5-3766-4cf1-a625-6dcaf47ed3d1
+status: experimental
+description: Detects loading of driver names associated with BYOVD-style destructive activity and wiper preparation reporting.
+references:
+  - https://www.threathunter.ai/blog/stryker-handala-mois-muddywater-unified-brief-detection-pack-v3
+  - https://attack.mitre.org/techniques/T1562/001/
+author: Andrey
+date: 2026/05/13
+tags:
+  - attack.defense_evasion
+  - attack.t1562.001
+logsource:
+  product: windows
+  category: driver_load
+detection:
+  selection:
+    ImageLoaded|endswith:
+      - '\ListOpenedFileDrv_32.sys'
+      - '\ListOpenedFileDrv_64.sys'
+      - '\ElRawDisk.sys'
+      - '\RawDisk.sys'
+  condition: selection
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - ImageLoaded
+  - Hashes
+falsepositives:
+  - Legacy disk management or forensic tooling. Validate publisher, hash, and parent process.
+level: high

@@ -1,0 +1,38 @@
+title: Privileged Role Activation With Potentially Stale MFA Claim
+id: 0116b5d3-8e90-48cb-a3de-e8f43c038c11
+status: experimental
+description: Detects privileged role activation events that require review for fresh phishing-resistant MFA enforcement.
+references:
+  - https://pushsecurity.com/blog/stryker-handala-report
+author: Andrey
+date: 2026/05/13
+tags:
+  - attack.persistence
+  - attack.t1098
+  - attack.t1078.004
+logsource:
+  product: azure
+  service: auditlogs
+detection:
+  selection_role:
+    OperationName|contains:
+      - 'Add member to role'
+      - 'Activate eligible role'
+      - 'Add eligible member'
+  selection_privileged:
+    TargetResources|contains:
+      - 'Global Administrator'
+      - 'Intune Administrator'
+      - 'Privileged Role Administrator'
+      - 'Cloud Device Administrator'
+      - 'Exchange Administrator'
+  condition: selection_role and selection_privileged
+fields:
+  - TimeGenerated
+  - OperationName
+  - InitiatedBy
+  - TargetResources
+  - Result
+falsepositives:
+  - Approved PIM activation with phishing-resistant MFA and ticketed change control.
+level: medium

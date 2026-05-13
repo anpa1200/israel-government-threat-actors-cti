@@ -1,0 +1,6 @@
+// Microsoft Defender XDR / Sentinel hunting query
+// Hunts for Rclone execution to cloud storage destinations that require approval review.
+DeviceProcessEvents
+| where FileName =~ "rclone.exe"
+| where ProcessCommandLine has_any ("wasabisys.com", "backblazeb2.com", "put.io")
+| project Timestamp, DeviceName, AccountName, InitiatingProcessFileName, FileName, ProcessCommandLine

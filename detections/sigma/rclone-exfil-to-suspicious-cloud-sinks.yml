@@ -1,0 +1,35 @@
+title: Rclone Execution To Unapproved Cloud Storage Sink
+id: 6fbb05db-7d0b-4d51-81a0-9790cb49d923
+status: experimental
+description: Detects Rclone execution with cloud storage destinations reported in Iranian actor exfiltration tradecraft or not approved for enterprise use.
+references:
+  - https://www.threathunter.ai/blog/stryker-handala-mois-muddywater-unified-brief-detection-pack-v3
+  - https://attack.mitre.org/techniques/T1567/002/
+author: Andrey
+date: 2026/05/13
+tags:
+  - attack.exfiltration
+  - attack.t1567.002
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection_image:
+    Image|endswith:
+      - '\rclone.exe'
+  selection_cloud:
+    CommandLine|contains:
+      - 'wasabisys.com'
+      - 'backblazeb2.com'
+      - 'put.io'
+  condition: selection_image and selection_cloud
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - ParentImage
+  - Image
+  - CommandLine
+falsepositives:
+  - Approved backup or engineering data transfer workflows using Rclone.
+level: high

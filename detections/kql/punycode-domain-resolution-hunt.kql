@@ -1,0 +1,5 @@
+// Microsoft Sentinel hunting query
+// Hunts for Punycode domains that may indicate impersonation or watering-hole infrastructure.
+DnsEvents
+| where Name has "xn--"
+| project TimeGenerated, Computer, ClientIP, Name, QueryType, ResponseCode

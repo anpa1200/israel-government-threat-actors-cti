@@ -15,6 +15,7 @@ Use `sources/` as the analyst-facing scored source library:
 - Vendor CTI: Microsoft, Mandiant / Google Cloud, ESET, SentinelOne, Meta, Check Point Research, Palo Alto Unit 42, CrowdStrike, Recorded Future.
 - Sector sources: WaterISAC, aviation, telecom, and government-sector information sharing groups.
 - Authored Medium research from this project owner: [andrey-medium-articles.md](andrey-medium-articles.md).
+- 2024-2026 escalation research intake: [2026-israel-critical-infrastructure-escalation.md](2026-israel-critical-infrastructure-escalation.md).
 
 ## Collection Rules
 

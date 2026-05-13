@@ -18,6 +18,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/actors/` | Actor and persona profiles with aliases, relevance, TTPs, and source notes. |
 | `docs/reports/` | Report index and source collection guidance. |
 | `docs/reports/andrey-medium-articles.md` | Relevant Medium articles from `@1200km` included as authored CTI or methodology references. |
+| `docs/reports/2026-israel-critical-infrastructure-escalation.md` | Research intake report on Israeli critical infrastructure and geopolitical escalation. |
 | `data/actors.csv` | Structured actor register. |
 | `data/sources.csv` | Source register with reliability notes. |
 | `data/ttps.csv` | Actor-to-ATT&CK mapping table. |

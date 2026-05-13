@@ -14,4 +14,7 @@ These sources are useful for analyst context, hypothesis development, collection
 | `SRC-SECWEEK-UNC3890` | Secondary summary of UNC3890 | https://www.securityweek.com/iranian-group-targeting-israeli-shipping-and-other-key-sectors/ |
 | `SRC-FDD-IRAN-IO-ISRAEL` | Iran influence operations targeting Israel | https://www.fdd.org/wp-content/uploads/2025/08/fdd-memo-a-year-of-meming-dangerously-iran-influence-operations-targeting-israel-since-october-7.pdf |
 | `SRC-CYBERINT-HANDALA` | Handala threat actor overview | https://cyberint.com/blog/threat-intelligence/handala-hack-what-we-know-about-the-rising-threat-actor/ |
-
+| `SRC-CLOUDSEK-EPIC-FURY` | Middle East escalation cyber situation report | https://www.cloudsek.com/blog/middle-east-escalation-israel-iran-us-cyber-war-2026 |
+| `SRC-THREAT-HUNTER-V3` | Stryker/Handala/MuddyWater detection pack v3 | https://www.threathunter.ai/blog/stryker-handala-mois-muddywater-unified-brief-detection-pack-v3 |
+| `SRC-SAFEBREACH-IRAN-2026` | Heightened threat of Iranian cyber attacks update | https://www.safebreach.com/blog/an-update-on-the-heightened-threat-of-iranian-cyber-attacks/ |
+| `SRC-CLEARSKY-LEBANESE-CEDAR` | Lebanese Cedar APT report | https://www.clearskysec.com/cedar/ |

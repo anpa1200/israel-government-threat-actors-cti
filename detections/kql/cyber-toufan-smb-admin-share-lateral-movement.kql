@@ -1,0 +1,8 @@
+// Microsoft Sentinel hunting query
+// Hunts for anomalous access to Windows administrative shares.
+SecurityEvent
+| where EventID == 5140
+| where ShareName has_any ("\\C$", "\\ADMIN$")
+| where Account !endswith "$"
+| where Account !in~ ("svc_sccm", "svc_backup", "svc_vulnscan")
+| project TimeGenerated, Computer, Account, IpAddress, ShareName, RelativeTargetName

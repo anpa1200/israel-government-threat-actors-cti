@@ -1,0 +1,10 @@
+// Microsoft Sentinel hunting query
+// Detects high-volume Intune destructive device actions by initiator.
+let threshold = 50;
+let window = 10m;
+AuditLogs
+| where OperationName has_any ("Wipe", "Retire", "Delete device", "Delete managed device")
+| extend Actor = tostring(InitiatedBy.user.userPrincipalName)
+| summarize ActionCount=count(), Operations=make_set(OperationName), Targets=make_set(tostring(TargetResources), 20) by Actor, bin(TimeGenerated, window)
+| where ActionCount >= threshold
+| project TimeGenerated, Actor, ActionCount, Operations, Targets
