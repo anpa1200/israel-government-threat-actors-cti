@@ -1,0 +1,42 @@
+title: Signed Installer Or Utility Loads DLL From User-Writable Path
+id: 69de8236-b306-41a6-a87f-cde858692b38
+status: experimental
+description: Detects signed installer or utility execution from user-writable paths with nearby DLL load context, useful for fake update and sideloading tradecraft hunts.
+references:
+  - https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/
+  - https://www.proofpoint.com/us/blog/threat-insight/ta402-uses-complex-ironwind-infection-chains-target-middle-east-based-government
+author: Andrey
+date: 2026/05/13
+tags:
+  - attack.defense_evasion
+  - attack.t1574.001
+logsource:
+  product: windows
+  category: image_load
+detection:
+  selection_path:
+    ImageLoaded|contains:
+      - '\Users\'
+      - '\Downloads\'
+      - '\AppData\Local\Temp\'
+      - '\ProgramData\'
+  selection_dll:
+    ImageLoaded|endswith: '.dll'
+  selection_process:
+    Image|endswith:
+      - '\setup.exe'
+      - '\update.exe'
+      - '\installer.exe'
+      - '\msiexec.exe'
+      - '\rundll32.exe'
+  condition: selection_path and selection_dll and selection_process
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - Image
+  - ImageLoaded
+  - Hashes
+falsepositives:
+  - Legitimate software installation from user download locations.
+level: medium

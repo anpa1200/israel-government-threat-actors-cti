@@ -1,0 +1,9 @@
+// Microsoft Defender XDR hunting query
+// Identifies sudden high-volume link/attachment email from trusted or internal senders.
+let threshold = 100;
+EmailEvents
+| where Timestamp > ago(24h)
+| where SenderFromDomain in~ ("gov.il", "idf.il", "mod.gov.il") or SenderFromAddress endswith ".gov.il"
+| summarize MessageCount=count(), Subjects=make_set(Subject, 10), Recipients=dcount(RecipientEmailAddress) by SenderFromAddress, bin(Timestamp, 1h)
+| where MessageCount >= threshold or Recipients >= threshold
+| project Timestamp, SenderFromAddress, MessageCount, Recipients, Subjects

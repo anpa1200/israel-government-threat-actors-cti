@@ -19,6 +19,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/reports/` | Report index and source collection guidance. |
 | `docs/reports/andrey-medium-articles.md` | Relevant Medium articles from `@1200km` included as authored CTI or methodology references. |
 | `docs/reports/2026-israel-critical-infrastructure-escalation.md` | Research intake report on Israeli critical infrastructure and geopolitical escalation. |
+| `docs/reports/defensive-cti-threats-to-israeli-public-sector.md` | Defensive CTI synthesis focused on Israeli government and public-sector environments. |
 | `data/actors.csv` | Structured actor register. |
 | `data/sources.csv` | Source register with reliability notes. |
 | `data/ttps.csv` | Actor-to-ATT&CK mapping table. |

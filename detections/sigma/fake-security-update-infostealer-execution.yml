@@ -1,0 +1,41 @@
+title: Fake Security Or Browser Update Execution From Mail Or Download Path
+id: c38c82b1-2018-4f85-9687-7a8f39fd5082
+status: experimental
+description: Detects security-update or browser-update themed executable names launched from user-controlled paths.
+references:
+  - https://research.checkpoint.com/2024/wezrat-malware-deep-dive/
+author: Andrey
+date: 2026/05/13
+tags:
+  - attack.initial_access
+  - attack.t1566
+  - attack.execution
+  - attack.t1204.002
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection_path:
+    Image|contains:
+      - '\Users\'
+      - '\Downloads\'
+      - '\AppData\Local\Temp\'
+  selection_name:
+    Image|contains:
+      - 'update'
+      - 'security'
+      - 'chrome'
+      - 'browser'
+      - 'cert'
+      - 'alert'
+  condition: selection_path and selection_name
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - ParentImage
+  - Image
+  - CommandLine
+falsepositives:
+  - Legitimate browser updates executed manually by users.
+level: medium

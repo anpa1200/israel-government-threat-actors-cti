@@ -1,0 +1,23 @@
+// Microsoft Defender XDR hunting query
+// Correlates inbound mail, URL click, and process execution from user-controlled paths.
+let lookback = 1d;
+let MailEventsWithLinks =
+    EmailEvents
+    | where Timestamp > ago(lookback)
+    | where Subject has_any ("security", "update", "urgent", "patch", "alert", "Rafael", "CERT", "INCD")
+    | project MailTime=Timestamp, NetworkMessageId, RecipientEmailAddress, SenderFromAddress, Subject;
+let Clicks =
+    UrlClickEvents
+    | where Timestamp > ago(lookback)
+    | project ClickTime=Timestamp, NetworkMessageId, AccountUpn, Url;
+let Execs =
+    DeviceProcessEvents
+    | where Timestamp > ago(lookback)
+    | where FolderPath has_any ("\\Downloads\\", "\\AppData\\Local\\Temp\\", "\\Users\\")
+    | where FileName endswith ".exe" or FileName endswith ".dll" or FileName endswith ".xll" or FileName endswith ".ppam"
+    | project ExecTime=Timestamp, AccountUpn, DeviceName, FileName, FolderPath, ProcessCommandLine;
+MailEventsWithLinks
+| join kind=inner Clicks on NetworkMessageId
+| join kind=inner Execs on AccountUpn
+| where ExecTime between (ClickTime .. ClickTime + 30m)
+| project MailTime, ClickTime, ExecTime, RecipientEmailAddress, SenderFromAddress, Subject, Url, DeviceName, FileName, FolderPath, ProcessCommandLine

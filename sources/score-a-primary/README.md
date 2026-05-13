@@ -39,3 +39,13 @@ These sources are suitable as anchor references for actor profiles, detections, 
 | `SRC-CISA-AA26-097A` | Rockwell/Allen-Bradley PLC exploitation advisory | https://media.defense.gov/2026/Apr/07/2003907538/-1/-1/0/AA26-097A-IRANIAN-AFFILIATED-CYBER-ACTORS-EXPLOIT-PROGRAMMABLE-LOGIC-CONTROLLERS-ACROSS-US-CRITICAL-INFRASTRUCTURE_508C.PDF |
 | `SRC-OPI-CYBER-TOUFAN` | Cyber Toufan attack playbook | https://op-c.net/blog/cyber-toufan-attack-playbook/ |
 | `SRC-CP-MOIS-CRIME` | Iranian MOIS actors and cyber crime connection | https://research.checkpoint.com/2026/iranian-mois-actors-the-cyber-crime-connection/ |
+| `SRC-MITRE-G1055` | VOID MANTICORE ATT&CK profile | https://attack.mitre.org/groups/G1055/ |
+| `SRC-INCD-MUDDYWATER-2024` | INCD MuddyWater 2024 evolution report | https://www.gov.il/BlobFolder/reports/maddy_water_2024/en/ALERT_CERT_IL_W_1858.pdf |
+| `SRC-INCD-MUDDYWATER-PHISHING` | INCD MuddyWater phishing report | https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-IL-W-1947.pdf |
+| `SRC-CISA-AA24-290A` | Iranian brute force and credential access advisory | https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-290a |
+| `SRC-CP-WEZRAT` | WezRat fake INCD phishing deep dive | https://research.checkpoint.com/2024/wezrat-malware-deep-dive/ |
+| `SRC-FBI-EMENNET-2024` | Emennet Pasargad / ASA joint advisory | https://www.fbi.gov/file-repository/new-tradecraft-or-iranian-cyber-group-aria-sepehr-ayandehsazan-aka-emennet-pasargad.pdf/view |
+| `SRC-CP-WIRTE-2024` | WIRTE disruptive activity report | https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/ |
+| `SRC-PROOFPOINT-TA402-IRONWIND` | TA402 IronWind malware report | https://www.proofpoint.com/us/blog/threat-insight/ta402-uses-complex-ironwind-infection-chains-target-middle-east-based-government |
+| `SRC-MANDIANT-MTRENDS-2025` | M-Trends 2025 report | https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2025 |
+| `SRC-CP-BUGSLEEP` | MuddyWater BugSleep backdoor report | https://research.checkpoint.com/2024/new-bugsleep-backdoor-deployed-in-recent-muddywater-campaigns/ |

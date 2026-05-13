@@ -14,6 +14,7 @@
 | Cyber Toufan | [cyber-toufan.md](cyber-toufan.md) | Medium |
 | Handala | [handala.md](handala.md) | Medium |
 | Lebanese Cedar | [lebanese-cedar.md](lebanese-cedar.md) | Medium |
+| WIRTE | [wirte.md](wirte.md) | High |
+| TA402 | [ta402.md](ta402.md) | Medium |
 
 Profiles are starter assessments. They MUST be updated as new public reporting becomes available.
-
