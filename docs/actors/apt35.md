@@ -21,5 +21,4 @@ APT35-related reporting is highly relevant to Israeli government because the act
 - MFA method registration after impossible travel or new device sign-in.
 - Lookalike domains targeting ministries, public agencies, or suppliers.
 
-Source: `SRC-MITRE-G0059`.
-
+Sources: `SRC-MITRE-G0059`, `SRC-MS-MINT-SANDSTORM`, `SRC-MS-MINT-PROFILE`, `SRC-CP-EDUCATED-2023`, `SRC-CP-EDUCATED-2025`.

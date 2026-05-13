@@ -36,3 +36,6 @@ Use low-to-medium confidence unless a primary technical source ties the persona 
 ## Repository Sources
 
 - `SRC-AP-HANDALA`: authored CTI assessment and SOC defensive guidance.
+- `SRC-CP-HANDALA-2026`: Check Point Research Handala modus operandi report.
+- `SRC-CP-VOID-2024`: Check Point Research Void Manticore destructive activity report.
+- `SRC-CYBERINT-HANDALA`: supporting vendor overview.

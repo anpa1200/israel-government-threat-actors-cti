@@ -21,5 +21,4 @@ OilRig is high priority for Israeli government exposure because public reporting
 - Unexpected archive creation under web application directories.
 - Authentication from unusual infrastructure after web exploitation.
 
-Source: `SRC-MITRE-G0049`.
-
+Sources: `SRC-MITRE-G0049`, `SRC-ESET-OILRIG-ISRAEL`.

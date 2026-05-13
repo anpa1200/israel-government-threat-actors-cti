@@ -23,6 +23,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `data/ttps.csv` | Actor-to-ATT&CK mapping table. |
 | `data/ioc-references.csv` | Pointers to public IOC locations. |
 | `data/malware-references.csv` | Malware/tool reference table without binaries. |
+| `sources/` | Scored source library separated into Score A primary, Score B supporting, and Score C watchlist material. |
 | `detections/sigma/` | Defensive Sigma examples and hunting rules. |
 | `detections/kql/` | Microsoft Sentinel / Defender hunting examples. |
 | `scripts/validate_repo.py` | Local validation for CSV and Sigma hygiene. |
@@ -34,6 +35,8 @@ python3 scripts/validate_repo.py
 ```
 
 Review the starting threat model in [docs/israel-government-threat-model.md](docs/israel-government-threat-model.md), then work through [docs/actors/README.md](docs/actors/README.md).
+
+For source triage, start with [sources/README.md](sources/README.md).
 
 ## Core Sources
 

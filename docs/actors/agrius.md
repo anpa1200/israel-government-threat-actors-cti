@@ -21,5 +21,4 @@ Agrius is high priority because public reporting links the actor to ransomware a
 - Endpoint protection service tampering followed by mass file operations.
 - Unexpected use of tunneling or admin tools from non-admin workstations.
 
-Source: `SRC-MITRE-G1030`.
-
+Sources: `SRC-MITRE-G1030`, `SRC-S1-AGRIUS-WIPER`, `SRC-S1-APOSTLE`, `SRC-UNIT42-AGRIUS`.

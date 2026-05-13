@@ -2,6 +2,12 @@
 
 Use `data/sources.csv` as the authoritative machine-readable source register.
 
+Use `sources/` as the analyst-facing scored source library:
+
+- `sources/score-a-primary/` for high-reliability primary sources.
+- `sources/score-b-supporting/` for supporting methodology, authored assessments, and secondary summaries.
+- `sources/score-c-watchlist/` for claims and leads that require corroboration.
+
 ## Priority Report Categories
 
 - Government advisories: CISA, FBI, NSA, INCD, CERT-IL, ENISA, NCSC.

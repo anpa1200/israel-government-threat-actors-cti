@@ -21,5 +21,4 @@ APT-C-23 is relevant to Israeli government and security-adjacent organizations b
 - User reports of suspicious social media recruitment or relationship-building approaches.
 - Mobile DNS traffic to known campaign infrastructure from vendor reports.
 
-Sources: `SRC-MITRE-G1028`, `SRC-META-ARIDVIPER`.
-
+Sources: `SRC-MITRE-G1028`, `SRC-META-ARIDVIPER`, `SRC-ESET-ARIDSPY`.
