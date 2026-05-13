@@ -1,0 +1,17 @@
+// Microsoft Sentinel hunting query
+// Correlates identity/MFA changes with backup or security-control changes by the same actor.
+let identity_window = 6h;
+let IdentityChanges =
+    AuditLogs
+    | where OperationName has_any ("Update user", "Strong authentication", "Add authentication method", "Update authentication methods")
+    | extend Actor = tostring(InitiatedBy.user.userPrincipalName)
+    | project IdentityTime = TimeGenerated, Actor, IdentityOperation = OperationName, TargetResources;
+let ControlChanges =
+    AuditLogs
+    | where OperationName has_any ("Delete backup", "Disable backup", "Delete policy", "Update conditional access policy", "Disable security")
+    | extend Actor = tostring(InitiatedBy.user.userPrincipalName)
+    | project ControlTime = TimeGenerated, Actor, ControlOperation = OperationName, TargetResources;
+IdentityChanges
+| join kind=inner ControlChanges on Actor
+| where ControlTime between (IdentityTime .. IdentityTime + identity_window)
+| project Actor, IdentityTime, IdentityOperation, ControlTime, ControlOperation, TargetResources

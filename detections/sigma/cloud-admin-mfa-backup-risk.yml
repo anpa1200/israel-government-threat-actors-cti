@@ -1,0 +1,42 @@
+title: Cloud Admin MFA Change Followed By Backup Or Security Control Modification
+id: b3a44d3e-7d8e-4e4a-b8fd-5878a30ab3e1
+status: experimental
+description: Detects privileged cloud identity changes followed by backup or security-control modification, a high-risk pattern for destructive operations.
+references:
+  - https://attack.mitre.org/techniques/T1098/
+  - https://attack.mitre.org/techniques/T1485/
+  - https://attack.mitre.org/groups/G1030/
+author: Andrey
+date: 2026/05/13
+tags:
+  - attack.persistence
+  - attack.t1098
+  - attack.impact
+  - attack.t1485
+logsource:
+  product: azure
+  service: auditlogs
+detection:
+  selection_identity:
+    OperationName|contains:
+      - 'Update user'
+      - 'Strong authentication'
+      - 'Add authentication method'
+      - 'Update authentication methods'
+  selection_control:
+    OperationName|contains:
+      - 'Delete backup'
+      - 'Disable backup'
+      - 'Delete policy'
+      - 'Update conditional access policy'
+      - 'Disable security'
+  condition: selection_identity or selection_control
+fields:
+  - TimeGenerated
+  - OperationName
+  - InitiatedBy
+  - TargetResources
+  - Result
+falsepositives:
+  - Planned identity or backup administration.
+level: medium

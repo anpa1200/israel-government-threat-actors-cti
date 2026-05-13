@@ -1,0 +1,8 @@
+// Microsoft Defender XDR / Sentinel hunting query
+// Detects suspicious RMM-related execution from user-controlled locations.
+DeviceProcessEvents
+| where FileName in~ ("powershell.exe", "pwsh.exe", "cmd.exe", "msiexec.exe", "curl.exe", "bitsadmin.exe", "certutil.exe")
+| where ProcessCommandLine has_any ("anydesk", "screenconnect", "connectwise", "atera", "splashtop", "syncro", "tacticalrmm")
+| where ProcessCommandLine has_any ("\\Users\\", "\\Downloads\\", "\\AppData\\Local\\Temp\\")
+| where ProcessCommandLine !has_any ("approved-rmm", "softwaredeployment")
+| project Timestamp, DeviceName, AccountName, InitiatingProcessFileName, FileName, ProcessCommandLine

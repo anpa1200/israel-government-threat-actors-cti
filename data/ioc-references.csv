@@ -1,0 +1,7 @@
+source_id,actor_id,ioc_type,where_to_get_iocs,handling_notes
+SRC-CISA-AA23-335A,CYBERAV3NGERS,"IP; device exposure; affected product context",https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a,"Use advisory IOCs for defensive blocking and exposure checks; prioritize password and internet exposure remediation."
+SRC-MANDIANT-APT42,G1044,"Domains; malware hashes; infrastructure",https://www.mandiant.com/sites/default/files/2022-09/apt42-report-mandiant.pdf,"Use report appendix and vendor portal where available; expect infrastructure churn."
+SRC-MITRE-G0069,G0069,Technique references,https://attack.mitre.org/groups/G0069/,"Use linked references on the MITRE page to retrieve campaign-specific IOCs."
+SRC-MITRE-G0049,G0049,Technique references,https://attack.mitre.org/groups/G0049/,"Use linked references on the MITRE page to retrieve campaign-specific IOCs."
+SRC-MITRE-G1030,G1030,Technique references,https://attack.mitre.org/groups/G1030/,"Collect wiper/ransomware IOCs from linked primary vendor reports; do not store binaries."
+SRC-META-ARIDVIPER,G1028,"Domains; apps; mobile indicators",https://about.fb.com/wp-content/uploads/2021/04/Technical-threat-report-Arid-Viper-April-2021.pdf,"Mobile app indicators require mobile-device-management and app inventory context."

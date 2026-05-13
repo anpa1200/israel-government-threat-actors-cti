@@ -1,0 +1,43 @@
+title: PowerShell Encoded Command With Certutil Or Download Chain
+id: 93340d81-66a4-45fd-87b1-0e5979dc9701
+status: experimental
+description: Detects suspicious encoded PowerShell or certutil download chains commonly seen in intrusion staging.
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+  - https://attack.mitre.org/techniques/T1105/
+author: Andrey
+date: 2026/05/13
+tags:
+  - attack.execution
+  - attack.t1059.001
+  - attack.t1105
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection_powershell:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+    CommandLine|contains:
+      - '-enc'
+      - '-encodedcommand'
+      - 'FromBase64String'
+  selection_download:
+    CommandLine|contains:
+      - 'certutil'
+      - 'Invoke-WebRequest'
+      - 'iwr '
+      - 'curl '
+      - 'bitsadmin'
+  condition: selection_powershell and selection_download
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - ParentImage
+  - Image
+  - CommandLine
+falsepositives:
+  - Administrative scripts that use encoded commands and approved download utilities.
+level: high

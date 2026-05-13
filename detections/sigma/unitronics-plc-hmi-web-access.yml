@@ -1,0 +1,35 @@
+title: Unitronics PLC HMI Web Interface Access
+id: 8a06da85-11d2-4138-98fe-490519ef85de
+status: experimental
+description: Detects web access patterns that may indicate internet-exposed Unitronics PLC/HMI interfaces requiring exposure review.
+references:
+  - https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a
+author: Andrey
+date: 2026/05/13
+tags:
+  - attack.initial_access
+  - attack.t1190
+logsource:
+  category: webserver
+detection:
+  selection_paths:
+    cs-uri-stem|contains:
+      - '/webvisu'
+      - '/login.html'
+      - '/visilogic'
+      - '/unitronics'
+  selection_agent:
+    cs-user-agent|contains:
+      - 'Unitronics'
+      - 'PLC'
+  condition: selection_paths or selection_agent
+fields:
+  - date
+  - time
+  - c-ip
+  - cs-host
+  - cs-uri-stem
+  - cs-user-agent
+falsepositives:
+  - Internal engineering workstation access to approved PLC/HMI management interfaces.
+level: medium
