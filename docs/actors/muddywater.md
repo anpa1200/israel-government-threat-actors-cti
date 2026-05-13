@@ -21,5 +21,4 @@ MuddyWater is high priority for Israeli government and regional public-sector de
 - PowerShell encoded commands launched by Office, browser, archive, or script-host processes.
 - New persistence from suspicious scheduled tasks or registry run keys.
 
-Source: `SRC-MITRE-G0069`.
-
+Sources: `SRC-MITRE-G0069`, `SRC-AP-MUDDYWATER`.

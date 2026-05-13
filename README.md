@@ -17,6 +17,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | --- | --- |
 | `docs/actors/` | Actor and persona profiles with aliases, relevance, TTPs, and source notes. |
 | `docs/reports/` | Report index and source collection guidance. |
+| `docs/reports/andrey-medium-articles.md` | Relevant Medium articles from `@1200km` included as authored CTI or methodology references. |
 | `data/actors.csv` | Structured actor register. |
 | `data/sources.csv` | Source register with reliability notes. |
 | `data/ttps.csv` | Actor-to-ATT&CK mapping table. |
@@ -44,6 +45,7 @@ Key starting references include:
 - CISA: [AA23-335A IRGC-affiliated CyberAv3ngers Unitronics PLC activity](https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a)
 - Microsoft: [Iran surges cyber-enabled influence operations in support of Hamas](https://www.microsoft.com/en-gb/security/security-insider/intelligence-reports/iran-surges-cyber-enabled-influence-operations-in-support-of-hamas/)
 - Mandiant: [UNC3890: Iranian actor targeting Israeli shipping and other sectors](https://www.securityweek.com/iranian-group-targeting-israeli-shipping-and-other-key-sectors/) and [APT42 report](https://www.mandiant.com/sites/default/files/2022-09/apt42-report-mandiant.pdf)
+- Andrey Pautov Medium research: [Handala](https://medium.com/@1200km/cti-research-handala-hack-group-aka-handala-hack-team-ddbdd294cfb8), [MuddyWater](https://medium.com/@1200km/cti-research-muddywater-seedworm-mango-sandstorm-ebf6af5ba061), and [Israeli telecom CTI-led defensive strategy](https://medium.com/@1200km/cti-led-defensive-strategy-for-a-fictional-cellular-provider-case-study-c77bc5765b31)
 
 ## Handling Rules
 
@@ -56,4 +58,3 @@ Key starting references include:
 ## Version
 
 Current version: `v0.1.0`
-

@@ -15,3 +15,8 @@ COTTONSANDSTORM,T1585,Resource Development,Establish Accounts,SRC-MS-IRAN-IO,Med
 G1028,T1456,Credential Access,Drive-by Compromise / Mobile Phishing,SRC-MITRE-G1028,Medium,"Mobile ATT&CK mapping depends on campaign details."
 UNC3890,T1189,Initial Access,Drive-by Compromise,SRC-SECWEEK-UNC3890,Medium,"Reported watering-hole and social engineering lures."
 CYBERTOUFAN,T1491,Impact,Defacement,SRC-MS-IRAN-HAMAS,Low-Medium,"Persona activity should be corroborated before operational attribution."
+HANDALA,T1566,Initial Access,Phishing,SRC-AP-HANDALA,Medium-High,"Article assesses current-event lure and trusted-channel abuse patterns from public reporting."
+HANDALA,T1204,Execution,User Execution,SRC-AP-HANDALA,Medium-High,"Installer/archive execution from user context is a priority detection path."
+HANDALA,T1485,Impact,Data Destruction,SRC-AP-HANDALA,Medium-High,"Wiper/destructive behavior is treated as a priority defensive scenario."
+HANDALA,T1490,Impact,Inhibit System Recovery,SRC-AP-HANDALA,Medium,"Hunt for backup and recovery tampering during destructive-operation response."
+HANDALA,T1567,Exfiltration,Exfiltration Over Web Service,SRC-AP-HANDALA,Medium,"Commercial hosting and file-sharing references should be correlated with local telemetry."
