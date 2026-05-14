@@ -21,4 +21,6 @@ Agrius is high priority because public reporting links the actor to ransomware a
 - Endpoint protection service tampering followed by mass file operations.
 - Unexpected use of tunneling or admin tools from non-admin workstations.
 
-Sources: `SRC-MITRE-G1030`, `SRC-S1-AGRIUS-WIPER`, `SRC-S1-APOSTLE`, `SRC-UNIT42-AGRIUS`.
+Sources: `SRC-MITRE-G1030`, `SRC-S1-AGRIUS-WIPER`, `SRC-S1-APOSTLE`, `SRC-UNIT42-AGRIUS`, `SRC-ISRAELHAYOM-ZIV-2023`, `SRC-TOI-ZIV-2023`, `SRC-CENTRIPETAL-PREPOSITIONED-2025`, `SRC-ANVILOGIC-IRAN-CI-2026`.
+
+Source note: Ziv Hospital and camera/BDA-related claims are not promoted here as high-confidence Agrius facts. Treat the news and supporting vendor sources as context until primary INCD/IDF/ISA or source telemetry is available.

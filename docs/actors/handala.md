@@ -42,5 +42,6 @@ Use low-to-medium confidence unless a primary technical source ties the persona 
 - `SRC-MITRE-G1055`: MITRE VOID MANTICORE profile — primary alias registry (Handala Hack, Homeland Justice, Karma, Karmabelow80, BANISHED KITTEN, Red Sandstorm, COBALT MYSTIQUE, Dune).
 - `SRC-CP-HANDALA-2026`: Check Point Research Handala modus operandi report (March 2026).
 - `SRC-CP-VOID-2024`: Check Point Research "Bad Karma No Justice" — Void Manticore destructive activity in Israel, Karma persona (May 2024).
+- `SRC-CP-MOIS-CRIME`: Check Point Research analysis of MOIS-linked actors and criminal ecosystem convergence (March 2026).
 - `SRC-PUSH-STRYKER-HANDALA`: Push Security Stryker incident analysis — Intune Remote Wipe via compromised Global Administrator credentials (March 2026).
 - `SRC-AP-HANDALA`: authored CTI assessment with SOC defensive guidance — rated B, trace primary references for operational decisions.

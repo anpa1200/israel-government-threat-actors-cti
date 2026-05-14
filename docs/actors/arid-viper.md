@@ -23,4 +23,6 @@ APT-C-23 is relevant to Israeli government and security-adjacent organizations b
 - User reports of suspicious social media recruitment or relationship-building approaches.
 - Mobile DNS traffic to known campaign infrastructure from vendor reports.
 
-Sources: `SRC-MITRE-G1028`, `SRC-META-ARIDVIPER`, `SRC-ESET-ARIDSPY`.
+Sources: `SRC-MITRE-G1028`, `SRC-META-ARIDVIPER`, `SRC-ESET-ARIDSPY`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`, `SRC-CYBERNEWS-REDALERT-2026`.
+
+Source note: Cybernews/Acronis RedAlert coverage is Score B secondary reporting in this repository. Keep RedAlert.apk-specific claims provisional until a primary Acronis TRU report is available.

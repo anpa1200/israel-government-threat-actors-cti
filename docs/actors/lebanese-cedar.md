@@ -26,4 +26,5 @@ Lebanese Cedar is relevant as a regional espionage threat with public reporting 
 ## Repository Sources
 
 - `SRC-CLEARSKY-LEBANESE-CEDAR`: ClearSky primary research — Volatile Cedar / Lebanese Cedar, covering Explosive RAT, Caterpillar WebShell, and compromised web servers (January 2021).
-- Check Point Research original Volatile Cedar report (2015) — precursor reporting establishing the actor; not in sources.csv but available at https://www.checkpoint.com/downloads/volatile-cedar-technical-report.pdf.
+- `SRC-CP-VOLATILE-CEDAR-2015`: Check Point Volatile Cedar technical report retrieved from a public Kaspersky-hosted mirror after the original Check Point PDF URL returned 404.
+- `SRC-ISRAELHAYOM-ZIV-2023` and `SRC-TOI-ZIV-2023`: secondary coverage of Israeli government statements about the Ziv Hospital incident. Use as context only until a primary government technical report is available.

@@ -18,3 +18,14 @@ These sources are useful for analyst context, hypothesis development, collection
 | `SRC-THREAT-HUNTER-V3` | Stryker/Handala/MuddyWater detection pack v3 | https://www.threathunter.ai/blog/stryker-handala-mois-muddywater-unified-brief-detection-pack-v3 |
 | `SRC-SAFEBREACH-IRAN-2026` | Heightened threat of Iranian cyber attacks update | https://www.safebreach.com/blog/an-update-on-the-heightened-threat-of-iranian-cyber-attacks/ |
 | `SRC-CLEARSKY-LEBANESE-CEDAR` | Lebanese Cedar APT report | https://www.clearskysec.com/cedar/ |
+| `SRC-KASPERSKY-ICS-Q4-2025` | Kaspersky ICS Q4 2025 industrial APT summary | https://ics-cert.kaspersky.com/publications/apt-and-financial-attacks-on-industrial-organizations-in-q4-2025/ |
+| `SRC-BRANDEFENSE-MUDDYWATER-2025` | MuddyWater 2025 overview | https://brandefense.io/blog/muddywater-apt-2025/ |
+| `SRC-KASPERSKY-ICS-H2-2023` | Kaspersky ICS H2 2023 industrial APT summary | https://ics-cert.kaspersky.com/publications/apt-and-financial-attacks-on-industrial-organizations-in-h2-2023/ |
+| `SRC-BRANDEFENSE-OILRIG-2025` | OilRig 2025 overview | https://brandefense.io/blog/oilrig-apt-2025/ |
+| `SRC-CENTRIPETAL-PREPOSITIONED-2025` | Iran conflict pre-positioned access research | https://www.centripetal.ai/threat-research/pre-positioned-access-cyber-threat-iran-conflict |
+| `SRC-ISRAELHAYOM-ZIV-2023` | Ziv Hospital incident secondary coverage | https://www.israelhayom.com/2023/12/18/iran-hezbollah-behind-cyber-attack-on-israeli-hospital/ |
+| `SRC-ANVILOGIC-IRAN-CI-2026` | Iran critical infrastructure threat synthesis | https://www.anvilogic.com/threat-reports/iranian-cyber-threats-against-u-s-critical-infrastructure-supply-chain |
+| `SRC-CYBERNEWS-REDALERT-2026` | RedAlert mobile spyware secondary coverage | https://cybernews.com/security/israel-malicious-redalert-app/ |
+| `SRC-S1-ISRAEL-HAMAS-CYBER-2023` | Israel-Hamas war cyber-domain actor compendium | https://www.sentinelone.com/labs/the-israel-hamas-war-cyber-domain-state-sponsored-activity-of-interest/ |
+| `SRC-TOI-ZIV-2023` | Ziv Hospital incident secondary coverage | https://www.timesofisrael.com/liveblog_entry/israel-says-iran-hezbollah-behind-failed-attempt-to-hack-ziv-hospital/ |
+| `SRC-CP-VOLATILE-CEDAR-2015` | Check Point Volatile Cedar report via public mirror | https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2015/03/20082004/volatile-cedar-technical-report.pdf |

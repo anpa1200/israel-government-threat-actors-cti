@@ -21,4 +21,6 @@ OilRig is high priority for Israeli government exposure because public reporting
 - Unexpected archive creation under web application directories.
 - Authentication from unusual infrastructure after web exploitation.
 
-Sources: `SRC-MITRE-G0049`, `SRC-ESET-OILRIG-ISRAEL`.
+Sources: `SRC-MITRE-G0049`, `SRC-ESET-OILRIG-ISRAEL`, `SRC-UNIT42-OILRIG-DNS-TUNNELING`, `SRC-KASPERSKY-ICS-H2-2023`, `SRC-BRANDEFENSE-OILRIG-2025`.
+
+Source note: ESET and Unit 42 are the preferred anchors for OilBooster/cloud-service and DNS-tunneling claims. Kaspersky ICS and Brandefense are supporting synthesis sources.

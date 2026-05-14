@@ -14,3 +14,4 @@ build/
 # Local research-intake dumps used during development.
 docs/reports/openai_research.md
 docs/reports/gemini_research.md
+research-downloads/

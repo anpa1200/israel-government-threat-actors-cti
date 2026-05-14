@@ -14,7 +14,7 @@ CYBERAV3NGERS,T0883,Initial Access,Internet Accessible Device,SRC-CISA-AA23-335A
 CYBERAV3NGERS,T0836,Impact,Modify Parameter,SRC-CISA-AA26-097A,Medium,PLC parameter modification for physical process effect. ATT&CK for ICS impact tactic.,M2
 CYBERAV3NGERS,T0832,Impact,Manipulation of View,SRC-CISA-AA23-335A,Medium-High,HMI display modification on compromised Unitronics PLCs for psychological and operational effect.,M2
 COTTONSANDSTORM,T1585,Resource Development,Establish Accounts,SRC-MS-IRAN-IO,Medium,Influence-operation infrastructure and persona staging.,M1
-G1028,T1456,Initial Access (Mobile),Drive-By Compromise,SRC-MITRE-G1028,Medium,Mobile ATT&CK technique; campaign-specific mobile delivery details should be validated before counting as tested coverage.,M2
+G1028,T1660,Initial Access (Mobile),Phishing,SRC-ESET-ARIDSPY,Medium,Mobile ATT&CK mapping for social-engineering and trojanized-app delivery; use mobile ATT&CK namespace when operationalizing.,M2
 UNC3890,T1189,Initial Access,Drive-by Compromise,SRC-SECWEEK-UNC3890,Medium,Reported watering-hole and social engineering lures.,M2
 CYBERTOUFAN,T1491,Impact,Defacement,SRC-MS-IRAN-HAMAS,Low-Medium,Persona activity should be corroborated before operational attribution.,M2
 HANDALA,T1566,Initial Access,Phishing,SRC-AP-HANDALA,Medium-High,Article assesses current-event lure and trusted-channel abuse patterns from public reporting.,M3
@@ -33,6 +33,8 @@ G1028,T1204.002,Execution,User Execution: Malicious File,SRC-ESET-ARIDSPY,Medium
 WIRTE,T1566,Initial Access,Phishing,SRC-CP-WIRTE-2024,Medium-High,Compromised trusted email and fake update lures used against Israeli organizations.,M3
 WIRTE,T1574.001,Defense Evasion,DLL Search Order Hijacking,SRC-CP-WIRTE-2024,Medium,DLL sideloading and fake-update installer chains should be hunted.,M3
 WIRTE,T1485,Impact,Data Destruction,SRC-CP-WIRTE-2024,Medium-High,SameCoin-linked destructive activity against Israeli targets.,M3
+WIRTE,T1105,Command and Control,Ingress Tool Transfer,SRC-UNIT42-ASHTAG-2025,Medium-High,AshTag reporting describes staged retrieval of additional payloads and modules.,M3
+WIRTE,T1567.002,Exfiltration,Exfiltration to Cloud Storage,SRC-UNIT42-ASHTAG-2025,Medium,Rclone-style cloud exfiltration should be treated as behavior-level hunting lead.,M3
 TA402,T1566.001,Initial Access,Spearphishing Attachment,SRC-PROOFPOINT-TA402-IRONWIND,Medium-High,"TA402 used PPAM, XLL, and RAR attachment chains against Middle East government entities.",M3
 TA402,T1574.001,Defense Evasion,DLL Search Order Hijacking,SRC-PROOFPOINT-TA402-IRONWIND,Medium-High,IronWind infection chain used sideloading after lure execution.,M3
 G1044,T1566.002,Initial Access,Spearphishing Link,SRC-GOOGLE-APT42-PHISHING,High,Google reported intensified APT42 phishing campaigns against Israeli and U.S. high-value users in 2024.,M3

@@ -22,5 +22,4 @@ WIRTE is high priority for Israeli public-sector defenders because Check Point r
 - Inbound mail from trusted regional senders that suddenly includes archives, XLL/PPAM files, or update-themed links.
 - Fake ESET/Kaspersky/reseller update filenames.
 
-Sources: `SRC-CP-WIRTE-2024`.
-
+Sources: `SRC-CP-WIRTE-2024`, `SRC-PROOFPOINT-TA402-IRONWIND`, `SRC-UNIT42-ASHTAG-2025`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`.

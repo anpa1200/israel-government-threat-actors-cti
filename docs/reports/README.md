@@ -21,6 +21,7 @@ Use `sources/` as the analyst-facing scored source library:
 - Sector sources: WaterISAC, aviation, telecom, and government-sector information sharing groups.
 - Authored Medium research from this project owner: [andrey-medium-articles.md](andrey-medium-articles.md).
 - 2024-2026 escalation research intake: [2026-israel-critical-infrastructure-escalation.md](2026-israel-critical-infrastructure-escalation.md).
+- 2023-2026 source-download and validation intake: [resourses_research.md](resourses_research.md).
 - Defensive CTI synthesis for Israeli public-sector environments: [defensive-cti-threats-to-israeli-public-sector.md](defensive-cti-threats-to-israeli-public-sector.md).
 
 ## Collection Rules
@@ -28,3 +29,8 @@ Use `sources/` as the analyst-facing scored source library:
 - Reports SHOULD be stored as links unless redistribution is explicitly allowed.
 - Analyst notes MAY summarize key findings, but MUST preserve original URL and publisher.
 - IOC lists SHOULD be referenced by location rather than duplicated wholesale.
+- Raw downloaded reports SHOULD remain in ignored `research-downloads/`.
+- Use `data/research-downloads.csv` as the committed manifest for download status,
+  local archive path, byte size, and SHA-256.
+- Use `scripts/convert_research_downloads.py` to create local searchable text
+  under ignored `research-downloads/converted/` when analyst review requires it.

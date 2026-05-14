@@ -27,6 +27,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `examples/gates/` | Sample quality-gate evidence packs. |
 | `data/actors.csv` | Structured actor register. |
 | `data/sources.csv` | Source register with reliability notes. |
+| `data/research-downloads.csv` | Download manifest for local source archive, including status, local path, size, and SHA-256. |
 | `data/ttps.csv` | Actor-to-ATT&CK mapping table. |
 | `data/ioc-references.csv` | Pointers to public IOC locations. |
 | `data/malware-references.csv` | Malware/tool reference table without binaries. |
@@ -34,6 +35,8 @@ This repository is intentionally blue-team only. It contains source references, 
 | `detections/sigma/` | Defensive Sigma examples and hunting rules. |
 | `detections/kql/` | Microsoft Sentinel / Defender hunting examples. |
 | `scripts/validate_repo.py` | Local validation for CSV and Sigma hygiene. |
+| `scripts/build_research_manifest.py` | Builds the committed source-download manifest from ignored local downloads. |
+| `scripts/convert_research_downloads.py` | Converts ignored local HTML/PDF downloads into searchable analyst text. |
 
 ## Quick Start
 
@@ -69,4 +72,4 @@ Key starting references include:
 
 ## Version
 
-Current version: `v0.1.0`
+Current version: `v0.1.3`
