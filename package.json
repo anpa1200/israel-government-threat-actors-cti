@@ -1,0 +1,26 @@
+{
+  "name": "israel-government-threat-actors-cti",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Docusaurus documentation site for defensive CTI on threat actors relevant to Israeli government and public-sector exposure.",
+  "scripts": {
+    "start": "docusaurus start --host 0.0.0.0",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve --host 0.0.0.0",
+    "clear": "docusaurus clear",
+    "validate": "python3 scripts/validate_repo.py && npm run build"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
+    "@mdx-js/react": "^3.1.0",
+    "clsx": "^2.1.1",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0"
+  }
+}

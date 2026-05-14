@@ -1,3 +1,8 @@
+---
+title: Actor Index
+sidebar_label: Actor Index
+---
+
 # Actor Index
 
 | Actor | Profile | Priority |

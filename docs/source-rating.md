@@ -1,3 +1,8 @@
+---
+title: Source Rating
+sidebar_position: 3
+---
+
 # Source Rating
 
 The repository uses a compact source reliability model.
@@ -16,4 +21,3 @@ Information credibility is tracked in free text as `High`, `Medium`, `Low`, or c
 - Public claims by hacktivist personas MUST be corroborated before being treated as confirmed compromise.
 - Vendor actor names SHOULD be mapped carefully because naming taxonomies differ.
 - Source publication date MUST be considered when using IOCs.
-

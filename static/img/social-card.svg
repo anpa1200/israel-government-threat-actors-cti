@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#101418"/>
+  <rect x="80" y="80" width="1040" height="470" rx="18" fill="#151b21" stroke="#26323d"/>
+  <text x="120" y="205" fill="#f7fafc" font-family="Arial, sans-serif" font-size="62" font-weight="700">Israel Government Threat Actors CTI</text>
+  <text x="120" y="292" fill="#b9c5cf" font-family="Arial, sans-serif" font-size="34">Defensive public-source intelligence, actor profiles,</text>
+  <text x="120" y="342" fill="#b9c5cf" font-family="Arial, sans-serif" font-size="34">TTP mappings, IOC references, Sigma and KQL detections</text>
+  <rect x="120" y="420" width="260" height="58" rx="8" fill="#1f7a8c"/>
+  <text x="152" y="459" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="700">Docusaurus Ready</text>
+</svg>

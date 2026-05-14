@@ -1,3 +1,8 @@
+---
+title: Report Index
+sidebar_label: Report Index
+---
+
 # Report Index
 
 Use `data/sources.csv` as the authoritative machine-readable source register.

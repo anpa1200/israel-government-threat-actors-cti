@@ -1,3 +1,11 @@
+---
+id: index
+slug: /
+title: Israel Government Threat Actors CTI
+sidebar_label: Overview
+sidebar_position: 1
+---
+
 # Israel Government Threat Actors CTI
 
 This documentation organizes public-source threat intelligence for defensive use by Israeli government and public-sector defenders.

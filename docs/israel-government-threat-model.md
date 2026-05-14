@@ -1,3 +1,8 @@
+---
+title: Threat Model
+sidebar_position: 2
+---
+
 # Israel Government Threat Model
 
 ## Protected Mission
@@ -37,4 +42,3 @@ Israeli government and public-sector networks support citizen services, national
 ## Attribution Caution
 
 Attribution MUST NOT rely only on an IOC, malware family, or claimed persona. Analysts SHOULD combine victimology, infrastructure, TTPs, timing, language, tooling, and source credibility before assigning actor confidence.
-
