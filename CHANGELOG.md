@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.1.2 - 2026-05-14
+
+### New
+- Added actor profiles for Imperial Kitten, Pioneer Kitten, DarkBit, Lyceum / HEXANE, and APT39.
+- Added structured actor, source, TTP, and malware/tool references for the new profiles and related tooling.
+- Added Sigma prototypes for IMAPLoader-style IMAP C2, Liontail-style service/DLL behavior, VSS/backup deletion, and BiBi-style file rename activity.
+- Added primary source records for CrowdStrike Imperial Kitten, PwC Yellow Liderc, CISA AA24-241A, MITRE G1012/G1001/G0087, Claroty IOCONTROL, Unit 42 OilRig DNS tunneling, and U.S. Rana/APT39 attribution sources.
+
+### Fixed
+- Clarified Void Manticore / Handala actor-persona taxonomy.
+- Fixed Scarred Manticore actor ID spelling in structured data.
+- Replaced the executable RMM Sigma placeholder filter with documentation-only tuning guidance.
+- Updated Unitronics PLC rule metadata to use ATT&CK for ICS T0883.
+- Strengthened repository validation with actor/source cross-reference checks, ATT&CK ID checks, duplicate ID checks, and Sigma placeholder detection.
+- Ignored local OpenAI/Gemini research-intake dumps so development materials are not committed as published reports.
+
 ## v0.1.1 - 2026-05-14
 
 ### New
