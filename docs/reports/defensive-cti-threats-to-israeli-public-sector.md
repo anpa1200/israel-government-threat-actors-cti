@@ -33,6 +33,7 @@ These patterns recur across the highest-priority actors and are more stable than
 | High | CyberAv3ngers / Cyber Avengers | IRGC-affiliated persona/group | OT/ICS exposure threat, Israeli-made Unitronics targeting, and PLC/HMI disruption risk. | High | `SRC-CISA-AA23-335A`, `SRC-CISA-AA26-097A`, `SRC-MANDIANT-OT-HACKTIVISTS` |
 | High | Emennet Pasargad / Cotton Sandstorm / Aria Sepehr Ayandehsazan | Iran-linked influence and intrusion actor/company | Fake INCD phishing, WezRat, and cyber-enabled influence operations against Israeli organizations. | High | `SRC-FBI-EMENNET-2024`, `SRC-CP-WEZRAT`, `SRC-MS-IRAN-IO` |
 | High | OilRig / APT34 / Hazel Sandstorm ecosystem | Iran-linked espionage ecosystem | Government targeting, regional supply-chain exposure, webshells, passive backdoors, and potential access handoff activity. | Moderate-High | `SRC-MITRE-G0049`, `SRC-ESET-OILRIG-ISRAEL`, `SRC-CP-EDUCATED-2023` |
+| High | UNC1860 | Iran MOIS-linked in public reporting | Specialized tooling, passive backdoors, persistent access, and probable initial access provider role for high-priority Middle Eastern networks. | High | `SRC-MALPEDIA-UNC1860`, `SRC-MANDIANT-UNC1860` |
 | High | APT-C-23 / Arid Viper / Desert Falcon | Hamas-linked or Palestinian-aligned in public reporting | Mobile espionage risk to field personnel, contractors, reservists, officials, and politically exposed users. | Moderate-High | `SRC-MITRE-G1028`, `SRC-ESET-ARIDSPY`, `SRC-META-ARIDVIPER` |
 | High | WIRTE / Gaza Cybergang-linked cluster | Hamas-affiliated in Check Point reporting | Fake-update campaigns, compromised trusted senders, and disruptive SameCoin-linked activity against Israeli entities. | Moderate-High | `SRC-CP-WIRTE-2024` |
 | Medium | TA402 / Molerats / Gaza Cybergang | Palestinian-aligned in public reporting | Trusted-account phishing and IronWind infection chains against Middle East government entities. | Moderate | `SRC-PROOFPOINT-TA402-IRONWIND` |
@@ -155,6 +156,21 @@ Detection ideas:
 - Webshell detection on public web infrastructure.
 - DNS tunneling, email-based C2, and passive backdoor hunts.
 
+### UNC1860
+
+FACT: Malpedia describes UNC1860 as a persistent and opportunistic Iranian state-sponsored actor likely affiliated with MOIS, with associated families including CRYPTOSLAY and TEMPLEDOOR.
+
+FACT: Mandiant reporting describes UNC1860 as having specialized tooling and passive backdoors that support persistent access and a probable initial access provider role across high-priority Middle Eastern networks.
+
+ASSESSMENT: UNC1860 should be handled as a high-priority access-enablement and persistence actor for Israeli public-sector, telecom, government-adjacent, and supplier environments.
+
+Detection ideas:
+
+- Monitor web roots, SharePoint paths, IIS modules, and upload directories for unexpected file changes.
+- Alert when web server worker processes spawn shells, scripting engines, archivers, or remote-access tools.
+- Correlate edge-host anomalies with later RDP, SMB, WMI, or account-creation activity.
+- Hunt low-volume long-lived callbacks from public-facing systems.
+
 ## ATT&CK Mapping
 
 | Technique | Why It Matters | Representative Actors | Telemetry |
@@ -162,8 +178,8 @@ Detection ideas:
 | T1566 Phishing | Spearphishing and fake updates recur across the threat set. | MuddyWater, APT42, WIRTE, TA402, Emennet Pasargad | Email security, proxy, EDR, user reports |
 | T1078 Valid Accounts | Legitimate accounts reduce detection friction. | MuddyWater, APT42, WIRTE, Cyber Toufan | IdP, MFA, mailbox, VPN |
 | T1110 Brute Force | Password spraying and MFA push abuse remain broad Iranian patterns. | Iran-linked actors broadly | IdP, VPN, cloud audit logs |
-| T1190 Exploit Public-Facing Application | Edge compromise enables webshells and handoff. | Agrius, Void Manticore, Volatile Cedar, OilRig | WAF, IIS, Exchange, SharePoint, EDR |
-| T1505.003 Web Shell | Repeated in Iranian and regional activity. | Agrius, OilRig, Volatile Cedar, UNC1860-adjacent | Webroot file changes, process creation |
+| T1190 Exploit Public-Facing Application | Edge compromise enables webshells and handoff. | Agrius, Void Manticore, Volatile Cedar, OilRig, UNC1860 | WAF, IIS, Exchange, SharePoint, EDR |
+| T1505.003 Web Shell | Repeated in Iranian and regional activity. | Agrius, OilRig, Volatile Cedar, UNC1860 | Webroot file changes, process creation |
 | T1059.001 PowerShell | Staging and post-exploitation. | MuddyWater, WIRTE, OilRig | ScriptBlockLogging, AMSI, EDR |
 | T1574.001 DLL Search Order Hijacking | Fake installer and archive-delivered payloads. | WIRTE, TA402, UNC2428-style campaigns | DLL load telemetry, file creation |
 | T1021.001 Remote Services: RDP | Common after edge compromise or credential access. | Agrius, Void Manticore-adjacent intrusions | Windows events, VPN, EDR |
@@ -181,6 +197,7 @@ Detection ideas:
 | AridSpy | Arid Viper | Mobile RAT | Sideloaded APK with high-risk permissions. |
 | SUGARUSH / SUGARDUMP | UNC3890 | Info stealer | Credential-harvest and shipping-sector investigations. |
 | Explosive RAT / Caterpillar WebShell | Lebanese Cedar | RAT / webshell | JSP/ASPX file and webroot integrity monitoring. |
+| TEMPLEDOOR / CRYPTOSLAY / PipeSnoop | UNC1860 | Passive backdoor and tooling families | Webroot integrity, edge-host persistence, and passive callback hunting. |
 
 ## IOC Starter Register
 
@@ -239,4 +256,3 @@ Additional KQL hunts:
 3. Inventory internet-exposed IIS, SharePoint, Exchange, VPN, and PLC/HMI surfaces across ministries, municipalities, education, healthcare, telecom, and strategic suppliers.
 4. Run a mobile-risk review for officials, field personnel, defense-adjacent staff, and regional liaison roles.
 5. Retro-hunt published infrastructure and filenames from source appendices, especially fake-INCD, TA402, APT34-adjacent, MuddyWater, and Rafael-themed deception indicators.
-

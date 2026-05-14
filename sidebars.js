@@ -33,6 +33,7 @@ const sidebars = {
         'actors/arid-viper',
         'actors/wirte',
         'actors/ta402',
+        'actors/unc1860',
         'actors/unc3890',
         'actors/cyber-toufan',
         'actors/lebanese-cedar',

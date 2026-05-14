@@ -49,3 +49,5 @@ These sources are suitable as anchor references for actor profiles, detections, 
 | `SRC-PROOFPOINT-TA402-IRONWIND` | TA402 IronWind malware report | https://www.proofpoint.com/us/blog/threat-insight/ta402-uses-complex-ironwind-infection-chains-target-middle-east-based-government |
 | `SRC-MANDIANT-MTRENDS-2025` | M-Trends 2025 report | https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2025 |
 | `SRC-CP-BUGSLEEP` | MuddyWater BugSleep backdoor report | https://research.checkpoint.com/2024/new-bugsleep-backdoor-deployed-in-recent-muddywater-campaigns/ |
+| `SRC-MALPEDIA-UNC1860` | Malpedia UNC1860 actor profile | https://malpedia.caad.fkie.fraunhofer.de/actor/unc1860 |
+| `SRC-MANDIANT-UNC1860` | UNC1860 Temple of Oats Mandiant report | https://cloud.google.com/blog/topics/threat-intelligence/unc1860-iran-middle-eastern-networks |

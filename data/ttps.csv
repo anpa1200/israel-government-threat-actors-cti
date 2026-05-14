@@ -36,3 +36,8 @@ TA402,T1574.001,Defense Evasion,DLL Search Order Hijacking,SRC-PROOFPOINT-TA402-
 APT42,T1566.002,Initial Access,Spearphishing Link,SRC-GOOGLE-APT42-PHISHING,High,"Google reported intensified APT42 phishing campaigns against Israeli and U.S. high-value users in 2024."
 COTTONSANDSTORM,T1204.002,Execution,User Execution: Malicious File,SRC-CP-WEZRAT,Medium-High,"Fake INCD security update phishing delivered WezRat to Israeli organizations."
 COTTONSANDSTORM,T1566,Initial Access,Phishing,SRC-FBI-EMENNET-2024,High,"Joint advisory documents Emennet Pasargad tradecraft and aliases."
+UNC1860,T1190,Initial Access,Exploit Public-Facing Application,SRC-MANDIANT-UNC1860,Medium-High,"Mandiant reporting emphasizes Middle Eastern network access and persistent footholds; public-facing edge exposure should be prioritized."
+UNC1860,T1505.003,Persistence,Web Shell,SRC-MANDIANT-UNC1860,High,"Passive webshell and backdoor families associated with the cluster support persistent access."
+UNC1860,T1105,Command and Control,Ingress Tool Transfer,SRC-MANDIANT-UNC1860,Medium,"Specialized tooling and staged components should drive webroot and edge-host transfer hunts."
+UNC1860,T1021.001,Lateral Movement,Remote Services: RDP,SRC-MANDIANT-UNC1860,Medium,"Persistent access provider model should be correlated with remote service use after edge compromise."
+UNC1860,T1078,Defense Evasion,Valid Accounts,SRC-MANDIANT-UNC1860,Medium,"Access-provider behavior should be hunted through privileged and service-account use after initial foothold."
