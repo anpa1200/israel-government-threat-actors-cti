@@ -7,11 +7,11 @@ sidebar_label: Lyceum
 
 Aliases: Lyceum, HEXANE, Spirlin, Siamesekitten. Some reporting places Lyceum within an OilRig-related subgroup or adjacent ecosystem.
 
-Assessed sponsor: Iranian state-sponsored, likely OilRig/MOIS-adjacent based on the imported research. Sponsor confidence is lower than core OilRig because public reporting has historically used cautious language and vendor taxonomies differ.
+Assessed sponsor: Iranian state-sponsored, likely OilRig/MOIS-adjacent based on current public source synthesis. Sponsor confidence is lower than core OilRig because public reporting has historically used cautious language and vendor taxonomies differ.
 
 ## Relevance
 
-Lyceum is high priority for Israeli telecom, ISP, energy, and supplier environments. Imported research notes MITRE/industry reporting of targeting in Israel and Middle Eastern telecom, oil/gas, and IT-provider environments. Even where newer incidents are published under broader OilRig subgrouping, the tradecraft remains relevant to Israeli public-sector dependencies.
+Lyceum is high priority for Israeli telecom, ISP, energy, and supplier environments. MITRE and industry reporting describe targeting in Israel and Middle Eastern telecom, oil/gas, and IT-provider environments. Even where newer incidents are published under broader OilRig subgrouping, the tradecraft remains relevant to Israeli public-sector dependencies.
 
 ## Defensive Focus
 

@@ -30,8 +30,9 @@ detection:
       - 'delete'
   selection_wbadmin:
     Image|endswith: '\wbadmin.exe'
-    CommandLine|contains:
+    CommandLine|contains|all:
       - 'delete'
+    CommandLine|contains:
       - 'backup'
       - 'catalog'
   selection_recycle_bin:

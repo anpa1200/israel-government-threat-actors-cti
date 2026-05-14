@@ -44,4 +44,3 @@ Use low-to-medium confidence unless a primary technical source ties the persona 
 - `SRC-CP-VOID-2024`: Check Point Research "Bad Karma No Justice" — Void Manticore destructive activity in Israel, Karma persona (May 2024).
 - `SRC-PUSH-STRYKER-HANDALA`: Push Security Stryker incident analysis — Intune Remote Wipe via compromised Global Administrator credentials (March 2026).
 - `SRC-AP-HANDALA`: authored CTI assessment with SOC defensive guidance — rated B, trace primary references for operational decisions.
-- `SRC-CYBERINT-HANDALA`: supporting vendor overview — rated B.

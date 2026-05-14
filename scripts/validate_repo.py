@@ -157,6 +157,10 @@ SIGMA_DISALLOWED_PLACEHOLDERS = [
 ]
 
 ATTACK_ID_RE = re.compile(r"^T\d{4}(?:\.\d{3})?$")
+SIGMA_LEGACY_AGGREGATION_RE = re.compile(
+    r"condition:\s*[^\n]*\|\s*(?:count|min|max|avg|sum)\s*\(",
+    re.IGNORECASE,
+)
 
 
 def fail(message: str) -> None:
@@ -252,6 +256,11 @@ def validate_sigma(path: Path) -> None:
         fail(
             f"{path.relative_to(ROOT)} contains executable placeholder values: "
             + ", ".join(placeholders)
+        )
+    if SIGMA_LEGACY_AGGREGATION_RE.search(text):
+        fail(
+            f"{path.relative_to(ROOT)} uses deprecated Sigma pipe aggregation syntax; "
+            "use a companion KQL query or a valid Sigma correlation rule"
         )
 
 

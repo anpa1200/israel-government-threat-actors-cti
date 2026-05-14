@@ -14,7 +14,7 @@ CYBERAV3NGERS,T0883,Initial Access,Internet Accessible Device,SRC-CISA-AA23-335A
 CYBERAV3NGERS,T0836,Impact,Modify Parameter,SRC-CISA-AA26-097A,Medium,PLC parameter modification for physical process effect. ATT&CK for ICS impact tactic.,M2
 CYBERAV3NGERS,T0832,Impact,Manipulation of View,SRC-CISA-AA23-335A,Medium-High,HMI display modification on compromised Unitronics PLCs for psychological and operational effect.,M2
 COTTONSANDSTORM,T1585,Resource Development,Establish Accounts,SRC-MS-IRAN-IO,Medium,Influence-operation infrastructure and persona staging.,M1
-G1028,T1456,Credential Access,Drive-by Compromise / Mobile Phishing,SRC-MITRE-G1028,Medium,Mobile ATT&CK mapping depends on campaign details.,M2
+G1028,T1456,Initial Access (Mobile),Drive-By Compromise,SRC-MITRE-G1028,Medium,Mobile ATT&CK technique; campaign-specific mobile delivery details should be validated before counting as tested coverage.,M2
 UNC3890,T1189,Initial Access,Drive-by Compromise,SRC-SECWEEK-UNC3890,Medium,Reported watering-hole and social engineering lures.,M2
 CYBERTOUFAN,T1491,Impact,Defacement,SRC-MS-IRAN-HAMAS,Low-Medium,Persona activity should be corroborated before operational attribution.,M2
 HANDALA,T1566,Initial Access,Phishing,SRC-AP-HANDALA,Medium-High,Article assesses current-event lure and trusted-channel abuse patterns from public reporting.,M3
@@ -56,7 +56,7 @@ PIONEERKITTEN,T1219,Command and Control,Remote Access Software,SRC-CISA-AA24-241
 PIONEERKITTEN,T1572,Command and Control,Protocol Tunneling,SRC-CISA-AA24-241A,High,Ligolo and ngrok-style tunnels support access handoff and persistence.,M3
 DARKBIT,T1486,Impact,Data Encrypted for Impact,SRC-INCD-DARKBIT-MUDDYWATER-2023,Medium-High,Technion/DarkBit-style pseudo-ransomware should be modeled as destructive impact behavior.,M2
 DARKBIT,T1490,Impact,Inhibit System Recovery,SRC-MS-MERCURY-DEV1084-2023,Medium-High,Destructive MERCURY/DEV-1084 operations included recovery and cloud-control-plane abuse patterns.,M2
-G1001,T1071.004,Command and Control,DNS,SRC-MITRE-G1001,Medium,Imported research and ATT&CK context emphasize DNS/HTTP C2 for Lyceum-linked tooling.,M2
+G1001,T1071.004,Command and Control,DNS,SRC-MITRE-G1001,Medium,ATT&CK and public reporting emphasize DNS/HTTP C2 for Lyceum-linked tooling.,M2
 G1001,T1003.001,Credential Access,LSASS Memory,SRC-MITRE-G1001,Medium,Credential dumping remains a relevant Lyceum/OilRig-adjacent detection path.,M2
 G0087,T1566.001,Initial Access,Spearphishing Attachment,SRC-MITRE-G0087,Medium-High,APT39/Chafer commonly uses targeted phishing for initial access in public reporting.,M2
 G0087,T1003.001,Credential Access,LSASS Memory,SRC-MITRE-G0087,Medium-High,Credential theft against identity-rich telecom/travel environments is a priority defensive concern.,M2

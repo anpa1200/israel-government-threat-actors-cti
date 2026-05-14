@@ -1,14 +1,14 @@
-title: Non-Mail Client Process Establishing IMAP Connections
+title: Non-Mail Client IMAP Connection Hunt Starter
 id: 0f9486c4-2270-4a13-9bd8-f37d3017f7b7
 status: experimental
 description: >
   Detects non-mail-client processes establishing outbound IMAP or IMAPS connections.
   This is a behavior-level hunt for IMAPLoader-style command and control associated
   with Imperial Kitten / Yellow Liderc reporting. Tune approved automation and legacy
-  mail clients before alerting.
+  mail clients before alerting; this selector is intentionally broad.
 references:
   - https://www.crowdstrike.com/en-us/blog/imperial-kitten-deploys-novel-malware-families/
-  - https://www.pwc.com/gx/en/issues/cybersecurity/cyber-threat-intelligence/yellow-liderc-ships-its-scripts-and-delivers-imaploader-malware.html
+  - https://www.pwc.com/gx/en/issues/cybersecurity/cyber-threat-intelligence/yellow-liderc-ships-its-scripts-delivers-imaploader-malware.html
 author: Andrey
 date: 2026-05-14
 tags:
@@ -40,4 +40,4 @@ fields:
 falsepositives:
   - Approved mail clients not included in the local allowlist.
   - Legacy mail-collection scripts or monitoring agents that use IMAP.
-level: medium
+level: low

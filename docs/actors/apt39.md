@@ -11,7 +11,7 @@ Assessed sponsor: Iran MOIS via Rana Intelligence Computing in U.S. Treasury / D
 
 ## Relevance
 
-APT39 is medium priority for Israeli public-sector defenders. The actor's strongest documented focus is telecom, travel, hospitality, IT, government, and identity-rich data collection across the Middle East and beyond. That is strategically relevant to Israeli border, civil aviation, telecom, and regional service-provider exposure. The imported OpenAI research preserves a gap for specific Israeli victim incidents in primary public reporting.
+APT39 is medium priority for Israeli public-sector defenders. The actor's strongest documented focus is telecom, travel, hospitality, IT, government, and identity-rich data collection across the Middle East and beyond. That is strategically relevant to Israeli border, civil aviation, telecom, and regional service-provider exposure. Current primary-source review preserves a gap for specific Israeli victim incidents in public reporting.
 
 ## Defensive Focus
 
@@ -30,7 +30,7 @@ APT39 is medium priority for Israeli public-sector defenders. The actor's strong
 
 ## Operational Status
 
-The imported OpenAI research did not identify high-confidence primary 2023-2025 incident reporting under the APT39 / Chafer / Remix Kitten label set. Keep recent operational evidence explicitly marked as limited until new primary reporting is added.
+Current primary-source review did not identify high-confidence 2023-2025 incident reporting under the APT39 / Chafer / Remix Kitten label set. Keep recent operational evidence explicitly marked as limited until new primary reporting is added.
 
 ## Repository Sources
 

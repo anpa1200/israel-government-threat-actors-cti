@@ -1,11 +1,11 @@
-title: Liontail-Style System32 DLL Placement Or Service Load
+title: Suspicious Service Control For Phantom DLL Hijack Targets
 id: 93f92a6d-c1a6-4f3c-b0d5-2cf9da3b3f76
 status: experimental
 description: >
-  Detects writes or service-control activity involving DLL names highlighted in
-  Scarred Manticore / Liontail reporting. This rule is a prototype for IIS-adjacent
-  passive backdoor hunting and should be correlated with HTTP.sys listener and web
-  server telemetry.
+  Detects service-control activity involving Windows services and DLL names that have
+  been highlighted in public Iranian intrusion reporting as phantom-DLL hijack targets.
+  This is not a complete Liontail detector; correlate with IIS native-module integrity,
+  HTTP.sys listener, and web-server telemetry for Scarred Manticore investigations.
 references:
   - https://research.checkpoint.com/2023/scarred-manticore-versus-mois-seeing-the-invisible/
 author: Andrey
@@ -40,4 +40,4 @@ fields:
 falsepositives:
   - Legitimate Windows service troubleshooting by administrators.
   - Operating system repair or network-service maintenance.
-level: high
+level: medium

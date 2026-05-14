@@ -46,7 +46,7 @@ Primary defensive implications:
 | `SRC-OPI-CYBER-TOUFAN` | OP Innovate Cyber Toufan playbook | A | Cyber Toufan external-exposure and leak-operation playbook. |
 | `SRC-ESET-ARIDSPY` | ESET AridSpy report | A | Arid Viper mobile espionage details. |
 | `SRC-MANDIANT-UNC3890` | Google/Mandiant UNC3890 report | A | Israeli shipping/logistics targeting and Punycode watering hole evidence. |
-| `SRC-SAFEBREACH-IRAN-2026` | SafeBreach Iranian threat update | B | Exposure-validation and scenario context. |
+| `SRC-CISA-IRAN-THREAT-2025` | Joint CISA/FBI/NSA/DC3 Iranian cyber threat fact sheet | A | Heightened Iranian cyber-threat context and critical-infrastructure guidance. |
 | `SRC-THREAT-HUNTER-V3` | ThreatHunter.ai Detection Pack v3 | B | Detection ideas and IOC hypotheses requiring corroboration. |
 | `SRC-CLOUDSEK-EPIC-FURY` | CloudSEK Middle East escalation report | B | Supporting regional hacktivist and escalation context. |
 | `SRC-CLEARSKY-LEBANESE-CEDAR` | ClearSky Lebanese Cedar report | B | Lebanese Cedar / Explosive RAT / Caterpillar WebShell source. |
@@ -105,7 +105,7 @@ ASSESSMENT: This actor should drive wiper-preparation, backup-deletion, endpoint
 
 ### Cotton Sandstorm / Emennet Pasargad
 
-FACT: Microsoft and SafeBreach reporting describe cyber-enabled influence and disruptive activity from Iran-linked actors including Cotton Sandstorm / Emennet Pasargad.
+FACT: Microsoft and U.S. government reporting describe cyber-enabled influence, disruptive activity, and heightened network-access risk from Iran-linked actors including Cotton Sandstorm / Emennet Pasargad.
 
 ASSESSMENT: Treat Cotton Sandstorm as a cyber-influence risk that may combine technical compromise, defacement, leaks, DDoS, and narrative amplification.
 
@@ -219,7 +219,7 @@ This report is accompanied by KQL examples in `detections/kql/`:
 
 - `intune-bulk-device-wipe-anomaly.kql`
 - `rclone-exfil-to-suspicious-cloud-sinks.kql`
-- `cyber-toufan-smb-admin-share-lateral-movement.kql`
+- `smb-admin-share-lateral-movement-anomaly.kql`
 - `punycode-domain-resolution-hunt.kql`
 
 ## Intelligence Gaps
@@ -237,4 +237,3 @@ This report is accompanied by KQL examples in `detections/kql/`:
 3. Deploy controlled OT deception assets that simulate Unitronics and Rockwell exposure without creating live critical-infrastructure risk.
 4. Aggregate identity logs across Entra ID, AWS, Google Workspace, VPN, and MDM into SIEM and baseline privileged-account behavior.
 5. Build release-quality Sigma/KQL detections for every high-priority actor scenario and test them against benign replay data.
-

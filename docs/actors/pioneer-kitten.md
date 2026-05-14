@@ -7,7 +7,7 @@ sidebar_label: Pioneer Kitten
 
 Aliases: Pioneer Kitten, Fox Kitten, UNC757, Parisite, RUBIDIUM, Lemon Sandstorm. The FBI/CISA/DC3 advisory also notes actor self-use of Br0k3r and xplfinder.
 
-Assessed sponsor: Iranian state-sponsored / Government of Iran-associated in the 2024 joint advisory. The imported research did not identify primary public evidence resolving the sponsor to MOIS, IRGC-CEC, or IRGC-IO.
+Assessed sponsor: Iranian state-sponsored / Government of Iran-associated in the 2024 joint advisory. Reviewed primary public reporting does not resolve the sponsor to MOIS, IRGC-CEC, or IRGC-IO.
 
 ## Relevance
 
@@ -22,7 +22,7 @@ Pioneer Kitten is high priority for Israeli public-sector and critical infrastru
 
 ## Handoff Model
 
-The imported OpenAI research summarizes AA24-241A as describing a shift from selling access through cyber marketplaces to direct collaboration with ransomware affiliates such as NoEscape, RansomHouse, and ALPHV/BlackCat. The operational implication is that an appliance intrusion may move quickly into ransomware staging without a clean telemetry break between "state actor" and "affiliate" activity.
+AA24-241A describes a shift from selling access through cyber marketplaces to direct collaboration with ransomware affiliates such as NoEscape, RansomHouse, and ALPHV/BlackCat. The operational implication is that an appliance intrusion may move quickly into ransomware staging without a clean telemetry break between "state actor" and "affiliate" activity.
 
 ## Detection Ideas
 

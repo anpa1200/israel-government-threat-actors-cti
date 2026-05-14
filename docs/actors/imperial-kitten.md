@@ -7,7 +7,7 @@ sidebar_label: Imperial Kitten
 
 Aliases: Imperial Kitten (CrowdStrike), Yellow Liderc (PwC), Tortoiseshell / Tortoise Shell (Symantec / Microsoft reporting), TA456 (Proofpoint), CURIUM / Crimson Sandstorm (Microsoft / MITRE ATT&CK).
 
-Assessed sponsor: IRGC-aligned in public reporting. The current repository assessment does not resolve the actor to IRGC-CEC or IRGC-IO because the imported research did not identify primary public evidence precise enough for that branch-level sponsor call.
+Assessed sponsor: IRGC-aligned in public reporting. The current repository assessment does not resolve the actor to IRGC-CEC or IRGC-IO because reviewed primary public reporting does not support a branch-level sponsor call.
 
 ## Relevance
 
@@ -24,8 +24,8 @@ Imperial Kitten is high priority for Israeli government and public-sector defend
 ## Associated Tooling
 
 - **IMAPLoader**: .NET downloader/loader using IMAP-based tasking and payload retrieval through legitimate or compromised email accounts.
-- **StandardKeyboard**: Reported by the imported research as an email-C2 aligned implant.
-- Discord API-based RAT: Reported by CrowdStrike/imported research as asynchronous C2 over a legitimate messaging service.
+- **StandardKeyboard**: Reported in public vendor analysis as an email-C2 aligned implant; keep sample-specific details tied to the primary report used for the claim.
+- Discord API-based RAT: Reported by CrowdStrike as asynchronous C2 over a legitimate messaging service.
 
 ## Detection Ideas
 
@@ -37,7 +37,7 @@ Imperial Kitten is high priority for Israeli government and public-sector defend
 
 ## Analytic Caution
 
-The two imported research notes agree on a strong 2022-2023 Israeli transportation/logistics relevance. They also preserve a gap for specific 2024-2025 Israeli incidents under this exact alias set. Do not represent 2024-2025 Israel-specific activity as confirmed without an added primary source.
+Current primary-source review supports strong 2022-2023 Israeli transportation/logistics relevance and preserves a gap for specific 2024-2025 Israeli incidents under this exact alias set. Do not represent 2024-2025 Israel-specific activity as confirmed without an added primary source.
 
 ## Repository Sources
 

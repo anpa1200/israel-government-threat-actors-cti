@@ -17,7 +17,7 @@ DarkBit is high priority for Israeli public-sector defenders because the persona
 
 ## Technion Incident
 
-Imported research records the Technion ransom demand as 80 BTC, with anti-Israeli messaging, a claimed 4 TB data-theft narrative, and a recovery note named `RECOVERY_DARKBIT`. Treat these as source-reported claims pending direct primary-source review before use in executive reporting.
+Current source review records the Technion ransom demand as 80 BTC, with anti-Israeli messaging, a claimed 4 TB data-theft narrative, and a recovery note named `RECOVERY_DARKBIT`. Treat these as source-reported claims pending direct primary-source verification before use in executive reporting.
 
 ## Defensive Focus
 
@@ -36,7 +36,7 @@ Imported research records the Technion ransom demand as 80 BTC, with anti-Israel
 
 ## Analytic Caution
 
-The imported OpenAI research did not find strong public evidence that DarkBit persisted as a standalone persona after 2023. Maintain detections on MuddyWater/Storm-1084 behaviors and destructive-operation chains rather than on the DarkBit brand alone.
+Current primary-source review did not identify strong public evidence that DarkBit persisted as a standalone persona after 2023. Maintain detections on MuddyWater/Storm-1084 behaviors and destructive-operation chains rather than on the DarkBit brand alone.
 
 ## Repository Sources
 

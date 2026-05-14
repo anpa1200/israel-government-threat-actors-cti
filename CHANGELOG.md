@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.1.3 - 2026-05-14
+
+### Fixed
+- Re-scoped the Intune wipe Sigma rule as a base event selector and removed deprecated pipe aggregation syntax; bulk detection remains in the KQL companion.
+- Added a validator guard for deprecated Sigma pipe aggregation so invalid count syntax fails repository validation.
+- Retitled the Liontail-adjacent Sigma rule as a generic phantom-DLL service-control hunt instead of overclaiming IIS native-module coverage.
+- Downgraded the IMAPLoader IMAP rule to a low-severity hunt starter because the selector is intentionally broad.
+- Replaced published "imported research" provenance phrasing with primary-source-review or explicit gap language.
+- Replaced the stale CyberAv3ngers IOControl source note with `SRC-CLAROTY-IOCONTROL-2024`.
+- Replaced dead or automation-blocked source URLs with live primary/source-register alternatives and verified external URL reachability.
+- Renamed the Cyber Toufan SMB KQL hunt to remove the actor name from the filename and updated documentation references.
+- Added `.gitattributes` and normalized `data/ttps.csv` line endings to LF.
+- Clarified that Arid Viper `T1456` is a Mobile ATT&CK mapping and should remain validated against campaign-specific mobile delivery evidence.
+- Pointed the Intune bulk-wipe detection backlog item to the KQL implementation and tightened the `wbadmin` backup-deletion Sigma condition.
+- Added an npm override for `serialize-javascript` 7.0.5 to clear the Docusaurus transitive high-severity audit finding.
+
 ## v0.1.2 - 2026-05-14
 
 ### New

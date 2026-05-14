@@ -24,5 +24,4 @@ Attribution confidence is medium or lower unless supported by independent techni
 
 ## Associated Detection Content
 
-The KQL hunt `detections/kql/cyber-toufan-smb-admin-share-lateral-movement.kql` covers the native SMB lateral movement pattern described in the OP Innovate playbook.
-
+The KQL hunt `detections/kql/smb-admin-share-lateral-movement-anomaly.kql` covers the native SMB lateral movement pattern described in the OP Innovate playbook.

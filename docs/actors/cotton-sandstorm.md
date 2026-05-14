@@ -21,5 +21,4 @@ Cotton Sandstorm is relevant to Israeli government because Microsoft describes I
 - Bulk email or SMS impersonation campaigns.
 - Unusual public data exposure followed by coordinated amplification.
 
-Sources: `SRC-MS-IRAN-HAMAS`, `SRC-MS-IRAN-IO`.
-
+Sources: `SRC-MS-IRAN-HAMAS`, `SRC-MS-IRAN-IO`, `SRC-FDD-IRAN-IO-ISRAEL`.

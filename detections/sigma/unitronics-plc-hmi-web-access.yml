@@ -10,7 +10,7 @@ description: >
   logging covers OT segments.
 references:
   - https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a
-  - https://media.defense.gov/2026/Apr/07/2003907538/-1/-1/0/AA26-097A-IRANIAN-AFFILIATED-CYBER-ACTORS-EXPLOIT-PROGRAMMABLE-LOGIC-CONTROLLERS-ACROSS-US-CRITICAL-INFRASTRUCTURE_508C.PDF
+  - https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a
 author: Andrey
 date: 2026-05-13
 modified: 2026-05-14

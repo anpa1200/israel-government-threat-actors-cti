@@ -24,7 +24,7 @@ CyberAv3ngers is high priority for Israeli government, municipal, and critical i
 
 ## Associated Malware
 
-- **IOControl**: Custom ICS/SCADA malware targeting internet-facing OT devices (PLCs, HMIs, routers, IP cameras). Reported by Claroty Team82 (December 2024). Deployed against infrastructure in Israel and the United States. Add source `SRC-CLAROTY-IOCONTROL` when available.
+- **IOControl**: Custom OT/IoT malware targeting internet-facing OT devices (PLCs, HMIs, routers, IP cameras). Reported by Claroty Team82 in December 2024 and tracked in this repository as `SRC-CLAROTY-IOCONTROL-2024`.
 - Unitronics Vision Series PLC default-credential exploitation (CISA AA23-335A, AA26-097A).
 - Rockwell Automation / Allen-Bradley exploitation (CISA AA26-097A).
 
@@ -33,4 +33,3 @@ CyberAv3ngers is high priority for Israeli government, municipal, and critical i
 - `SRC-CISA-AA23-335A`: Joint advisory on Unitronics PLC exploitation (December 2023).
 - `SRC-CISA-AA26-097A`: Joint advisory identifying IRGC-CEC sponsor, full alias list, and Rockwell/Allen-Bradley targeting (April 2026).
 - `SRC-MANDIANT-OT-HACKTIVISTS`: OT hacktivist targeting claims context.
-
