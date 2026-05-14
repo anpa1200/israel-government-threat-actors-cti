@@ -1,13 +1,20 @@
-title: Cloud Admin MFA Change Followed By Backup Or Security Control Modification
+title: Cloud Admin Identity Or Security Control Modification (Hunt Starter)
 id: b3a44d3e-7d8e-4e4a-b8fd-5878a30ab3e1
 status: experimental
-description: Detects privileged cloud identity changes followed by backup or security-control modification, a high-risk pattern for destructive operations.
+description: >
+  Detects privileged cloud identity changes OR backup/security-control modifications
+  as independent single-event indicators. Each selection fires separately; this rule
+  does NOT correlate the two events. For the temporally-correlated version (MFA change
+  within 6h of backup deletion), use the companion KQL query
+  detections/kql/cloud-admin-mfa-backup-risk.kql which joins SigninLogs on a 6h window.
+  Use this Sigma rule as a broad review alert requiring analyst triage.
 references:
   - https://attack.mitre.org/techniques/T1098/
   - https://attack.mitre.org/techniques/T1485/
   - https://attack.mitre.org/groups/G1030/
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
+modified: 2026-05-14
 tags:
   - attack.persistence
   - attack.t1098
@@ -38,5 +45,7 @@ fields:
   - TargetResources
   - Result
 falsepositives:
-  - Planned identity or backup administration.
-level: medium
+  - Planned identity or backup administration. This rule has a high expected false-positive
+    rate on its own; treat every alert as a triage task. Correlate with the KQL companion
+    query for the high-confidence destructive-prep pattern.
+level: low

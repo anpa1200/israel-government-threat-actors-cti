@@ -1,12 +1,20 @@
-title: Trusted Sender Bulk Phishing Anomaly
+title: Trusted Sender Bulk Phishing Anomaly (Hunt Starter — Requires KQL For Production)
 id: 5737ccdf-5f23-4058-bd1d-2ca92963c3f8
 status: experimental
-description: Conceptual mail telemetry rule for previously low-volume trusted senders that suddenly send high-volume external messages with links or attachments.
+description: >
+  Hunt-starter rule: matches security-themed messages sent to external recipients from
+  an M365 Exchange perspective. This Sigma rule does NOT implement the bulk-detection
+  logic (volume threshold, per-sender aggregation, government-domain scoping) required
+  for production use. The companion KQL query detections/kql/trusted-sender-bulk-phishing-anomaly.kql
+  implements threshold (>=100 messages/hour), SenderFromAddress grouping, and scoping to
+  .gov.il/.idf.il/.mod.gov.il recipient domains. Use this Sigma rule only as an initial
+  triage sweep; expect a very high false-positive rate without further tuning.
 references:
   - https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-IL-W-1947.pdf
   - https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
+modified: 2026-05-14
 tags:
   - attack.initial_access
   - attack.t1566
@@ -24,7 +32,12 @@ detection:
       - 'urgent'
       - 'patch'
       - 'alert'
-  condition: selection_external and selection_content
+  filter_known_benign:
+    SenderFromAddress|contains:
+      - 'cert@'
+      - 'noreply@'
+      - 'no-reply@'
+  condition: selection_external and selection_content and not filter_known_benign
 fields:
   - TimeGenerated
   - SenderFromAddress
@@ -33,5 +46,7 @@ fields:
   - UrlCount
   - AttachmentCount
 falsepositives:
-  - Legitimate advisories from known CERT, IT, vendor, or government communication accounts.
-level: medium
+  - Any legitimate IT, CERT, vendor, or government advisory mailing. This rule will
+    generate significant noise without volume-threshold aggregation. Use the KQL
+    companion query for production detection.
+level: informational

@@ -1,8 +1,10 @@
 # Magic Hound / APT35
 
-Aliases: Charming Kitten, TA453, COBALT ILLUSION, Phosphorus, Newscaster, Mint Sandstorm.
+Aliases: Charming Kitten, COBALT ILLUSION, Phosphorus, Newscaster, Mint Sandstorm, ITG18 (IBM), Ballistic Bobcat (ESET), Group 83.
 
-Assessed sponsor: Iran state-linked in public reporting.
+Assessed sponsor: IRGC-IO (Islamic Revolutionary Guard Corps Intelligence Organisation) per Proofpoint, Mandiant, and U.S. Treasury designations.
+
+**Vendor naming caveat — TA453:** MITRE G0059 lists TA453 as a Magic Hound / APT35 alias. However, Proofpoint (2023), Volexity (2024), and Recorded Future map TA453 as roughly equivalent to APT42 rather than APT35. Analysts should note which vendor's taxonomy their source uses before attributing TA453 activity to this profile. See also the APT42 profile.
 
 ## Relevance
 

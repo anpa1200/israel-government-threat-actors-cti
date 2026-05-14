@@ -1,11 +1,19 @@
 title: Unitronics PLC HMI Web Interface Access
 id: 8a06da85-11d2-4138-98fe-490519ef85de
 status: experimental
-description: Detects web access patterns that may indicate internet-exposed Unitronics PLC/HMI interfaces requiring exposure review.
+description: >
+  Detects HTTP requests to Unitronics-specific PLC/HMI web paths from clients that
+  also present a Unitronics or PLC user-agent string. Both conditions must match to
+  reduce false positives from generic /webvisu paths on non-OT systems. Scope this
+  rule to internet-facing or DMZ web proxies — internal OT segment traffic requires
+  separate tuning. Remove or replace with network perimeter alerts if no web proxy
+  logging covers OT segments.
 references:
   - https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a
+  - https://media.defense.gov/2026/Apr/07/2003907538/-1/-1/0/AA26-097A-IRANIAN-AFFILIATED-CYBER-ACTORS-EXPLOIT-PROGRAMMABLE-LOGIC-CONTROLLERS-ACROSS-US-CRITICAL-INFRASTRUCTURE_508C.PDF
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
+modified: 2026-05-14
 tags:
   - attack.initial_access
   - attack.t1190
@@ -15,14 +23,16 @@ detection:
   selection_paths:
     cs-uri-stem|contains:
       - '/webvisu'
-      - '/login.html'
       - '/visilogic'
       - '/unitronics'
+      - '/SetDateTime'
+      - '/EthernetSetup'
+      - '/ipinfo.html'
   selection_agent:
     cs-user-agent|contains:
       - 'Unitronics'
       - 'PLC'
-  condition: selection_paths or selection_agent
+  condition: selection_paths and selection_agent
 fields:
   - date
   - time
@@ -32,4 +42,6 @@ fields:
   - cs-user-agent
 falsepositives:
   - Internal engineering workstation access to approved PLC/HMI management interfaces.
+    Both path and agent must match; tune approved source IPs as a filter if internal
+    OT management traffic is visible in this log source.
 level: medium

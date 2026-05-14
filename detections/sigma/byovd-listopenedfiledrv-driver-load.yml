@@ -6,7 +6,7 @@ references:
   - https://www.threathunter.ai/blog/stryker-handala-mois-muddywater-unified-brief-detection-pack-v3
   - https://attack.mitre.org/techniques/T1562/001/
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
 tags:
   - attack.defense_evasion
   - attack.t1562.001

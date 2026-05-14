@@ -6,7 +6,7 @@ references:
   - https://attack.mitre.org/techniques/T1059/001/
   - https://attack.mitre.org/techniques/T1105/
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
 tags:
   - attack.execution
   - attack.t1059.001

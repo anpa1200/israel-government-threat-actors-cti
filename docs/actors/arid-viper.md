@@ -1,6 +1,8 @@
 # APT-C-23 / Arid Viper
 
-Aliases: Desert Falcon, Mantis, TAG-63, Grey Karkadann, Two-tailed Scorpion.
+Aliases: Desert Falcon, Mantis, TAG-63, Grey Karkadann, Renegade Jackal (CrowdStrike).
+
+Note on removed alias: "Two-tailed Scorpion" does not appear as a tracked alias for APT-C-23 in MITRE G1028, ESET, Meta, Cisco Talos, or CrowdStrike reporting and has been removed to avoid taxonomy confusion.
 
 Assessed sponsor: Hamas-linked / Palestinian regional actor in public reporting.
 

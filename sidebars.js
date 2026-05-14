@@ -48,6 +48,7 @@ const sidebars = {
       },
       items: [
         'actors/handala',
+        'actors/scarred-manticore',
         'actors/muddywater',
         'actors/apt42',
         'actors/apt35',

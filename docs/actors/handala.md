@@ -1,6 +1,8 @@
 # Handala Hack Team
 
-Aliases: Handala, Void Manticore, Storm-0842, Storm-842, BANISHED KITTEN, Dune, COBALT MYSTIQUE.
+Aliases: Handala, Void Manticore, Storm-0842, BANISHED KITTEN, Dune, COBALT MYSTIQUE, Red Sandstorm, Karma, Karma Below (Karmabelow80), Homeland Justice.
+
+Note on naming: "Storm-842" appears in some secondary literature as a shorthand for Storm-0842; both refer to the same Microsoft-designated cluster. "Temple of Oats" is the title of the Mandiant/Check Point reporting on Void Manticore, not a tracked alias. Karma and Homeland Justice are Void Manticore persona variants documented in MITRE G1055; Homeland Justice was used in Albania-targeting campaigns.
 
 Assessed sponsor: Iran-aligned persona / MOIS-linked cluster in public reporting. Incident-level confidence varies by source and event.
 
@@ -35,8 +37,9 @@ Use low-to-medium confidence unless a primary technical source ties the persona 
 
 ## Repository Sources
 
-- `SRC-AP-HANDALA`: authored CTI assessment and SOC defensive guidance.
-- `SRC-CP-HANDALA-2026`: Check Point Research Handala modus operandi report.
-- `SRC-CP-VOID-2024`: Check Point Research Void Manticore destructive activity report.
-- `SRC-MITRE-G1055`: MITRE VOID MANTICORE profile.
-- `SRC-CYBERINT-HANDALA`: supporting vendor overview.
+- `SRC-MITRE-G1055`: MITRE VOID MANTICORE profile — primary alias registry (Handala Hack, Homeland Justice, Karma, Karmabelow80, BANISHED KITTEN, Red Sandstorm, COBALT MYSTIQUE, Dune).
+- `SRC-CP-HANDALA-2026`: Check Point Research Handala modus operandi report (March 2026).
+- `SRC-CP-VOID-2024`: Check Point Research "Bad Karma No Justice" — Void Manticore destructive activity in Israel, Karma persona (May 2024).
+- `SRC-PUSH-STRYKER-HANDALA`: Push Security Stryker incident analysis — Intune Remote Wipe via compromised Global Administrator credentials (March 2026).
+- `SRC-AP-HANDALA`: authored CTI assessment with SOC defensive guidance — rated B, trace primary references for operational decisions.
+- `SRC-CYBERINT-HANDALA`: supporting vendor overview — rated B.

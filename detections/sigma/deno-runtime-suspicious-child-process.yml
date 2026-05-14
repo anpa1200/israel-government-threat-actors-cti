@@ -5,7 +5,7 @@ description: Detects suspicious child process execution from the Deno runtime, a
 references:
   - https://www.threathunter.ai/blog/stryker-handala-mois-muddywater-unified-brief-detection-pack-v3
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
 tags:
   - attack.execution
   - attack.t1059

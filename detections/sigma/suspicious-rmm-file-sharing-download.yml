@@ -1,12 +1,19 @@
 title: Suspicious RMM Installer Download From User Context
 id: 58d38b0e-902c-4b0d-9f3f-0a7b54f8e601
 status: experimental
-description: Detects download or execution patterns consistent with abuse of legitimate remote monitoring and management tools from user-controlled locations.
+description: >
+  Detects download or execution patterns consistent with abuse of legitimate remote
+  monitoring and management tools from user-controlled locations (MuddyWater / MERCURY
+  RMM-abuse tradecraft). REQUIRED before enabling: replace the filter_admin_tools
+  ParentImage placeholder value with your organisation's actual approved deployment
+  parent process paths (e.g. SCCM, Intune, your helpdesk tool). Without this tuning
+  step the rule will generate significant noise from legitimate helpdesk activity.
 references:
   - https://attack.mitre.org/techniques/T1219/
   - https://attack.mitre.org/groups/G0069/
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
+modified: 2026-05-14
 tags:
   - attack.command_and_control
   - attack.t1219
@@ -39,9 +46,8 @@ detection:
       - '\Downloads\'
       - '\AppData\Local\Temp\'
   filter_admin_tools:
-    CommandLine|contains:
-      - 'approved-rmm'
-      - 'softwaredeployment'
+    ParentImage|contains:
+      - '<configure-approved-deployment-parent>'
   condition: all of selection_* and not filter_admin_tools
 fields:
   - UtcTime
@@ -51,5 +57,5 @@ fields:
   - ParentImage
   - CommandLine
 falsepositives:
-  - Approved enterprise RMM deployment or helpdesk installation.
+  - Approved enterprise RMM deployment or helpdesk installation via authorised parent process.
 level: medium

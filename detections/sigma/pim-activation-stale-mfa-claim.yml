@@ -1,11 +1,19 @@
-title: Privileged Role Activation With Potentially Stale MFA Claim
+title: Privileged Role Activation Requiring Phishing-Resistant MFA Review
 id: 0116b5d3-8e90-48cb-a3de-e8f43c038c11
 status: experimental
-description: Detects privileged role activation events that require review for fresh phishing-resistant MFA enforcement.
+description: >
+  Detects activation of high-privilege roles via PIM (Privileged Identity Management).
+  Analysts MUST review whether the activating identity authenticated with phishing-resistant
+  MFA (FIDO2/certificate) at activation time. Stale-claim detection — verifying token
+  issuance time vs activation time — requires a KQL join against SigninLogs and cannot
+  be expressed in Sigma pattern matching; this rule fires on every privileged activation
+  as a review trigger, not a confirmed stale-claim detection.
 references:
   - https://pushsecurity.com/blog/stryker-handala-report
+  - https://attack.mitre.org/techniques/T1078/004/
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
+modified: 2026-05-14
 tags:
   - attack.persistence
   - attack.t1098

@@ -1,43 +1,50 @@
-actor_id,attack_id,tactic,technique,source_id,confidence,notes
-G0069,T1566,Initial Access,Phishing,SRC-MITRE-G0069,High,"Common initial access path for public-sector and regional targeting."
-G0069,T1059.001,Execution,PowerShell,SRC-MITRE-G0069,High,"Relevant to encoded command and script execution hunting."
-G0069,T1219,Command and Control,Remote Access Software,SRC-MITRE-G0069,Medium-High,"Public reporting frequently associates Iran-linked operations with legitimate RMM abuse."
-G0049,T1505.003,Persistence,Web Shell,SRC-MITRE-G0049,High,"Useful for Exchange/IIS and externally exposed web application monitoring."
-G0049,T1049,Discovery,System Network Connections Discovery,SRC-MITRE-G0049,High,"Basic discovery after foothold."
-G0059,T1566.002,Initial Access,Spearphishing Link,SRC-MITRE-G0059,High,"Credential phishing and fake login pages are central defensive concerns."
-G0059,T1583.001,Resource Development,Acquire Domains,SRC-MITRE-G0059,High,"Typosquatting and impersonation infrastructure."
-G1044,T1530,Collection,Data from Cloud Storage,SRC-MITRE-G1044,High,"Relevant to Microsoft 365 and cloud audit monitoring."
-G1044,T1102,Command and Control,Web Service,SRC-MITRE-G1044,High,"Use of legitimate web services and cloud links complicates blocklists."
-G1030,T1485,Impact,Data Destruction,SRC-MITRE-G1030,High,"Priority for backup and endpoint destructive-action analytics."
-G1030,T1486,Impact,Data Encrypted for Impact,SRC-MITRE-G1030,High,"Ransomware-style destructive operations reported against Israeli entities."
-CYBERAV3NGERS,T0811,Initial Access,Data from Information Repositories / ICS Access Abuse,SRC-CISA-AA23-335A,Medium,"ATT&CK for ICS mapping should be verified per environment; focus on exposed PLCs and default credentials."
-COTTONSANDSTORM,T1585,Resource Development,Establish Accounts,SRC-MS-IRAN-IO,Medium,"Influence-operation infrastructure and persona staging."
-G1028,T1456,Credential Access,Drive-by Compromise / Mobile Phishing,SRC-MITRE-G1028,Medium,"Mobile ATT&CK mapping depends on campaign details."
-UNC3890,T1189,Initial Access,Drive-by Compromise,SRC-SECWEEK-UNC3890,Medium,"Reported watering-hole and social engineering lures."
-CYBERTOUFAN,T1491,Impact,Defacement,SRC-MS-IRAN-HAMAS,Low-Medium,"Persona activity should be corroborated before operational attribution."
-HANDALA,T1566,Initial Access,Phishing,SRC-AP-HANDALA,Medium-High,"Article assesses current-event lure and trusted-channel abuse patterns from public reporting."
-HANDALA,T1204,Execution,User Execution,SRC-AP-HANDALA,Medium-High,"Installer/archive execution from user context is a priority detection path."
-HANDALA,T1485,Impact,Data Destruction,SRC-AP-HANDALA,Medium-High,"Wiper/destructive behavior is treated as a priority defensive scenario."
-HANDALA,T1490,Impact,Inhibit System Recovery,SRC-AP-HANDALA,Medium,"Hunt for backup and recovery tampering during destructive-operation response."
-HANDALA,T1567,Exfiltration,Exfiltration Over Web Service,SRC-AP-HANDALA,Medium,"Commercial hosting and file-sharing references should be correlated with local telemetry."
-HANDALA,T1078.004,Initial Access,Valid Accounts: Cloud Accounts,SRC-PUSH-STRYKER-HANDALA,Medium-High,"Stryker report describes compromised Global Administrator credentials and Intune abuse."
-HANDALA,T1485,Impact,Data Destruction,SRC-PUSH-STRYKER-HANDALA,Medium-High,"Intune Remote Wipe abuse is tracked as identity-plane destructive action."
-G0069,T1567.002,Exfiltration,Exfiltration to Cloud Storage,SRC-THREAT-HUNTER-V3,Medium,"Rclone exfiltration to cloud storage sinks should be hunted as behavior."
-CYBERTOUFAN,T1595,Reconnaissance,Active Scanning,SRC-OPI-CYBER-TOUFAN,Medium-High,"Cyber Toufan playbook emphasizes exposed VPN/firewall/admin interface discovery."
-CYBERTOUFAN,T1021.002,Lateral Movement,SMB/Windows Admin Shares,SRC-OPI-CYBER-TOUFAN,Medium-High,"Native SMB lateral movement is a priority hunt path."
-LEBANESECEDAR,T1190,Initial Access,Exploit Public-Facing Application,SRC-CLEARSKY-LEBANESE-CEDAR,Medium-High,"ClearSky reporting describes exploitation of unpatched public-facing Oracle and Atlassian servers."
-LEBANESECEDAR,T1505.003,Persistence,Web Shell,SRC-CLEARSKY-LEBANESE-CEDAR,Medium-High,"Caterpillar WebShell/JSP file browser should drive web server hunts."
-G1028,T1204.002,Execution,User Execution: Malicious File,SRC-ESET-ARIDSPY,Medium-High,"Trojanized APK sideloading is the core mobile execution path."
-WIRTE,T1566,Initial Access,Phishing,SRC-CP-WIRTE-2024,Medium-High,"Compromised trusted email and fake update lures used against Israeli organizations."
-WIRTE,T1574.001,Defense Evasion,DLL Search Order Hijacking,SRC-CP-WIRTE-2024,Medium,"DLL sideloading and fake-update installer chains should be hunted."
-WIRTE,T1485,Impact,Data Destruction,SRC-CP-WIRTE-2024,Medium-High,"SameCoin-linked destructive activity against Israeli targets."
-TA402,T1566.001,Initial Access,Spearphishing Attachment,SRC-PROOFPOINT-TA402-IRONWIND,Medium-High,"TA402 used PPAM, XLL, and RAR attachment chains against Middle East government entities."
-TA402,T1574.001,Defense Evasion,DLL Search Order Hijacking,SRC-PROOFPOINT-TA402-IRONWIND,Medium-High,"IronWind infection chain used sideloading after lure execution."
-APT42,T1566.002,Initial Access,Spearphishing Link,SRC-GOOGLE-APT42-PHISHING,High,"Google reported intensified APT42 phishing campaigns against Israeli and U.S. high-value users in 2024."
-COTTONSANDSTORM,T1204.002,Execution,User Execution: Malicious File,SRC-CP-WEZRAT,Medium-High,"Fake INCD security update phishing delivered WezRat to Israeli organizations."
-COTTONSANDSTORM,T1566,Initial Access,Phishing,SRC-FBI-EMENNET-2024,High,"Joint advisory documents Emennet Pasargad tradecraft and aliases."
-UNC1860,T1190,Initial Access,Exploit Public-Facing Application,SRC-MANDIANT-UNC1860,Medium-High,"Mandiant reporting emphasizes Middle Eastern network access and persistent footholds; public-facing edge exposure should be prioritized."
-UNC1860,T1505.003,Persistence,Web Shell,SRC-MANDIANT-UNC1860,High,"Passive webshell and backdoor families associated with the cluster support persistent access."
-UNC1860,T1105,Command and Control,Ingress Tool Transfer,SRC-MANDIANT-UNC1860,Medium,"Specialized tooling and staged components should drive webroot and edge-host transfer hunts."
-UNC1860,T1021.001,Lateral Movement,Remote Services: RDP,SRC-MANDIANT-UNC1860,Medium,"Persistent access provider model should be correlated with remote service use after edge compromise."
-UNC1860,T1078,Defense Evasion,Valid Accounts,SRC-MANDIANT-UNC1860,Medium,"Access-provider behavior should be hunted through privileged and service-account use after initial foothold."
+actor_id,attack_id,tactic,technique,source_id,confidence,notes,mapping_quality
+G0069,T1566,Initial Access,Phishing,SRC-MITRE-G0069,High,Common initial access path for public-sector and regional targeting.,M3
+G0069,T1059.001,Execution,PowerShell,SRC-MITRE-G0069,High,Relevant to encoded command and script execution hunting.,M3
+G0069,T1219,Command and Control,Remote Access Software,SRC-MITRE-G0069,Medium-High,Public reporting frequently associates Iran-linked operations with legitimate RMM abuse.,M3
+G0049,T1505.003,Persistence,Web Shell,SRC-MITRE-G0049,High,Useful for Exchange/IIS and externally exposed web application monitoring.,M3
+G0049,T1049,Discovery,System Network Connections Discovery,SRC-MITRE-G0049,High,Basic discovery after foothold.,M1
+G0059,T1566.002,Initial Access,Spearphishing Link,SRC-MITRE-G0059,High,Credential phishing and fake login pages are central defensive concerns.,M3
+G0059,T1583.001,Resource Development,Acquire Domains,SRC-MITRE-G0059,High,Typosquatting and impersonation infrastructure.,M1
+G1044,T1530,Collection,Data from Cloud Storage,SRC-MITRE-G1044,High,Relevant to Microsoft 365 and cloud audit monitoring.,M1
+G1044,T1102,Command and Control,Web Service,SRC-MITRE-G1044,High,Use of legitimate web services and cloud links complicates blocklists.,M1
+G1030,T1485,Impact,Data Destruction,SRC-MITRE-G1030,High,Priority for backup and endpoint destructive-action analytics.,M3
+G1030,T1486,Impact,Data Encrypted for Impact,SRC-MITRE-G1030,High,Ransomware-style destructive operations reported against Israeli entities.,M2
+CYBERAV3NGERS,T0883,Initial Access,Internet Accessible Device,SRC-CISA-AA23-335A,High,Primary ICS initial access: internet-exposed Unitronics and Rockwell PLCs with default credentials. T0811 (Collection) was the prior incorrect mapping — corrected to T0883 per ATT&CK for ICS.,M2
+CYBERAV3NGERS,T0836,Impact,Modify Parameter,SRC-CISA-AA26-097A,Medium,PLC parameter modification for physical process effect. ATT&CK for ICS impact tactic.,M2
+CYBERAV3NGERS,T0832,Impact,Manipulation of View,SRC-CISA-AA23-335A,Medium-High,HMI display modification on compromised Unitronics PLCs for psychological and operational effect.,M2
+COTTONSANDSTORM,T1585,Resource Development,Establish Accounts,SRC-MS-IRAN-IO,Medium,Influence-operation infrastructure and persona staging.,M1
+G1028,T1456,Credential Access,Drive-by Compromise / Mobile Phishing,SRC-MITRE-G1028,Medium,Mobile ATT&CK mapping depends on campaign details.,M2
+UNC3890,T1189,Initial Access,Drive-by Compromise,SRC-SECWEEK-UNC3890,Medium,Reported watering-hole and social engineering lures.,M2
+CYBERTOUFAN,T1491,Impact,Defacement,SRC-MS-IRAN-HAMAS,Low-Medium,Persona activity should be corroborated before operational attribution.,M2
+HANDALA,T1566,Initial Access,Phishing,SRC-AP-HANDALA,Medium-High,Article assesses current-event lure and trusted-channel abuse patterns from public reporting.,M3
+HANDALA,T1204,Execution,User Execution,SRC-AP-HANDALA,Medium-High,Installer/archive execution from user context is a priority detection path.,M2
+HANDALA,T1485,Impact,Data Destruction,SRC-AP-HANDALA,Medium-High,Wiper/destructive behavior is treated as a priority defensive scenario.,M3
+HANDALA,T1490,Impact,Inhibit System Recovery,SRC-AP-HANDALA,Medium,Hunt for backup and recovery tampering during destructive-operation response.,M2
+HANDALA,T1567,Exfiltration,Exfiltration Over Web Service,SRC-AP-HANDALA,Medium,Commercial hosting and file-sharing references should be correlated with local telemetry.,M2
+HANDALA,T1078.004,Initial Access,Valid Accounts: Cloud Accounts,SRC-PUSH-STRYKER-HANDALA,Medium-High,Stryker report describes compromised Global Administrator credentials and Intune abuse.,M3
+HANDALA,T1485,Impact,Data Destruction,SRC-PUSH-STRYKER-HANDALA,Medium-High,Intune Remote Wipe abuse is tracked as identity-plane destructive action.,M3
+G0069,T1567.002,Exfiltration,Exfiltration to Cloud Storage,SRC-THREAT-HUNTER-V3,Medium,Rclone exfiltration to cloud storage sinks should be hunted as behavior.,M3
+CYBERTOUFAN,T1595,Reconnaissance,Active Scanning,SRC-OPI-CYBER-TOUFAN,Medium-High,Cyber Toufan playbook emphasizes exposed VPN/firewall/admin interface discovery.,M1
+CYBERTOUFAN,T1021.002,Lateral Movement,SMB/Windows Admin Shares,SRC-OPI-CYBER-TOUFAN,Medium-High,Native SMB lateral movement is a priority hunt path.,M3
+LEBANESECEDAR,T1190,Initial Access,Exploit Public-Facing Application,SRC-CLEARSKY-LEBANESE-CEDAR,Medium-High,ClearSky reporting describes exploitation of unpatched public-facing Oracle and Atlassian servers.,M3
+LEBANESECEDAR,T1505.003,Persistence,Web Shell,SRC-CLEARSKY-LEBANESE-CEDAR,Medium-High,Caterpillar WebShell/JSP file browser should drive web server hunts.,M3
+G1028,T1204.002,Execution,User Execution: Malicious File,SRC-ESET-ARIDSPY,Medium-High,Trojanized APK sideloading is the core mobile execution path.,M3
+WIRTE,T1566,Initial Access,Phishing,SRC-CP-WIRTE-2024,Medium-High,Compromised trusted email and fake update lures used against Israeli organizations.,M3
+WIRTE,T1574.001,Defense Evasion,DLL Search Order Hijacking,SRC-CP-WIRTE-2024,Medium,DLL sideloading and fake-update installer chains should be hunted.,M3
+WIRTE,T1485,Impact,Data Destruction,SRC-CP-WIRTE-2024,Medium-High,SameCoin-linked destructive activity against Israeli targets.,M3
+TA402,T1566.001,Initial Access,Spearphishing Attachment,SRC-PROOFPOINT-TA402-IRONWIND,Medium-High,"TA402 used PPAM, XLL, and RAR attachment chains against Middle East government entities.",M3
+TA402,T1574.001,Defense Evasion,DLL Search Order Hijacking,SRC-PROOFPOINT-TA402-IRONWIND,Medium-High,IronWind infection chain used sideloading after lure execution.,M3
+APT42,T1566.002,Initial Access,Spearphishing Link,SRC-GOOGLE-APT42-PHISHING,High,Google reported intensified APT42 phishing campaigns against Israeli and U.S. high-value users in 2024.,M3
+COTTONSANDSTORM,T1204.002,Execution,User Execution: Malicious File,SRC-CP-WEZRAT,Medium-High,Fake INCD security update phishing delivered WezRat to Israeli organizations.,M3
+COTTONSANDSTORM,T1566,Initial Access,Phishing,SRC-FBI-EMENNET-2024,High,Joint advisory documents Emennet Pasargad tradecraft and aliases.,M3
+UNC1860,T1190,Initial Access,Exploit Public-Facing Application,SRC-MANDIANT-UNC1860,Medium-High,Mandiant reporting emphasizes Middle Eastern network access and persistent footholds; public-facing edge exposure should be prioritized.,M3
+UNC1860,T1505.003,Persistence,Web Shell,SRC-MANDIANT-UNC1860,High,Passive webshell and backdoor families associated with the cluster support persistent access.,M3
+UNC1860,T1105,Command and Control,Ingress Tool Transfer,SRC-MANDIANT-UNC1860,Medium,Specialized tooling and staged components should drive webroot and edge-host transfer hunts.,M3
+UNC1860,T1021.001,Lateral Movement,Remote Services: RDP,SRC-MANDIANT-UNC1860,Medium,Persistent access provider model should be correlated with remote service use after edge compromise.,M2
+UNC1860,T1078,Defense Evasion,Valid Accounts,SRC-MANDIANT-UNC1860,Medium,Access-provider behavior should be hunted through privileged and service-account use after initial foothold.,M2
+SCAREDMANTICORE,T1190,Initial Access,Exploit Public-Facing Application,SRC-CP-VOID-2024,High,"Primary initial access vector: exploitation of public-facing SharePoint, IIS, and web applications. CVE-2019-0604 documented in some reporting.",M3
+SCAREDMANTICORE,T1505.004,Persistence,IIS Components,SRC-CP-VOID-2024,High,Liontail framework loads malicious IIS native modules and HTTP.sys listeners as passive persistent backdoors.,M2
+SCAREDMANTICORE,T1505.003,Persistence,Web Shell,SRC-CP-VOID-2024,High,Web shells dropped alongside or after IIS module implants as secondary persistence.,M3
+SCAREDMANTICORE,T1071.001,Command and Control,Web Protocols,SRC-CP-VOID-2024,Medium-High,"Liontail passive backdoor responds to HTTP/S requests, blending C2 traffic with legitimate web server activity.",M2
+SCAREDMANTICORE,T1199,Initial Access,Trusted Relationship,SRC-CP-VOID-2024,Medium,Some reporting describes handoff-style operations where access obtained by Scarred Manticore is passed to a second team for destructive effects — hunt for privilege escalation or destructive staging shortly after edge-application compromise.,M2

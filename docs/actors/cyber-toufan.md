@@ -17,5 +17,12 @@ Cyber Toufan is relevant as a claimed activity persona around Israeli targets, e
 
 Attribution confidence is medium or lower unless supported by independent technical evidence.
 
-Source: `SRC-MS-IRAN-HAMAS`.
+## Repository Sources
+
+- `SRC-OPI-CYBER-TOUFAN`: OP Innovate primary playbook analysis — external exposure, credential abuse, SMB lateral movement via admin shares, Telegram leak operations.
+- `SRC-MS-IRAN-HAMAS`: Microsoft Threat Intelligence, Iran influence operations context.
+
+## Associated Detection Content
+
+The KQL hunt `detections/kql/cyber-toufan-smb-admin-share-lateral-movement.kql` covers the native SMB lateral movement pattern described in the OP Innovate playbook.
 

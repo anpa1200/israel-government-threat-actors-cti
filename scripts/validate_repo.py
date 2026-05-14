@@ -41,6 +41,7 @@ CSV_HEADERS = {
         "source_id",
         "confidence",
         "notes",
+        "mapping_quality",
     ],
     "data/ioc-references.csv": [
         "source_id",

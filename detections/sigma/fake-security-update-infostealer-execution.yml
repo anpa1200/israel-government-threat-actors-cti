@@ -1,11 +1,18 @@
 title: Fake Security Or Browser Update Execution From Mail Or Download Path
 id: c38c82b1-2018-4f85-9687-7a8f39fd5082
 status: experimental
-description: Detects security-update or browser-update themed executable names launched from user-controlled paths.
+description: >
+  Detects executables with security-update or browser-update themed filenames launched
+  from user-writable paths by a mail client, browser, or archive parent process.
+  Anchors on parent process to avoid matching legitimate auto-updaters that run from
+  vendor-controlled paths. Reference: WezRat (Emennet Pasargad) and Cotton Sandstorm
+  fake INCD update lures (Check Point Research 2024).
 references:
   - https://research.checkpoint.com/2024/wezrat-malware-deep-dive/
+  - https://attack.mitre.org/techniques/T1204/002/
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
+modified: 2026-05-14
 tags:
   - attack.initial_access
   - attack.t1566
@@ -15,20 +22,36 @@ logsource:
   product: windows
   category: process_creation
 detection:
+  selection_parent:
+    ParentImage|endswith:
+      - '\outlook.exe'
+      - '\chrome.exe'
+      - '\msedge.exe'
+      - '\firefox.exe'
+      - '\WinRAR.exe'
+      - '\7zfm.exe'
+      - '\7zG.exe'
+      - '\explorer.exe'
   selection_path:
     Image|contains:
       - '\Users\'
       - '\Downloads\'
       - '\AppData\Local\Temp\'
   selection_name:
-    Image|contains:
-      - 'update'
-      - 'security'
-      - 'chrome'
-      - 'browser'
-      - 'cert'
-      - 'alert'
-  condition: selection_path and selection_name
+    Image|endswith:
+      - 'update.exe'
+      - 'Update.exe'
+      - 'security.exe'
+      - 'Security.exe'
+      - 'chrome_update.exe'
+      - 'ChromeUpdate.exe'
+      - 'browser_update.exe'
+      - 'BrowserUpdate.exe'
+      - 'certupdate.exe'
+      - 'CertUpdate.exe'
+      - 'alert.exe'
+      - 'Alert.exe'
+  condition: selection_parent and selection_path and selection_name
 fields:
   - UtcTime
   - Computer
@@ -37,5 +60,7 @@ fields:
   - Image
   - CommandLine
 falsepositives:
-  - Legitimate browser updates executed manually by users.
+  - Legitimate browser or certificate updates manually triggered by users from the
+    Downloads folder. Validate ParentImage and file hash against known-good vendor
+    binaries before escalating.
 level: medium

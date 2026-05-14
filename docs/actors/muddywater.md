@@ -1,6 +1,6 @@
 # MuddyWater
 
-Aliases: Mango Sandstorm, Static Kitten, Seedworm, MERCURY, TEMP.Zagros.
+Aliases: Mango Sandstorm, Boggy Serpens (Microsoft, current), Static Kitten, Seedworm, MERCURY (Microsoft, retired April 2023), TEMP.Zagros, TA450 (Proofpoint), Earth Vetala (Trend Micro).
 
 Assessed sponsor: Iran MOIS-aligned in public reporting.
 

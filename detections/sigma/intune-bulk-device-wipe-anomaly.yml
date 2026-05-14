@@ -1,15 +1,23 @@
 title: Intune Bulk Device Wipe Or Retire Anomaly
 id: 53fd1734-475f-46fc-a87b-ad74a98e9347
 status: experimental
-description: Detects high-risk Intune device lifecycle actions that may indicate identity-plane destructive activity.
+description: >
+  Detects when a single initiating identity performs 20 or more Intune device wipe,
+  retire, or delete actions within a 10-minute window — consistent with identity-plane
+  destructive activity (e.g. Stryker/Handala Intune Remote Wipe abuse). The companion
+  KQL query detections/kql/intune-bulk-device-wipe-anomaly.kql uses a threshold of 50
+  actions and adds tenant-wide context; tune both thresholds to your environment baseline.
 references:
   - https://pushsecurity.com/blog/stryker-handala-report
   - https://attack.mitre.org/techniques/T1485/
+  - https://attack.mitre.org/techniques/T1072/
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
+modified: 2026-05-14
 tags:
   - attack.impact
   - attack.t1485
+  - attack.t1072
   - attack.t1078.004
 logsource:
   product: azure
@@ -21,7 +29,8 @@ detection:
       - 'Retire'
       - 'Delete device'
       - 'Delete managed device'
-  condition: selection
+  condition: selection | count() by InitiatedBy > 20
+timeframe: 10m
 fields:
   - TimeGenerated
   - OperationName
@@ -29,5 +38,6 @@ fields:
   - TargetResources
   - Result
 falsepositives:
-  - Planned device retirement projects or tenant cleanup activity.
+  - Planned device retirement projects or tenant cleanup activity by authorised IT staff.
+    Tune threshold (default 20 in 10m) against your environment baseline before enabling.
 level: high

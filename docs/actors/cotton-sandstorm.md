@@ -1,8 +1,8 @@
 # Cotton Sandstorm
 
-Aliases: Emennet Pasargad, MarnanBridge, Haywire Kitten.
+Aliases: Emennet Pasargad, Aria Sepehr Ayandehsazan (ASA), MarnanBridge, Haywire Kitten, Altoufan Team (Al-Toufan), Net Peygard Samavat.
 
-Assessed sponsor: Iran IRGC-linked in public Microsoft reporting.
+Assessed sponsor: IRGC-linked, specifically associated with the front company Aria Sepehr Ayandehsazan (ASA) per the FBI / U.S. Treasury / INCD joint advisory (October 2024). ASA is an Iranian cyber contractor, not a direct IRGC unit — distinguish from IRGC-CEC (CyberAv3ngers) and MOIS-subordinate actors.
 
 ## Relevance
 

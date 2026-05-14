@@ -6,7 +6,7 @@ references:
   - https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/
   - https://www.proofpoint.com/us/blog/threat-insight/ta402-uses-complex-ironwind-infection-chains-target-middle-east-based-government
 author: Andrey
-date: 2026/05/13
+date: 2026-05-13
 tags:
   - attack.defense_evasion
   - attack.t1574.001

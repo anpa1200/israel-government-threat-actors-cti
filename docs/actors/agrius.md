@@ -2,7 +2,7 @@
 
 Aliases: Pink Sandstorm, AMERICIUM, Agonizing Serpens, BlackShadow.
 
-Assessed sponsor: Iran MOIS-linked in public reporting.
+Assessed sponsor: Iran-aligned (assessed by some sources as MOIS-linked; firm MOIS attribution not established in primary reporting). SentinelLabs, Unit 42, and Microsoft use "Iran-aligned" or "Iran-nexus" language without confirming a specific Iranian intelligence service. Use evidence label `Assessed-by-source` rather than `Source-reported` for any MOIS claim.
 
 ## Relevance
 

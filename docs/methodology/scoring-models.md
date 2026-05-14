@@ -9,6 +9,8 @@ This project uses separate scores for source quality, claim quality, analyst con
 
 ## Source Reliability
 
+Adapted from the NATO Admiralty Code (STANAG 2511). See also Sherman Kent's words-of-estimative-probability framework for the parallel information-credibility scale.
+
 | Score | Meaning | Use |
 | --- | --- | --- |
 | A | Highly reliable source with strong methodology or direct evidence. | May anchor actor profiles, scenarios, and detection logic. |
