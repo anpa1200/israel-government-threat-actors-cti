@@ -1,0 +1,5 @@
+metric_id,metric_name,scope,value,unit,measurement_date,owner,notes
+MET-001,Mean detection readiness level,Detection backlog,4.75,DRL,2026-05-14,Detection Lead,Average of current sample detections; production target is DRL-9 for deployed analytics.
+MET-002,ATT&CK mappings at M3 or better,Technique mapping,14,count,2026-05-14,CTI Lead,Only M3/M4 rows should be counted as defensive coverage.
+MET-003,Evidence records with claim IDs,Evidence register,12,count,2026-05-14,CTI Lead,Initial claim backbone; expand until every major actor-page assertion has an evidence ID.
+MET-004,Persona claims requiring corroboration,Persona claims register,3,count,2026-05-14,Comms / Legal,Tracks public claims separately from confirmed incidents.

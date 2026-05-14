@@ -46,3 +46,20 @@ A detection MUST include:
 
 Only M3 or M4 mappings SHOULD be counted as defensive coverage.
 
+## Production Evidence Pack
+
+A DRL-9 detection MUST have an evidence pack with:
+
+- source and evidence IDs;
+- platform-specific query or rule export;
+- positive test result;
+- negative test result;
+- false-positive review;
+- expected alert volume;
+- tuning guidance;
+- SOC triage procedure;
+- owner and rollback plan;
+- review date and expiry date.
+
+Rules at DRL-4 to DRL-6 remain hunt starters or pilots even when their ATT&CK
+mapping is strong. Do not market them as production coverage.

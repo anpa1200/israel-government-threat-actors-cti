@@ -23,10 +23,10 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/methodology/` | CTI-to-detection operating standard, scoring models, and artifact contracts. |
 | `docs/threat-hunting/` | Threat-hunting workflow and hypothesis rules. |
 | `docs/detection-engineering/` | Detection lifecycle, DRL, quality gates, and production criteria. |
-| `examples/registers/` | PIR, SIR, evidence, scenario, hunt, detection, and health register templates. |
+| `examples/registers/` | PIR, SIR, evidence, persona-claim, scenario, hunt, detection, health, and metrics register templates. |
 | `examples/gates/` | Sample quality-gate evidence packs. |
 | `data/actors.csv` | Structured actor register. |
-| `data/sources.csv` | Source register with reliability notes. |
+| `data/sources.csv` | Source register with reliability, publication/access/review dates, and archive hashes where available. |
 | `data/research-downloads.csv` | Download manifest for local source archive, including status, local path, size, and SHA-256. |
 | `data/ttps.csv` | Actor-to-ATT&CK mapping table. |
 | `data/ioc-references.csv` | Pointers to public IOC locations. |

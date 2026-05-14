@@ -20,6 +20,7 @@ const sidebars = {
       items: [
         'methodology/operating-standard',
         'methodology/scoring-models',
+        'methodology/source-freshness',
         'methodology/artifact-contracts',
       ],
     },
@@ -36,6 +37,7 @@ const sidebars = {
       items: [
         'detection-engineering/detection-lifecycle',
         'detection-engineering/quality-gates',
+        'detection-engineering/soc-triage-playbooks',
       ],
     },
     {
@@ -82,6 +84,7 @@ const sidebars = {
         'reports/defensive-cti-threats-to-israeli-public-sector',
         'reports/israel-critical-infrastructure-escalation',
         'reports/resourses_research',
+        'reports/worked-cases',
         'reports/andrey-medium-articles',
       ],
     },
