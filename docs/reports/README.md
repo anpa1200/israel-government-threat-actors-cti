@@ -23,6 +23,7 @@ Use `sources/` as the analyst-facing scored source library:
 - 2024-2026 escalation research intake: [2026-israel-critical-infrastructure-escalation.md](2026-israel-critical-infrastructure-escalation.md).
 - 2023-2026 source-download and validation intake: [resourses_research.md](resourses_research.md).
 - End-to-end CTI-to-detection examples: [worked-cases.md](worked-cases.md).
+- CI and build evidence: [ci-validation-evidence.md](ci-validation-evidence.md).
 - Defensive CTI synthesis for Israeli public-sector environments: [defensive-cti-threats-to-israeli-public-sector.md](defensive-cti-threats-to-israeli-public-sector.md).
 
 ## Collection Rules

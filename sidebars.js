@@ -86,6 +86,7 @@ const sidebars = {
         'reports/israel-critical-infrastructure-escalation',
         'reports/resourses_research',
         'reports/worked-cases',
+        'reports/ci-validation-evidence',
         'reports/andrey-medium-articles',
       ],
     },
