@@ -1,0 +1,33 @@
+title: BiBi-Style Wiper File Rename Pattern
+id: e6b105b7-65bb-4135-bb01-774d22e5ad46
+status: experimental
+description: >
+  Detects file rename activity consistent with BiBi-family destructive behavior.
+  This is a narrow extension-based prototype and should be paired with higher-volume
+  file write and rename-rate analytics in EDR telemetry.
+references:
+  - https://research.checkpoint.com/2024/bad-karma-no-justice-void-manticore-destructive-activities-in-israel/
+author: Andrey
+date: 2026-05-14
+tags:
+  - attack.impact
+  - attack.t1485
+logsource:
+  product: windows
+  category: file_rename
+detection:
+  selection_extension:
+    TargetFilename|contains:
+      - '.BiBi'
+      - '.bibi'
+  condition: selection_extension
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - Image
+  - TargetFilename
+falsepositives:
+  - Malware-lab testing or ransomware simulation exercises.
+  - Rare user-created files containing the same string.
+level: high

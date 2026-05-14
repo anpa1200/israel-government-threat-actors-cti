@@ -59,4 +59,4 @@ Scarred Manticore should not be used as a default label for every Iranian-linked
 
 - `SRC-CP-VOID-2024`: Check Point Research "Bad Karma No Justice" — documents Scarred Manticore as initial access provider handing off to Void Manticore for destructive operations in Israel.
 - `SRC-MITRE-G1055`: MITRE Void Manticore profile — references Scarred Manticore collaboration and initial access role.
-- Check Point Research "Scarred Manticore versus MOIS: Seeing the Invisible" (October 2023) — primary Liontail framework analysis; add as `SRC-CP-SCARRED-MANTICORE-2023` when source record is created.
+- `SRC-CP-SCARRED-MANTICORE-2023`: Check Point Research "Scarred Manticore versus MOIS: Seeing the Invisible" — primary Liontail framework analysis (October 2023).

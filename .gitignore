@@ -10,3 +10,7 @@ node_modules/
 .docusaurus/
 build/
 .npm/
+
+# Local research-intake dumps used during development.
+docs/reports/openai_research.md
+docs/reports/gemini_research.md

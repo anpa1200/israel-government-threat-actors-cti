@@ -35,7 +35,7 @@ WIRTE,T1574.001,Defense Evasion,DLL Search Order Hijacking,SRC-CP-WIRTE-2024,Med
 WIRTE,T1485,Impact,Data Destruction,SRC-CP-WIRTE-2024,Medium-High,SameCoin-linked destructive activity against Israeli targets.,M3
 TA402,T1566.001,Initial Access,Spearphishing Attachment,SRC-PROOFPOINT-TA402-IRONWIND,Medium-High,"TA402 used PPAM, XLL, and RAR attachment chains against Middle East government entities.",M3
 TA402,T1574.001,Defense Evasion,DLL Search Order Hijacking,SRC-PROOFPOINT-TA402-IRONWIND,Medium-High,IronWind infection chain used sideloading after lure execution.,M3
-APT42,T1566.002,Initial Access,Spearphishing Link,SRC-GOOGLE-APT42-PHISHING,High,Google reported intensified APT42 phishing campaigns against Israeli and U.S. high-value users in 2024.,M3
+G1044,T1566.002,Initial Access,Spearphishing Link,SRC-GOOGLE-APT42-PHISHING,High,Google reported intensified APT42 phishing campaigns against Israeli and U.S. high-value users in 2024.,M3
 COTTONSANDSTORM,T1204.002,Execution,User Execution: Malicious File,SRC-CP-WEZRAT,Medium-High,Fake INCD security update phishing delivered WezRat to Israeli organizations.,M3
 COTTONSANDSTORM,T1566,Initial Access,Phishing,SRC-FBI-EMENNET-2024,High,Joint advisory documents Emennet Pasargad tradecraft and aliases.,M3
 UNC1860,T1190,Initial Access,Exploit Public-Facing Application,SRC-MANDIANT-UNC1860,Medium-High,Mandiant reporting emphasizes Middle Eastern network access and persistent footholds; public-facing edge exposure should be prioritized.,M3
@@ -43,8 +43,20 @@ UNC1860,T1505.003,Persistence,Web Shell,SRC-MANDIANT-UNC1860,High,Passive webshe
 UNC1860,T1105,Command and Control,Ingress Tool Transfer,SRC-MANDIANT-UNC1860,Medium,Specialized tooling and staged components should drive webroot and edge-host transfer hunts.,M3
 UNC1860,T1021.001,Lateral Movement,Remote Services: RDP,SRC-MANDIANT-UNC1860,Medium,Persistent access provider model should be correlated with remote service use after edge compromise.,M2
 UNC1860,T1078,Defense Evasion,Valid Accounts,SRC-MANDIANT-UNC1860,Medium,Access-provider behavior should be hunted through privileged and service-account use after initial foothold.,M2
-SCAREDMANTICORE,T1190,Initial Access,Exploit Public-Facing Application,SRC-CP-VOID-2024,High,"Primary initial access vector: exploitation of public-facing SharePoint, IIS, and web applications. CVE-2019-0604 documented in some reporting.",M3
-SCAREDMANTICORE,T1505.004,Persistence,IIS Components,SRC-CP-VOID-2024,High,Liontail framework loads malicious IIS native modules and HTTP.sys listeners as passive persistent backdoors.,M2
-SCAREDMANTICORE,T1505.003,Persistence,Web Shell,SRC-CP-VOID-2024,High,Web shells dropped alongside or after IIS module implants as secondary persistence.,M3
-SCAREDMANTICORE,T1071.001,Command and Control,Web Protocols,SRC-CP-VOID-2024,Medium-High,"Liontail passive backdoor responds to HTTP/S requests, blending C2 traffic with legitimate web server activity.",M2
-SCAREDMANTICORE,T1199,Initial Access,Trusted Relationship,SRC-CP-VOID-2024,Medium,Some reporting describes handoff-style operations where access obtained by Scarred Manticore is passed to a second team for destructive effects — hunt for privilege escalation or destructive staging shortly after edge-application compromise.,M2
+SCARREDMANTICORE,T1190,Initial Access,Exploit Public-Facing Application,SRC-CP-VOID-2024,High,"Primary initial access vector: exploitation of public-facing SharePoint, IIS, and web applications. CVE-2019-0604 documented in some reporting.",M3
+SCARREDMANTICORE,T1505.004,Persistence,IIS Components,SRC-CP-VOID-2024,High,Liontail framework loads malicious IIS native modules and HTTP.sys listeners as passive backdoors.,M2
+SCARREDMANTICORE,T1505.003,Persistence,Web Shell,SRC-CP-VOID-2024,High,Web shells dropped alongside or after IIS module implants as secondary persistence.,M3
+SCARREDMANTICORE,T1071.001,Command and Control,Web Protocols,SRC-CP-VOID-2024,Medium-High,"Liontail passive backdoor responds to HTTP/S requests, blending C2 traffic with legitimate web server activity.",M2
+SCARREDMANTICORE,T1199,Initial Access,Trusted Relationship,SRC-CP-VOID-2024,Medium,Some reporting describes handoff-style operations where access obtained by Scarred Manticore is passed to a second team for destructive effects — hunt for privilege escalation or destructive staging shortly after edge-application compromise.,M2
+IMPERIALKITTEN,T1189,Initial Access,Drive-by Compromise,SRC-CS-IMPERIAL-KITTEN-2023,Medium-High,Strategic web compromise and profiling of Israeli or Israel-adjacent logistics/transportation targets.,M2
+IMPERIALKITTEN,T1071.003,Command and Control,Mail Protocols,SRC-PWC-YELLOW-LIDERC-2023,High,IMAPLoader uses IMAP-based command and control via email accounts.,M3
+IMPERIALKITTEN,T1059.005,Execution,Visual Basic,SRC-PWC-YELLOW-LIDERC-2023,Medium,Office/XLL delivery chains and scripting should be hunted as delivery-stage behavior.,M2
+PIONEERKITTEN,T1190,Initial Access,Exploit Public-Facing Application,SRC-CISA-AA24-241A,High,Joint advisory emphasizes exploitation of internet-facing VPN/load-balancer/security gateway appliances.,M3
+PIONEERKITTEN,T1219,Command and Control,Remote Access Software,SRC-CISA-AA24-241A,High,AnyDesk and other remote access tools appear in post-compromise activity.,M3
+PIONEERKITTEN,T1572,Command and Control,Protocol Tunneling,SRC-CISA-AA24-241A,High,Ligolo and ngrok-style tunnels support access handoff and persistence.,M3
+DARKBIT,T1486,Impact,Data Encrypted for Impact,SRC-INCD-DARKBIT-MUDDYWATER-2023,Medium-High,Technion/DarkBit-style pseudo-ransomware should be modeled as destructive impact behavior.,M2
+DARKBIT,T1490,Impact,Inhibit System Recovery,SRC-MS-MERCURY-DEV1084-2023,Medium-High,Destructive MERCURY/DEV-1084 operations included recovery and cloud-control-plane abuse patterns.,M2
+G1001,T1071.004,Command and Control,DNS,SRC-MITRE-G1001,Medium,Imported research and ATT&CK context emphasize DNS/HTTP C2 for Lyceum-linked tooling.,M2
+G1001,T1003.001,Credential Access,LSASS Memory,SRC-MITRE-G1001,Medium,Credential dumping remains a relevant Lyceum/OilRig-adjacent detection path.,M2
+G0087,T1566.001,Initial Access,Spearphishing Attachment,SRC-MITRE-G0087,Medium-High,APT39/Chafer commonly uses targeted phishing for initial access in public reporting.,M2
+G0087,T1003.001,Credential Access,LSASS Memory,SRC-MITRE-G0087,Medium-High,Credential theft against identity-rich telecom/travel environments is a priority defensive concern.,M2

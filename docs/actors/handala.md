@@ -1,14 +1,16 @@
-# Handala Hack Team
+# Void Manticore / Handala
 
-Aliases: Handala, Void Manticore, Storm-0842, BANISHED KITTEN, Dune, COBALT MYSTIQUE, Red Sandstorm, Karma, Karma Below (Karmabelow80), Homeland Justice.
+Primary cluster: Void Manticore.
 
-Note on naming: "Storm-842" appears in some secondary literature as a shorthand for Storm-0842; both refer to the same Microsoft-designated cluster. "Temple of Oats" is the title of the Mandiant/Check Point reporting on Void Manticore, not a tracked alias. Karma and Homeland Justice are Void Manticore persona variants documented in MITRE G1055; Homeland Justice was used in Albania-targeting campaigns.
+Public personas and aliases: Handala Hack, Karma, Karma Below (Karmabelow80), Homeland Justice, Storm-0842, BANISHED KITTEN, Dune, COBALT MYSTIQUE, Red Sandstorm.
+
+Note on naming: Handala, Karma, and Homeland Justice are treated here as public personas associated with Void Manticore, not interchangeable proof that every public claim is a confirmed Void Manticore intrusion. "Storm-842" appears in some secondary literature as a shorthand for Storm-0842; both refer to the same Microsoft-designated cluster. "Temple of Oats" is the title of the Mandiant/Check Point reporting on Void Manticore, not a tracked alias. Homeland Justice was used in Albania-targeting campaigns.
 
 Assessed sponsor: Iran-aligned persona / MOIS-linked cluster in public reporting. Incident-level confidence varies by source and event.
 
 ## Relevance
 
-Handala is high priority for Israeli government and public-sector defenders because the persona and related cluster reporting focus heavily on Israeli organizations, civilian-impact sectors, public claims, leak pressure, and destructive or disruptive operations.
+Void Manticore / Handala is high priority for Israeli government and public-sector defenders because the related cluster and persona reporting focus heavily on Israeli organizations, civilian-impact sectors, public claims, leak pressure, and destructive or disruptive operations.
 
 Andrey Pautov's Medium assessment `SRC-AP-HANDALA` frames Handala as an influence-enabled intrusion threat: compromise, leak or destructive action, rapid public claim publication, and narrative amplification. The profile also notes cross-vendor cluster convergence around Void Manticore / Storm-0842 / BANISHED KITTEN / Dune style naming, while warning that vendor naming overlap does not prove every incident-level attribution.
 

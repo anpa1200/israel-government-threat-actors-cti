@@ -4,10 +4,9 @@ status: experimental
 description: >
   Detects download or execution patterns consistent with abuse of legitimate remote
   monitoring and management tools from user-controlled locations (MuddyWater / MERCURY
-  RMM-abuse tradecraft). REQUIRED before enabling: replace the filter_admin_tools
-  ParentImage placeholder value with your organisation's actual approved deployment
-  parent process paths (e.g. SCCM, Intune, your helpdesk tool). Without this tuning
-  step the rule will generate significant noise from legitimate helpdesk activity.
+  RMM-abuse tradecraft). REQUIRED before enabling: apply a local allowlist for approved
+  deployment parents such as SCCM, Intune, or helpdesk tooling. Without local tuning,
+  the rule will generate significant noise from legitimate helpdesk activity.
 references:
   - https://attack.mitre.org/techniques/T1219/
   - https://attack.mitre.org/groups/G0069/
@@ -45,10 +44,7 @@ detection:
       - '\Users\'
       - '\Downloads\'
       - '\AppData\Local\Temp\'
-  filter_admin_tools:
-    ParentImage|contains:
-      - '<configure-approved-deployment-parent>'
-  condition: all of selection_* and not filter_admin_tools
+  condition: all of selection_*
 fields:
   - UtcTime
   - Computer
@@ -58,4 +54,6 @@ fields:
   - CommandLine
 falsepositives:
   - Approved enterprise RMM deployment or helpdesk installation via authorised parent process.
+  - Local deployments should add an environment-specific ParentImage allowlist outside
+    this portable prototype rule.
 level: medium

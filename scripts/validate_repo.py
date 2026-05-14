@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import re
 import sys
 from pathlib import Path
 
@@ -147,6 +148,16 @@ SIGMA_REQUIRED_KEYS = [
     "level:",
 ]
 
+SIGMA_DISALLOWED_PLACEHOLDERS = [
+    "''",
+    '""',
+    "<configure-",
+    "<replace-",
+    "<your-",
+]
+
+ATTACK_ID_RE = re.compile(r"^T\d{4}(?:\.\d{3})?$")
+
 
 def fail(message: str) -> None:
     print(f"ERROR: {message}", file=sys.stderr)
@@ -180,17 +191,75 @@ def validate_source_urls(path: Path) -> None:
                 fail(f"source URL must use https: {url}")
 
 
+def read_csv_dicts(path: Path) -> list[dict[str, str]]:
+    with path.open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
+
+
+def validate_unique_ids(rows: list[dict[str, str]], field: str, rel_path: str) -> None:
+    seen: set[str] = set()
+    for row in rows:
+        value = row[field]
+        if value in seen:
+            fail(f"duplicate {field} in {rel_path}: {value}")
+        seen.add(value)
+
+
+def validate_references() -> None:
+    actors = read_csv_dicts(ROOT / "data/actors.csv")
+    sources = read_csv_dicts(ROOT / "data/sources.csv")
+    ttps = read_csv_dicts(ROOT / "data/ttps.csv")
+    iocs = read_csv_dicts(ROOT / "data/ioc-references.csv")
+    malware = read_csv_dicts(ROOT / "data/malware-references.csv")
+
+    validate_unique_ids(actors, "actor_id", "data/actors.csv")
+    validate_unique_ids(sources, "source_id", "data/sources.csv")
+
+    actor_ids = {row["actor_id"] for row in actors}
+    source_ids = {row["source_id"] for row in sources}
+
+    for row in ttps:
+        actor_id = row["actor_id"]
+        source_id = row["source_id"]
+        attack_id = row["attack_id"]
+        if actor_id not in actor_ids:
+            fail(f"data/ttps.csv references unknown actor_id: {actor_id}")
+        if source_id not in source_ids:
+            fail(f"data/ttps.csv references unknown source_id: {source_id}")
+        if not ATTACK_ID_RE.match(attack_id):
+            fail(f"data/ttps.csv has invalid ATT&CK technique ID: {attack_id}")
+
+    for rel_path, rows in {
+        "data/ioc-references.csv": iocs,
+        "data/malware-references.csv": malware,
+    }.items():
+        for row in rows:
+            actor_id = row["actor_id"]
+            source_id = row["source_id"]
+            if actor_id not in actor_ids:
+                fail(f"{rel_path} references unknown actor_id: {actor_id}")
+            if source_id not in source_ids:
+                fail(f"{rel_path} references unknown source_id: {source_id}")
+
+
 def validate_sigma(path: Path) -> None:
     text = path.read_text(encoding="utf-8")
     missing = [key for key in SIGMA_REQUIRED_KEYS if key not in text]
     if missing:
         fail(f"{path.relative_to(ROOT)} missing Sigma keys: {', '.join(missing)}")
+    placeholders = [value for value in SIGMA_DISALLOWED_PLACEHOLDERS if value in text]
+    if placeholders:
+        fail(
+            f"{path.relative_to(ROOT)} contains executable placeholder values: "
+            + ", ".join(placeholders)
+        )
 
 
 def main() -> int:
     for rel_path, header in CSV_HEADERS.items():
         validate_csv(ROOT / rel_path, header)
     validate_source_urls(ROOT / "data/sources.csv")
+    validate_references()
 
     sigma_files = sorted((ROOT / "detections/sigma").glob("*.yml"))
     if not sigma_files:
