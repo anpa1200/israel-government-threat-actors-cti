@@ -77,6 +77,7 @@ const sidebars = {
         'reports/defensive-cti-threats-to-israeli-public-sector',
         'reports/israel-critical-infrastructure-escalation',
         'reports/andrey-medium-articles',
+        'reports/deep-research-prompt',
       ],
     },
   ],
