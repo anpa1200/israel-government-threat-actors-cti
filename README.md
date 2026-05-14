@@ -1,5 +1,7 @@
 # Israel Government Threat Actors CTI
 
+[![Validate CTI Repository](https://github.com/anpa1200/israel-government-threat-actors-cti/actions/workflows/validate.yml/badge.svg)](https://github.com/anpa1200/israel-government-threat-actors-cti/actions/workflows/validate.yml)
+
 Defensive cyber threat intelligence repository focused on public-source reporting about threat actors, personas, malware families, TTPs, and detection opportunities relevant to Israeli government, public-sector, municipal, critical infrastructure, and adjacent suppliers.
 
 This repository is intentionally blue-team only. It contains source references, analytic summaries, ATT&CK mappings, IOC reference locations, and detection examples. It does not store malware binaries, leaked data, credentials, exploit code, or instructions for unauthorized access.

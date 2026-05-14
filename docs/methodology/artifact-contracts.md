@@ -120,6 +120,8 @@ A detection row MUST include:
 - `soc_action`
 - `owner`
 - `priority`
+- `platform_field_mapping`
+- `drl_evidence_pack`
 
 ## Gate Evidence Pack
 

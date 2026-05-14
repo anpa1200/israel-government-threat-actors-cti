@@ -63,3 +63,6 @@ A DRL-9 detection MUST have an evidence pack with:
 
 Rules at DRL-4 to DRL-6 remain hunt starters or pilots even when their ATT&CK
 mapping is strong. Do not market them as production coverage.
+
+Use `examples/gates/drl-evidence-pack-template.md` before promoting any rule
+above DRL-6.

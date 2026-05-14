@@ -37,6 +37,7 @@ const sidebars = {
       items: [
         'detection-engineering/detection-lifecycle',
         'detection-engineering/quality-gates',
+        'detection-engineering/platform-field-mapping',
         'detection-engineering/soc-triage-playbooks',
       ],
     },
