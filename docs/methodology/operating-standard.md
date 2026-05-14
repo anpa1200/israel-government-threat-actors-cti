@@ -1,0 +1,60 @@
+---
+title: CTI-To-Detection Operating Standard
+sidebar_label: Operating Standard
+---
+
+# CTI-To-Detection Operating Standard
+
+This repository is not only an actor encyclopedia. It is designed to support threat hunting and CTI-based detection engineering for Israeli government, public-sector, municipal, critical infrastructure, telecom, defense-adjacent, and supplier environments.
+
+## Mandatory Rules
+
+1. Every intelligence task MUST support a defensive decision, asset risk, hunt, detection, SOC workflow, or collection requirement.
+2. Every major claim MUST identify source, evidence label, source reliability, information credibility, analyst confidence, and known gaps.
+3. Actor attribution MUST NOT be based on IOC matching alone.
+4. IOC references MUST NOT move directly to blocking without source review, freshness check, enrichment, customer relevance, expiry, owner, and operational-risk review.
+5. A detection MUST NOT be accepted unless the required telemetry, fields, parsing, and retention are confirmed.
+6. A detection MUST include positive tests, negative tests, expected false positives, triage instructions, severity logic, and rollback criteria.
+7. ATT&CK mapping MUST NOT be counted as coverage unless there is tested hunt logic, tested detection logic, or validated telemetry coverage.
+8. High-risk scenarios MUST remain visible even when telemetry is weak. Weak telemetry creates a remediation backlog item, not a reason to drop the scenario.
+9. AI-assisted analysis MUST be treated as draft until reviewed by a human analyst against source evidence.
+10. Public persona claims MUST be separated from verified compromise.
+
+## Claim-To-Action Chain
+
+Every high-value item SHOULD be traceable through this chain:
+
+```text
+Source -> Claim -> Evidence -> Assessment -> Israeli Relevance -> Scenario -> Observable -> Telemetry -> Hunt/Detection -> Test -> SOC Action -> Decision -> Metric
+```
+
+If an item cannot move across the chain, classify it as context, a lead, or an intelligence gap rather than a finished detection-engineering input.
+
+## Evidence Labels
+
+Use one evidence label per material claim:
+
+| Label | Meaning |
+| --- | --- |
+| `Observed` | Confirmed in local telemetry, logs, malware analysis, or controlled testing. |
+| `Source-reported` | Stated directly by a cited source. |
+| `Assessed-by-source` | Analytic judgment made by a cited source. |
+| `Assessed-here` | Repository analyst judgment based on available evidence. |
+| `Inferred` | Reasonable interpretation from evidence, but not directly observed. |
+| `Gap` | Missing evidence needed to increase confidence or rule out alternatives. |
+
+## Required Output Pattern
+
+Any threat-hunting or detection-engineering item SHOULD include:
+
+- PIR or defensive decision.
+- Actor, persona, scenario, or behavior pattern.
+- Claim IDs and evidence IDs.
+- ATT&CK technique and mapping quality.
+- Observable behavior.
+- Required telemetry and fields.
+- Detection Readiness Level.
+- Test plan.
+- SOC action.
+- Owner and lifecycle status.
+

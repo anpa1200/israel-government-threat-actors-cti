@@ -1,0 +1,5 @@
+scenario_id,pir_id,actor_or_pattern,asset_or_sector,attack_path,likelihood,impact,exposure,detection_gap,time_sensitivity,priority_score,status
+SCN-001,PIR-001,Handala / Void Manticore identity weaponization,Cloud identity and MDM tenants,Compromised privileged account abuses Intune or cloud management actions,4,5,4,4,5,22,Active
+SCN-002,PIR-002,MuddyWater RMM abuse,Government and supplier endpoints,Phishing leads to unauthorized RMM deployment and persistence,4,4,4,3,4,19,Active
+SCN-003,PIR-003,CyberAv3ngers OT exposure,Water and municipal OT,Internet-exposed PLC/HMI accessed with weak credentials,4,5,5,3,5,22,Active
+SCN-004,PIR-002,APT42 VIP credential phishing,Officials and defense-adjacent users,Cloud-hosted lure captures credentials or OAuth access,5,4,4,3,4,20,Active

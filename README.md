@@ -20,6 +20,11 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/reports/andrey-medium-articles.md` | Relevant Medium articles from `@1200km` included as authored CTI or methodology references. |
 | `docs/reports/2026-israel-critical-infrastructure-escalation.md` | Research intake report on Israeli critical infrastructure and geopolitical escalation. |
 | `docs/reports/defensive-cti-threats-to-israeli-public-sector.md` | Defensive CTI synthesis focused on Israeli government and public-sector environments. |
+| `docs/methodology/` | CTI-to-detection operating standard, scoring models, and artifact contracts. |
+| `docs/threat-hunting/` | Threat-hunting workflow and hypothesis rules. |
+| `docs/detection-engineering/` | Detection lifecycle, DRL, quality gates, and production criteria. |
+| `examples/registers/` | PIR, SIR, evidence, scenario, hunt, detection, and health register templates. |
+| `examples/gates/` | Sample quality-gate evidence packs. |
 | `data/actors.csv` | Structured actor register. |
 | `data/sources.csv` | Source register with reliability notes. |
 | `data/ttps.csv` | Actor-to-ATT&CK mapping table. |
@@ -39,6 +44,8 @@ python3 scripts/validate_repo.py
 Review the starting threat model in [docs/israel-government-threat-model.md](docs/israel-government-threat-model.md), then work through [docs/actors/README.md](docs/actors/README.md).
 
 For source triage, start with [sources/README.md](sources/README.md).
+
+For threat hunting and CTI-based detection engineering, start with [docs/methodology/operating-standard.md](docs/methodology/operating-standard.md).
 
 ## Core Sources
 

@@ -1,0 +1,4 @@
+pir_id,decision_owner,decision,question,time_horizon,status,confidence_threshold
+PIR-001,CISO,Prioritize identity and MDM protection for Israeli public-sector tenants,Which Iran-linked actors or personas can create destructive impact through cloud identity or endpoint-management abuse?,30 days,Approved,Moderate
+PIR-002,SOC Manager,Approve near-term threat-hunting sprint,Which actor behaviors should be hunted first across Israeli government and supplier telemetry?,30 days,Approved,Moderate
+PIR-003,OT Security Lead,Reduce exposed OT management risk,Which OT/ICS exposure patterns create immediate risk from CyberAv3ngers-style activity?,14 days,Approved,High

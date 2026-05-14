@@ -15,6 +15,31 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Methodology',
+      collapsed: false,
+      items: [
+        'methodology/operating-standard',
+        'methodology/scoring-models',
+        'methodology/artifact-contracts',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Threat Hunting',
+      collapsed: false,
+      items: ['threat-hunting/hunt-workflow'],
+    },
+    {
+      type: 'category',
+      label: 'Detection Engineering',
+      collapsed: false,
+      items: [
+        'detection-engineering/detection-lifecycle',
+        'detection-engineering/quality-gates',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Actors',
       collapsed: false,
       link: {

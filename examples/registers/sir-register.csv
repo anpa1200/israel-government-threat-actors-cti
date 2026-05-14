@@ -1,0 +1,5 @@
+sir_id,pir_id,question,data_source,evidence_type,owner,due_date,status
+SIR-001,PIR-001,Which sources describe identity-plane destructive tradecraft by Handala or Void Manticore?,data/sources.csv,Source-reported,CTI Analyst,2026-05-21,Open
+SIR-002,PIR-001,Which cloud audit events show bulk Intune wipe or privileged role activation?,Entra ID and Intune audit logs,Observed,SOC Engineer,2026-05-21,Open
+SIR-003,PIR-002,Which RMM tools are approved and which are unauthorized on public-sector endpoints?,CMDB and EDR process logs,Observed,Endpoint Engineer,2026-05-28,Open
+SIR-004,PIR-003,Which PLC/HMI interfaces are internet exposed?,External attack surface scan and OT inventory,Observed,OT Security Lead,2026-05-21,Open

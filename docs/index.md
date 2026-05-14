@@ -16,8 +16,11 @@ This documentation organizes public-source threat intelligence for defensive use
 2. [Source Rating](source-rating.md)
 3. [Actor Index](actors/README.md)
 4. [Report Index](reports/README.md)
-5. Scored source library in `sources/`
-6. Detection examples in `detections/sigma/` and `detections/kql/`
+5. [CTI-to-Detection Operating Standard](methodology/operating-standard.md)
+6. [Threat Hunting Workflow](threat-hunting/hunt-workflow.md)
+7. [Detection Lifecycle](detection-engineering/detection-lifecycle.md)
+8. Scored source library in `sources/`
+9. Detection examples in `detections/sigma/` and `detections/kql/`
 
 ## Operating Rules
 
@@ -25,3 +28,5 @@ This documentation organizes public-source threat intelligence for defensive use
 - Analysts SHOULD cite at least one source record for every actor claim.
 - Detections MUST be validated against local telemetry before production deployment.
 - IOC matches SHOULD be treated as leads, not final attribution.
+- Threat hunts SHOULD start from a PIR, scenario, and evidence record.
+- Production coverage MUST NOT be claimed below DRL-9.

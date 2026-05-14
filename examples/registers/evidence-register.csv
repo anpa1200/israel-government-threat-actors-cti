@@ -1,0 +1,5 @@
+evidence_id,source_id,claim,evidence_label,source_reliability,information_credibility,analyst_confidence,notes
+EVD-001,SRC-MALPEDIA-UNC1860,UNC1860 is likely MOIS-affiliated and uses specialized tooling and passive backdoors,Source-reported,A,2,High,Use as actor relevance anchor and validate technical details through Mandiant.
+EVD-002,SRC-CISA-AA23-335A,CyberAv3ngers exploited internet-facing Unitronics PLCs,Source-reported,A,1,High,Direct government advisory suitable for OT exposure scenario.
+EVD-003,SRC-GOOGLE-APT42-PHISHING,APT42 increased targeting of Israeli high-value users in 2024,Source-reported,A,2,High,Supports VIP identity-phishing hunt scenario.
+EVD-004,SRC-INCD-MUDDYWATER-PHISHING,INCD reported MuddyWater phishing campaigns in the Israeli cyber domain,Source-reported,A,2,High,Supports phishing and mailbox-compromise hunt sprint.
