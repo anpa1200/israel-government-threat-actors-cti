@@ -21,9 +21,9 @@ not a production SOC analytics package.
 ## Detection Engineering
 
 - No detection is DRL-9.
-- Synthetic fixture tests are committed for the four sample detections, but
-  synthetic tests are not a substitute for customer telemetry, tenant replay, or
-  SOC pilot review.
+- Synthetic fixture tests are committed for the four sample detections, including
+  multiple positive and benign boundary cases, but synthetic tests are not a
+  substitute for customer telemetry, tenant replay, or SOC pilot review.
 - Measured false-positive rates are currently synthetic fixture rates only.
   They do not predict production alert volume.
 - Sigma rules pass local Sigma CLI semantic checks, but not every rule has a

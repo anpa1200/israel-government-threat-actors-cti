@@ -36,7 +36,7 @@ Target DRL: DRL-7 after pilot deployment and SOC review.
 | --- | --- | --- |
 | Positive test | Synthetic lab logic test completed with RMM-like execution from a user-controlled path. | `examples/detection-test-results/DET-002-rmm-user-path-lab.md` |
 | Negative test | Synthetic negative-boundary test completed for approved deployment path and IT management context. | `examples/detection-test-results/DET-002-rmm-user-path-lab.md` |
-| Historical replay | Synthetic 30-day replay substitute completed with 60 benign events, one seeded malicious event, one alert, and zero synthetic false positives. | `examples/detection-test-results/synthetic-test-summary.md` |
+| Historical replay | Synthetic 30-day replay substitute completed with 240 benign events, two seeded malicious events, two alerts, and zero synthetic false positives. | `examples/detection-test-results/synthetic-test-summary.md` |
 | False-positive review | Synthetic false-positive rate is 0.00%; approved RMM false-positive categories are documented. Environment-specific allowlist is not committed. | `examples/detection-test-results/synthetic-test-summary.md`; SOC and endpoint engineering review required. |
 
 ## Operations

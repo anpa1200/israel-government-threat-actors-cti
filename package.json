@@ -8,7 +8,7 @@
     "build": "docusaurus build",
     "serve": "docusaurus serve --host 0.0.0.0",
     "clear": "docusaurus clear",
-    "validate": "python3 scripts/validate_repo.py && python3 scripts/check_source_freshness.py && python3 scripts/run_detection_fixture_tests.py && npm run build"
+    "validate": "python3 scripts/validate_repo.py && python3 scripts/check_source_freshness.py && python3 scripts/run_detection_fixture_tests.py && python3 scripts/build_detection_dashboard.py && npm run build"
   },
   "dependencies": {
     "@docusaurus/core": "^3.8.1",

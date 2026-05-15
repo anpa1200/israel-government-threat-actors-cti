@@ -11,7 +11,12 @@ const sidebars = {
       type: 'category',
       label: 'Foundations',
       collapsed: false,
-      items: ['israel-government-threat-model', 'source-rating', 'known-limitations'],
+      items: [
+        'israel-government-threat-model',
+        'source-rating',
+        'known-limitations',
+        'customer-environment-use',
+      ],
     },
     {
       type: 'category',
@@ -36,6 +41,7 @@ const sidebars = {
       collapsed: false,
       items: [
         'detection-engineering/detection-lifecycle',
+        'detection-engineering/detection-status-dashboard',
         'detection-engineering/quality-gates',
         'detection-engineering/platform-field-mapping',
         'detection-engineering/platform-query-variants',

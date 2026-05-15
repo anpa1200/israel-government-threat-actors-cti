@@ -68,7 +68,13 @@ def det_004(events: list[dict[str, object]]) -> bool:
     themed = any(term in subject for term in ["security", "update", "urgent", "patch", "alert", "rafael", "cert", "incd"])
     user_path = any(path in folder for path in ["\\downloads\\", "\\appdata\\local\\temp\\", "\\users\\"])
     executable = filename.endswith((".exe", ".dll", ".xll", ".ppam"))
-    return themed and user_path and executable and int(event["ClickToExecMinutes"]) <= 30
+    return (
+        themed
+        and user_path
+        and executable
+        and int(event["ClickToExecMinutes"]) <= 30
+        and not bool(event["ApprovedSimulation"])
+    )
 
 
 DETECTORS = {

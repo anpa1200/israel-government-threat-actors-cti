@@ -29,6 +29,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/threat-hunting/` | Threat-hunting workflow and hypothesis rules. |
 | `docs/detection-engineering/` | Detection lifecycle, DRL, quality gates, and production criteria. |
 | `docs/known-limitations.md` | Top-level limitations and non-production caveats. |
+| `docs/customer-environment-use.md` | How to use the project in a customer/SOC environment without overclaiming production readiness. |
 | `examples/registers/` | PIR, SIR, evidence, persona-claim, scenario, hunt, detection, health, and metrics register templates. |
 | `examples/gates/` | Sample quality-gate evidence packs. |
 | `examples/drl-evidence-packs/` | Detection-specific DRL evidence packs. |
@@ -67,6 +68,8 @@ For end-to-end examples and proof artifacts, review:
 - [CI validation evidence](docs/reports/ci-validation-evidence.md)
 - [Release notes](docs/reports/release-notes.md)
 - [Known limitations](docs/known-limitations.md)
+- [Customer environment use](docs/customer-environment-use.md)
+- [Detection status dashboard](docs/detection-engineering/detection-status-dashboard.md)
 
 ## Core Sources
 

@@ -25,6 +25,7 @@ The validation workflow runs:
 - `python3 scripts/validate_repo.py`
 - `python3 scripts/check_source_freshness.py`
 - `python3 scripts/run_detection_fixture_tests.py`
+- `python3 scripts/build_detection_dashboard.py`
 - `npm ci`
 - `npm run build`
 
@@ -37,10 +38,10 @@ sources_stale=0
 sources_missing_review_date=0
 download_records_total=42
 download_records_unavailable=10
-DET-001: TP=1 FP=0 TN=1 FN=0 synthetic_fp_rate=0.00%
-DET-002: TP=1 FP=0 TN=1 FN=0 synthetic_fp_rate=0.00%
-DET-003: TP=1 FP=0 TN=1 FN=0 synthetic_fp_rate=0.00%
-DET-004: TP=1 FP=0 TN=1 FN=0 synthetic_fp_rate=0.00%
+DET-001: TP=2 FP=0 TN=4 FN=0 synthetic_fp_rate=0.00%
+DET-002: TP=2 FP=0 TN=4 FN=0 synthetic_fp_rate=0.00%
+DET-003: TP=2 FP=0 TN=4 FN=0 synthetic_fp_rate=0.00%
+DET-004: TP=2 FP=0 TN=4 FN=0 synthetic_fp_rate=0.00%
 Docusaurus build passed
 ```
 

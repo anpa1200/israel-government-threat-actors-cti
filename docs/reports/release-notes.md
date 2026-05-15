@@ -16,10 +16,14 @@ coverage.
 Key changes:
 
 - Added deterministic synthetic fixture tests for `DET-001` through `DET-004`.
+- Expanded the synthetic fixture set to include multiple positive and benign
+  boundary cases per detection.
 - Added `scripts/run_detection_fixture_tests.py` to CI validation.
 - Added committed synthetic positive/negative outputs and synthetic
   false-positive rates.
 - Added synthetic 30-day replay substitute for `DET-002`.
+- Added generated detection status dashboard.
+- Added customer-environment usage guide.
 - Added Sigma CLI semantic validation result with zero errors and zero issues.
 - Added top-level known limitations page.
 - Added platform query-variant status page.

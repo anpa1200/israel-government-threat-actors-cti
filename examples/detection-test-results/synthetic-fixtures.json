@@ -16,6 +16,19 @@
         ]
       },
       {
+        "case_id": "DET-001-POS-002",
+        "expected": true,
+        "events": [
+          {
+            "OperationName": "Delete device",
+            "Actor": "breakglass-shadow@example.gov.il",
+            "ActionCount": 75,
+            "WindowMinutes": 8,
+            "ApprovedChange": false
+          }
+        ]
+      },
+      {
         "case_id": "DET-001-NEG-001",
         "expected": false,
         "events": [
@@ -25,6 +38,45 @@
             "ActionCount": 4,
             "WindowMinutes": 10,
             "ApprovedChange": true
+          }
+        ]
+      },
+      {
+        "case_id": "DET-001-NEG-002",
+        "expected": false,
+        "events": [
+          {
+            "OperationName": "Wipe managed device",
+            "Actor": "it-admin@example.gov.il",
+            "ActionCount": 12,
+            "WindowMinutes": 10,
+            "ApprovedChange": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-001-NEG-003",
+        "expected": false,
+        "events": [
+          {
+            "OperationName": "Retire managed device",
+            "Actor": "svc-intune-lifecycle@example.gov.il",
+            "ActionCount": 90,
+            "WindowMinutes": 10,
+            "ApprovedChange": true
+          }
+        ]
+      },
+      {
+        "case_id": "DET-001-NEG-004",
+        "expected": false,
+        "events": [
+          {
+            "OperationName": "Wipe managed device",
+            "Actor": "it-admin@example.gov.il",
+            "ActionCount": 65,
+            "WindowMinutes": 45,
+            "ApprovedChange": false
           }
         ]
       }
@@ -46,6 +98,18 @@
         ]
       },
       {
+        "case_id": "DET-002-POS-002",
+        "expected": true,
+        "events": [
+          {
+            "FileName": "cmd.exe",
+            "ProcessCommandLine": "cmd.exe /c C:\\Users\\analyst\\AppData\\Local\\Temp\\tacticalrmm-installer.exe",
+            "InitiatingProcessFileName": "outlook.exe",
+            "ApprovedRmm": false
+          }
+        ]
+      },
+      {
         "case_id": "DET-002-NEG-001",
         "expected": false,
         "events": [
@@ -56,12 +120,48 @@
             "ApprovedRmm": true
           }
         ]
+      },
+      {
+        "case_id": "DET-002-NEG-002",
+        "expected": false,
+        "events": [
+          {
+            "FileName": "powershell.exe",
+            "ProcessCommandLine": "powershell.exe -File C:\\Users\\analyst\\Downloads\\inventory.ps1",
+            "InitiatingProcessFileName": "explorer.exe",
+            "ApprovedRmm": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-002-NEG-003",
+        "expected": false,
+        "events": [
+          {
+            "FileName": "msiexec.exe",
+            "ProcessCommandLine": "msiexec.exe /i C:\\Program Files\\Helpdesk\\screenconnect.msi",
+            "InitiatingProcessFileName": "services.exe",
+            "ApprovedRmm": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-002-NEG-004",
+        "expected": false,
+        "events": [
+          {
+            "FileName": "certutil.exe",
+            "ProcessCommandLine": "certutil.exe -urlcache -split -f https://vendor.example/approved-rmm/atera.exe C:\\Users\\admin\\Downloads\\atera.exe",
+            "InitiatingProcessFileName": "approved-rmm-bootstrapper.exe",
+            "ApprovedRmm": true
+          }
+        ]
       }
     ],
     "synthetic_30d_replay": {
-      "benign_events": 60,
-      "malicious_seeded_events": 1,
-      "expected_alerts": 1,
+      "benign_events": 240,
+      "malicious_seeded_events": 2,
+      "expected_alerts": 2,
       "expected_false_positives": 0
     }
   },
@@ -81,6 +181,18 @@
         ]
       },
       {
+        "case_id": "DET-003-POS-002",
+        "expected": true,
+        "events": [
+          {
+            "cs-uri-stem": "/SetDateTime",
+            "cs-user-agent": "PLC engineering client",
+            "c-ip": "203.0.113.77",
+            "ApprovedSource": false
+          }
+        ]
+      },
+      {
         "case_id": "DET-003-NEG-001",
         "expected": false,
         "events": [
@@ -89,6 +201,42 @@
             "cs-user-agent": "Mozilla/5.0",
             "c-ip": "10.20.30.40",
             "ApprovedSource": true
+          }
+        ]
+      },
+      {
+        "case_id": "DET-003-NEG-002",
+        "expected": false,
+        "events": [
+          {
+            "cs-uri-stem": "/status",
+            "cs-user-agent": "Unitronics PLC client",
+            "c-ip": "10.20.30.41",
+            "ApprovedSource": true
+          }
+        ]
+      },
+      {
+        "case_id": "DET-003-NEG-003",
+        "expected": false,
+        "events": [
+          {
+            "cs-uri-stem": "/EthernetSetup",
+            "cs-user-agent": "Unitronics PLC client",
+            "c-ip": "10.20.30.42",
+            "ApprovedSource": true
+          }
+        ]
+      },
+      {
+        "case_id": "DET-003-NEG-004",
+        "expected": false,
+        "events": [
+          {
+            "cs-uri-stem": "/login",
+            "cs-user-agent": "Mozilla/5.0",
+            "c-ip": "198.51.100.88",
+            "ApprovedSource": false
           }
         ]
       }
@@ -111,6 +259,19 @@
         ]
       },
       {
+        "case_id": "DET-004-POS-002",
+        "expected": true,
+        "events": [
+          {
+            "Subject": "CERT alert patch notice",
+            "ClickToExecMinutes": 5,
+            "FolderPath": "C:\\Users\\vip\\AppData\\Local\\Temp\\payload.xll",
+            "FileName": "payload.xll",
+            "ApprovedSimulation": false
+          }
+        ]
+      },
+      {
         "case_id": "DET-004-NEG-001",
         "expected": false,
         "events": [
@@ -120,6 +281,45 @@
             "FolderPath": "",
             "FileName": "",
             "ApprovedSimulation": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-004-NEG-002",
+        "expected": false,
+        "events": [
+          {
+            "Subject": "Urgent security update",
+            "ClickToExecMinutes": 75,
+            "FolderPath": "C:\\Users\\vip\\Downloads\\update.exe",
+            "FileName": "update.exe",
+            "ApprovedSimulation": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-004-NEG-003",
+        "expected": false,
+        "events": [
+          {
+            "Subject": "Quarterly report",
+            "ClickToExecMinutes": 7,
+            "FolderPath": "C:\\Users\\vip\\Downloads\\report.pdf",
+            "FileName": "report.pdf",
+            "ApprovedSimulation": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-004-NEG-004",
+        "expected": false,
+        "events": [
+          {
+            "Subject": "Security awareness simulation",
+            "ClickToExecMinutes": 10,
+            "FolderPath": "C:\\Program Files\\Training\\simulator.exe",
+            "FileName": "simulator.exe",
+            "ApprovedSimulation": true
           }
         ]
       }
