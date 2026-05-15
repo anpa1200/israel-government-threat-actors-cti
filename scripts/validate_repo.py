@@ -270,19 +270,55 @@ def validate_unique_ids(rows: list[dict[str, str]], field: str, rel_path: str) -
         seen.add(value)
 
 
+def split_multi_value(value: str) -> list[str]:
+    return [part.strip() for part in value.split(";") if part.strip()]
+
+
 def validate_references() -> None:
     actors = read_csv_dicts(ROOT / "data/actors.csv")
     sources = read_csv_dicts(ROOT / "data/sources.csv")
     ttps = read_csv_dicts(ROOT / "data/ttps.csv")
     iocs = read_csv_dicts(ROOT / "data/ioc-references.csv")
     malware = read_csv_dicts(ROOT / "data/malware-references.csv")
+    evidence = read_csv_dicts(ROOT / "examples/registers/evidence-register.csv")
+    persona_claims = read_csv_dicts(
+        ROOT / "examples/registers/persona-claims-register.csv"
+    )
+    scenarios = read_csv_dicts(ROOT / "examples/registers/threat-scenario-register.csv")
+    hunts = read_csv_dicts(ROOT / "examples/registers/hunt-backlog.csv")
     detection_backlog = read_csv_dicts(ROOT / "examples/registers/detection-backlog.csv")
+    detection_health = read_csv_dicts(
+        ROOT / "examples/registers/detection-health-register.csv"
+    )
+    metrics = read_csv_dicts(ROOT / "examples/registers/metrics.csv")
 
     validate_unique_ids(actors, "actor_id", "data/actors.csv")
     validate_unique_ids(sources, "source_id", "data/sources.csv")
+    validate_unique_ids(evidence, "evidence_id", "examples/registers/evidence-register.csv")
+    validate_unique_ids(evidence, "claim_id", "examples/registers/evidence-register.csv")
+    validate_unique_ids(
+        persona_claims, "claim_id", "examples/registers/persona-claims-register.csv"
+    )
+    validate_unique_ids(
+        scenarios, "scenario_id", "examples/registers/threat-scenario-register.csv"
+    )
+    validate_unique_ids(hunts, "hunt_id", "examples/registers/hunt-backlog.csv")
+    validate_unique_ids(
+        detection_backlog,
+        "detection_id",
+        "examples/registers/detection-backlog.csv",
+    )
+    validate_unique_ids(
+        metrics,
+        "metric_id",
+        "examples/registers/metrics.csv",
+    )
 
     actor_ids = {row["actor_id"] for row in actors}
     source_ids = {row["source_id"] for row in sources}
+    evidence_ids = {row["evidence_id"] for row in evidence}
+    scenario_ids = {row["scenario_id"] for row in scenarios}
+    detection_ids = {row["detection_id"] for row in detection_backlog}
 
     for row in ttps:
         actor_id = row["actor_id"]
@@ -307,8 +343,48 @@ def validate_references() -> None:
             if source_id not in source_ids:
                 fail(f"{rel_path} references unknown source_id: {source_id}")
 
+    for row in evidence:
+        actor_id = row["actor_id"]
+        source_id = row["source_id"]
+        if actor_id not in actor_ids:
+            fail(
+                "examples/registers/evidence-register.csv "
+                f"references unknown actor_id: {actor_id}"
+            )
+        if source_id not in source_ids:
+            fail(
+                "examples/registers/evidence-register.csv "
+                f"references unknown source_id: {source_id}"
+            )
+
+    for row in hunts:
+        scenario_id = row["scenario_id"]
+        if scenario_id not in scenario_ids:
+            fail(
+                "examples/registers/hunt-backlog.csv "
+                f"references unknown scenario_id: {scenario_id}"
+            )
+        for evidence_id in split_multi_value(row["linked_evidence_ids"]):
+            if evidence_id not in evidence_ids:
+                fail(
+                    "examples/registers/hunt-backlog.csv "
+                    f"references unknown evidence_id: {evidence_id}"
+                )
+        for detection_id in split_multi_value(row["linked_detection_ids"]):
+            if detection_id not in detection_ids:
+                fail(
+                    "examples/registers/hunt-backlog.csv "
+                    f"references unknown detection_id: {detection_id}"
+                )
+
     for row in detection_backlog:
         detection_id = row["detection_id"]
+        scenario_id = row["scenario_id"]
+        if scenario_id not in scenario_ids:
+            fail(
+                "examples/registers/detection-backlog.csv "
+                f"{detection_id} references unknown scenario_id: {scenario_id}"
+            )
         for field in ["rule_path", "platform_field_mapping", "drl_evidence_pack"]:
             rel_path = row[field]
             if not (ROOT / rel_path).exists():
@@ -336,6 +412,14 @@ def validate_references() -> None:
         ]:
             if section not in evidence_text:
                 fail(f"{evidence_pack} missing required DRL evidence section: {section}")
+
+    for row in detection_health:
+        detection_id = row["detection_id"]
+        if detection_id not in detection_ids:
+            fail(
+                "examples/registers/detection-health-register.csv "
+                f"references unknown detection_id: {detection_id}"
+            )
 
 
 def validate_sigma(path: Path) -> None:
