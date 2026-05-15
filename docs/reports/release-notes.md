@@ -8,6 +8,33 @@ sidebar_label: Release Notes
 This page records repository maturity changes. It is intentionally explicit
 about what is and is not production-ready.
 
+## v0.1.6
+
+Status: practical navigation layer for analyst use; still not production SOC
+coverage.
+
+Key changes:
+
+- Added generated actor navigation blocks to every actor profile.
+- Added an Actor Navigation Workbench that joins each actor to TTPs, IOC
+  references, malware/tool references, hunts, detections, evidence records, and
+  operational surfaces.
+- Added a TTP To Detection Matrix so analysts can click from a technique to
+  relevant actors, mapped repository detections, mapped hunts, and MITRE ATT&CK.
+- Added a Surface And Capability Matrix so analysts can start from identity,
+  endpoint, OT, internet-facing server, destructive-operations, or C2 surfaces
+  and route to relevant actors and defensive content.
+- Added `scripts/build_navigation_crosslinks.py` and wired it into local and CI
+  validation so navigation pages are regenerated from structured repository
+  data.
+
+Remaining production blockers:
+
+- Navigation coverage does not imply production detection coverage.
+- Some actors and TTPs intentionally have no mapped repository detection yet.
+- No detection is DRL-9.
+- Customer telemetry validation is still required before production use.
+
 ## v0.1.5
 
 Status: stronger proof layer for public validation; still not production SOC

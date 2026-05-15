@@ -1,5 +1,23 @@
 # APT-C-23 / Arid Viper
 
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [APT-C-23](../navigation/actor-workbench.md#apt-c-23)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: None currently mapped.
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1660](../navigation/ttp-detection-matrix.md#t1660) Phishing (M2); [T1204.002](../navigation/ttp-detection-matrix.md#t1204002) User Execution: Malicious File (M3)
+- Mapped detections: None currently mapped.
+- Mapped hunts: None currently mapped.
+- IOC reference sources: `SRC-META-ARIDVIPER` Domains; apps; mobile indicators; `SRC-CYBERNEWS-REDALERT-2026` App names; package references; domains from secondary coverage; `SRC-S1-ISRAEL-HAMAS-CYBER-2023` Actor context; mobile and social-engineering references
+- Malware and tools: `AridSpy` (Mobile RAT); `RedAlert.apk` (Mobile spyware / trojanized app)
+- Evidence records: `EVD-011` / `CLM-ARIDVIPER-001`
+- Source IDs in structured data: `SRC-CYBERNEWS-REDALERT-2026`, `SRC-ESET-ARIDSPY`, `SRC-META-ARIDVIPER`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 Aliases: Desert Falcon, Mantis, TAG-63, Grey Karkadann, Renegade Jackal (CrowdStrike).
 
 Note on removed alias: "Two-tailed Scorpion" does not appear as a tracked alias for APT-C-23 in MITRE G1028, ESET, Meta, Cisco Talos, or CrowdStrike reporting and has been removed to avoid taxonomy confusion.

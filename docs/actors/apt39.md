@@ -1,3 +1,22 @@
+
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [APT39](../navigation/actor-workbench.md#apt39)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: None currently mapped.
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1566.001](../navigation/ttp-detection-matrix.md#t1566001) Spearphishing Attachment (M2); [T1003.001](../navigation/ttp-detection-matrix.md#t1003001) LSASS Memory (M2)
+- Mapped detections: None currently mapped.
+- Mapped hunts: None currently mapped.
+- IOC reference sources: None currently mapped.
+- Malware and tools: None currently mapped.
+- Evidence records: `EVD-027` / `CLM-APT39-001`
+- Source IDs in structured data: `SRC-MITRE-G0087`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 ---
 title: APT39
 sidebar_label: APT39

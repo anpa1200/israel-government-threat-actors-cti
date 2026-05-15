@@ -1,5 +1,23 @@
 # Agrius
 
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [Agrius](../navigation/actor-workbench.md#agrius)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: [Destructive Operations, Backup Deletion, And Wipers](../navigation/surface-capability-matrix.md#destructive-operations)
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1485](../navigation/ttp-detection-matrix.md#t1485) Data Destruction (M2); [T1486](../navigation/ttp-detection-matrix.md#t1486) Data Encrypted for Impact (M2)
+- Mapped detections: [DET-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) Intune Bulk Device Wipe Anomaly (Hunt, DRL-5)
+- Mapped hunts: [HUNT-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) If identity-plane destructive tradecraft is attempted then privileged role activation or bulk device actions will appear in audit logs
+- IOC reference sources: `SRC-MITRE-G1030` Technique references
+- Malware and tools: `Moneybird` (Ransomware / destructive malware); `BlackShadow` (Ransomware / persona)
+- Evidence records: `EVD-017` / `CLM-AGRIUS-001`
+- Source IDs in structured data: `SRC-MITRE-G1030`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 Aliases: Pink Sandstorm, AMERICIUM, Agonizing Serpens, BlackShadow.
 
 Assessed sponsor: Iran-aligned (assessed by some sources as MOIS-linked; firm MOIS attribution not established in primary reporting). SentinelLabs, Unit 42, and Microsoft use "Iran-aligned" or "Iran-nexus" language without confirming a specific Iranian intelligence service. Use evidence label `Assessed-by-source` rather than `Source-reported` for any MOIS claim.

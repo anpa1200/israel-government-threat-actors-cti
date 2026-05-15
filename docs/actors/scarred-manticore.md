@@ -1,3 +1,22 @@
+
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [Scarred Manticore](../navigation/actor-workbench.md#scarred-manticore)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: [Internet-Facing Servers, Webshells, And Passive Access](../navigation/surface-capability-matrix.md#edge-webshell)
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1190](../navigation/ttp-detection-matrix.md#t1190) Exploit Public-Facing Application (M2); [T1505.004](../navigation/ttp-detection-matrix.md#t1505004) IIS Components (M2); [T1505.003](../navigation/ttp-detection-matrix.md#t1505003) Web Shell (M2); [T1071.001](../navigation/ttp-detection-matrix.md#t1071001) Web Protocols (M2); [T1199](../navigation/ttp-detection-matrix.md#t1199) Trusted Relationship (M2)
+- Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
+- Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
+- IOC reference sources: None currently mapped.
+- Malware and tools: `Liontail` (Passive backdoor framework)
+- Evidence records: `EVD-007` / `CLM-SCARRED-001`
+- Source IDs in structured data: `SRC-CP-SCARRED-MANTICORE-2023`, `SRC-CP-VOID-2024`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 ---
 title: Scarred Manticore
 sidebar_label: Scarred Manticore

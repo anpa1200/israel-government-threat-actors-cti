@@ -15,12 +15,15 @@ This documentation organizes public-source threat intelligence for defensive use
 1. [Threat Model](israel-government-threat-model.md)
 2. [Source Rating](source-rating.md)
 3. [Actor Index](actors/README.md)
-4. [Report Index](reports/README.md)
-5. [CTI-to-Detection Operating Standard](methodology/operating-standard.md)
-6. [Threat Hunting Workflow](threat-hunting/hunt-workflow.md)
-7. [Detection Lifecycle](detection-engineering/detection-lifecycle.md)
-8. Scored source library in `sources/`
-9. Detection examples in `detections/sigma/` and `detections/kql/`
+4. [Actor Navigation Workbench](navigation/actor-workbench.md)
+5. [TTP To Detection Matrix](navigation/ttp-detection-matrix.md)
+6. [Surface And Capability Matrix](navigation/surface-capability-matrix.md)
+7. [Report Index](reports/README.md)
+8. [CTI-to-Detection Operating Standard](methodology/operating-standard.md)
+9. [Threat Hunting Workflow](threat-hunting/hunt-workflow.md)
+10. [Detection Lifecycle](detection-engineering/detection-lifecycle.md)
+11. Scored source library in `sources/`
+12. Detection examples in `detections/sigma/` and `detections/kql/`
 
 ## Operating Rules
 

@@ -18,6 +18,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | Path | Purpose |
 | --- | --- |
 | `docs/actors/` | Actor and persona profiles with aliases, relevance, TTPs, and source notes. |
+| `docs/navigation/` | Generated actor and surface cross-reference pages for analyst navigation. |
 | `docs/reports/` | Report index and source collection guidance. |
 | `docs/reports/andrey-medium-articles.md` | Relevant Medium articles from `@1200km` included as authored CTI or methodology references. |
 | `docs/reports/2026-israel-critical-infrastructure-escalation.md` | Research intake report on Israeli critical infrastructure and geopolitical escalation. |
@@ -58,6 +59,8 @@ python3 scripts/validate_repo.py
 
 Review the starting threat model in [docs/israel-government-threat-model.md](docs/israel-government-threat-model.md), then work through [docs/actors/README.md](docs/actors/README.md).
 
+For practical click-through use, start with the [Actor Navigation Workbench](docs/navigation/actor-workbench.md), [TTP To Detection Matrix](docs/navigation/ttp-detection-matrix.md), or [Surface And Capability Matrix](docs/navigation/surface-capability-matrix.md).
+
 For source triage, start with [sources/README.md](sources/README.md).
 
 For threat hunting and CTI-based detection engineering, start with [docs/methodology/operating-standard.md](docs/methodology/operating-standard.md).
@@ -71,6 +74,9 @@ For end-to-end examples and proof artifacts, review:
 - [Known limitations](docs/known-limitations.md)
 - [Customer environment use](docs/customer-environment-use.md)
 - [Detection status dashboard](docs/detection-engineering/detection-status-dashboard.md)
+- [Actor navigation workbench](docs/navigation/actor-workbench.md)
+- [TTP to detection matrix](docs/navigation/ttp-detection-matrix.md)
+- [Surface and capability matrix](docs/navigation/surface-capability-matrix.md)
 - [Replay datasets](docs/detection-engineering/replay-datasets.md)
 
 ## Core Sources
@@ -95,4 +101,4 @@ Key starting references include:
 
 ## Version
 
-Current version: `v0.1.5`
+Current version: `v0.1.6`

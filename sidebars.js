@@ -37,6 +37,16 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Navigation',
+      collapsed: false,
+      items: [
+        'navigation/actor-workbench',
+        'navigation/ttp-detection-matrix',
+        'navigation/surface-capability-matrix',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Detection Engineering',
       collapsed: false,
       items: [

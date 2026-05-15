@@ -1,5 +1,23 @@
 # WIRTE
 
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [WIRTE](../navigation/actor-workbench.md#wirte)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: [Endpoint RMM, Scripting, And User-Path Execution](../navigation/surface-capability-matrix.md#endpoint-rmm)
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1566](../navigation/ttp-detection-matrix.md#t1566) Phishing (M2); [T1574.001](../navigation/ttp-detection-matrix.md#t1574001) DLL Search Order Hijacking (M3); [T1485](../navigation/ttp-detection-matrix.md#t1485) Data Destruction (M2); [T1105](../navigation/ttp-detection-matrix.md#t1105) Ingress Tool Transfer (M3); [T1567.002](../navigation/ttp-detection-matrix.md#t1567002) Exfiltration to Cloud Storage (M3)
+- Mapped detections: [DET-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) Intune Bulk Device Wipe Anomaly (Hunt, DRL-5); [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
+- Mapped hunts: [HUNT-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) If identity-plane destructive tradecraft is attempted then privileged role activation or bulk device actions will appear in audit logs; [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
+- IOC reference sources: `SRC-CP-WIRTE-2024` Wiper references; trusted sender abuse; fake update artifacts; `SRC-UNIT42-ASHTAG-2025` Malware hashes; domains; C2 paths; tool behavior
+- Malware and tools: `SameCoin` (Wiper); `AshTag` (Modular .NET malware suite)
+- Evidence records: `EVD-010` / `CLM-WIRTE-001`
+- Source IDs in structured data: `SRC-CP-WIRTE-2024`, `SRC-UNIT42-ASHTAG-2025`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 Aliases: Ashen Lepus; Gaza Cybergang-linked reporting.
 
 Assessed sponsor: Hamas-affiliated in Check Point public reporting.

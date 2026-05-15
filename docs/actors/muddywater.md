@@ -1,5 +1,23 @@
 # MuddyWater
 
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [MuddyWater](../navigation/actor-workbench.md#muddywater)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: [Endpoint RMM, Scripting, And User-Path Execution](../navigation/surface-capability-matrix.md#endpoint-rmm); [Email, Cloud-Service, IMAP, And DNS C2](../navigation/surface-capability-matrix.md#email-c2-dns)
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1566](../navigation/ttp-detection-matrix.md#t1566) Phishing (M2); [T1059.001](../navigation/ttp-detection-matrix.md#t1059001) PowerShell (M2); [T1219](../navigation/ttp-detection-matrix.md#t1219) Remote Access Software (M3); [T1567.002](../navigation/ttp-detection-matrix.md#t1567002) Exfiltration to Cloud Storage (M2)
+- Mapped detections: [DET-002](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/suspicious-rmm-file-sharing-download.yml) Suspicious RMM Installer Download From User Context (Pilot, DRL-6); [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
+- Mapped hunts: [HUNT-002](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/suspicious-rmm-file-sharing-download.kql) If MuddyWater-style RMM abuse is active then unauthorized RMM execution will appear from user-controlled paths; [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
+- IOC reference sources: `SRC-MITRE-G0069` Technique references; `SRC-AP-MUDDYWATER` Malware/tool references; ATT&CK mappings; campaign IOCs; `SRC-THREAT-HUNTER-V3` Domains; IPs; Rclone destinations; Dindoor/Fakeset references; `SRC-INCD-MUDDYWATER-2024` Domains; hashes; tools; infrastructure; TTPs
+- Malware and tools: `Remote Monitoring and Management tools` (Living-off-the-land tooling); `Dindoor` (Backdoor); `Fakeset` (Backdoor); `BugSleep` (Backdoor); `BlackBeard` (Backdoor); `Fooder / MuddyViper` (Loader and backdoor)
+- Evidence records: `EVD-004` / `CLM-MUDDYWATER-001`
+- Source IDs in structured data: `SRC-AP-MUDDYWATER`, `SRC-CP-BUGSLEEP`, `SRC-ESET-MUDDYWATER-SNAKES`, `SRC-INCD-MUDDYWATER-2024`, `SRC-INCD-MUDDYWATER-PHISHING`, `SRC-MITRE-G0069`, `SRC-THREAT-HUNTER-V3`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 Aliases: Mango Sandstorm, Boggy Serpens (Microsoft, current), Static Kitten, Seedworm, MERCURY (Microsoft, retired April 2023), TEMP.Zagros, TA450 (Proofpoint), Earth Vetala (Trend Micro).
 
 Assessed sponsor: Iran MOIS-aligned in public reporting.

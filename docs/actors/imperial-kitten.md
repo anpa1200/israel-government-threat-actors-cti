@@ -1,3 +1,22 @@
+
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [Imperial Kitten](../navigation/actor-workbench.md#imperial-kitten)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: [Endpoint RMM, Scripting, And User-Path Execution](../navigation/surface-capability-matrix.md#endpoint-rmm); [Email, Cloud-Service, IMAP, And DNS C2](../navigation/surface-capability-matrix.md#email-c2-dns)
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1189](../navigation/ttp-detection-matrix.md#t1189) Drive-by Compromise (M2); [T1071.003](../navigation/ttp-detection-matrix.md#t1071003) Mail Protocols (M3); [T1059.005](../navigation/ttp-detection-matrix.md#t1059005) Visual Basic (M2)
+- Mapped detections: None currently mapped.
+- Mapped hunts: None currently mapped.
+- IOC reference sources: None currently mapped.
+- Malware and tools: `IMAPLoader` (.NET downloader / loader); `StandardKeyboard` (Backdoor / C2 tool)
+- Evidence records: `EVD-018` / `CLM-IMPERIALKITTEN-001`
+- Source IDs in structured data: `SRC-CS-IMPERIAL-KITTEN-2023`, `SRC-PWC-YELLOW-LIDERC-2023`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 ---
 title: Imperial Kitten
 sidebar_label: Imperial Kitten

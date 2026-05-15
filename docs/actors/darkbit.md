@@ -1,3 +1,22 @@
+
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [DarkBit](../navigation/actor-workbench.md#darkbit)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: [Destructive Operations, Backup Deletion, And Wipers](../navigation/surface-capability-matrix.md#destructive-operations)
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1486](../navigation/ttp-detection-matrix.md#t1486) Data Encrypted for Impact (M2); [T1490](../navigation/ttp-detection-matrix.md#t1490) Inhibit System Recovery (M2)
+- Mapped detections: None currently mapped.
+- Mapped hunts: None currently mapped.
+- IOC reference sources: None currently mapped.
+- Malware and tools: `DarkBit ransomware` (Pseudo-ransomware / destructive malware)
+- Evidence records: `EVD-020` / `CLM-DARKBIT-001`
+- Source IDs in structured data: `SRC-INCD-DARKBIT-MUDDYWATER-2023`, `SRC-MS-MERCURY-DEV1084-2023`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 ---
 title: DarkBit
 sidebar_label: DarkBit

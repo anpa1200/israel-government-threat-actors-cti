@@ -1,3 +1,22 @@
+
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [Lyceum](../navigation/actor-workbench.md#lyceum)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: [OT, PLC, HMI, And Exposed Engineering Interfaces](../navigation/surface-capability-matrix.md#ot-plc)
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1071.004](../navigation/ttp-detection-matrix.md#t1071004) DNS (M2); [T1003.001](../navigation/ttp-detection-matrix.md#t1003001) LSASS Memory (M2)
+- Mapped detections: None currently mapped.
+- Mapped hunts: None currently mapped.
+- IOC reference sources: None currently mapped.
+- Malware and tools: `DanBot` (Remote Access Trojan); `Kevin` (Backdoor); `Shark` (Backdoor)
+- Evidence records: `EVD-021` / `CLM-LYCEUM-001`
+- Source IDs in structured data: `SRC-MITRE-G1001`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 ---
 title: Lyceum
 sidebar_label: Lyceum

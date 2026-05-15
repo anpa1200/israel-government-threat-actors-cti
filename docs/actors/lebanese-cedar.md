@@ -1,5 +1,23 @@
 # Lebanese Cedar
 
+<!-- ACTOR-NAVIGATION:START -->
+## Repository Navigation
+
+- Actor workbench: [Lebanese Cedar](../navigation/actor-workbench.md#lebanese-cedar)
+- TTP-to-detection matrix: [all mapped techniques](../navigation/ttp-detection-matrix.md)
+- Surface and capability routes: [Internet-Facing Servers, Webshells, And Passive Access](../navigation/surface-capability-matrix.md#edge-webshell)
+- Detection status: [dashboard](../detection-engineering/detection-status-dashboard.md)
+- Hunt workflow: [hunt workflow](../threat-hunting/hunt-workflow.md)
+- ATT&CK mappings: [T1190](../navigation/ttp-detection-matrix.md#t1190) Exploit Public-Facing Application (M2); [T1505.003](../navigation/ttp-detection-matrix.md#t1505003) Web Shell (M2)
+- Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
+- Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
+- IOC reference sources: `SRC-CLEARSKY-LEBANESE-CEDAR` Webshell paths; malware references; vulnerable products
+- Malware and tools: `Explosive RAT` (Remote Access Trojan); `Caterpillar WebShell` (Web Shell)
+- Evidence records: `EVD-012` / `CLM-LEBANESECEDAR-001`
+- Source IDs in structured data: `SRC-CLEARSKY-LEBANESE-CEDAR`
+
+<!-- ACTOR-NAVIGATION:END -->
+
 Aliases: Volatile Cedar.
 
 Assessed sponsor: Lebanon-linked / Hezbollah-linked in public reporting.
