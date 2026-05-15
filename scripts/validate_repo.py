@@ -276,6 +276,7 @@ def validate_references() -> None:
     ttps = read_csv_dicts(ROOT / "data/ttps.csv")
     iocs = read_csv_dicts(ROOT / "data/ioc-references.csv")
     malware = read_csv_dicts(ROOT / "data/malware-references.csv")
+    detection_backlog = read_csv_dicts(ROOT / "examples/registers/detection-backlog.csv")
 
     validate_unique_ids(actors, "actor_id", "data/actors.csv")
     validate_unique_ids(sources, "source_id", "data/sources.csv")
@@ -305,6 +306,36 @@ def validate_references() -> None:
                 fail(f"{rel_path} references unknown actor_id: {actor_id}")
             if source_id not in source_ids:
                 fail(f"{rel_path} references unknown source_id: {source_id}")
+
+    for row in detection_backlog:
+        detection_id = row["detection_id"]
+        for field in ["rule_path", "platform_field_mapping", "drl_evidence_pack"]:
+            rel_path = row[field]
+            if not (ROOT / rel_path).exists():
+                fail(
+                    "examples/registers/detection-backlog.csv "
+                    f"{detection_id} references missing {field}: {rel_path}"
+                )
+        evidence_pack = row["drl_evidence_pack"]
+        if evidence_pack == "examples/gates/drl-evidence-pack-template.md":
+            fail(
+                "examples/registers/detection-backlog.csv "
+                f"{detection_id} still points at the generic DRL evidence template"
+            )
+        evidence_text = (ROOT / evidence_pack).read_text(encoding="utf-8")
+        if f"Detection ID: {detection_id}" not in evidence_text:
+            fail(
+                f"{evidence_pack} does not declare matching Detection ID: {detection_id}"
+            )
+        for section in [
+            "## Source And Claim Traceability",
+            "## Rule Artifact",
+            "## Test Evidence",
+            "## Operations",
+            "## Approval",
+        ]:
+            if section not in evidence_text:
+                fail(f"{evidence_pack} missing required DRL evidence section: {section}")
 
 
 def validate_sigma(path: Path) -> None:

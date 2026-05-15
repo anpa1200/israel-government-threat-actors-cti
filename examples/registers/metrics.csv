@@ -9,3 +9,4 @@ MET-007,Detections without positive tests,Detection backlog,3,count,2026-05-14,D
 MET-008,Detections without negative tests,Detection backlog,4,count,2026-05-14,Detection Lead,No detection currently has a committed negative-test evidence pack.
 MET-009,Actors without current 2024+ source,Actor register,4,count,2026-05-14,CTI Lead,"Watchlist estimate for actors needing recency review: APT39, Lebanese Cedar, UNC3890, Lyceum."
 MET-010,Detections with SOC triage coverage,Detection backlog,4,count,2026-05-14,SOC Lead,Generic SOC triage playbooks cover the four sample detections; rule-specific triage still required for production.
+MET-011,Detection backlog rows with concrete DRL evidence packs,Detection backlog,4,count,2026-05-15,Detection Lead,Each sample detection now points to a detection-specific DRL evidence pack rather than only the generic template.

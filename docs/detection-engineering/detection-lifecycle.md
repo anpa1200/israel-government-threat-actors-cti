@@ -66,3 +66,7 @@ mapping is strong. Do not market them as production coverage.
 
 Use `examples/gates/drl-evidence-pack-template.md` before promoting any rule
 above DRL-6.
+
+The current detection-specific packs are summarized in
+`docs/detection-engineering/drl-evidence-packs.md` and stored under
+`examples/drl-evidence-packs/`.

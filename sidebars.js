@@ -39,6 +39,7 @@ const sidebars = {
         'detection-engineering/quality-gates',
         'detection-engineering/platform-field-mapping',
         'detection-engineering/soc-triage-playbooks',
+        'detection-engineering/drl-evidence-packs',
       ],
     },
     {
