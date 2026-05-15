@@ -78,6 +78,30 @@ CSV_HEADERS = {
         "bytes",
         "note",
     ],
+    "data/intel-feeds.csv": [
+        "feed_id",
+        "name",
+        "provider",
+        "url",
+        "feed_type",
+        "auth_required",
+        "update_cadence",
+        "handling_notes",
+    ],
+    "data/intel-update-candidates.csv": [
+        "candidate_id",
+        "feed_id",
+        "actor_id",
+        "matched_terms",
+        "item_type",
+        "title",
+        "published_or_modified",
+        "url",
+        "relevance_reason",
+        "recommended_action",
+        "status",
+        "review_notes",
+    ],
     "examples/registers/pir-register.csv": [
         "pir_id",
         "decision_owner",
@@ -257,6 +281,14 @@ def validate_source_urls(path: Path) -> None:
                 fail(f"source URL must use https: {url}")
 
 
+def validate_https_urls(path: Path, field: str) -> None:
+    with path.open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            url = row[field]
+            if not url.startswith("https://"):
+                fail(f"{path.relative_to(ROOT)} {field} must use https: {url}")
+
+
 def read_csv_dicts(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
@@ -281,6 +313,8 @@ def validate_references() -> None:
     ttps = read_csv_dicts(ROOT / "data/ttps.csv")
     iocs = read_csv_dicts(ROOT / "data/ioc-references.csv")
     malware = read_csv_dicts(ROOT / "data/malware-references.csv")
+    intel_feeds = read_csv_dicts(ROOT / "data/intel-feeds.csv")
+    intel_candidates = read_csv_dicts(ROOT / "data/intel-update-candidates.csv")
     evidence = read_csv_dicts(ROOT / "examples/registers/evidence-register.csv")
     persona_claims = read_csv_dicts(
         ROOT / "examples/registers/persona-claims-register.csv"
@@ -295,6 +329,10 @@ def validate_references() -> None:
 
     validate_unique_ids(actors, "actor_id", "data/actors.csv")
     validate_unique_ids(sources, "source_id", "data/sources.csv")
+    validate_unique_ids(intel_feeds, "feed_id", "data/intel-feeds.csv")
+    validate_unique_ids(
+        intel_candidates, "candidate_id", "data/intel-update-candidates.csv"
+    )
     validate_unique_ids(evidence, "evidence_id", "examples/registers/evidence-register.csv")
     validate_unique_ids(evidence, "claim_id", "examples/registers/evidence-register.csv")
     validate_unique_ids(
@@ -317,6 +355,7 @@ def validate_references() -> None:
 
     actor_ids = {row["actor_id"] for row in actors}
     source_ids = {row["source_id"] for row in sources}
+    feed_ids = {row["feed_id"] for row in intel_feeds}
     evidence_ids = {row["evidence_id"] for row in evidence}
     scenario_ids = {row["scenario_id"] for row in scenarios}
     detection_ids = {row["detection_id"] for row in detection_backlog}
@@ -356,6 +395,20 @@ def validate_references() -> None:
             fail(
                 "examples/registers/evidence-register.csv "
                 f"references unknown source_id: {source_id}"
+            )
+
+    for row in intel_candidates:
+        feed_id = row["feed_id"]
+        actor_id = row["actor_id"]
+        if feed_id not in feed_ids:
+            fail(
+                "data/intel-update-candidates.csv "
+                f"references unknown feed_id: {feed_id}"
+            )
+        if actor_id and actor_id not in actor_ids:
+            fail(
+                "data/intel-update-candidates.csv "
+                f"references unknown actor_id: {actor_id}"
             )
 
     for row in hunts:
@@ -454,6 +507,8 @@ def main() -> int:
     for rel_path, header in CSV_HEADERS.items():
         validate_csv(ROOT / rel_path, header)
     validate_source_urls(ROOT / "data/sources.csv")
+    validate_https_urls(ROOT / "data/intel-feeds.csv", "url")
+    validate_https_urls(ROOT / "data/intel-update-candidates.csv", "url")
     validate_references()
 
     sigma_files = sorted((ROOT / "detections/sigma").glob("*.yml"))

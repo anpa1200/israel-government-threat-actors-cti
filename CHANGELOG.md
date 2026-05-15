@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.1.7 - 2026-05-15
+
+### New
+- Added a public CTI feed update layer with no-key connectors for MITRE ATT&CK Enterprise STIX, CISA KEV, and CISA Cybersecurity Advisories RSS.
+- Added optional OTX, MISP, and OpenCTI connector definitions for environments with API keys or trusted community instances.
+- Added `scripts/fetch_intel_updates.py`, `data/intel-feeds.csv`, `data/intel-update-candidates.csv`, and `docs/intelligence-updates.md`.
+- Added scheduled/manual GitHub Actions workflow `intel-update-check.yml` to publish update queue artifacts without auto-committing unreviewed feed content.
+
+### Guardrails
+- Feed hits are review candidates only and do not auto-promote into actor attribution, evidence, TTP, hunt, or detection records.
+
 ## v0.1.3 - 2026-05-14
 
 ### Fixed

@@ -8,6 +8,34 @@ sidebar_label: Release Notes
 This page records repository maturity changes. It is intentionally explicit
 about what is and is not production-ready.
 
+## v0.1.7
+
+Status: public CTI update intake layer; still requires analyst review before
+promotion into source, evidence, actor, hunt, or detection records.
+
+Key changes:
+
+- Added no-key public feed definitions for MITRE ATT&CK Enterprise STIX, CISA
+  KEV, and CISA Cybersecurity Advisories RSS.
+- Added optional connector definitions for OTX, MISP, and OpenCTI using local
+  environment variables or GitHub Actions secrets.
+- Added `scripts/fetch_intel_updates.py` and `npm run intel:update`.
+- Added `data/intel-update-candidates.csv` as a machine-readable analyst review
+  queue.
+- Added [Intelligence Update Queue](../intelligence-updates.md) as the human
+  review page for current feed candidates.
+- Added a scheduled/manual GitHub Actions workflow that can fetch the update
+  queue and publish it as an artifact without auto-committing unreviewed feed
+  data.
+
+Remaining production blockers:
+
+- Feed matches are collection leads, not verified claims.
+- KEV and surface matches must not be converted into actor attribution without
+  primary-source evidence.
+- OTX, MISP, and OpenCTI require trusted local/community instances or API keys.
+- No feed item bypasses the repository's source/evidence review workflow.
+
 ## v0.1.6
 
 Status: practical navigation layer for analyst use; still not production SOC

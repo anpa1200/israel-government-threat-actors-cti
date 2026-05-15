@@ -31,6 +31,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/detection-engineering/` | Detection lifecycle, DRL, quality gates, and production criteria. |
 | `docs/known-limitations.md` | Top-level limitations and non-production caveats. |
 | `docs/customer-environment-use.md` | How to use the project in a customer/SOC environment without overclaiming production readiness. |
+| `docs/intelligence-updates.md` | Generated CTI feed update queue from no-key public sources. |
 | `examples/registers/` | PIR, SIR, evidence, persona-claim, scenario, hunt, detection, health, and metrics register templates. |
 | `examples/gates/` | Sample quality-gate evidence packs. |
 | `examples/drl-evidence-packs/` | Detection-specific DRL evidence packs. |
@@ -39,6 +40,8 @@ This repository is intentionally blue-team only. It contains source references, 
 | `data/actors.csv` | Structured actor register. |
 | `data/sources.csv` | Source register with reliability, publication/access/review dates, and archive hashes where available. |
 | `data/research-downloads.csv` | Download manifest for local source archive, including status, local path, size, and SHA-256. |
+| `data/intel-feeds.csv` | Public/free CTI feed definitions and optional connector targets. |
+| `data/intel-update-candidates.csv` | Analyst review queue generated from CTI feeds. |
 | `data/ttps.csv` | Actor-to-ATT&CK mapping table. |
 | `data/ioc-references.csv` | Pointers to public IOC locations. |
 | `data/malware-references.csv` | Malware/tool reference table without binaries. |
@@ -50,6 +53,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `scripts/validate_repo.py` | Local validation for CSV and Sigma hygiene. |
 | `scripts/build_research_manifest.py` | Builds the committed source-download manifest from ignored local downloads. |
 | `scripts/convert_research_downloads.py` | Converts ignored local HTML/PDF downloads into searchable analyst text. |
+| `scripts/fetch_intel_updates.py` | Fetches no-key public CTI feeds and writes an analyst update queue. |
 
 ## Quick Start
 
@@ -63,6 +67,14 @@ For practical click-through use, start with the [Actor Navigation Workbench](doc
 
 For source triage, start with [sources/README.md](sources/README.md).
 
+To pull current public CTI update candidates:
+
+```bash
+npm run intel:update
+```
+
+This updates [docs/intelligence-updates.md](docs/intelligence-updates.md) and [data/intel-update-candidates.csv](data/intel-update-candidates.csv). Feed items are review leads only; promote them through source/evidence records before changing actor or detection content.
+
 For threat hunting and CTI-based detection engineering, start with [docs/methodology/operating-standard.md](docs/methodology/operating-standard.md).
 
 For end-to-end examples and proof artifacts, review:
@@ -73,6 +85,7 @@ For end-to-end examples and proof artifacts, review:
 - [Release notes](docs/reports/release-notes.md)
 - [Known limitations](docs/known-limitations.md)
 - [Customer environment use](docs/customer-environment-use.md)
+- [Intelligence update queue](docs/intelligence-updates.md)
 - [Detection status dashboard](docs/detection-engineering/detection-status-dashboard.md)
 - [Actor navigation workbench](docs/navigation/actor-workbench.md)
 - [TTP to detection matrix](docs/navigation/ttp-detection-matrix.md)
@@ -101,4 +114,4 @@ Key starting references include:
 
 ## Version
 
-Current version: `v0.1.6`
+Current version: `v0.1.7`

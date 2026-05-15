@@ -18,12 +18,13 @@ This documentation organizes public-source threat intelligence for defensive use
 4. [Actor Navigation Workbench](navigation/actor-workbench.md)
 5. [TTP To Detection Matrix](navigation/ttp-detection-matrix.md)
 6. [Surface And Capability Matrix](navigation/surface-capability-matrix.md)
-7. [Report Index](reports/README.md)
-8. [CTI-to-Detection Operating Standard](methodology/operating-standard.md)
-9. [Threat Hunting Workflow](threat-hunting/hunt-workflow.md)
-10. [Detection Lifecycle](detection-engineering/detection-lifecycle.md)
-11. Scored source library in `sources/`
-12. Detection examples in `detections/sigma/` and `detections/kql/`
+7. [Intelligence Update Queue](intelligence-updates.md)
+8. [Report Index](reports/README.md)
+9. [CTI-to-Detection Operating Standard](methodology/operating-standard.md)
+10. [Threat Hunting Workflow](threat-hunting/hunt-workflow.md)
+11. [Detection Lifecycle](detection-engineering/detection-lifecycle.md)
+12. Scored source library in `sources/`
+13. Detection examples in `detections/sigma/` and `detections/kql/`
 
 ## Operating Rules
 
