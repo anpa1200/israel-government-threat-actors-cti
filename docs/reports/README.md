@@ -24,6 +24,7 @@ Use `sources/` as the analyst-facing scored source library:
 - 2023-2026 source-download and validation intake: [resourses_research.md](resourses_research.md).
 - End-to-end CTI-to-detection examples: [worked-cases.md](worked-cases.md).
 - CI and build evidence: [ci-validation-evidence.md](ci-validation-evidence.md).
+- Versioned maturity notes: [release-notes.md](release-notes.md).
 - Detection-readiness evidence packs:
   [../detection-engineering/drl-evidence-packs.md](../detection-engineering/drl-evidence-packs.md).
 - Defensive CTI synthesis for Israeli public-sector environments: [defensive-cti-threats-to-israeli-public-sector.md](defensive-cti-threats-to-israeli-public-sector.md).

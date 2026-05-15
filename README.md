@@ -22,11 +22,16 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/reports/andrey-medium-articles.md` | Relevant Medium articles from `@1200km` included as authored CTI or methodology references. |
 | `docs/reports/2026-israel-critical-infrastructure-escalation.md` | Research intake report on Israeli critical infrastructure and geopolitical escalation. |
 | `docs/reports/defensive-cti-threats-to-israeli-public-sector.md` | Defensive CTI synthesis focused on Israeli government and public-sector environments. |
+| `docs/reports/worked-cases.md` | End-to-end CTI-to-detection worked cases for MuddyWater, Scarred Manticore/UNC1860 to Void Manticore, and CyberAv3ngers OT exposure. |
+| `docs/reports/ci-validation-evidence.md` | Public GitHub Actions validation and Pages build evidence. |
+| `docs/reports/release-notes.md` | Versioned release notes and maturity changes. |
 | `docs/methodology/` | CTI-to-detection operating standard, scoring models, and artifact contracts. |
 | `docs/threat-hunting/` | Threat-hunting workflow and hypothesis rules. |
 | `docs/detection-engineering/` | Detection lifecycle, DRL, quality gates, and production criteria. |
 | `examples/registers/` | PIR, SIR, evidence, persona-claim, scenario, hunt, detection, health, and metrics register templates. |
 | `examples/gates/` | Sample quality-gate evidence packs. |
+| `examples/drl-evidence-packs/` | Detection-specific DRL evidence packs. |
+| `examples/detection-test-results/` | Committed lab/synthetic detection test evidence where available. |
 | `data/actors.csv` | Structured actor register. |
 | `data/sources.csv` | Source register with reliability, publication/access/review dates, and archive hashes where available. |
 | `data/research-downloads.csv` | Download manifest for local source archive, including status, local path, size, and SHA-256. |
@@ -52,6 +57,13 @@ For source triage, start with [sources/README.md](sources/README.md).
 
 For threat hunting and CTI-based detection engineering, start with [docs/methodology/operating-standard.md](docs/methodology/operating-standard.md).
 
+For end-to-end examples and proof artifacts, review:
+
+- [Worked cases](docs/reports/worked-cases.md)
+- [DRL evidence packs](docs/detection-engineering/drl-evidence-packs.md)
+- [CI validation evidence](docs/reports/ci-validation-evidence.md)
+- [Release notes](docs/reports/release-notes.md)
+
 ## Core Sources
 
 This project starts from public reporting by MITRE ATT&CK, CISA, Microsoft Threat Intelligence, Mandiant / Google Cloud, ESET, SentinelOne, Meta, Check Point Research, and other reputable CTI publishers. Source records are maintained in [data/sources.csv](data/sources.csv).
@@ -74,4 +86,4 @@ Key starting references include:
 
 ## Version
 
-Current version: `v0.1.3`
+Current version: `v0.1.4`

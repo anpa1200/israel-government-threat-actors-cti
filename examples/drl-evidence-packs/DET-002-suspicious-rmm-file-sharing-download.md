@@ -19,7 +19,7 @@ Target DRL: DRL-7 after pilot deployment and SOC review.
 | Scenario ID | `SCN-002` |
 | Hunt ID | `HUNT-002` |
 | ATT&CK technique | `T1219` Remote Access Software |
-| Mapping quality | M3. Rule logic is tied to unauthorized RMM execution from user-controlled paths. M4 requires committed test output. |
+| Mapping quality | M4 candidate for lab scope because technique, observable, telemetry, and committed synthetic test evidence are documented. Production coverage is not claimed until pilot evidence exists. |
 
 ## Rule Artifact
 
@@ -28,14 +28,14 @@ Target DRL: DRL-7 after pilot deployment and SOC review.
 | Rule path | `detections/sigma/suspicious-rmm-file-sharing-download.yml` |
 | Companion query | `detections/kql/suspicious-rmm-file-sharing-download.kql` |
 | Backend conversion result | Sigma structure passes repository validation; backend conversion to target SIEM not yet recorded. |
-| Query version / commit | Record release commit before pilot. |
+| Query version / commit | Public lab evidence recorded for v0.1.4. Record deployment commit again before pilot. |
 
 ## Test Evidence
 
 | Requirement | Result | Evidence Location |
 | --- | --- | --- |
-| Positive test | Lab command-line simulation completed with benign RMM-like filenames and user-path execution. | Commit-level validation noted in detection backlog; raw test artifact not yet committed. |
-| Negative test | Defined, not committed. Requires approved RMM deployment from software distribution paths and IT admin context. | Local EDR replay required. |
+| Positive test | Synthetic lab logic test completed with RMM-like execution from a user-controlled path. | `examples/detection-test-results/DET-002-rmm-user-path-lab.md` |
+| Negative test | Synthetic negative-boundary test completed for approved deployment path and IT management context. | `examples/detection-test-results/DET-002-rmm-user-path-lab.md` |
 | Historical replay | Not run. | Run against 30 days of EDR telemetry with approved RMM inventory joined. |
 | False-positive review | Partial. Approved RMM false-positive category is documented, but environment-specific allowlist is not committed. | SOC and endpoint engineering review required. |
 
@@ -58,7 +58,6 @@ Approver: Pending endpoint engineering and SOC owner.
 
 Remaining blockers:
 
-- Commit positive and negative test outputs.
 - Add target-backend conversion result.
 - Complete historical replay with approved RMM inventory.
 - Document alert-volume estimate and tuned false-positive examples.

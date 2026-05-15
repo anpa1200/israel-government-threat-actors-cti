@@ -19,7 +19,7 @@ metric, and change record.
 | Detection | Current DRL | Pack | Production Status |
 | --- | --- | --- | --- |
 | `DET-001` Intune Bulk Device Wipe Anomaly | DRL-5 | `examples/drl-evidence-packs/DET-001-intune-bulk-device-wipe-anomaly.md` | Not production approved. Tenant replay and false-positive review required. |
-| `DET-002` Suspicious RMM Installer Download From User Context | DRL-6 | `examples/drl-evidence-packs/DET-002-suspicious-rmm-file-sharing-download.md` | Pilot candidate. Backend conversion, negative tests, and historical replay required. |
+| `DET-002` Suspicious RMM Installer Download From User Context | DRL-6 | `examples/drl-evidence-packs/DET-002-suspicious-rmm-file-sharing-download.md` | Pilot candidate. Synthetic positive/negative lab evidence exists; backend conversion, historical replay, and false-positive measurement still required. |
 | `DET-003` Unitronics PLC HMI Web Interface Access | DRL-4 | `examples/drl-evidence-packs/DET-003-unitronics-plc-hmi-web-interface-access.md` | Hunt starter only. OT telemetry mapping and owner-approved tests required. |
 | `DET-004` Mail Click To Execution Correlation | DRL-4 | `examples/drl-evidence-packs/DET-004-mail-click-to-exec-correlation.md` | Hunt starter only. Defender XDR validation and replay required. |
 

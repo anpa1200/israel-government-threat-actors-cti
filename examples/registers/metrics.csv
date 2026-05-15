@@ -6,8 +6,9 @@ MET-004,Persona claims requiring corroboration,Persona claims register,3,count,2
 MET-005,Sources past review date,Source register,0,count,2026-05-14,CTI Lead,Calculated by scripts/check_source_freshness.py using repository review cadence.
 MET-006,Broken or unavailable download targets,Research download manifest,10,count,2026-05-14,CTI Lead,"Includes failed, failed_placeholder, and not_found records in data/research-downloads.csv."
 MET-007,Detections without positive tests,Detection backlog,3,count,2026-05-14,Detection Lead,"DET-001, DET-003, and DET-004 still need tenant/platform replay or pilot validation."
-MET-008,Detections without negative tests,Detection backlog,4,count,2026-05-14,Detection Lead,No detection currently has a committed negative-test evidence pack.
+MET-008,Detections without negative tests,Detection backlog,3,count,2026-05-15,Detection Lead,"DET-001, DET-003, and DET-004 still need committed negative-test evidence; DET-002 has synthetic lab evidence."
 MET-009,Actors without current 2024+ source,Actor register,4,count,2026-05-14,CTI Lead,"Watchlist estimate for actors needing recency review: APT39, Lebanese Cedar, UNC3890, Lyceum."
 MET-010,Detections with SOC triage coverage,Detection backlog,4,count,2026-05-14,SOC Lead,Generic SOC triage playbooks cover the four sample detections; rule-specific triage still required for production.
 MET-011,Detection backlog rows with concrete DRL evidence packs,Detection backlog,4,count,2026-05-15,Detection Lead,Each sample detection now points to a detection-specific DRL evidence pack rather than only the generic template.
 MET-012,Actor profiles with at least one evidence-register row,Actor register,21,count,2026-05-15,CTI Lead,Every actor_id in data/actors.csv now has at least one corresponding evidence-register record.
+MET-013,Detections with committed lab test evidence,Detection backlog,1,count,2026-05-15,Detection Lead,DET-002 has committed synthetic positive and negative lab evidence; no production telemetry replay is claimed.

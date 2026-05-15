@@ -1,5 +1,5 @@
 detection_id,current_drl,last_test_date,false_positive_status,last_tuning_action,owner,next_review_date,health
 DET-001,5,2026-05-14,Unknown,Initial rule added,SOC Engineer,2026-06-14,Needs Pilot
-DET-002,6,2026-05-14,Expected admin-tool false positives documented,Approved RMM filter added,Endpoint Engineer,2026-06-14,Usable
+DET-002,6,2026-05-15,Expected admin-tool false positives documented; synthetic negative-boundary test committed,Committed synthetic positive and negative lab evidence,Endpoint Engineer,2026-06-14,Usable
 DET-003,4,2026-05-14,Unknown,Needs local logsource mapping,OT Security Lead,2026-06-14,Needs Telemetry
 DET-004,4,2026-05-14,Unknown,Needs Defender XDR table validation,SOC Analyst,2026-06-14,Needs Pilot

@@ -88,6 +88,7 @@ const sidebars = {
         'reports/resourses_research',
         'reports/worked-cases',
         'reports/ci-validation-evidence',
+        'reports/release-notes',
         'reports/andrey-medium-articles',
       ],
     },

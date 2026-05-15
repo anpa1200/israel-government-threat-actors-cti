@@ -412,6 +412,9 @@ def validate_references() -> None:
         ]:
             if section not in evidence_text:
                 fail(f"{evidence_pack} missing required DRL evidence section: {section}")
+        for test_path in re.findall(r"`(examples/detection-test-results/[^`]+)`", evidence_text):
+            if not (ROOT / test_path).exists():
+                fail(f"{evidence_pack} references missing test evidence: {test_path}")
 
     for row in detection_health:
         detection_id = row["detection_id"]
