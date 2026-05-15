@@ -15,8 +15,8 @@ Checked on 2026-05-15.
 
 | Workflow | Commit | Status | Conclusion | Run URL |
 | --- | --- | --- | --- | --- |
-| Validate CTI Repository | `267e674` | completed | success | https://github.com/anpa1200/israel-government-threat-actors-cti/actions/runs/25919728436 |
-| Deploy Docusaurus to GitHub Pages | `267e674` | completed | success | https://github.com/anpa1200/israel-government-threat-actors-cti/actions/runs/25919728390 |
+| Validate CTI Repository | `27e4958` | completed | success | https://github.com/anpa1200/israel-government-threat-actors-cti/actions/runs/25922088987 |
+| Deploy Docusaurus to GitHub Pages | `27e4958` | completed | success | https://github.com/anpa1200/israel-government-threat-actors-cti/actions/runs/25922088988 |
 
 ## Validation Scope
 
