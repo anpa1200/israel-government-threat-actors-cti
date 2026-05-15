@@ -1,0 +1,7 @@
+TimeGenerated,OperationName,Actor,ActionCount,WindowMinutes,ApprovedChange,ExpectedMatch
+2026-05-15T08:00:00Z,Wipe managed device,new-admin@example.gov.il,55,10,false,true
+2026-05-15T08:05:00Z,Delete device,breakglass-shadow@example.gov.il,75,8,false,true
+2026-05-15T09:00:00Z,Retire managed device,svc-intune-lifecycle@example.gov.il,4,10,true,false
+2026-05-15T09:30:00Z,Wipe managed device,it-admin@example.gov.il,12,10,false,false
+2026-05-15T10:00:00Z,Retire managed device,svc-intune-lifecycle@example.gov.il,90,10,true,false
+2026-05-15T10:45:00Z,Wipe managed device,it-admin@example.gov.il,65,45,false,false

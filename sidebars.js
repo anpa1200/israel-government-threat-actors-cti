@@ -45,6 +45,7 @@ const sidebars = {
         'detection-engineering/quality-gates',
         'detection-engineering/platform-field-mapping',
         'detection-engineering/platform-query-variants',
+        'detection-engineering/replay-datasets',
         'detection-engineering/sigma-validation-results',
         'detection-engineering/backend-conversion-results',
         'detection-engineering/soc-triage-playbooks',

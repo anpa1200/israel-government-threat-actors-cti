@@ -34,6 +34,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `examples/gates/` | Sample quality-gate evidence packs. |
 | `examples/drl-evidence-packs/` | Detection-specific DRL evidence packs. |
 | `examples/detection-test-results/` | Committed lab/synthetic detection test evidence where available. |
+| `examples/replay-datasets/` | Small synthetic replay datasets for parser and rule-behavior checks. |
 | `data/actors.csv` | Structured actor register. |
 | `data/sources.csv` | Source register with reliability, publication/access/review dates, and archive hashes where available. |
 | `data/research-downloads.csv` | Download manifest for local source archive, including status, local path, size, and SHA-256. |
@@ -70,6 +71,7 @@ For end-to-end examples and proof artifacts, review:
 - [Known limitations](docs/known-limitations.md)
 - [Customer environment use](docs/customer-environment-use.md)
 - [Detection status dashboard](docs/detection-engineering/detection-status-dashboard.md)
+- [Replay datasets](docs/detection-engineering/replay-datasets.md)
 
 ## Core Sources
 

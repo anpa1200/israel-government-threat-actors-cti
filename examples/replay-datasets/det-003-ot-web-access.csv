@@ -1,0 +1,7 @@
+date,time,c-ip,cs-host,cs-uri-stem,cs-user-agent,ApprovedSource,ExpectedMatch
+2026-05-15,08:00:00,198.51.100.25,plc.example.gov.il,/unitronics/webvisu,Unitronics PLC client,false,true
+2026-05-15,08:15:00,203.0.113.77,plc.example.gov.il,/SetDateTime,PLC engineering client,false,true
+2026-05-15,09:00:00,10.20.30.40,plc.local,/webvisu,Mozilla/5.0,true,false
+2026-05-15,09:15:00,10.20.30.41,plc.local,/status,Unitronics PLC client,true,false
+2026-05-15,09:30:00,10.20.30.42,plc.local,/EthernetSetup,Unitronics PLC client,true,false
+2026-05-15,10:00:00,198.51.100.88,web.example.gov.il,/login,Mozilla/5.0,false,false

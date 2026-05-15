@@ -1,0 +1,7 @@
+MailTime,ClickTime,ExecTime,RecipientEmailAddress,SenderFromAddress,Subject,Url,DeviceName,FileName,FolderPath,ApprovedSimulation,ExpectedMatch
+2026-05-15T08:00:00Z,2026-05-15T08:01:00Z,2026-05-15T08:13:00Z,vip@example.gov.il,security-update@example.net,Urgent security update,https://example.net/update,VIP-001,update.exe,C:\Users\vip\Downloads\update.exe,false,true
+2026-05-15T08:30:00Z,2026-05-15T08:32:00Z,2026-05-15T08:37:00Z,vip@example.gov.il,cert-alert@example.net,CERT alert patch notice,https://example.net/patch,VIP-002,payload.xll,C:\Users\vip\AppData\Local\Temp\payload.xll,false,true
+2026-05-15T09:00:00Z,2026-05-15T09:01:00Z,,user@example.gov.il,billing@saas.example,Approved SaaS invoice,https://saas.example/invoice,WS-010,,,false,false
+2026-05-15T09:30:00Z,2026-05-15T09:31:00Z,2026-05-15T10:46:00Z,vip@example.gov.il,security@example.net,Urgent security update,https://example.net/update,VIP-003,update.exe,C:\Users\vip\Downloads\update.exe,false,false
+2026-05-15T10:00:00Z,2026-05-15T10:01:00Z,2026-05-15T10:08:00Z,user@example.gov.il,reports@example.net,Quarterly report,https://example.net/report,WS-011,report.pdf,C:\Users\vip\Downloads\report.pdf,false,false
+2026-05-15T10:30:00Z,2026-05-15T10:31:00Z,2026-05-15T10:41:00Z,user@example.gov.il,training@example.gov.il,Security awareness simulation,https://training.example,WS-012,simulator.exe,C:\Program Files\Training\simulator.exe,true,false
