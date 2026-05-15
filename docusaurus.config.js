@@ -11,7 +11,7 @@ const config = {
   organizationName: 'anpa1200',
   projectName: 'israel-government-threat-actors-cti',
   deploymentBranch: 'gh-pages',
-  trailingSlash: false,
+  trailingSlash: true,
 
   onBrokenLinks: 'warn',
   markdown: {
