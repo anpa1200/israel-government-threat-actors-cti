@@ -1,0 +1,33 @@
+TargetFilename IN ("*.BiBi*", "*.bibi*") | table UtcTime,Computer,User,Image,TargetFilename
+
+ImageLoaded IN ("*\\ListOpenedFileDrv_32.sys", "*\\ListOpenedFileDrv_64.sys", "*\\ElRawDisk.sys", "*\\RawDisk.sys") | table UtcTime,Computer,User,ImageLoaded,Hashes
+
+OperationName IN ("*Update user*", "*Strong authentication*", "*Add authentication method*", "*Update authentication methods*") OR OperationName IN ("*Delete backup*", "*Disable backup*", "*Delete policy*", "*Update conditional access policy*", "*Disable security*") | table TimeGenerated,OperationName,InitiatedBy,TargetResources,Result
+
+ParentImage="*\\deno.exe" Image IN ("*\\cmd.exe", "*\\powershell.exe", "*\\pwsh.exe", "*\\wscript.exe", "*\\cscript.exe", "*\\rundll32.exe") | table UtcTime,Computer,User,ParentImage,Image,CommandLine
+
+ParentImage IN ("*\\w3wp.exe", "*\\php-cgi.exe", "*\\httpd.exe", "*\\nginx.exe") Image IN ("*\\cmd.exe", "*\\powershell.exe", "*\\pwsh.exe", "*\\cscript.exe", "*\\wscript.exe", "*\\rundll32.exe") | table UtcTime,Computer,User,ParentImage,Image,CommandLine
+
+ParentImage IN ("*\\outlook.exe", "*\\chrome.exe", "*\\msedge.exe", "*\\firefox.exe", "*\\WinRAR.exe", "*\\7zfm.exe", "*\\7zG.exe", "*\\explorer.exe") Image IN ("*\\Users\\*", "*\\Downloads\\*", "*\\AppData\\Local\\Temp\\*") Image IN ("*update.exe", "*Update.exe", "*security.exe", "*Security.exe", "*chrome_update.exe", "*ChromeUpdate.exe", "*browser_update.exe", "*BrowserUpdate.exe", "*certupdate.exe", "*CertUpdate.exe", "*alert.exe", "*Alert.exe") | table UtcTime,Computer,User,ParentImage,Image,CommandLine
+
+DestinationPort IN (143, 993) NOT (Image IN ("*\\OUTLOOK.EXE", "*\\outlook.exe", "*\\thunderbird.exe", "*\\olk.exe")) | table UtcTime,Computer,User,Image,DestinationHostname,DestinationIp,DestinationPort
+
+OperationName IN ("*Wipe*", "*Retire*", "*Delete device*", "*Delete managed device*") | table TimeGenerated,OperationName,InitiatedBy,TargetResources,Result
+
+Image IN ("*\\sc.exe", "*\\powershell.exe", "*\\cmd.exe") CommandLine IN ("*Eaphost*", "*IKEEXT*", "*PolicyAgent*", "*wlanapi.dll*", "*wlbsctrl.dll*") | table UtcTime,Computer,User,Image,ParentImage,CommandLine
+
+OperationName IN ("*Add member to role*", "*Activate eligible role*", "*Add eligible member*") TargetResources IN ("*Global Administrator*", "*Intune Administrator*", "*Privileged Role Administrator*", "*Cloud Device Administrator*", "*Exchange Administrator*") | table TimeGenerated,OperationName,InitiatedBy,TargetResources,Result
+
+Image IN ("*\\powershell.exe", "*\\pwsh.exe") CommandLine IN ("*-enc*", "*-encodedcommand*", "*FromBase64String*") CommandLine IN ("*certutil*", "*Invoke-WebRequest*", "*iwr *", "*curl *", "*bitsadmin*") | table UtcTime,Computer,User,ParentImage,Image,CommandLine
+
+Image="*\\rclone.exe" CommandLine IN ("*wasabisys.com*", "*backblazeb2.com*", "*put.io*") | table UtcTime,Computer,User,ParentImage,Image,CommandLine
+
+ImageLoaded IN ("*\\Users\\*", "*\\Downloads\\*", "*\\AppData\\Local\\Temp\\*", "*\\ProgramData\\*") ImageLoaded="*.dll" Image IN ("*\\setup.exe", "*\\update.exe", "*\\installer.exe", "*\\msiexec.exe", "*\\rundll32.exe") | table UtcTime,Computer,User,Image,ImageLoaded,Hashes
+
+Image IN ("*\\powershell.exe", "*\\pwsh.exe", "*\\cmd.exe", "*\\msiexec.exe", "*\\curl.exe", "*\\bitsadmin.exe", "*\\certutil.exe") CommandLine IN ("*anydesk*", "*screenconnect*", "*connectwise*", "*atera*", "*splashtop*", "*syncro*", "*tacticalrmm*") CommandLine IN ("*\\Users\\*", "*\\Downloads\\*", "*\\AppData\\Local\\Temp\\*") | table UtcTime,Computer,User,Image,ParentImage,CommandLine
+
+RecipientType="*External*" Subject IN ("*update*", "*security*", "*urgent*", "*patch*", "*alert*") NOT (SenderFromAddress IN ("*cert@*", "*noreply@*", "*no-reply@*")) | table TimeGenerated,SenderFromAddress,RecipientEmailAddress,Subject,UrlCount,AttachmentCount
+
+"cs-uri-stem" IN ("*/webvisu*", "*/visilogic*", "*/unitronics*", "*/SetDateTime*", "*/EthernetSetup*", "*/ipinfo.html*") "cs-user-agent" IN ("*Unitronics*", "*PLC*") | table date,time,c-ip,cs-host,cs-uri-stem,cs-user-agent
+
+(Image="*\\vssadmin.exe" CommandLine="*delete*" CommandLine="*shadows*") OR (Image="*\\wmic.exe" CommandLine="*shadowcopy*" CommandLine="*delete*") OR (Image="*\\wbadmin.exe" CommandLine="*delete*" CommandLine IN ("*backup*", "*catalog*")) OR (Image="*\\cmd.exe" CommandLine="*$Recycle.Bin*" CommandLine="*/s*" CommandLine="*/q*") | table UtcTime,Computer,User,Image,ParentImage,CommandLine

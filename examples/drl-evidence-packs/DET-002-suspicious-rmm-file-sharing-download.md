@@ -36,8 +36,8 @@ Target DRL: DRL-7 after pilot deployment and SOC review.
 | --- | --- | --- |
 | Positive test | Synthetic lab logic test completed with RMM-like execution from a user-controlled path. | `examples/detection-test-results/DET-002-rmm-user-path-lab.md` |
 | Negative test | Synthetic negative-boundary test completed for approved deployment path and IT management context. | `examples/detection-test-results/DET-002-rmm-user-path-lab.md` |
-| Historical replay | Not run. | Run against 30 days of EDR telemetry with approved RMM inventory joined. |
-| False-positive review | Partial. Approved RMM false-positive category is documented, but environment-specific allowlist is not committed. | SOC and endpoint engineering review required. |
+| Historical replay | Synthetic 30-day replay substitute completed with 60 benign events, one seeded malicious event, one alert, and zero synthetic false positives. | `examples/detection-test-results/synthetic-test-summary.md` |
+| False-positive review | Synthetic false-positive rate is 0.00%; approved RMM false-positive categories are documented. Environment-specific allowlist is not committed. | `examples/detection-test-results/synthetic-test-summary.md`; SOC and endpoint engineering review required. |
 
 ## Operations
 
@@ -59,5 +59,5 @@ Approver: Pending endpoint engineering and SOC owner.
 Remaining blockers:
 
 - Add target-backend conversion result.
-- Complete historical replay with approved RMM inventory.
+- Complete real historical replay with approved RMM inventory.
 - Document alert-volume estimate and tuned false-positive examples.

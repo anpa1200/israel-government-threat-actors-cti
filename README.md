@@ -28,6 +28,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/methodology/` | CTI-to-detection operating standard, scoring models, and artifact contracts. |
 | `docs/threat-hunting/` | Threat-hunting workflow and hypothesis rules. |
 | `docs/detection-engineering/` | Detection lifecycle, DRL, quality gates, and production criteria. |
+| `docs/known-limitations.md` | Top-level limitations and non-production caveats. |
 | `examples/registers/` | PIR, SIR, evidence, persona-claim, scenario, hunt, detection, health, and metrics register templates. |
 | `examples/gates/` | Sample quality-gate evidence packs. |
 | `examples/drl-evidence-packs/` | Detection-specific DRL evidence packs. |
@@ -41,6 +42,8 @@ This repository is intentionally blue-team only. It contains source references, 
 | `sources/` | Scored source library separated into Score A primary, Score B supporting, and Score C watchlist material. |
 | `detections/sigma/` | Defensive Sigma examples and hunting rules. |
 | `detections/kql/` | Microsoft Sentinel / Defender hunting examples. |
+| `detections/splunk/` | Sigma-generated Splunk SPL conversion artifacts for review. |
+| `detections/elastic/` | Sigma-generated Elastic Lucene conversion artifacts for review. |
 | `scripts/validate_repo.py` | Local validation for CSV and Sigma hygiene. |
 | `scripts/build_research_manifest.py` | Builds the committed source-download manifest from ignored local downloads. |
 | `scripts/convert_research_downloads.py` | Converts ignored local HTML/PDF downloads into searchable analyst text. |
@@ -63,6 +66,7 @@ For end-to-end examples and proof artifacts, review:
 - [DRL evidence packs](docs/detection-engineering/drl-evidence-packs.md)
 - [CI validation evidence](docs/reports/ci-validation-evidence.md)
 - [Release notes](docs/reports/release-notes.md)
+- [Known limitations](docs/known-limitations.md)
 
 ## Core Sources
 
@@ -86,4 +90,4 @@ Key starting references include:
 
 ## Version
 
-Current version: `v0.1.4`
+Current version: `v0.1.5`

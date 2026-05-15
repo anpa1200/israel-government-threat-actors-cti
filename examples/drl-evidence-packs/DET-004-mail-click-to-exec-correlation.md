@@ -33,10 +33,10 @@ Target DRL: DRL-6 after Defender XDR table validation; DRL-7 after VIP pilot.
 
 | Requirement | Result | Evidence Location |
 | --- | --- | --- |
-| Positive test | Not run. Requires controlled phishing-simulation click followed by benign script/executable launch or risky sign-in simulation. | Defender XDR test tenant required. |
-| Negative test | Not run. Requires approved SaaS click with normal sign-in and no endpoint execution. | Defender XDR test tenant required. |
+| Positive test | Synthetic fixture test completed for security-themed mail click followed by executable launch from Downloads within 30 minutes. | `examples/detection-test-results/synthetic-test-summary.md` |
+| Negative test | Synthetic fixture test completed for approved SaaS click with no endpoint execution. | `examples/detection-test-results/synthetic-test-summary.md` |
 | Historical replay | Not run. | Run against 14 days of VIP click, sign-in, and endpoint telemetry. |
-| False-positive review | Not run. | SOC review required for business SaaS links, training simulations, and partner portals. |
+| False-positive review | Synthetic false-positive rate is 0.00% over one benign fixture; no Defender XDR environment false-positive rate measured. | `examples/detection-test-results/synthetic-test-summary.md`; SOC review required for business SaaS links, training simulations, and partner portals. |
 
 ## Operations
 
@@ -58,6 +58,6 @@ Approver: Pending SOC lead.
 Remaining blockers:
 
 - Validate table names and joins in Defender XDR.
-- Run positive and negative tests.
+- Run positive and negative tests in Defender XDR or Sentinel.
 - Complete 14-day VIP historical replay.
 - Document alert volume and false-positive exclusions.

@@ -1,0 +1,128 @@
+{
+  "DET-001": {
+    "description": "Bulk Intune destructive device action threshold logic.",
+    "cases": [
+      {
+        "case_id": "DET-001-POS-001",
+        "expected": true,
+        "events": [
+          {
+            "OperationName": "Wipe managed device",
+            "Actor": "new-admin@example.gov.il",
+            "ActionCount": 55,
+            "WindowMinutes": 10,
+            "ApprovedChange": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-001-NEG-001",
+        "expected": false,
+        "events": [
+          {
+            "OperationName": "Retire managed device",
+            "Actor": "svc-intune-lifecycle@example.gov.il",
+            "ActionCount": 4,
+            "WindowMinutes": 10,
+            "ApprovedChange": true
+          }
+        ]
+      }
+    ]
+  },
+  "DET-002": {
+    "description": "RMM-like execution from user-controlled paths.",
+    "cases": [
+      {
+        "case_id": "DET-002-POS-001",
+        "expected": true,
+        "events": [
+          {
+            "FileName": "powershell.exe",
+            "ProcessCommandLine": "powershell.exe -ExecutionPolicy Bypass -File C:\\Users\\analyst\\Downloads\\install-anydesk.ps1",
+            "InitiatingProcessFileName": "chrome.exe",
+            "ApprovedRmm": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-002-NEG-001",
+        "expected": false,
+        "events": [
+          {
+            "FileName": "msiexec.exe",
+            "ProcessCommandLine": "msiexec.exe /i \\\\softwaredeployment\\approved-rmm\\screenconnect.msi",
+            "InitiatingProcessFileName": "ccmexec.exe",
+            "ApprovedRmm": true
+          }
+        ]
+      }
+    ],
+    "synthetic_30d_replay": {
+      "benign_events": 60,
+      "malicious_seeded_events": 1,
+      "expected_alerts": 1,
+      "expected_false_positives": 0
+    }
+  },
+  "DET-003": {
+    "description": "Unitronics PLC/HMI web path and user-agent matching.",
+    "cases": [
+      {
+        "case_id": "DET-003-POS-001",
+        "expected": true,
+        "events": [
+          {
+            "cs-uri-stem": "/unitronics/webvisu",
+            "cs-user-agent": "Unitronics PLC client",
+            "c-ip": "198.51.100.25",
+            "ApprovedSource": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-003-NEG-001",
+        "expected": false,
+        "events": [
+          {
+            "cs-uri-stem": "/webvisu",
+            "cs-user-agent": "Mozilla/5.0",
+            "c-ip": "10.20.30.40",
+            "ApprovedSource": true
+          }
+        ]
+      }
+    ]
+  },
+  "DET-004": {
+    "description": "Mail click followed by execution from a user-controlled path.",
+    "cases": [
+      {
+        "case_id": "DET-004-POS-001",
+        "expected": true,
+        "events": [
+          {
+            "Subject": "Urgent security update",
+            "ClickToExecMinutes": 12,
+            "FolderPath": "C:\\Users\\vip\\Downloads\\update.exe",
+            "FileName": "update.exe",
+            "ApprovedSimulation": false
+          }
+        ]
+      },
+      {
+        "case_id": "DET-004-NEG-001",
+        "expected": false,
+        "events": [
+          {
+            "Subject": "Approved SaaS invoice",
+            "ClickToExecMinutes": 0,
+            "FolderPath": "",
+            "FileName": "",
+            "ApprovedSimulation": false
+          }
+        ]
+      }
+    ]
+  }
+}

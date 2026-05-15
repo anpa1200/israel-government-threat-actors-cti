@@ -33,10 +33,10 @@ Target DRL: DRL-6 after local field mapping and benign validation; DRL-8 after m
 
 | Requirement | Result | Evidence Location |
 | --- | --- | --- |
-| Positive test | Not run. Requires controlled access to lab or approved test PLC/HMI web interface path from an untrusted source segment. | OT lab or approved replay dataset required. |
-| Negative test | Not run. Requires approved vendor remote session through VPN/jump host. | OT owner-approved test required. |
+| Positive test | Synthetic fixture test completed for Unitronics path and PLC user-agent from an unapproved source. | `examples/detection-test-results/synthetic-test-summary.md` |
+| Negative test | Synthetic fixture test completed for generic webvisu path without Unitronics/PLC user-agent from approved source. | `examples/detection-test-results/synthetic-test-summary.md` |
 | Historical replay | Not run. | Review 30 days of firewall/proxy/OT NDR telemetry for public access to PLC/HMI services. |
-| False-positive review | Not run. | OT owner and network engineering review required. |
+| False-positive review | Synthetic false-positive rate is 0.00% over one benign fixture; no OT environment false-positive rate measured. | `examples/detection-test-results/synthetic-test-summary.md`; OT owner and network engineering review required. |
 
 ## Operations
 
@@ -59,5 +59,5 @@ Remaining blockers:
 
 - Confirm available logsource and normalized fields.
 - Validate Unitronics path matching in the local proxy/firewall/OT NDR backend.
-- Run benign vendor-session negative test.
+- Run benign vendor-session negative test in an OT-approved lab or monitored segment.
 - Define OT escalation and change-control procedure before pilot.

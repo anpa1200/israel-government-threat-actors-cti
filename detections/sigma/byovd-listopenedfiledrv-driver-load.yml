@@ -8,8 +8,7 @@ references:
 author: Andrey
 date: 2026-05-13
 tags:
-  - attack.defense_evasion
-  - attack.t1562.001
+  - attack.t1068
 logsource:
   product: windows
   category: driver_load

@@ -1,0 +1,33 @@
+file.path:(*.BiBi* OR *.bibi*)
+
+file.path:(*\\ListOpenedFileDrv_32.sys OR *\\ListOpenedFileDrv_64.sys OR *\\ElRawDisk.sys OR *\\RawDisk.sys)
+
+(OperationName:(*Update\ user* OR *Strong\ authentication* OR *Add\ authentication\ method* OR *Update\ authentication\ methods*)) OR (OperationName:(*Delete\ backup* OR *Disable\ backup* OR *Delete\ policy* OR *Update\ conditional\ access\ policy* OR *Disable\ security*))
+
+process.parent.executable:*\\deno.exe AND (process.executable:(*\\cmd.exe OR *\\powershell.exe OR *\\pwsh.exe OR *\\wscript.exe OR *\\cscript.exe OR *\\rundll32.exe))
+
+(process.parent.executable:(*\\w3wp.exe OR *\\php\-cgi.exe OR *\\httpd.exe OR *\\nginx.exe)) AND (process.executable:(*\\cmd.exe OR *\\powershell.exe OR *\\pwsh.exe OR *\\cscript.exe OR *\\wscript.exe OR *\\rundll32.exe))
+
+(process.parent.executable:(*\\outlook.exe OR *\\chrome.exe OR *\\msedge.exe OR *\\firefox.exe OR *\\WinRAR.exe OR *\\7zfm.exe OR *\\7zG.exe OR *\\explorer.exe)) AND (process.executable:(*\\Users\\* OR *\\Downloads\\* OR *\\AppData\\Local\\Temp\\*)) AND (process.executable:(*update.exe OR *Update.exe OR *security.exe OR *Security.exe OR *chrome_update.exe OR *ChromeUpdate.exe OR *browser_update.exe OR *BrowserUpdate.exe OR *certupdate.exe OR *CertUpdate.exe OR *alert.exe OR *Alert.exe))
+
+(destination.port:(143 OR 993)) AND (NOT (process.executable:(*\\OUTLOOK.EXE OR *\\outlook.exe OR *\\thunderbird.exe OR *\\olk.exe)))
+
+OperationName:(*Wipe* OR *Retire* OR *Delete\ device* OR *Delete\ managed\ device*)
+
+(process.executable:(*\\sc.exe OR *\\powershell.exe OR *\\cmd.exe)) AND (process.command_line:(*Eaphost* OR *IKEEXT* OR *PolicyAgent* OR *wlanapi.dll* OR *wlbsctrl.dll*))
+
+(OperationName:(*Add\ member\ to\ role* OR *Activate\ eligible\ role* OR *Add\ eligible\ member*)) AND (TargetResources:(*Global\ Administrator* OR *Intune\ Administrator* OR *Privileged\ Role\ Administrator* OR *Cloud\ Device\ Administrator* OR *Exchange\ Administrator*))
+
+((process.executable:(*\\powershell.exe OR *\\pwsh.exe)) AND (process.command_line:(*\-enc* OR *\-encodedcommand* OR *FromBase64String*))) AND (process.command_line:(*certutil* OR *Invoke\-WebRequest* OR *iwr\ * OR *curl\ * OR *bitsadmin*))
+
+process.executable:*\\rclone.exe AND (process.command_line:(*wasabisys.com* OR *backblazeb2.com* OR *put.io*))
+
+(file.path:(*\\Users\\* OR *\\Downloads\\* OR *\\AppData\\Local\\Temp\\* OR *\\ProgramData\\*)) AND file.path:*.dll AND (process.executable:(*\\setup.exe OR *\\update.exe OR *\\installer.exe OR *\\msiexec.exe OR *\\rundll32.exe))
+
+(process.executable:(*\\powershell.exe OR *\\pwsh.exe OR *\\cmd.exe OR *\\msiexec.exe OR *\\curl.exe OR *\\bitsadmin.exe OR *\\certutil.exe)) AND (process.command_line:(*anydesk* OR *screenconnect* OR *connectwise* OR *atera* OR *splashtop* OR *syncro* OR *tacticalrmm*)) AND (process.command_line:(*\\Users\\* OR *\\Downloads\\* OR *\\AppData\\Local\\Temp\\*))
+
+RecipientType:*External* AND (Subject:(*update* OR *security* OR *urgent* OR *patch* OR *alert*)) AND (NOT (SenderFromAddress:(*cert@* OR *noreply@* OR *no\-reply@*)))
+
+(cs-uri-stem:(*\/webvisu* OR *\/visilogic* OR *\/unitronics* OR *\/SetDateTime* OR *\/EthernetSetup* OR *\/ipinfo.html*)) AND (cs-user-agent:(*Unitronics* OR *PLC*))
+
+(process.executable:*\\vssadmin.exe AND (process.command_line:*delete* AND process.command_line:*shadows*)) OR (process.executable:*\\wmic.exe AND (process.command_line:*shadowcopy* AND process.command_line:*delete*)) OR (process.executable:*\\wbadmin.exe AND process.command_line:*delete* AND (process.command_line:(*backup* OR *catalog*))) OR (process.executable:*\\cmd.exe AND (process.command_line:*$Recycle.Bin* AND process.command_line:*\/s* AND process.command_line:*\/q*))

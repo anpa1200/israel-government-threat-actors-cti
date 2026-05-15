@@ -15,9 +15,8 @@ author: Andrey
 date: 2026-05-13
 modified: 2026-05-14
 tags:
-  - attack.initial_access
-  - attack_ics.initial_access
-  - attack_ics.t0883
+  - attack.initial-access
+  - attack.t1190
 logsource:
   category: webserver
 detection:

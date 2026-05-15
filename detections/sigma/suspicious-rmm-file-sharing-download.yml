@@ -14,7 +14,7 @@ author: Andrey
 date: 2026-05-13
 modified: 2026-05-14
 tags:
-  - attack.command_and_control
+  - attack.command-and-control
   - attack.t1219
   - attack.t1105
 logsource:

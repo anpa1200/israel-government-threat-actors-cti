@@ -34,10 +34,10 @@ Target DRL: DRL-7 before pilot use; DRL-9 only after production approval.
 
 | Requirement | Result | Evidence Location |
 | --- | --- | --- |
-| Positive test | Defined, not executed. Requires replay or controlled lab generation of multiple Intune wipe, retire, or delete actions by a non-automation privileged identity. | Local tenant test evidence required before DRL-7. |
-| Negative test | Defined, not executed. Requires approved device lifecycle activity by known MDM automation or service desk account. | Local tenant test evidence required before DRL-7. |
+| Positive test | Synthetic fixture test completed for 55 wipe actions in a 10-minute window by a non-approved identity. | `examples/detection-test-results/synthetic-test-summary.md` |
+| Negative test | Synthetic fixture test completed for low-volume approved lifecycle activity. | `examples/detection-test-results/synthetic-test-summary.md` |
 | Historical replay | Not run. | Export query results and alert volume from at least 30 days of tenant audit logs. |
-| False-positive review | Not run. | SOC and endpoint-management owner review required. |
+| False-positive review | Synthetic false-positive rate is 0.00% over one benign fixture; no tenant false-positive rate measured. | `examples/detection-test-results/synthetic-test-summary.md`; SOC and endpoint-management owner review still required. |
 
 ## Operations
 

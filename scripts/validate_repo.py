@@ -168,6 +168,7 @@ CSV_HEADERS = {
         "attack_id",
         "data_source",
         "drl",
+        "release_status",
         "rule_path",
         "test_status",
         "soc_action",
@@ -380,6 +381,12 @@ def validate_references() -> None:
     for row in detection_backlog:
         detection_id = row["detection_id"]
         scenario_id = row["scenario_id"]
+        release_status = row["release_status"]
+        if release_status not in {"Hunt", "Pilot", "Production", "Retired"}:
+            fail(
+                "examples/registers/detection-backlog.csv "
+                f"{detection_id} has invalid release_status: {release_status}"
+            )
         if scenario_id not in scenario_ids:
             fail(
                 "examples/registers/detection-backlog.csv "

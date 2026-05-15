@@ -8,6 +8,33 @@ sidebar_label: Release Notes
 This page records repository maturity changes. It is intentionally explicit
 about what is and is not production-ready.
 
+## v0.1.5
+
+Status: stronger proof layer for public validation; still not production SOC
+coverage.
+
+Key changes:
+
+- Added deterministic synthetic fixture tests for `DET-001` through `DET-004`.
+- Added `scripts/run_detection_fixture_tests.py` to CI validation.
+- Added committed synthetic positive/negative outputs and synthetic
+  false-positive rates.
+- Added synthetic 30-day replay substitute for `DET-002`.
+- Added Sigma CLI semantic validation result with zero errors and zero issues.
+- Added top-level known limitations page.
+- Added platform query-variant status page.
+- Added customer-style SOC handoff packet for `DET-002`.
+- Added `release_status` to the detection backlog: Hunt / Pilot / Production /
+  Retired.
+
+Remaining production blockers:
+
+- No detection is DRL-9.
+- Synthetic tests are not customer telemetry.
+- No real tenant or customer historical replay is committed.
+- Backend-specific Splunk and Elastic conversion artifacts remain pending.
+- False-positive rates are synthetic fixture rates only.
+
 ## v0.1.4
 
 Status: professional public CTI-to-detection research repository; not a

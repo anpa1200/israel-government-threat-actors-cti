@@ -27,6 +27,11 @@ Use `sources/` as the analyst-facing scored source library:
 - Versioned maturity notes: [release-notes.md](release-notes.md).
 - Detection-readiness evidence packs:
   [../detection-engineering/drl-evidence-packs.md](../detection-engineering/drl-evidence-packs.md).
+- Known limitations: [../known-limitations.md](../known-limitations.md).
+- Sigma validation results:
+  [../detection-engineering/sigma-validation-results.md](../detection-engineering/sigma-validation-results.md).
+- SOC handoff packet:
+  [../detection-engineering/soc-handoff-packet.md](../detection-engineering/soc-handoff-packet.md).
 - Defensive CTI synthesis for Israeli public-sector environments: [defensive-cti-threats-to-israeli-public-sector.md](defensive-cti-threats-to-israeli-public-sector.md).
 
 ## Collection Rules
