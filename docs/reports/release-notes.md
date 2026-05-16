@@ -8,6 +8,32 @@ sidebar_label: Release Notes
 This page records repository maturity changes. It is intentionally explicit
 about what is and is not production-ready.
 
+## v1.1
+
+Status: practical CTI-to-detection framework with connected public CTI update
+intake. Still not a production SOC detection pack.
+
+Key changes:
+
+- Promoted the repository version to `v1.1`.
+- Refreshed the connected-feed queue from MITRE ATT&CK Enterprise STIX, CISA
+  KEV, and CISA Cybersecurity Advisories RSS.
+- Added [Connected TIPs And CTI Feeds](../connected-tips.md) with feed
+  descriptions, optional connector setup, GitHub Actions behavior, and
+  promotion workflow.
+- Expanded [Intelligence Update Queue](../intelligence-updates.md) with actor
+  update candidates and surface/exposure candidate summaries.
+- Added current intel lead counts into actor navigation blocks and actor
+  workbench tables.
+
+Remaining production blockers:
+
+- Feed candidates are leads and must be reviewed before promotion.
+- No connected feed may create actor attribution by itself.
+- OTX, MISP, and OpenCTI require trusted local/community configuration before
+  use beyond documented connector targets.
+- No detection is DRL-9.
+
 ## v0.1.7
 
 Status: public CTI update intake layer; still requires analyst review before

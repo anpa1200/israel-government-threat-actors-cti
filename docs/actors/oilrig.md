@@ -14,6 +14,7 @@
 - IOC reference sources: `SRC-MITRE-G0049` Technique references
 - Malware and tools: `OilBooster` (Downloader); `Saitama` (DNS-tunneling backdoor)
 - Evidence records: `EVD-013` / `CLM-OILRIG-001`; `EVD-014` / `CLM-OILRIG-002`
+- Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-ESET-OILRIG-ISRAEL`, `SRC-MITRE-G0049`, `SRC-UNIT42-OILRIG-DNS-TUNNELING`
 
 <!-- ACTOR-NAVIGATION:END -->

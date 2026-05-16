@@ -14,6 +14,7 @@
 - IOC reference sources: `SRC-AP-HANDALA` IP/CIDR; hashes; URLs; actor channels; soft IOCs; `SRC-THREAT-HUNTER-V3` Domains; IPs; file names; driver names; behavioral IOCs
 - Malware and tools: `BiBi / BiBi Wiper lineage` (Wiper / destructive malware lineage); `Handala-linked destructive installer chains` (Installer-led destructive chain)
 - Evidence records: `EVD-005` / `CLM-HANDALA-001`; `EVD-006` / `CLM-HANDALA-002`
+- Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-AP-HANDALA`, `SRC-PUSH-STRYKER-HANDALA`, `SRC-THREAT-HUNTER-V3`
 
 <!-- ACTOR-NAVIGATION:END -->

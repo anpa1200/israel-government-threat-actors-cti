@@ -14,6 +14,7 @@
 - IOC reference sources: `SRC-CP-WEZRAT` Email sender; domains; hashes; C2 paths; malware behavior
 - Malware and tools: `WezRat` (Modular infostealer / RAT)
 - Evidence records: `EVD-022` / `CLM-COTTONSANDSTORM-001`
+- Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-WEZRAT`, `SRC-FBI-EMENNET-2024`, `SRC-MS-IRAN-IO`
 
 <!-- ACTOR-NAVIGATION:END -->

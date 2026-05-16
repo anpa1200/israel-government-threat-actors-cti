@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.1 - 2026-05-16
+
+### New
+- Added connected TIP/CTI feed documentation covering MITRE ATT&CK STIX, CISA KEV, CISA advisories, OTX, MISP, and OpenCTI.
+- Expanded the intelligence update page with actor update and surface/exposure summaries from the latest feed pull.
+- Added current intel lead counts to generated actor navigation blocks and actor workbench tables.
+
+### Changed
+- Bumped project version to `v1.1`.
+- Refreshed the connected-feed review queue from the currently connected public feeds.
+
 ## v0.1.7 - 2026-05-15
 
 ### New

@@ -14,6 +14,7 @@
 - IOC reference sources: `SRC-CP-WIRTE-2024` Wiper references; trusted sender abuse; fake update artifacts; `SRC-UNIT42-ASHTAG-2025` Malware hashes; domains; C2 paths; tool behavior
 - Malware and tools: `SameCoin` (Wiper); `AshTag` (Modular .NET malware suite)
 - Evidence records: `EVD-010` / `CLM-WIRTE-001`
+- Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CP-WIRTE-2024`, `SRC-UNIT42-ASHTAG-2025`
 
 <!-- ACTOR-NAVIGATION:END -->

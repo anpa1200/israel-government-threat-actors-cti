@@ -13,6 +13,7 @@
 - IOC reference sources: None currently mapped.
 - Malware and tools: `Liontail` (Passive backdoor framework)
 - Evidence records: `EVD-007` / `CLM-SCARRED-001`
+- Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-SCARRED-MANTICORE-2023`, `SRC-CP-VOID-2024`
 
 <!-- ACTOR-NAVIGATION:END -->

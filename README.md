@@ -31,6 +31,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/detection-engineering/` | Detection lifecycle, DRL, quality gates, and production criteria. |
 | `docs/known-limitations.md` | Top-level limitations and non-production caveats. |
 | `docs/customer-environment-use.md` | How to use the project in a customer/SOC environment without overclaiming production readiness. |
+| `docs/connected-tips.md` | Connected CTI/TIP feed descriptions, commands, optional secrets, and promotion workflow. |
 | `docs/intelligence-updates.md` | Generated CTI feed update queue from no-key public sources. |
 | `examples/registers/` | PIR, SIR, evidence, persona-claim, scenario, hunt, detection, health, and metrics register templates. |
 | `examples/gates/` | Sample quality-gate evidence packs. |
@@ -65,6 +66,8 @@ Review the starting threat model in [docs/israel-government-threat-model.md](doc
 
 For practical click-through use, start with the [Actor Navigation Workbench](docs/navigation/actor-workbench.md), [TTP To Detection Matrix](docs/navigation/ttp-detection-matrix.md), or [Surface And Capability Matrix](docs/navigation/surface-capability-matrix.md).
 
+For CTI feed updates, start with [Connected TIPs And CTI Feeds](docs/connected-tips.md).
+
 For source triage, start with [sources/README.md](sources/README.md).
 
 To pull current public CTI update candidates:
@@ -85,6 +88,7 @@ For end-to-end examples and proof artifacts, review:
 - [Release notes](docs/reports/release-notes.md)
 - [Known limitations](docs/known-limitations.md)
 - [Customer environment use](docs/customer-environment-use.md)
+- [Connected TIPs and CTI feeds](docs/connected-tips.md)
 - [Intelligence update queue](docs/intelligence-updates.md)
 - [Detection status dashboard](docs/detection-engineering/detection-status-dashboard.md)
 - [Actor navigation workbench](docs/navigation/actor-workbench.md)
@@ -114,4 +118,4 @@ Key starting references include:
 
 ## Version
 
-Current version: `v0.1.7`
+Current version: `v1.1`

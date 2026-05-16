@@ -14,6 +14,7 @@
 - IOC reference sources: None currently mapped.
 - Malware and tools: None currently mapped.
 - Evidence records: `EVD-023` / `CLM-CYBERTOUFAN-001`
+- Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-MS-IRAN-HAMAS`, `SRC-OPI-CYBER-TOUFAN`
 
 <!-- ACTOR-NAVIGATION:END -->

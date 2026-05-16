@@ -13,6 +13,7 @@
 - IOC reference sources: None currently mapped.
 - Malware and tools: `NGROK / Ligolo` (Tunneling / proxy tooling)
 - Evidence records: `EVD-019` / `CLM-PIONEERKITTEN-001`
+- Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CISA-AA24-241A`
 
 <!-- ACTOR-NAVIGATION:END -->

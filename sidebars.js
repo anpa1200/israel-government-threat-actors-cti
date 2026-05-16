@@ -16,6 +16,7 @@ const sidebars = {
         'source-rating',
         'known-limitations',
         'customer-environment-use',
+        'connected-tips',
         'intelligence-updates',
       ],
     },

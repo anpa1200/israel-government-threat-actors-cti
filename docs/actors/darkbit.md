@@ -13,6 +13,7 @@
 - IOC reference sources: None currently mapped.
 - Malware and tools: `DarkBit ransomware` (Pseudo-ransomware / destructive malware)
 - Evidence records: `EVD-020` / `CLM-DARKBIT-001`
+- Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-INCD-DARKBIT-MUDDYWATER-2023`, `SRC-MS-MERCURY-DEV1084-2023`
 
 <!-- ACTOR-NAVIGATION:END -->

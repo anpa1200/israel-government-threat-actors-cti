@@ -21,7 +21,7 @@ from xml.etree import ElementTree
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TODAY = date(2026, 5, 15)
+TODAY = date.today()
 OUT_PATH = ROOT / "data/intel-update-candidates.csv"
 DOC_PATH = ROOT / "docs/intelligence-updates.md"
 USER_AGENT = "israel-government-threat-actors-cti/0.1 (+public-defensive-research)"
@@ -400,9 +400,15 @@ def dedupe(rows: list[dict[str, str]]) -> list[dict[str, str]]:
 def write_doc(rows: list[dict[str, str]], errors: list[str]) -> None:
     by_feed: dict[str, int] = {}
     by_status: dict[str, int] = {}
+    by_actor: dict[str, list[dict[str, str]]] = {}
+    by_surface: dict[str, list[dict[str, str]]] = {}
     for row in rows:
         by_feed[row["feed_id"]] = by_feed.get(row["feed_id"], 0) + 1
         by_status[row["status"]] = by_status.get(row["status"], 0) + 1
+        if row["actor_id"]:
+            by_actor.setdefault(row["actor_id"], []).append(row)
+        else:
+            by_surface.setdefault(row["item_type"], []).append(row)
 
     lines = [
         "---",
@@ -451,6 +457,48 @@ def write_doc(rows: list[dict[str, str]], errors: list[str]) -> None:
             "- Use CISA KEV matches for exposure review and asset-owner routing first.",
             "- Use MITRE matches to check alias, description, and technique drift.",
             "- Add a normal source/evidence record before changing an actor page or detection mapping.",
+            "",
+            "## Actor Update Candidates",
+            "",
+            "| Actor | Candidates | Feeds | Latest candidate date |",
+            "| --- | ---: | --- | --- |",
+        ]
+    )
+    for actor_id, actor_rows in sorted(by_actor.items()):
+        feeds = ", ".join(
+            f"`{feed}`" for feed in sorted({row["feed_id"] for row in actor_rows})
+        )
+        dated_rows = [row["published_or_modified"] for row in actor_rows if row["published_or_modified"]]
+        latest = max(dated_rows) if dated_rows else ""
+        lines.append(f"| `{actor_id}` | {len(actor_rows)} | {feeds} | {latest} |")
+
+    lines.extend(
+        [
+            "",
+            "## Surface And Exposure Candidates",
+            "",
+            "| Candidate Type | Candidates | Feeds | Matched terms |",
+            "| --- | ---: | --- | --- |",
+        ]
+    )
+    for item_type, surface_rows in sorted(by_surface.items()):
+        feeds = ", ".join(
+            f"`{feed}`" for feed in sorted({row["feed_id"] for row in surface_rows})
+        )
+        matched = sorted(
+            {
+                term.strip()
+                for row in surface_rows
+                for term in row["matched_terms"].split(";")
+                if term.strip()
+            }
+        )
+        lines.append(
+            f"| {item_type} | {len(surface_rows)} | {feeds} | {', '.join(matched) or 'None'} |"
+        )
+
+    lines.extend(
+        [
             "",
             "## Current Candidates",
             "",

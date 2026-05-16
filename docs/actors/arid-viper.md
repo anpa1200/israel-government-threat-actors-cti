@@ -14,6 +14,7 @@
 - IOC reference sources: `SRC-META-ARIDVIPER` Domains; apps; mobile indicators; `SRC-CYBERNEWS-REDALERT-2026` App names; package references; domains from secondary coverage; `SRC-S1-ISRAEL-HAMAS-CYBER-2023` Actor context; mobile and social-engineering references
 - Malware and tools: `AridSpy` (Mobile RAT); `RedAlert.apk` (Mobile spyware / trojanized app)
 - Evidence records: `EVD-011` / `CLM-ARIDVIPER-001`
+- Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CYBERNEWS-REDALERT-2026`, `SRC-ESET-ARIDSPY`, `SRC-META-ARIDVIPER`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`
 
 <!-- ACTOR-NAVIGATION:END -->

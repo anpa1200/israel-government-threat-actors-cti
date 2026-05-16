@@ -1,6 +1,6 @@
 {
   "name": "israel-government-threat-actors-cti",
-  "version": "0.1.7",
+  "version": "1.1.0",
   "private": true,
   "description": "Docusaurus documentation site for defensive CTI on threat actors relevant to Israeli government and public-sector exposure.",
   "scripts": {

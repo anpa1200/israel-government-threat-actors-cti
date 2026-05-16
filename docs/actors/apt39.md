@@ -13,6 +13,7 @@
 - IOC reference sources: None currently mapped.
 - Malware and tools: None currently mapped.
 - Evidence records: `EVD-027` / `CLM-APT39-001`
+- Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G0087`
 
 <!-- ACTOR-NAVIGATION:END -->

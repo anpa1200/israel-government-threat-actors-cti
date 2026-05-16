@@ -14,6 +14,7 @@
 - IOC reference sources: `SRC-MITRE-G1030` Technique references
 - Malware and tools: `Moneybird` (Ransomware / destructive malware); `BlackShadow` (Ransomware / persona)
 - Evidence records: `EVD-017` / `CLM-AGRIUS-001`
+- Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1030`
 
 <!-- ACTOR-NAVIGATION:END -->

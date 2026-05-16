@@ -14,6 +14,7 @@
 - IOC reference sources: `SRC-MITRE-G0069` Technique references; `SRC-AP-MUDDYWATER` Malware/tool references; ATT&CK mappings; campaign IOCs; `SRC-THREAT-HUNTER-V3` Domains; IPs; Rclone destinations; Dindoor/Fakeset references; `SRC-INCD-MUDDYWATER-2024` Domains; hashes; tools; infrastructure; TTPs
 - Malware and tools: `Remote Monitoring and Management tools` (Living-off-the-land tooling); `Dindoor` (Backdoor); `Fakeset` (Backdoor); `BugSleep` (Backdoor); `BlackBeard` (Backdoor); `Fooder / MuddyViper` (Loader and backdoor)
 - Evidence records: `EVD-004` / `CLM-MUDDYWATER-001`
+- Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-AP-MUDDYWATER`, `SRC-CP-BUGSLEEP`, `SRC-ESET-MUDDYWATER-SNAKES`, `SRC-INCD-MUDDYWATER-2024`, `SRC-INCD-MUDDYWATER-PHISHING`, `SRC-MITRE-G0069`, `SRC-THREAT-HUNTER-V3`
 
 <!-- ACTOR-NAVIGATION:END -->

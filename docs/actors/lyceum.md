@@ -13,6 +13,7 @@
 - IOC reference sources: None currently mapped.
 - Malware and tools: `DanBot` (Remote Access Trojan); `Kevin` (Backdoor); `Shark` (Backdoor)
 - Evidence records: `EVD-021` / `CLM-LYCEUM-001`
+- Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1001`
 
 <!-- ACTOR-NAVIGATION:END -->

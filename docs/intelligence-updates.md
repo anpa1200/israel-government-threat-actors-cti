@@ -9,7 +9,7 @@ This page summarizes the latest no-key public CTI feed pull. It is a review queu
 
 Feed candidates must be reviewed before they are promoted into `data/sources.csv`, actor profiles, evidence records, TTP mappings, hunts, or detections.
 
-Generated: `2026-05-15`
+Generated: `2026-05-16`
 
 ## Connected Feeds
 
@@ -42,6 +42,33 @@ Generated: `2026-05-15`
 - Use MITRE matches to check alias, description, and technique drift.
 - Add a normal source/evidence record before changing an actor page or detection mapping.
 
+## Actor Update Candidates
+
+| Actor | Candidates | Feeds | Latest candidate date |
+| --- | ---: | --- | --- |
+| `G0049` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2026-05-12 |
+| `G0059` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2026-05-12 |
+| `G0069` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2026-05-12 |
+| `G0087` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2024-04-11 |
+| `G1001` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2026-05-12 |
+| `G1028` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2024-11-17 |
+| `G1030` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2024-08-29 |
+| `G1044` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2026-05-12 |
+| `HANDALA` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2026-05-12 |
+| `IMPERIALKITTEN` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2024-10-02 |
+| `LEBANESECEDAR` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2025-04-16 |
+| `PIONEERKITTEN` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2026-05-12 |
+| `TA402` | 2 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2025-04-18 |
+| `WIRTE` | 1 | `FEED-MITRE-ATTACK-ENTERPRISE` | 2026-04-23 |
+
+## Surface And Exposure Candidates
+
+| Candidate Type | Candidates | Feeds | Matched terms |
+| --- | ---: | --- | --- |
+| Government advisory | 13 | `FEED-CISA-ADVISORIES` | f5, hmi, ivanti, microsoft exchange, palo alto, plc |
+| Known exploited vulnerability | 1 | `FEED-CISA-KEV` | microsoft exchange |
+| Optional connector status | 3 | `FEED-MISP-OPTIONAL`, `FEED-OPENCTI-OPTIONAL`, `FEED-OTX-OPTIONAL` | None |
+
 ## Current Candidates
 
 | Candidate | Feed | Actor | Type | Title | Date | Status |
@@ -60,7 +87,7 @@ Generated: `2026-05-15`
 | `UPD-CISA-ADV-SURFACE-5860784a6e` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Siemens SIMATIC](https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-07) | Thu, 14 May 26 12:00:00 +0000 | Needs analyst review |
 | `UPD-CISA-ADV-SURFACE-ff7824dc56` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Siemens SIMATIC S7 PLC Web Server](https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-15) | Thu, 14 May 26 12:00:00 +0000 | Needs analyst review |
 | `UPD-KEV-CVE-2026-42897` | `FEED-CISA-KEV` | Surface | Known exploited vulnerability | [CVE-2026-42897 - Microsoft Exchange Server Cross-Site Scripting Vulnerability](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | 2026-05-15 | Needs exposure review |
-| `UPD-CONNECTOR-FEED-MISP-OPTIONAL` | `FEED-MISP-OPTIONAL` | Surface | Optional connector status | [MISP events](https://www.misp-project.org/openapi/) | 2026-05-15 | Not configured |
+| `UPD-CONNECTOR-FEED-MISP-OPTIONAL` | `FEED-MISP-OPTIONAL` | Surface | Optional connector status | [MISP events](https://www.misp-project.org/openapi/) | 2026-05-16 | Not configured |
 | `UPD-MITRE-G0049-60c08f71f0` | `FEED-MITRE-ATTACK-ENTERPRISE` | G0049 | ATT&CK intrusion-set taxonomy update | [OilRig](https://attack.mitre.org/groups/G0049) | 2026-05-12 | Needs analyst review |
 | `UPD-MITRE-G0059-2eecb5256c` | `FEED-MITRE-ATTACK-ENTERPRISE` | G0059 | ATT&CK intrusion-set taxonomy update | [Magic Hound](https://attack.mitre.org/groups/G0059) | 2026-05-12 | Needs analyst review |
 | `UPD-MITRE-G0069-03689cb0da` | `FEED-MITRE-ATTACK-ENTERPRISE` | G0069 | ATT&CK intrusion-set taxonomy update | [MuddyWater](https://attack.mitre.org/groups/G0069) | 2026-05-12 | Needs analyst review |
@@ -76,8 +103,8 @@ Generated: `2026-05-15`
 | `UPD-MITRE-TA402-976749cc0a` | `FEED-MITRE-ATTACK-ENTERPRISE` | TA402 | ATT&CK intrusion-set taxonomy update | [Frankenstein](https://attack.mitre.org/groups/G0101) | 2025-04-18 | Needs analyst review |
 | `UPD-MITRE-TA402-65b917d7e7` | `FEED-MITRE-ATTACK-ENTERPRISE` | TA402 | ATT&CK intrusion-set taxonomy update | [Molerats](https://attack.mitre.org/groups/G0021) | 2024-11-17 | Needs analyst review |
 | `UPD-MITRE-WIRTE-7cc1aa86db` | `FEED-MITRE-ATTACK-ENTERPRISE` | WIRTE | ATT&CK intrusion-set taxonomy update | [WIRTE](https://attack.mitre.org/groups/G0090) | 2026-04-23 | Needs analyst review |
-| `UPD-CONNECTOR-FEED-OPENCTI-OPTIONAL` | `FEED-OPENCTI-OPTIONAL` | Surface | Optional connector status | [OpenCTI indicators and reports](https://docs.opencti.io/latest/reference/api/) | 2026-05-15 | Not configured |
-| `UPD-CONNECTOR-FEED-OTX-OPTIONAL` | `FEED-OTX-OPTIONAL` | Surface | Optional connector status | [AlienVault OTX pulses](https://otx.alienvault.com/api/v1/pulses/subscribed) | 2026-05-15 | Not configured |
+| `UPD-CONNECTOR-FEED-OPENCTI-OPTIONAL` | `FEED-OPENCTI-OPTIONAL` | Surface | Optional connector status | [OpenCTI indicators and reports](https://docs.opencti.io/latest/reference/api/) | 2026-05-16 | Not configured |
+| `UPD-CONNECTOR-FEED-OTX-OPTIONAL` | `FEED-OTX-OPTIONAL` | Surface | Optional connector status | [AlienVault OTX pulses](https://otx.alienvault.com/api/v1/pulses/subscribed) | 2026-05-16 | Not configured |
 
 Machine-readable queue: `data/intel-update-candidates.csv`.
 

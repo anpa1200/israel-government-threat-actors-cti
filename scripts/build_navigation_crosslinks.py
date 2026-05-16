@@ -155,6 +155,7 @@ def build_indexes() -> dict[str, object]:
     hunts = read_csv("examples/registers/hunt-backlog.csv")
     detections = read_csv("examples/registers/detection-backlog.csv")
     evidence = read_csv("examples/registers/evidence-register.csv")
+    intel_candidates = read_csv("data/intel-update-candidates.csv")
 
     actors_by_id = {row["actor_id"]: row for row in actors}
     detections_by_id = {row["detection_id"]: row for row in detections}
@@ -165,6 +166,7 @@ def build_indexes() -> dict[str, object]:
     iocs_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     malware_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     evidence_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
+    intel_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     detections_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     hunts_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
 
@@ -176,6 +178,10 @@ def build_indexes() -> dict[str, object]:
         malware_by_actor[row["actor_id"]].append(row)
     for row in evidence:
         evidence_by_actor[row["actor_id"]].append(row)
+    for row in intel_candidates:
+        actor_id = row.get("actor_id", "")
+        if actor_id:
+            intel_by_actor[actor_id].append(row)
 
     actor_attack_ids = {
         actor_id: {row["attack_id"] for row in rows}
@@ -216,6 +222,7 @@ def build_indexes() -> dict[str, object]:
         "iocs_by_actor": iocs_by_actor,
         "malware_by_actor": malware_by_actor,
         "evidence_by_actor": evidence_by_actor,
+        "intel_by_actor": intel_by_actor,
         "detections_by_actor": detections_by_actor,
         "hunts_by_actor": hunts_by_actor,
         "detections_by_id": detections_by_id,
@@ -236,6 +243,7 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
     iocs_by_actor = indexes["iocs_by_actor"]
     malware_by_actor = indexes["malware_by_actor"]
     evidence_by_actor = indexes["evidence_by_actor"]
+    intel_by_actor = indexes["intel_by_actor"]
     detections_by_actor = indexes["detections_by_actor"]
     hunts_by_actor = indexes["hunts_by_actor"]
 
@@ -259,6 +267,7 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
     ioc_rows = iocs_by_actor.get(actor_id, [])
     malware_rows = malware_by_actor.get(actor_id, [])
     evidence_rows = evidence_by_actor.get(actor_id, [])
+    intel_rows = intel_by_actor.get(actor_id, [])
 
     ttp_links = [
         f"{technique_matrix_link(row['attack_id'], row['attack_id'], relative_to_actor=relative_to_actor)} {row['technique']} ({row['mapping_quality']})"
@@ -282,6 +291,11 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
         for row in evidence_rows[:5]
     ]
     source_ids = sorted({row["source_id"] for row in ttp_rows + ioc_rows + malware_rows})
+    intel_link = (
+        f"[{len(intel_rows)} current candidate(s)](../intelligence-updates.md#actor-update-candidates)"
+        if relative_to_actor
+        else f"[{len(intel_rows)} current candidate(s)](../intelligence-updates.md#actor-update-candidates)"
+    )
     surfaces = [
         f"[{surface_row['name']}]({surface}#{surface_row['id']})"
         for surface_row in SURFACES
@@ -303,6 +317,7 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
         f"- IOC reference sources: {bullet_links(ioc_links)}",
         f"- Malware and tools: {bullet_links(malware_links)}",
         f"- Evidence records: {bullet_links(evidence_links)}",
+        f"- Intel update candidates: {intel_link if intel_rows else 'None in current feed pull.'}",
         f"- Source IDs in structured data: {', '.join(f'`{source_id}`' for source_id in source_ids) if source_ids else 'None currently mapped.'}",
         "",
         "<!-- ACTOR-NAVIGATION:END -->",
@@ -345,6 +360,7 @@ def build_actor_workbench(indexes: dict[str, object]) -> None:
     iocs_by_actor = indexes["iocs_by_actor"]
     malware_by_actor = indexes["malware_by_actor"]
     evidence_by_actor = indexes["evidence_by_actor"]
+    intel_by_actor = indexes["intel_by_actor"]
 
     rows = [
         "---",
@@ -360,8 +376,8 @@ def build_actor_workbench(indexes: dict[str, object]) -> None:
         "",
         "## Actor Coverage Matrix",
         "",
-        "| Actor | Priority | TTPs | IOC refs | Tools | Hunts | Detections | Evidence |",
-        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| Actor | Priority | TTPs | IOC refs | Tools | Hunts | Detections | Evidence | Intel leads |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for actor in actors:
         actor_id = actor["actor_id"]
@@ -376,7 +392,8 @@ def build_actor_workbench(indexes: dict[str, object]) -> None:
             + f"{len(malware_by_actor.get(actor_id, []))} | "
             + f"{len(hunts_by_actor.get(actor_id, []))} | "
             + f"{len(detections_by_actor.get(actor_id, []))} | "
-            + f"{len(evidence_by_actor.get(actor_id, []))} |"
+            + f"{len(evidence_by_actor.get(actor_id, []))} | "
+            + f"{len(intel_by_actor.get(actor_id, []))} |"
         )
 
     rows.extend(["", "## Actor Drilldowns", ""])
@@ -558,6 +575,7 @@ def update_actor_index(indexes: dict[str, object]) -> None:
     hunts_by_actor = indexes["hunts_by_actor"]
     iocs_by_actor = indexes["iocs_by_actor"]
     malware_by_actor = indexes["malware_by_actor"]
+    intel_by_actor = indexes["intel_by_actor"]
 
     rows = [
         "---",
@@ -574,8 +592,8 @@ def update_actor_index(indexes: dict[str, object]) -> None:
         "- [Surface And Capability Matrix](../navigation/surface-capability-matrix.md)",
         "- [Detection Status Dashboard](../detection-engineering/detection-status-dashboard.md)",
         "",
-        "| Actor | Profile | Workbench | Priority | TTPs | IOC refs | Tools | Hunts | Detections |",
-        "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |",
+        "| Actor | Profile | Workbench | Priority | TTPs | IOC refs | Tools | Hunts | Detections | Intel leads |",
+        "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for actor in actors:
         actor_id = actor["actor_id"]
@@ -591,7 +609,8 @@ def update_actor_index(indexes: dict[str, object]) -> None:
             f"{len(iocs_by_actor.get(actor_id, []))} | "
             f"{len(malware_by_actor.get(actor_id, []))} | "
             f"{len(hunts_by_actor.get(actor_id, []))} | "
-            f"{len(detections_by_actor.get(actor_id, []))} |"
+            f"{len(detections_by_actor.get(actor_id, []))} | "
+            f"{len(intel_by_actor.get(actor_id, []))} |"
         )
     rows.extend([
         "",
