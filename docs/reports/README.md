@@ -24,6 +24,15 @@ Use `sources/` as the analyst-facing scored source library:
 - 2023-2026 source-download and validation intake: [resourses_research.md](resourses_research.md).
 - Actor-specific LLM research prompts: [actor-deep-research-prompts.md](actor-deep-research-prompts.md).
 - Additional Gemini research intake: [additional-research-gemeni.md](additional-research-gemeni.md).
+- Imported deep-research actor intakes:
+  [muddywater-deep-research.md](muddywater-deep-research.md),
+  [oilrig-magic-hound-deep-research.md](oilrig-magic-hound-deep-research.md),
+  [pioneer-kitten-deep-research.md](pioneer-kitten-deep-research.md),
+  [apt39-arid-viper-unc3890-cyber-toufan-deep-research.md](apt39-arid-viper-unc3890-cyber-toufan-deep-research.md),
+  [apt35-oilrig-israel-deep-research.md](apt35-oilrig-israel-deep-research.md).
+  Downloaded `deep-research-report (5).md` was an exact duplicate of
+  `deep-research-report (1).md` and is represented by
+  [oilrig-magic-hound-deep-research.md](oilrig-magic-hound-deep-research.md).
 - End-to-end CTI-to-detection examples: [worked-cases.md](worked-cases.md).
 - CI and build evidence: [ci-validation-evidence.md](ci-validation-evidence.md).
 - Versioned maturity notes: [release-notes.md](release-notes.md).
