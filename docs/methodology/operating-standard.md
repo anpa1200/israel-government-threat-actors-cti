@@ -61,3 +61,13 @@ Any threat-hunting or detection-engineering item SHOULD include:
 - SOC action.
 - Owner and lifecycle status.
 
+## Cross-Links
+
+- [Fact Correlation](../fact-correlation.md) — shared rules and canonical owners across the three-project ecosystem
+- [Source Rating](../source-rating.md) — Admiralty Code A-F and 1-6 scales used in evidence labels
+- [CTI Analyst Field Manual — Evidence Labels](https://anpa1200.github.io/cti-analyst-field-manual/docs/01-cti-foundations/evidence-labels) — canonical evidence label definitions (Observed, Reported, Assessed, Inferred, Unknown, Gap)
+- [CTI Analyst Field Manual — Source Reliability](https://anpa1200.github.io/cti-analyst-field-manual/docs/01-cti-foundations/source-reliability) — full Admiralty Code tables with warning on treating ratings as mathematical truth
+- [CTI Analyst Field Manual — ATT&CK as a Working Tool](https://anpa1200.github.io/cti-analyst-field-manual/docs/frameworks/mitre-attack-as-working-tool/) — mapping quality M0–M4 scale
+- [CTI Analyst Field Manual — Detection Readiness Levels](https://anpa1200.github.io/cti-analyst-field-manual/docs/08-cti-to-detection/detection-readiness-levels) — DRL model (DRL-9 = production only)
+- [Customer project — Normative Language](https://anpa1200.github.io/customer-driven-ai-cti-project/docs/standard/normative-language/) — MUST/SHOULD/MAY definitions that align with mandatory rules above
+

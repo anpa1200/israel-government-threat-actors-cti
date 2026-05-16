@@ -23,3 +23,10 @@ Information credibility is tracked separately using a 1–6 scale (1 = Confirmed
 - Public claims by hacktivist personas MUST be corroborated before being treated as confirmed compromise.
 - Vendor actor names SHOULD be mapped carefully because naming taxonomies differ.
 - Source publication date MUST be considered when using IOCs.
+
+## Cross-Links
+
+- [Scoring Models](methodology/scoring-models.md) — full A-F and 1-6 tables with combined notation
+- [CTI Analyst Field Manual — Source Reliability](https://anpa1200.github.io/cti-analyst-field-manual/docs/01-cti-foundations/source-reliability) — canonical Admiralty Code reference with A1–F6 examples and warning on treating ratings as mathematical truth
+- [CTI Analyst Field Manual — Estimative Language](https://anpa1200.github.io/cti-analyst-field-manual/docs/02-analytic-discipline/estimative-language) — calibrated confidence language that pairs with source ratings
+- [Customer project — Normative Language](https://anpa1200.github.io/customer-driven-ai-cti-project/docs/standard/normative-language/) — MUST/SHOULD/MAY usage for source rating requirements

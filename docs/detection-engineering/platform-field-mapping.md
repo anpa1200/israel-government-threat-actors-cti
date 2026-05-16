@@ -44,3 +44,17 @@ Before moving from hunt starter to pilot:
 - run one positive test or replay;
 - run one negative test or benign baseline review;
 - record the result in the detection health register.
+
+## Cross-Links
+
+- [Detection Lifecycle](detection-lifecycle.md)
+- [Detection Status Dashboard](detection-status-dashboard.md)
+- [CTI Analyst Field Manual — Telemetry Requirements](https://anpa1200.github.io/cti-analyst-field-manual/docs/08-cti-to-detection/telemetry-requirements) — field-level tables for Windows Security Event Log, Sysmon, EDR, DNS, proxy, identity provider, and cloud audit logs
+- [CTI Analyst Field Manual — Sigma/KQL/SPL Examples](https://anpa1200.github.io/cti-analyst-field-manual/docs/08-cti-to-detection/sigma-kql-spl-examples) — two DRL-4 detection candidates with Sigma, KQL (MDE), and SPL (Sysmon) variants
+- [CTI Analyst Field Manual — Detection Readiness Levels](https://anpa1200.github.io/cti-analyst-field-manual/docs/08-cti-to-detection/detection-readiness-levels) — DRL model that promotion requirements reference
+
+## References
+
+- [Sigma Documentation](https://sigmahq.io/docs/)
+- [Microsoft Advanced Hunting Schema](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-schema-tables)
+- [MITRE ATT&CK Data Sources](https://attack.mitre.org/datasources/)

@@ -36,6 +36,10 @@ MuddyWater is high priority for Israeli government and regional public-sector de
 - Legitimate remote access tool abuse.
 - Credential collection and lateral movement preparation.
 
+## Field Manual Cross-Reference
+
+Full public-source case study with PIR/SIR decomposition, alias table, sponsor assessment, ATT&CK mapping with quality levels, telemetry requirements, and DRL-1 hunt hypotheses: [CTI Analyst Field Manual — MuddyWater Worked Example](https://anpa1200.github.io/cti-analyst-field-manual/docs/worked-examples/actor-research).
+
 ## Detection Ideas
 
 - RMM execution from user download folders.
