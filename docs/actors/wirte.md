@@ -15,6 +15,7 @@
 - Tool detail pages: [`SameCoin`](../tools/samecoin.md); [`AshTag`](../tools/ashtag.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#wirte) (2 mapped tool row(s))
 - Evidence records: `EVD-010` / `CLM-WIRTE-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CP-WIRTE-2024`, `SRC-UNIT42-ASHTAG-2025`
 

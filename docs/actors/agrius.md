@@ -15,6 +15,7 @@
 - Tool detail pages: [`Moneybird`](../tools/moneybird.md); [`BlackShadow`](../tools/blackshadow.md); [`Apostle`](../tools/apostle.md); [`ASPXSpy`](../tools/aspxspy.md); [`BFG Agonizer`](../tools/bfg-agonizer.md); [`DEADWOOD`](../tools/deadwood.md); [`IPsec Helper`](../tools/ipsec-helper.md); [`Mimikatz`](../tools/mimikatz.md); [`MultiLayer Wiper`](../tools/multilayer-wiper.md); [`NBTscan`](../tools/nbtscan.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#agrius) (10 mapped tool row(s))
 - Evidence records: `EVD-017` / `CLM-AGRIUS-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1030`
 

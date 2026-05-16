@@ -18,6 +18,7 @@ sidebar_label: Scarred Manticore
 - Tool detail pages: [`Liontail`](../tools/liontail.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#scarred-manticore) (1 mapped tool row(s))
 - Evidence records: `EVD-007` / `CLM-SCARRED-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-SCARRED-MANTICORE-2023`, `SRC-CP-VOID-2024`
 

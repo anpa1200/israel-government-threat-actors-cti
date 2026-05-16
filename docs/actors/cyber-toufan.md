@@ -15,6 +15,7 @@
 - Tool detail pages: [`Cyber Toufan supplier-access playbook`](../tools/cyber-toufan-supplier-access-playbook.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#cyber-toufan) (1 mapped tool row(s))
 - Evidence records: `EVD-023` / `CLM-CYBERTOUFAN-001`
+- Imported research intakes: [APT39 Arid Viper UNC3890 Cyber Toufan Deep Research Intake](../reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research.md) (High, Needs source validation)
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-MS-IRAN-HAMAS`, `SRC-OPI-CYBER-TOUFAN`
 

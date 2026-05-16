@@ -15,6 +15,7 @@
 - Tool detail pages: [`Explosive RAT`](../tools/explosive-rat.md); [`Caterpillar WebShell`](../tools/caterpillar-webshell.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#lebanese-cedar) (2 mapped tool row(s))
 - Evidence records: `EVD-012` / `CLM-LEBANESECEDAR-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CLEARSKY-LEBANESE-CEDAR`
 

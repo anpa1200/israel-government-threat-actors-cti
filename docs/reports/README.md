@@ -33,6 +33,8 @@ Use `sources/` as the analyst-facing scored source library:
   Downloaded `deep-research-report (5).md` was an exact duplicate of
   `deep-research-report (1).md` and is represented by
   [oilrig-magic-hound-deep-research.md](oilrig-magic-hound-deep-research.md).
+- Imported research upgrade summary and validation queue:
+  [research-intake-upgrade-summary.md](research-intake-upgrade-summary.md).
 - End-to-end CTI-to-detection examples: [worked-cases.md](worked-cases.md).
 - CI and build evidence: [ci-validation-evidence.md](ci-validation-evidence.md).
 - Versioned maturity notes: [release-notes.md](release-notes.md).

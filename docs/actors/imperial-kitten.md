@@ -18,6 +18,7 @@ sidebar_label: Imperial Kitten
 - Tool detail pages: [`IMAPLoader`](../tools/imaploader.md); [`StandardKeyboard`](../tools/standardkeyboard.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#imperial-kitten) (2 mapped tool row(s))
 - Evidence records: `EVD-018` / `CLM-IMPERIALKITTEN-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CS-IMPERIAL-KITTEN-2023`, `SRC-PWC-YELLOW-LIDERC-2023`
 

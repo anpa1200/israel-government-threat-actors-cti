@@ -132,6 +132,7 @@ const sidebars = {
         'reports/pioneer-kitten-deep-research',
         'reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research',
         'reports/apt35-oilrig-israel-deep-research',
+        'reports/research-intake-upgrade-summary',
         'reports/worked-cases',
         'reports/ci-validation-evidence',
         'reports/release-notes',

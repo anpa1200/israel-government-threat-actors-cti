@@ -18,6 +18,7 @@ sidebar_label: APT39
 - Tool detail pages: [`Remexi`](../tools/remexi.md); [`ANTAK / ASPXSPY`](../tools/antak-aspxspy.md); [`Cadelspy`](../tools/cadelspy.md); [`CrackMapExec`](../tools/crackmapexec.md); [`ftp`](../tools/ftp.md); [`MechaFlounder`](../tools/mechaflounder.md); [`Mimikatz`](../tools/mimikatz.md); [`NBTscan`](../tools/nbtscan.md); [`PsExec`](../tools/psexec.md); [`pwdump`](../tools/pwdump.md); [`Windows Credential Editor`](../tools/windows-credential-editor.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#apt39) (11 mapped tool row(s))
 - Evidence records: `EVD-027` / `CLM-APT39-001`
+- Imported research intakes: [APT39 Arid Viper UNC3890 Cyber Toufan Deep Research Intake](../reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research.md) (Medium, Needs source validation)
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G0087`
 

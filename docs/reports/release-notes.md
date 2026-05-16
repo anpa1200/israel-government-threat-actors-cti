@@ -44,6 +44,14 @@ Key changes:
   update candidates and surface/exposure candidate summaries.
 - Added current intel lead counts into actor navigation blocks and actor
   workbench tables.
+- Added `data/research-intake-map.csv` to connect imported deep-research
+  reports to relevant actors while keeping unvalidated LLM-derived claims out
+  of authoritative source, evidence, tool, TTP, hunt, and detection records.
+- Regenerated actor navigation blocks and the actor workbench with imported
+  research-intake links, priority, and validation status.
+- Added [Research Intake Upgrade Summary](research-intake-upgrade-summary.md)
+  to show what was upgraded from the imported reports and which claims remain
+  validation-gated.
 
 Remaining production blockers:
 

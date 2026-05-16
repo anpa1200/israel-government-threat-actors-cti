@@ -11,29 +11,29 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 
 ## Actor Coverage Matrix
 
-| Actor | Priority | TTPs | IOC refs | Tools | Hunts | Detections | Evidence | Intel leads |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| [MuddyWater](../actors/muddywater.md) | High | 4 | 4 | 26 | 2 | 2 | 1 | 1 |
-| [OilRig](../actors/oilrig.md) | High | 2 | 1 | 31 | 0 | 0 | 2 | 1 |
-| [Magic Hound](../actors/apt35.md) | High | 2 | 0 | 14 | 1 | 1 | 1 | 1 |
-| [APT42](../actors/apt42.md) | High | 3 | 2 | 3 | 1 | 1 | 2 | 1 |
-| [Agrius](../actors/agrius.md) | High | 2 | 1 | 10 | 1 | 1 | 1 | 1 |
-| [CyberAv3ngers](../actors/cyberav3ngers.md) | High | 3 | 1 | 2 | 1 | 1 | 3 | 0 |
-| [Imperial Kitten](../actors/imperial-kitten.md) | High | 3 | 0 | 2 | 0 | 0 | 1 | 1 |
-| [Pioneer Kitten](../actors/pioneer-kitten.md) | High | 3 | 0 | 1 | 2 | 2 | 1 | 1 |
-| [DarkBit](../actors/darkbit.md) | High | 2 | 0 | 1 | 0 | 0 | 1 | 0 |
-| [Lyceum](../actors/lyceum.md) | High | 2 | 0 | 12 | 0 | 0 | 1 | 1 |
-| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | High | 3 | 1 | 1 | 1 | 1 | 1 | 0 |
-| [APT39](../actors/apt39.md) | Medium | 2 | 0 | 11 | 0 | 0 | 1 | 1 |
-| [APT-C-23](../actors/arid-viper.md) | High | 2 | 3 | 7 | 0 | 0 | 1 | 1 |
-| [UNC3890](../actors/unc3890.md) | Medium-High | 1 | 1 | 1 | 0 | 0 | 1 | 0 |
-| [Cyber Toufan](../actors/cyber-toufan.md) | Medium-High | 3 | 0 | 1 | 1 | 1 | 1 | 0 |
-| [Void Manticore / Handala](../actors/handala.md) | High | 7 | 2 | 9 | 2 | 2 | 2 | 1 |
-| [Lebanese Cedar](../actors/lebanese-cedar.md) | Medium | 2 | 1 | 2 | 1 | 1 | 1 | 1 |
-| [WIRTE](../actors/wirte.md) | High | 5 | 2 | 2 | 2 | 2 | 1 | 1 |
-| [TA402](../actors/ta402.md) | Medium-High | 2 | 2 | 1 | 0 | 0 | 1 | 2 |
-| [UNC1860](../actors/unc1860.md) | High | 5 | 2 | 9 | 1 | 1 | 2 | 0 |
-| [Scarred Manticore](../actors/scarred-manticore.md) | High | 5 | 0 | 1 | 1 | 1 | 1 | 0 |
+| Actor | Priority | TTPs | IOC refs | Tools | Hunts | Detections | Evidence | Research intakes | Intel leads |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| [MuddyWater](../actors/muddywater.md) | High | 4 | 4 | 26 | 2 | 2 | 1 | 1 | 1 |
+| [OilRig](../actors/oilrig.md) | High | 2 | 1 | 31 | 0 | 0 | 2 | 2 | 1 |
+| [Magic Hound](../actors/apt35.md) | High | 2 | 0 | 14 | 1 | 1 | 1 | 2 | 1 |
+| [APT42](../actors/apt42.md) | High | 3 | 2 | 3 | 1 | 1 | 2 | 0 | 1 |
+| [Agrius](../actors/agrius.md) | High | 2 | 1 | 10 | 1 | 1 | 1 | 0 | 1 |
+| [CyberAv3ngers](../actors/cyberav3ngers.md) | High | 3 | 1 | 2 | 1 | 1 | 3 | 0 | 0 |
+| [Imperial Kitten](../actors/imperial-kitten.md) | High | 3 | 0 | 2 | 0 | 0 | 1 | 0 | 1 |
+| [Pioneer Kitten](../actors/pioneer-kitten.md) | High | 3 | 0 | 1 | 2 | 2 | 1 | 1 | 1 |
+| [DarkBit](../actors/darkbit.md) | High | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
+| [Lyceum](../actors/lyceum.md) | High | 2 | 0 | 12 | 0 | 0 | 1 | 0 | 1 |
+| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | High | 3 | 1 | 1 | 1 | 1 | 1 | 0 | 0 |
+| [APT39](../actors/apt39.md) | Medium | 2 | 0 | 11 | 0 | 0 | 1 | 1 | 1 |
+| [APT-C-23](../actors/arid-viper.md) | High | 2 | 3 | 7 | 0 | 0 | 1 | 1 | 1 |
+| [UNC3890](../actors/unc3890.md) | Medium-High | 1 | 1 | 1 | 0 | 0 | 1 | 1 | 0 |
+| [Cyber Toufan](../actors/cyber-toufan.md) | Medium-High | 3 | 0 | 1 | 1 | 1 | 1 | 1 | 0 |
+| [Void Manticore / Handala](../actors/handala.md) | High | 7 | 2 | 9 | 2 | 2 | 2 | 0 | 1 |
+| [Lebanese Cedar](../actors/lebanese-cedar.md) | Medium | 2 | 1 | 2 | 1 | 1 | 1 | 0 | 1 |
+| [WIRTE](../actors/wirte.md) | High | 5 | 2 | 2 | 2 | 2 | 1 | 0 | 1 |
+| [TA402](../actors/ta402.md) | Medium-High | 2 | 2 | 1 | 0 | 0 | 1 | 0 | 2 |
+| [UNC1860](../actors/unc1860.md) | High | 5 | 2 | 9 | 1 | 1 | 2 | 0 | 0 |
+| [Scarred Manticore](../actors/scarred-manticore.md) | High | 5 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
 
 ## Actor Drilldowns
 
@@ -51,6 +51,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`Remote Monitoring and Management tools`](../tools/remote-monitoring-and-management-tools.md); [`Dindoor`](../tools/dindoor.md); [`Fakeset`](../tools/fakeset.md); [`BugSleep`](../tools/bugsleep.md); [`BlackBeard`](../tools/blackbeard.md); [`Fooder / MuddyViper`](../tools/fooder-muddyviper.md); [`ConnectWise`](../tools/connectwise.md); [`CrackMapExec`](../tools/crackmapexec.md); [`DCHSpy`](../tools/dchspy.md); [`Empire`](../tools/empire.md); [`Koadic`](../tools/koadic.md); [`LaZagne`](../tools/lazagne.md); [`LP-Notes`](../tools/lp-notes.md); [`Mimikatz`](../tools/mimikatz.md); [`Mori`](../tools/mori.md); [`Out1`](../tools/out1.md); [`PowerSploit`](../tools/powersploit.md); [`POWERSTATS`](../tools/powerstats.md); [`PowGoop`](../tools/powgoop.md); [`Rclone`](../tools/rclone.md); [`RemoteUtilities`](../tools/remoteutilities.md); [`RustyWater`](../tools/rustywater.md); [`SHARPSTATS`](../tools/sharpstats.md); [`Small Sieve`](../tools/small-sieve.md); [`STARWHALE`](../tools/starwhale.md); [`Tsundere Botnet`](../tools/tsundere-botnet.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#muddywater) (26 mapped tool row(s))
 - Evidence records: `EVD-004` / `CLM-MUDDYWATER-001`
+- Imported research intakes: [MuddyWater Deep Research Intake](../reports/muddywater-deep-research.md) (High, Needs source validation)
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-AP-MUDDYWATER`, `SRC-CP-BUGSLEEP`, `SRC-ESET-MUDDYWATER-SNAKES`, `SRC-INCD-MUDDYWATER-2024`, `SRC-INCD-MUDDYWATER-PHISHING`, `SRC-MITRE-G0069`, `SRC-THREAT-HUNTER-V3`
 
@@ -69,6 +70,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`OilBooster`](../tools/oilbooster.md); [`Saitama`](../tools/saitama.md); [`BONDUPDATER`](../tools/bondupdater.md); [`certutil`](../tools/certutil.md); [`ftp`](../tools/ftp.md); [`Helminth`](../tools/helminth.md); [`ipconfig`](../tools/ipconfig.md); [`ISMInjector`](../tools/isminjector.md); [`LaZagne`](../tools/lazagne.md); [`Mango`](../tools/mango.md); [`Mimikatz`](../tools/mimikatz.md); [`Net`](../tools/net.md); [`netstat`](../tools/netstat.md); [`ngrok`](../tools/ngrok.md); [`ODAgent`](../tools/odagent.md); [`OilCheck`](../tools/oilcheck.md); [`OopsIE`](../tools/oopsie.md); [`PowerExchange`](../tools/powerexchange.md); [`POWRUNER`](../tools/powruner.md); [`PsExec`](../tools/psexec.md); [`QUADAGENT`](../tools/quadagent.md); [`RDAT`](../tools/rdat.md); [`Reg`](../tools/reg.md); [`RGDoor`](../tools/rgdoor.md); [`SampleCheck5000`](../tools/samplecheck5000.md); [`SEASHARPEE`](../tools/seasharpee.md); [`SideTwist`](../tools/sidetwist.md); [`Solar`](../tools/solar.md); [`Systeminfo`](../tools/systeminfo.md); [`Tasklist`](../tools/tasklist.md); [`ZeroCleare`](../tools/zerocleare.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#oilrig) (31 mapped tool row(s))
 - Evidence records: `EVD-013` / `CLM-OILRIG-001`; `EVD-014` / `CLM-OILRIG-002`
+- Imported research intakes: [OilRig And Magic Hound Deep Research Intake](../reports/oilrig-magic-hound-deep-research.md) (High, Needs source validation); [APT35 And OilRig Israel Deep Research Intake](../reports/apt35-oilrig-israel-deep-research.md) (High, Needs source validation)
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-ESET-OILRIG-ISRAEL`, `SRC-MITRE-G0049`, `SRC-UNIT42-OILRIG-DNS-TUNNELING`
 
@@ -87,6 +89,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`FRP / Plink`](../tools/frp-plink.md); [`Mimikatz / SQLMap / Havij`](../tools/mimikatz-sqlmap-havij.md); [`CharmPower`](../tools/charmpower.md); [`DownPaper`](../tools/downpaper.md); [`Impacket`](../tools/impacket.md); [`ipconfig`](../tools/ipconfig.md); [`Mimikatz`](../tools/mimikatz.md); [`Net`](../tools/net.md); [`netsh`](../tools/netsh.md); [`Ping`](../tools/ping.md); [`PowerLess`](../tools/powerless.md); [`PsExec`](../tools/psexec.md); [`Pupy`](../tools/pupy.md); [`Systeminfo`](../tools/systeminfo.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#magic-hound) (14 mapped tool row(s))
 - Evidence records: `EVD-015` / `CLM-APT35-001`
+- Imported research intakes: [OilRig And Magic Hound Deep Research Intake](../reports/oilrig-magic-hound-deep-research.md) (High, Needs source validation); [APT35 And OilRig Israel Deep Research Intake](../reports/apt35-oilrig-israel-deep-research.md) (High, Needs source validation)
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G0059`
 
@@ -105,6 +108,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`POWERPOST`](../tools/powerpost.md); [`NICECURL`](../tools/nicecurl.md); [`TAMECAT`](../tools/tamecat.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#apt42) (3 mapped tool row(s))
 - Evidence records: `EVD-003` / `CLM-APT42-001`; `EVD-016` / `CLM-APT42-002`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-GOOGLE-APT42-PHISHING`, `SRC-MANDIANT-APT42`, `SRC-MITRE-G1044`, `SRC-PROOFPOINT-IRAN-CONFLICT-2026`
 
@@ -123,6 +127,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`Moneybird`](../tools/moneybird.md); [`BlackShadow`](../tools/blackshadow.md); [`Apostle`](../tools/apostle.md); [`ASPXSpy`](../tools/aspxspy.md); [`BFG Agonizer`](../tools/bfg-agonizer.md); [`DEADWOOD`](../tools/deadwood.md); [`IPsec Helper`](../tools/ipsec-helper.md); [`Mimikatz`](../tools/mimikatz.md); [`MultiLayer Wiper`](../tools/multilayer-wiper.md); [`NBTscan`](../tools/nbtscan.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#agrius) (10 mapped tool row(s))
 - Evidence records: `EVD-017` / `CLM-AGRIUS-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1030`
 
@@ -141,6 +146,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`Unitronics Vision PLC Web/HMI`](../tools/unitronics-vision-plc-webhmi.md); [`IOControl`](../tools/iocontrol.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#cyberav3ngers) (2 mapped tool row(s))
 - Evidence records: `EVD-002` / `CLM-CYBERAV3NGERS-001`; `EVD-009` / `CLM-CYBERAV3NGERS-002`; `EVD-026` / `CLM-CYBERAV3NGERS-003`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CISA-AA23-335A`, `SRC-CISA-AA26-097A`, `SRC-CLAROTY-IOCONTROL-2024`
 
@@ -159,6 +165,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`IMAPLoader`](../tools/imaploader.md); [`StandardKeyboard`](../tools/standardkeyboard.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#imperial-kitten) (2 mapped tool row(s))
 - Evidence records: `EVD-018` / `CLM-IMPERIALKITTEN-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CS-IMPERIAL-KITTEN-2023`, `SRC-PWC-YELLOW-LIDERC-2023`
 
@@ -177,6 +184,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`NGROK / Ligolo`](../tools/ngrok-ligolo.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#pioneer-kitten) (1 mapped tool row(s))
 - Evidence records: `EVD-019` / `CLM-PIONEERKITTEN-001`
+- Imported research intakes: [Pioneer Kitten Deep Research Intake](../reports/pioneer-kitten-deep-research.md) (High, Needs source validation)
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CISA-AA24-241A`
 
@@ -195,6 +203,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`DarkBit ransomware`](../tools/darkbit-ransomware.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#darkbit) (1 mapped tool row(s))
 - Evidence records: `EVD-020` / `CLM-DARKBIT-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-INCD-DARKBIT-MUDDYWATER-2023`, `SRC-MS-MERCURY-DEV1084-2023`
 
@@ -213,6 +222,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`DanBot`](../tools/danbot.md); [`Kevin`](../tools/kevin.md); [`Shark`](../tools/shark.md); [`BITSAdmin`](../tools/bitsadmin.md); [`DnsSystem`](../tools/dnssystem.md); [`Empire`](../tools/empire.md); [`ipconfig`](../tools/ipconfig.md); [`Milan`](../tools/milan.md); [`Mimikatz`](../tools/mimikatz.md); [`netstat`](../tools/netstat.md); [`Ping`](../tools/ping.md); [`PoshC2`](../tools/poshc2.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#lyceum) (12 mapped tool row(s))
 - Evidence records: `EVD-021` / `CLM-LYCEUM-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1001`
 
@@ -231,6 +241,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`WezRat`](../tools/wezrat.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#cotton-sandstorm) (1 mapped tool row(s))
 - Evidence records: `EVD-022` / `CLM-COTTONSANDSTORM-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-WEZRAT`, `SRC-FBI-EMENNET-2024`, `SRC-MS-IRAN-IO`
 
@@ -249,6 +260,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`Remexi`](../tools/remexi.md); [`ANTAK / ASPXSPY`](../tools/antak-aspxspy.md); [`Cadelspy`](../tools/cadelspy.md); [`CrackMapExec`](../tools/crackmapexec.md); [`ftp`](../tools/ftp.md); [`MechaFlounder`](../tools/mechaflounder.md); [`Mimikatz`](../tools/mimikatz.md); [`NBTscan`](../tools/nbtscan.md); [`PsExec`](../tools/psexec.md); [`pwdump`](../tools/pwdump.md); [`Windows Credential Editor`](../tools/windows-credential-editor.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#apt39) (11 mapped tool row(s))
 - Evidence records: `EVD-027` / `CLM-APT39-001`
+- Imported research intakes: [APT39 Arid Viper UNC3890 Cyber Toufan Deep Research Intake](../reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research.md) (Medium, Needs source validation)
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G0087`
 
@@ -267,6 +279,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`AridSpy`](../tools/aridspy.md); [`RedAlert.apk`](../tools/redalertapk.md); [`Desert Scorpion`](../tools/desert-scorpion.md); [`FrozenCell`](../tools/frozencell.md); [`Micropsia`](../tools/micropsia.md); [`Phenakite`](../tools/phenakite.md); [`SpyC23`](../tools/spyc23.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#apt-c-23) (7 mapped tool row(s))
 - Evidence records: `EVD-011` / `CLM-ARIDVIPER-001`
+- Imported research intakes: [APT39 Arid Viper UNC3890 Cyber Toufan Deep Research Intake](../reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research.md) (High, Needs source validation)
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CYBERNEWS-REDALERT-2026`, `SRC-ESET-ARIDSPY`, `SRC-META-ARIDVIPER`, `SRC-MITRE-G1028`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`
 
@@ -285,6 +298,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`SUGARUSH / SUGARDUMP`](../tools/sugarush-sugardump.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#unc3890) (1 mapped tool row(s))
 - Evidence records: `EVD-025` / `CLM-UNC3890-001`
+- Imported research intakes: [APT39 Arid Viper UNC3890 Cyber Toufan Deep Research Intake](../reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research.md) (Medium, Needs source validation)
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-MANDIANT-UNC3890`, `SRC-SECWEEK-UNC3890`
 
@@ -303,6 +317,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`Cyber Toufan supplier-access playbook`](../tools/cyber-toufan-supplier-access-playbook.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#cyber-toufan) (1 mapped tool row(s))
 - Evidence records: `EVD-023` / `CLM-CYBERTOUFAN-001`
+- Imported research intakes: [APT39 Arid Viper UNC3890 Cyber Toufan Deep Research Intake](../reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research.md) (High, Needs source validation)
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-MS-IRAN-HAMAS`, `SRC-OPI-CYBER-TOUFAN`
 
@@ -321,6 +336,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`BiBi / BiBi Wiper lineage`](../tools/bibi-bibi-wiper-lineage.md); [`Handala-linked destructive installer chains`](../tools/handala-linked-destructive-installer-chains.md); [`CHIMNEYSWEEP`](../tools/chimneysweep.md); [`ftp`](../tools/ftp.md); [`Impacket`](../tools/impacket.md); [`Mimikatz`](../tools/mimikatz.md); [`RawDisk`](../tools/rawdisk.md); [`ROADSWEEP`](../tools/roadsweep.md); [`ZeroCleare`](../tools/zerocleare.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#void-manticore-handala) (9 mapped tool row(s))
 - Evidence records: `EVD-005` / `CLM-HANDALA-001`; `EVD-006` / `CLM-HANDALA-002`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-AP-HANDALA`, `SRC-MITRE-G1055`, `SRC-PUSH-STRYKER-HANDALA`, `SRC-THREAT-HUNTER-V3`
 
@@ -339,6 +355,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`Explosive RAT`](../tools/explosive-rat.md); [`Caterpillar WebShell`](../tools/caterpillar-webshell.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#lebanese-cedar) (2 mapped tool row(s))
 - Evidence records: `EVD-012` / `CLM-LEBANESECEDAR-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CLEARSKY-LEBANESE-CEDAR`
 
@@ -357,6 +374,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`SameCoin`](../tools/samecoin.md); [`AshTag`](../tools/ashtag.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#wirte) (2 mapped tool row(s))
 - Evidence records: `EVD-010` / `CLM-WIRTE-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CP-WIRTE-2024`, `SRC-UNIT42-ASHTAG-2025`
 
@@ -375,6 +393,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`IronWind`](../tools/ironwind.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#ta402) (1 mapped tool row(s))
 - Evidence records: `EVD-024` / `CLM-TA402-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: [2 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-PROOFPOINT-TA402-IRONWIND`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`
 
@@ -393,6 +412,7 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`TEMPLEDOOR`](../tools/templedoor.md); [`TEMPLEPLAY`](../tools/templeplay.md); [`CRYPTOSLAY`](../tools/cryptoslay.md); [`PipeSnoop`](../tools/pipesnoop.md); [`STAYSHANTE`](../tools/stayshante.md); [`SASHEYAWAY`](../tools/sasheyaway.md); [`VIROGREEN`](../tools/virogreen.md); [`TEMPLEDROP`](../tools/templedrop.md); [`TEMPLELOCK`](../tools/templelock.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#unc1860) (9 mapped tool row(s))
 - Evidence records: `EVD-001` / `CLM-UNC1860-001`; `EVD-008` / `CLM-UNC1860-002`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-MALPEDIA-UNC1860`, `SRC-MANDIANT-UNC1860`
 
@@ -411,5 +431,6 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Tool detail pages: [`Liontail`](../tools/liontail.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#scarred-manticore) (1 mapped tool row(s))
 - Evidence records: `EVD-007` / `CLM-SCARRED-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-SCARRED-MANTICORE-2023`, `SRC-CP-VOID-2024`

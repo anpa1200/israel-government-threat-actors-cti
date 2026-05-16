@@ -18,6 +18,7 @@ sidebar_label: Pioneer Kitten
 - Tool detail pages: [`NGROK / Ligolo`](../tools/ngrok-ligolo.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#pioneer-kitten) (1 mapped tool row(s))
 - Evidence records: `EVD-019` / `CLM-PIONEERKITTEN-001`
+- Imported research intakes: [Pioneer Kitten Deep Research Intake](../reports/pioneer-kitten-deep-research.md) (High, Needs source validation)
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CISA-AA24-241A`
 

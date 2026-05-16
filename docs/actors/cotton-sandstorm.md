@@ -15,6 +15,7 @@
 - Tool detail pages: [`WezRat`](../tools/wezrat.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#cotton-sandstorm) (1 mapped tool row(s))
 - Evidence records: `EVD-022` / `CLM-COTTONSANDSTORM-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-WEZRAT`, `SRC-FBI-EMENNET-2024`, `SRC-MS-IRAN-IO`
 

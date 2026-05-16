@@ -18,6 +18,7 @@ sidebar_label: DarkBit
 - Tool detail pages: [`DarkBit ransomware`](../tools/darkbit-ransomware.md)
 - Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#darkbit) (1 mapped tool row(s))
 - Evidence records: `EVD-020` / `CLM-DARKBIT-001`
+- Imported research intakes: None currently mapped.
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-INCD-DARKBIT-MUDDYWATER-2023`, `SRC-MS-MERCURY-DEV1084-2023`
 

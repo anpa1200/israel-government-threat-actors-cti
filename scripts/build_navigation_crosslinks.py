@@ -174,6 +174,7 @@ def build_indexes() -> dict[str, object]:
     iocs = read_csv("data/ioc-references.csv")
     malware = read_csv("data/malware-references.csv")
     tool_intelligence = read_csv("data/tool-intelligence.csv")
+    research_intake = read_csv("data/research-intake-map.csv")
     scenarios = read_csv("examples/registers/threat-scenario-register.csv")
     hunts = read_csv("examples/registers/hunt-backlog.csv")
     detections = read_csv("examples/registers/detection-backlog.csv")
@@ -193,6 +194,7 @@ def build_indexes() -> dict[str, object]:
     tool_lookup: dict[tuple[str, str], dict[str, str]] = {}
     evidence_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     intel_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
+    research_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     detections_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     hunts_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
 
@@ -211,6 +213,10 @@ def build_indexes() -> dict[str, object]:
         actor_id = row.get("actor_id", "")
         if actor_id:
             intel_by_actor[actor_id].append(row)
+    for row in research_intake:
+        actor_id = row.get("actor_id", "")
+        if actor_id:
+            research_by_actor[actor_id].append(row)
 
     actor_attack_ids = {
         actor_id: {row["attack_id"] for row in rows}
@@ -255,6 +261,7 @@ def build_indexes() -> dict[str, object]:
         "tool_lookup": tool_lookup,
         "evidence_by_actor": evidence_by_actor,
         "intel_by_actor": intel_by_actor,
+        "research_by_actor": research_by_actor,
         "detections_by_actor": detections_by_actor,
         "hunts_by_actor": hunts_by_actor,
         "detections_by_id": detections_by_id,
@@ -278,6 +285,8 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
     tool_lookup = indexes["tool_lookup"]
     evidence_by_actor = indexes["evidence_by_actor"]
     intel_by_actor = indexes["intel_by_actor"]
+    research_by_actor = indexes["research_by_actor"]
+    research_by_actor = indexes["research_by_actor"]
     detections_by_actor = indexes["detections_by_actor"]
     hunts_by_actor = indexes["hunts_by_actor"]
 
@@ -303,6 +312,7 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
     tool_rows = tools_by_actor.get(actor_id, [])
     evidence_rows = evidence_by_actor.get(actor_id, [])
     intel_rows = intel_by_actor.get(actor_id, [])
+    research_rows = research_by_actor.get(actor_id, [])
 
     ttp_links = [
         f"{technique_matrix_link(row['attack_id'], row['attack_id'], relative_to_actor=relative_to_actor)} {row['technique']} ({row['mapping_quality']})"
@@ -342,6 +352,11 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
         if relative_to_actor
         else f"[{len(intel_rows)} current candidate(s)](../intelligence-updates.md#actor-update-candidates)"
     )
+    research_prefix = "../" if relative_to_actor else "../"
+    research_links = [
+        f"[{row['report_title']}]({research_prefix}{row['report_path']}.md) ({row['priority']}, {row['validation_status']})"
+        for row in research_rows
+    ]
     surfaces = [
         f"[{surface_row['name']}]({surface}#{surface_row['id']})"
         for surface_row in SURFACES
@@ -364,6 +379,7 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
         f"- Tool detail pages: {bullet_links(tool_detail_links)}",
         f"- Tool matrix: [all actor-linked tools]({tool_matrix}#{anchor(actor['primary_name'])}) ({len(tool_rows)} mapped tool row(s))",
         f"- Evidence records: {bullet_links(evidence_links)}",
+        f"- Imported research intakes: {bullet_links(research_links)}",
         f"- Intel update candidates: {intel_link if intel_rows else 'None in current feed pull.'}",
         f"- Source IDs in structured data: {', '.join(f'`{source_id}`' for source_id in source_ids) if source_ids else 'None currently mapped.'}",
         "",
@@ -414,6 +430,7 @@ def build_actor_workbench(indexes: dict[str, object]) -> None:
     tools_by_actor = indexes["tools_by_actor"]
     evidence_by_actor = indexes["evidence_by_actor"]
     intel_by_actor = indexes["intel_by_actor"]
+    research_by_actor = indexes["research_by_actor"]
 
     rows = [
         "---",
@@ -429,8 +446,8 @@ def build_actor_workbench(indexes: dict[str, object]) -> None:
         "",
         "## Actor Coverage Matrix",
         "",
-        "| Actor | Priority | TTPs | IOC refs | Tools | Hunts | Detections | Evidence | Intel leads |",
-        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| Actor | Priority | TTPs | IOC refs | Tools | Hunts | Detections | Evidence | Research intakes | Intel leads |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for actor in actors:
         actor_id = actor["actor_id"]
@@ -446,6 +463,7 @@ def build_actor_workbench(indexes: dict[str, object]) -> None:
             + f"{len(hunts_by_actor.get(actor_id, []))} | "
             + f"{len(detections_by_actor.get(actor_id, []))} | "
             + f"{len(evidence_by_actor.get(actor_id, []))} | "
+            + f"{len(research_by_actor.get(actor_id, []))} | "
             + f"{len(intel_by_actor.get(actor_id, []))} |"
         )
 
