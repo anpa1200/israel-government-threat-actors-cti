@@ -5,7 +5,7 @@ sidebar_label: TTP Matrix
 
 # TTP To Detection Matrix
 
-Use this page when the starting point is a technique. Each technique links back to relevant actors, mapped repository detections, mapped hunts, and MITRE ATT&CK.
+Use this page when the starting point is a technique. For mapping discipline, use the Field Manual [ATT&CK as a Working Tool](https://anpa1200.github.io/cti-analyst-field-manual/docs/frameworks/mitre-attack-as-working-tool/). Each technique links back to relevant actors, mapped repository detections, mapped hunts, and MITRE ATT&CK.
 
 A missing detection means the technique is tracked for intelligence context but does not yet have a repository rule or hunt mapped to it.
 

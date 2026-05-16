@@ -45,12 +45,15 @@ Use one evidence label per material claim:
 
 ## Required Output Pattern
 
+For the canonical ATT&CK mapping rule, use the Field Manual [ATT&CK as a Working Tool](https://anpa1200.github.io/cti-analyst-field-manual/docs/frameworks/mitre-attack-as-working-tool/) page and this project's [Fact Correlation](../fact-correlation.md) page.
+
+
 Any threat-hunting or detection-engineering item SHOULD include:
 
 - PIR or defensive decision.
 - Actor, persona, scenario, or behavior pattern.
 - Claim IDs and evidence IDs.
-- ATT&CK technique and mapping quality.
+- Behavior-backed ATT&CK technique and mapping quality when defensible, or `ATT&CK mapping: Gap / Not mapped` when evidence does not support a technique.
 - Observable behavior.
 - Required telemetry and fields.
 - Detection Readiness Level.

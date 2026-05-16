@@ -5,7 +5,7 @@ sidebar_label: Actor Index
 
 # Actor Index
 
-This index is the entry point for actor-centric navigation. Each actor links to its profile and to the generated cross-reference workbench that joins actor pages to TTPs, IOC references, malware/tool references, hunts, detections, and surfaces.
+This index is the entry point for actor-centric navigation. Use the Field Manual [Actor Profile Template](https://anpa1200.github.io/cti-analyst-field-manual/docs/actor-research/actor-profile-template/) and [Attribution Methodology](https://anpa1200.github.io/cti-analyst-field-manual/docs/attribution/attribution-methodology/) when editing actor claims. Each actor links to its profile and to the generated cross-reference workbench that joins actor pages to TTPs, IOC references, malware/tool references, hunts, detections, and surfaces.
 
 - [Actor Navigation Workbench](../navigation/actor-workbench.md)
 - [TTP To Detection Matrix](../navigation/ttp-detection-matrix.md)

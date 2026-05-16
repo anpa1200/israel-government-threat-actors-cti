@@ -13,6 +13,11 @@ const sidebars = {
       label: 'CTI Project Ecosystem',
     },
     {
+      type: 'doc',
+      id: 'fact-correlation',
+      label: 'Fact Correlation',
+    },
+    {
       type: 'category',
       label: 'Foundations',
       collapsed: false,

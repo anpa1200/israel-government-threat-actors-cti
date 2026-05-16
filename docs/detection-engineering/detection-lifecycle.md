@@ -5,13 +5,13 @@ sidebar_label: Detection Lifecycle
 
 # Detection Lifecycle
 
-Detection engineering in this repository uses CTI as input, but production deployment requires engineering evidence.
+Detection engineering in this repository uses CTI as input, but production deployment requires engineering evidence. This lifecycle aligns with the Field Manual [Intelligence to Detection](https://anpa1200.github.io/cti-analyst-field-manual/docs/cti-to-detection/intelligence-to-detection/) method and the Customer project [delivery gates](https://anpa1200.github.io/customer-driven-ai-cti-project/docs/methodology/foundations/).
 
 ## Lifecycle
 
 | Stage | Required Output |
 | --- | --- |
-| Intake | PIR, scenario, source/evidence IDs, ATT&CK technique, customer relevance. |
+| Intake | PIR, scenario, source/evidence IDs, behavior-backed ATT&CK technique when defensible, customer relevance. |
 | Design | Observable, telemetry source, fields, expected false positives, severity, SOC action. |
 | Prototype | Sigma, KQL, SPL, Elastic, or platform-native query. |
 | Test | Positive test, negative test, edge case, replay or historical validation. |
@@ -26,7 +26,7 @@ A detection MUST include:
 - `what it detects`;
 - `why it matters`;
 - source/evidence IDs;
-- ATT&CK technique and mapping quality;
+- ATT&CK technique and mapping quality when behavior-backed, or `ATT&CK mapping: Gap / Not mapped` when no defensible technique exists;
 - log source and fields;
 - rule logic;
 - false-positive assumptions;

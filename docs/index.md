@@ -8,7 +8,7 @@ sidebar_position: 1
 
 # Israel Government Threat Actors CTI
 
-This documentation organizes public-source threat intelligence for defensive use by Israeli government and public-sector defenders.
+This documentation organizes [public-source threat intelligence](https://anpa1200.github.io/cti-analyst-field-manual/docs/cti-foundations/what-is-cti/) for defensive use by Israeli government and public-sector defenders.
 
 ## CTI Ecosystem
 
@@ -37,7 +37,7 @@ This knowledge base is the Israel-focused actor and sector layer of a three-book
 
 ## Operating Rules
 
-- Analysts MUST distinguish source facts from analytic inference.
+- Analysts MUST distinguish [source facts from analytic inference](https://anpa1200.github.io/cti-analyst-field-manual/docs/cti-foundations/evidence-labels/).
 - Analysts SHOULD cite at least one source record for every actor claim.
 - Detections MUST be validated against local telemetry before production deployment.
 - IOC matches SHOULD be treated as leads, not final attribution.
