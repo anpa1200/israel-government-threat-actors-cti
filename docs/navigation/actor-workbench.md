@@ -13,22 +13,22 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 
 | Actor | Priority | TTPs | IOC refs | Tools | Hunts | Detections | Evidence | Intel leads |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| [MuddyWater](../actors/muddywater.md) | High | 4 | 4 | 6 | 2 | 2 | 1 | 1 |
-| [OilRig](../actors/oilrig.md) | High | 2 | 1 | 2 | 0 | 0 | 2 | 1 |
-| [Magic Hound](../actors/apt35.md) | High | 2 | 0 | 2 | 1 | 1 | 1 | 1 |
+| [MuddyWater](../actors/muddywater.md) | High | 4 | 4 | 26 | 2 | 2 | 1 | 1 |
+| [OilRig](../actors/oilrig.md) | High | 2 | 1 | 31 | 0 | 0 | 2 | 1 |
+| [Magic Hound](../actors/apt35.md) | High | 2 | 0 | 14 | 1 | 1 | 1 | 1 |
 | [APT42](../actors/apt42.md) | High | 3 | 2 | 3 | 1 | 1 | 2 | 1 |
-| [Agrius](../actors/agrius.md) | High | 2 | 1 | 2 | 1 | 1 | 1 | 1 |
+| [Agrius](../actors/agrius.md) | High | 2 | 1 | 10 | 1 | 1 | 1 | 1 |
 | [CyberAv3ngers](../actors/cyberav3ngers.md) | High | 3 | 1 | 2 | 1 | 1 | 3 | 0 |
 | [Imperial Kitten](../actors/imperial-kitten.md) | High | 3 | 0 | 2 | 0 | 0 | 1 | 1 |
 | [Pioneer Kitten](../actors/pioneer-kitten.md) | High | 3 | 0 | 1 | 2 | 2 | 1 | 1 |
 | [DarkBit](../actors/darkbit.md) | High | 2 | 0 | 1 | 0 | 0 | 1 | 0 |
-| [Lyceum](../actors/lyceum.md) | High | 2 | 0 | 3 | 0 | 0 | 1 | 1 |
+| [Lyceum](../actors/lyceum.md) | High | 2 | 0 | 12 | 0 | 0 | 1 | 1 |
 | [Cotton Sandstorm](../actors/cotton-sandstorm.md) | High | 3 | 1 | 1 | 1 | 1 | 1 | 0 |
-| [APT39](../actors/apt39.md) | Medium | 2 | 0 | 2 | 0 | 0 | 1 | 1 |
-| [APT-C-23](../actors/arid-viper.md) | High | 2 | 3 | 2 | 0 | 0 | 1 | 1 |
+| [APT39](../actors/apt39.md) | Medium | 2 | 0 | 11 | 0 | 0 | 1 | 1 |
+| [APT-C-23](../actors/arid-viper.md) | High | 2 | 3 | 7 | 0 | 0 | 1 | 1 |
 | [UNC3890](../actors/unc3890.md) | Medium-High | 1 | 1 | 1 | 0 | 0 | 1 | 0 |
 | [Cyber Toufan](../actors/cyber-toufan.md) | Medium-High | 3 | 0 | 1 | 1 | 1 | 1 | 0 |
-| [Void Manticore / Handala](../actors/handala.md) | High | 7 | 2 | 2 | 2 | 2 | 2 | 1 |
+| [Void Manticore / Handala](../actors/handala.md) | High | 7 | 2 | 9 | 2 | 2 | 2 | 1 |
 | [Lebanese Cedar](../actors/lebanese-cedar.md) | Medium | 2 | 1 | 2 | 1 | 1 | 1 | 1 |
 | [WIRTE](../actors/wirte.md) | High | 5 | 2 | 2 | 2 | 2 | 1 | 1 |
 | [TA402](../actors/ta402.md) | Medium-High | 2 | 2 | 1 | 0 | 0 | 1 | 2 |
@@ -48,9 +48,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-002](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/suspicious-rmm-file-sharing-download.yml) Suspicious RMM Installer Download From User Context (Pilot, DRL-6); [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
 - Mapped hunts: [HUNT-002](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/suspicious-rmm-file-sharing-download.kql) If MuddyWater-style RMM abuse is active then unauthorized RMM execution will appear from user-controlled paths; [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
 - IOC reference sources: `SRC-MITRE-G0069` Technique references; `SRC-AP-MUDDYWATER` Malware/tool references; ATT&CK mappings; campaign IOCs; `SRC-THREAT-HUNTER-V3` Domains; IPs; Rclone destinations; Dindoor/Fakeset references; `SRC-INCD-MUDDYWATER-2024` Domains; hashes; tools; infrastructure; TTPs
-- Malware and tools: [`Remote Monitoring and Management tools`](../tools/remote-monitoring-and-management-tools.md) (Living-off-the-land tooling); [`Dindoor`](../tools/dindoor.md) (Backdoor); [`Fakeset`](../tools/fakeset.md) (Backdoor); [`BugSleep`](../tools/bugsleep.md) (Backdoor); [`BlackBeard`](../tools/blackbeard.md) (Backdoor); [`Fooder / MuddyViper`](../tools/fooder-muddyviper.md) (Loader and backdoor)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#muddywater) (6 mapped tool row(s))
-- Tool detail pages: [`Remote Monitoring and Management tools`](../tools/remote-monitoring-and-management-tools.md); [`Dindoor`](../tools/dindoor.md); [`Fakeset`](../tools/fakeset.md); [`BugSleep`](../tools/bugsleep.md); [`BlackBeard`](../tools/blackbeard.md); [`Fooder / MuddyViper`](../tools/fooder-muddyviper.md)
+- Tool detail pages: [`Remote Monitoring and Management tools`](../tools/remote-monitoring-and-management-tools.md); [`Dindoor`](../tools/dindoor.md); [`Fakeset`](../tools/fakeset.md); [`BugSleep`](../tools/bugsleep.md); [`BlackBeard`](../tools/blackbeard.md); [`Fooder / MuddyViper`](../tools/fooder-muddyviper.md); [`ConnectWise`](../tools/connectwise.md); [`CrackMapExec`](../tools/crackmapexec.md); [`DCHSpy`](../tools/dchspy.md); [`Empire`](../tools/empire.md); [`Koadic`](../tools/koadic.md); [`LaZagne`](../tools/lazagne.md); [`LP-Notes`](../tools/lp-notes.md); [`Mimikatz`](../tools/mimikatz.md); [`Mori`](../tools/mori.md); [`Out1`](../tools/out1.md); [`PowerSploit`](../tools/powersploit.md); [`POWERSTATS`](../tools/powerstats.md); [`PowGoop`](../tools/powgoop.md); [`Rclone`](../tools/rclone.md); [`RemoteUtilities`](../tools/remoteutilities.md); [`RustyWater`](../tools/rustywater.md); [`SHARPSTATS`](../tools/sharpstats.md); [`Small Sieve`](../tools/small-sieve.md); [`STARWHALE`](../tools/starwhale.md); [`Tsundere Botnet`](../tools/tsundere-botnet.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#muddywater) (26 mapped tool row(s))
 - Evidence records: `EVD-004` / `CLM-MUDDYWATER-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-AP-MUDDYWATER`, `SRC-CP-BUGSLEEP`, `SRC-ESET-MUDDYWATER-SNAKES`, `SRC-INCD-MUDDYWATER-2024`, `SRC-INCD-MUDDYWATER-PHISHING`, `SRC-MITRE-G0069`, `SRC-THREAT-HUNTER-V3`
@@ -67,9 +66,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: `SRC-MITRE-G0049` Technique references
-- Malware and tools: [`OilBooster`](../tools/oilbooster.md) (Downloader); [`Saitama`](../tools/saitama.md) (DNS-tunneling backdoor)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#oilrig) (2 mapped tool row(s))
-- Tool detail pages: [`OilBooster`](../tools/oilbooster.md); [`Saitama`](../tools/saitama.md)
+- Tool detail pages: [`OilBooster`](../tools/oilbooster.md); [`Saitama`](../tools/saitama.md); [`BONDUPDATER`](../tools/bondupdater.md); [`certutil`](../tools/certutil.md); [`ftp`](../tools/ftp.md); [`Helminth`](../tools/helminth.md); [`ipconfig`](../tools/ipconfig.md); [`ISMInjector`](../tools/isminjector.md); [`LaZagne`](../tools/lazagne.md); [`Mango`](../tools/mango.md); [`Mimikatz`](../tools/mimikatz.md); [`Net`](../tools/net.md); [`netstat`](../tools/netstat.md); [`ngrok`](../tools/ngrok.md); [`ODAgent`](../tools/odagent.md); [`OilCheck`](../tools/oilcheck.md); [`OopsIE`](../tools/oopsie.md); [`PowerExchange`](../tools/powerexchange.md); [`POWRUNER`](../tools/powruner.md); [`PsExec`](../tools/psexec.md); [`QUADAGENT`](../tools/quadagent.md); [`RDAT`](../tools/rdat.md); [`Reg`](../tools/reg.md); [`RGDoor`](../tools/rgdoor.md); [`SampleCheck5000`](../tools/samplecheck5000.md); [`SEASHARPEE`](../tools/seasharpee.md); [`SideTwist`](../tools/sidetwist.md); [`Solar`](../tools/solar.md); [`Systeminfo`](../tools/systeminfo.md); [`Tasklist`](../tools/tasklist.md); [`ZeroCleare`](../tools/zerocleare.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#oilrig) (31 mapped tool row(s))
 - Evidence records: `EVD-013` / `CLM-OILRIG-001`; `EVD-014` / `CLM-OILRIG-002`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-ESET-OILRIG-ISRAEL`, `SRC-MITRE-G0049`, `SRC-UNIT42-OILRIG-DNS-TUNNELING`
@@ -86,9 +84,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
 - Mapped hunts: [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
 - IOC reference sources: None currently mapped.
-- Malware and tools: [`FRP / Plink`](../tools/frp-plink.md) (Dual-use tunneling / proxy tooling); [`Mimikatz / SQLMap / Havij`](../tools/mimikatz-sqlmap-havij.md) (Public offensive/security tooling)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#magic-hound) (2 mapped tool row(s))
-- Tool detail pages: [`FRP / Plink`](../tools/frp-plink.md); [`Mimikatz / SQLMap / Havij`](../tools/mimikatz-sqlmap-havij.md)
+- Tool detail pages: [`FRP / Plink`](../tools/frp-plink.md); [`Mimikatz / SQLMap / Havij`](../tools/mimikatz-sqlmap-havij.md); [`CharmPower`](../tools/charmpower.md); [`DownPaper`](../tools/downpaper.md); [`Impacket`](../tools/impacket.md); [`ipconfig`](../tools/ipconfig.md); [`Mimikatz`](../tools/mimikatz.md); [`Net`](../tools/net.md); [`netsh`](../tools/netsh.md); [`Ping`](../tools/ping.md); [`PowerLess`](../tools/powerless.md); [`PsExec`](../tools/psexec.md); [`Pupy`](../tools/pupy.md); [`Systeminfo`](../tools/systeminfo.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#magic-hound) (14 mapped tool row(s))
 - Evidence records: `EVD-015` / `CLM-APT35-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G0059`
@@ -105,9 +102,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
 - Mapped hunts: [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
 - IOC reference sources: `SRC-MANDIANT-APT42` Domains; malware hashes; infrastructure; `SRC-PROOFPOINT-IRAN-CONFLICT-2026` Phishing infrastructure; lure domains; campaign indicators
-- Malware and tools: [`POWERPOST`](../tools/powerpost.md) (Script / collection tool); [`NICECURL`](../tools/nicecurl.md) (Backdoor / C2 tool); [`TAMECAT`](../tools/tamecat.md) (Backdoor / C2 tool)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#apt42) (3 mapped tool row(s))
 - Tool detail pages: [`POWERPOST`](../tools/powerpost.md); [`NICECURL`](../tools/nicecurl.md); [`TAMECAT`](../tools/tamecat.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#apt42) (3 mapped tool row(s))
 - Evidence records: `EVD-003` / `CLM-APT42-001`; `EVD-016` / `CLM-APT42-002`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-GOOGLE-APT42-PHISHING`, `SRC-MANDIANT-APT42`, `SRC-MITRE-G1044`, `SRC-PROOFPOINT-IRAN-CONFLICT-2026`
@@ -124,9 +120,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) Intune Bulk Device Wipe Anomaly (Hunt, DRL-5)
 - Mapped hunts: [HUNT-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) If identity-plane destructive tradecraft is attempted then privileged role activation or bulk device actions will appear in audit logs
 - IOC reference sources: `SRC-MITRE-G1030` Technique references
-- Malware and tools: [`Moneybird`](../tools/moneybird.md) (Ransomware / destructive malware); [`BlackShadow`](../tools/blackshadow.md) (Ransomware / persona)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#agrius) (2 mapped tool row(s))
-- Tool detail pages: [`Moneybird`](../tools/moneybird.md); [`BlackShadow`](../tools/blackshadow.md)
+- Tool detail pages: [`Moneybird`](../tools/moneybird.md); [`BlackShadow`](../tools/blackshadow.md); [`Apostle`](../tools/apostle.md); [`ASPXSpy`](../tools/aspxspy.md); [`BFG Agonizer`](../tools/bfg-agonizer.md); [`DEADWOOD`](../tools/deadwood.md); [`IPsec Helper`](../tools/ipsec-helper.md); [`Mimikatz`](../tools/mimikatz.md); [`MultiLayer Wiper`](../tools/multilayer-wiper.md); [`NBTscan`](../tools/nbtscan.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#agrius) (10 mapped tool row(s))
 - Evidence records: `EVD-017` / `CLM-AGRIUS-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1030`
@@ -143,9 +138,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: `SRC-CISA-AA23-335A` IP; device exposure; affected product context
-- Malware and tools: [`Unitronics Vision PLC Web/HMI`](../tools/unitronics-vision-plc-webhmi.md) (Targeted technology); [`IOControl`](../tools/iocontrol.md) (OT/IoT malware)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#cyberav3ngers) (2 mapped tool row(s))
 - Tool detail pages: [`Unitronics Vision PLC Web/HMI`](../tools/unitronics-vision-plc-webhmi.md); [`IOControl`](../tools/iocontrol.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#cyberav3ngers) (2 mapped tool row(s))
 - Evidence records: `EVD-002` / `CLM-CYBERAV3NGERS-001`; `EVD-009` / `CLM-CYBERAV3NGERS-002`; `EVD-026` / `CLM-CYBERAV3NGERS-003`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CISA-AA23-335A`, `SRC-CISA-AA26-097A`, `SRC-CLAROTY-IOCONTROL-2024`
@@ -162,9 +156,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: None currently mapped.
-- Malware and tools: [`IMAPLoader`](../tools/imaploader.md) (.NET downloader / loader); [`StandardKeyboard`](../tools/standardkeyboard.md) (Backdoor / C2 tool)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#imperial-kitten) (2 mapped tool row(s))
 - Tool detail pages: [`IMAPLoader`](../tools/imaploader.md); [`StandardKeyboard`](../tools/standardkeyboard.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#imperial-kitten) (2 mapped tool row(s))
 - Evidence records: `EVD-018` / `CLM-IMPERIALKITTEN-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CS-IMPERIAL-KITTEN-2023`, `SRC-PWC-YELLOW-LIDERC-2023`
@@ -181,9 +174,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-002](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/suspicious-rmm-file-sharing-download.yml) Suspicious RMM Installer Download From User Context (Pilot, DRL-6); [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-002](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/suspicious-rmm-file-sharing-download.kql) If MuddyWater-style RMM abuse is active then unauthorized RMM execution will appear from user-controlled paths; [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: None currently mapped.
-- Malware and tools: [`NGROK / Ligolo`](../tools/ngrok-ligolo.md) (Tunneling / proxy tooling)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#pioneer-kitten) (1 mapped tool row(s))
 - Tool detail pages: [`NGROK / Ligolo`](../tools/ngrok-ligolo.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#pioneer-kitten) (1 mapped tool row(s))
 - Evidence records: `EVD-019` / `CLM-PIONEERKITTEN-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CISA-AA24-241A`
@@ -200,9 +192,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: None currently mapped.
-- Malware and tools: [`DarkBit ransomware`](../tools/darkbit-ransomware.md) (Pseudo-ransomware / destructive malware)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#darkbit) (1 mapped tool row(s))
 - Tool detail pages: [`DarkBit ransomware`](../tools/darkbit-ransomware.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#darkbit) (1 mapped tool row(s))
 - Evidence records: `EVD-020` / `CLM-DARKBIT-001`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-INCD-DARKBIT-MUDDYWATER-2023`, `SRC-MS-MERCURY-DEV1084-2023`
@@ -219,9 +210,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: None currently mapped.
-- Malware and tools: [`DanBot`](../tools/danbot.md) (Remote Access Trojan); [`Kevin`](../tools/kevin.md) (Backdoor); [`Shark`](../tools/shark.md) (Backdoor)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#lyceum) (3 mapped tool row(s))
-- Tool detail pages: [`DanBot`](../tools/danbot.md); [`Kevin`](../tools/kevin.md); [`Shark`](../tools/shark.md)
+- Tool detail pages: [`DanBot`](../tools/danbot.md); [`Kevin`](../tools/kevin.md); [`Shark`](../tools/shark.md); [`BITSAdmin`](../tools/bitsadmin.md); [`DnsSystem`](../tools/dnssystem.md); [`Empire`](../tools/empire.md); [`ipconfig`](../tools/ipconfig.md); [`Milan`](../tools/milan.md); [`Mimikatz`](../tools/mimikatz.md); [`netstat`](../tools/netstat.md); [`Ping`](../tools/ping.md); [`PoshC2`](../tools/poshc2.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#lyceum) (12 mapped tool row(s))
 - Evidence records: `EVD-021` / `CLM-LYCEUM-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1001`
@@ -238,9 +228,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
 - Mapped hunts: [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
 - IOC reference sources: `SRC-CP-WEZRAT` Email sender; domains; hashes; C2 paths; malware behavior
-- Malware and tools: [`WezRat`](../tools/wezrat.md) (Modular infostealer / RAT)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#cotton-sandstorm) (1 mapped tool row(s))
 - Tool detail pages: [`WezRat`](../tools/wezrat.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#cotton-sandstorm) (1 mapped tool row(s))
 - Evidence records: `EVD-022` / `CLM-COTTONSANDSTORM-001`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-WEZRAT`, `SRC-FBI-EMENNET-2024`, `SRC-MS-IRAN-IO`
@@ -257,9 +246,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: None currently mapped.
-- Malware and tools: [`Remexi`](../tools/remexi.md) (Malware / collection tool); [`ANTAK / ASPXSPY`](../tools/antak-aspxspy.md) (Web shells)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#apt39) (2 mapped tool row(s))
-- Tool detail pages: [`Remexi`](../tools/remexi.md); [`ANTAK / ASPXSPY`](../tools/antak-aspxspy.md)
+- Tool detail pages: [`Remexi`](../tools/remexi.md); [`ANTAK / ASPXSPY`](../tools/antak-aspxspy.md); [`Cadelspy`](../tools/cadelspy.md); [`CrackMapExec`](../tools/crackmapexec.md); [`ftp`](../tools/ftp.md); [`MechaFlounder`](../tools/mechaflounder.md); [`Mimikatz`](../tools/mimikatz.md); [`NBTscan`](../tools/nbtscan.md); [`PsExec`](../tools/psexec.md); [`pwdump`](../tools/pwdump.md); [`Windows Credential Editor`](../tools/windows-credential-editor.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#apt39) (11 mapped tool row(s))
 - Evidence records: `EVD-027` / `CLM-APT39-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G0087`
@@ -276,12 +264,11 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: `SRC-META-ARIDVIPER` Domains; apps; mobile indicators; `SRC-CYBERNEWS-REDALERT-2026` App names; package references; domains from secondary coverage; `SRC-S1-ISRAEL-HAMAS-CYBER-2023` Actor context; mobile and social-engineering references
-- Malware and tools: [`AridSpy`](../tools/aridspy.md) (Mobile RAT); [`RedAlert.apk`](../tools/redalertapk.md) (Mobile spyware / trojanized app)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#apt-c-23) (2 mapped tool row(s))
-- Tool detail pages: [`AridSpy`](../tools/aridspy.md); [`RedAlert.apk`](../tools/redalertapk.md)
+- Tool detail pages: [`AridSpy`](../tools/aridspy.md); [`RedAlert.apk`](../tools/redalertapk.md); [`Desert Scorpion`](../tools/desert-scorpion.md); [`FrozenCell`](../tools/frozencell.md); [`Micropsia`](../tools/micropsia.md); [`Phenakite`](../tools/phenakite.md); [`SpyC23`](../tools/spyc23.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#apt-c-23) (7 mapped tool row(s))
 - Evidence records: `EVD-011` / `CLM-ARIDVIPER-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
-- Source IDs in structured data: `SRC-CYBERNEWS-REDALERT-2026`, `SRC-ESET-ARIDSPY`, `SRC-META-ARIDVIPER`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`
+- Source IDs in structured data: `SRC-CYBERNEWS-REDALERT-2026`, `SRC-ESET-ARIDSPY`, `SRC-META-ARIDVIPER`, `SRC-MITRE-G1028`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`
 
 
 ### UNC3890 {#unc3890}
@@ -295,9 +282,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: `SRC-MANDIANT-UNC3890` Punycode domains; malware references; infrastructure
-- Malware and tools: [`SUGARUSH / SUGARDUMP`](../tools/sugarush-sugardump.md) (Information stealer)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#unc3890) (1 mapped tool row(s))
 - Tool detail pages: [`SUGARUSH / SUGARDUMP`](../tools/sugarush-sugardump.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#unc3890) (1 mapped tool row(s))
 - Evidence records: `EVD-025` / `CLM-UNC3890-001`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-MANDIANT-UNC3890`, `SRC-SECWEEK-UNC3890`
@@ -314,9 +300,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: None currently mapped.
-- Malware and tools: [`Cyber Toufan supplier-access playbook`](../tools/cyber-toufan-supplier-access-playbook.md) (Credential and admin-interface abuse)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#cyber-toufan) (1 mapped tool row(s))
 - Tool detail pages: [`Cyber Toufan supplier-access playbook`](../tools/cyber-toufan-supplier-access-playbook.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#cyber-toufan) (1 mapped tool row(s))
 - Evidence records: `EVD-023` / `CLM-CYBERTOUFAN-001`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-MS-IRAN-HAMAS`, `SRC-OPI-CYBER-TOUFAN`
@@ -333,12 +318,11 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) Intune Bulk Device Wipe Anomaly (Hunt, DRL-5); [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
 - Mapped hunts: [HUNT-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) If identity-plane destructive tradecraft is attempted then privileged role activation or bulk device actions will appear in audit logs; [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
 - IOC reference sources: `SRC-AP-HANDALA` IP/CIDR; hashes; URLs; actor channels; soft IOCs; `SRC-THREAT-HUNTER-V3` Domains; IPs; file names; driver names; behavioral IOCs
-- Malware and tools: [`BiBi / BiBi Wiper lineage`](../tools/bibi-bibi-wiper-lineage.md) (Wiper / destructive malware lineage); [`Handala-linked destructive installer chains`](../tools/handala-linked-destructive-installer-chains.md) (Installer-led destructive chain)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#void-manticore-handala) (2 mapped tool row(s))
-- Tool detail pages: [`BiBi / BiBi Wiper lineage`](../tools/bibi-bibi-wiper-lineage.md); [`Handala-linked destructive installer chains`](../tools/handala-linked-destructive-installer-chains.md)
+- Tool detail pages: [`BiBi / BiBi Wiper lineage`](../tools/bibi-bibi-wiper-lineage.md); [`Handala-linked destructive installer chains`](../tools/handala-linked-destructive-installer-chains.md); [`CHIMNEYSWEEP`](../tools/chimneysweep.md); [`ftp`](../tools/ftp.md); [`Impacket`](../tools/impacket.md); [`Mimikatz`](../tools/mimikatz.md); [`RawDisk`](../tools/rawdisk.md); [`ROADSWEEP`](../tools/roadsweep.md); [`ZeroCleare`](../tools/zerocleare.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#void-manticore-handala) (9 mapped tool row(s))
 - Evidence records: `EVD-005` / `CLM-HANDALA-001`; `EVD-006` / `CLM-HANDALA-002`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
-- Source IDs in structured data: `SRC-AP-HANDALA`, `SRC-PUSH-STRYKER-HANDALA`, `SRC-THREAT-HUNTER-V3`
+- Source IDs in structured data: `SRC-AP-HANDALA`, `SRC-MITRE-G1055`, `SRC-PUSH-STRYKER-HANDALA`, `SRC-THREAT-HUNTER-V3`
 
 
 ### Lebanese Cedar {#lebanese-cedar}
@@ -352,9 +336,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: `SRC-CLEARSKY-LEBANESE-CEDAR` Webshell paths; malware references; vulnerable products
-- Malware and tools: [`Explosive RAT`](../tools/explosive-rat.md) (Remote Access Trojan); [`Caterpillar WebShell`](../tools/caterpillar-webshell.md) (Web Shell)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#lebanese-cedar) (2 mapped tool row(s))
 - Tool detail pages: [`Explosive RAT`](../tools/explosive-rat.md); [`Caterpillar WebShell`](../tools/caterpillar-webshell.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#lebanese-cedar) (2 mapped tool row(s))
 - Evidence records: `EVD-012` / `CLM-LEBANESECEDAR-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CLEARSKY-LEBANESE-CEDAR`
@@ -371,9 +354,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) Intune Bulk Device Wipe Anomaly (Hunt, DRL-5); [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
 - Mapped hunts: [HUNT-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) If identity-plane destructive tradecraft is attempted then privileged role activation or bulk device actions will appear in audit logs; [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
 - IOC reference sources: `SRC-CP-WIRTE-2024` Wiper references; trusted sender abuse; fake update artifacts; `SRC-UNIT42-ASHTAG-2025` Malware hashes; domains; C2 paths; tool behavior
-- Malware and tools: [`SameCoin`](../tools/samecoin.md) (Wiper); [`AshTag`](../tools/ashtag.md) (Modular .NET malware suite)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#wirte) (2 mapped tool row(s))
 - Tool detail pages: [`SameCoin`](../tools/samecoin.md); [`AshTag`](../tools/ashtag.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#wirte) (2 mapped tool row(s))
 - Evidence records: `EVD-010` / `CLM-WIRTE-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CP-WIRTE-2024`, `SRC-UNIT42-ASHTAG-2025`
@@ -390,9 +372,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: `SRC-PROOFPOINT-TA402-IRONWIND` Domains; payload hashes; attachment chain details; `SRC-S1-ISRAEL-HAMAS-CYBER-2023` Actor context; lure and malware family references
-- Malware and tools: [`IronWind`](../tools/ironwind.md) (Initial access downloader / staged malware)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#ta402) (1 mapped tool row(s))
 - Tool detail pages: [`IronWind`](../tools/ironwind.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#ta402) (1 mapped tool row(s))
 - Evidence records: `EVD-024` / `CLM-TA402-001`
 - Intel update candidates: [2 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-PROOFPOINT-TA402-IRONWIND`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`
@@ -409,9 +390,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: `SRC-MALPEDIA-UNC1860` Associated malware families; references; taxonomy; `SRC-MANDIANT-UNC1860` Tooling; passive backdoors; webshells; access-enablement references
-- Malware and tools: [`TEMPLEDOOR`](../tools/templedoor.md) (Passive backdoor / tool family); [`CRYPTOSLAY`](../tools/cryptoslay.md) (Tool family); [`PipeSnoop`](../tools/pipesnoop.md) (Tool family); `STAYSHANTE / SASHEYAWAY` (Passive backdoor / webshell-associated tooling)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#unc1860) (9 mapped tool row(s))
-- Tool detail pages: [`TEMPLEDOOR`](../tools/templedoor.md); [`TEMPLEPLAY`](../tools/templeplay.md); [`CRYPTOSLAY`](../tools/cryptoslay.md); [`PipeSnoop`](../tools/pipesnoop.md); [`STAYSHANTE`](../tools/stayshante.md); [`SASHEYAWAY`](../tools/sasheyaway.md)
+- Tool detail pages: [`TEMPLEDOOR`](../tools/templedoor.md); [`TEMPLEPLAY`](../tools/templeplay.md); [`CRYPTOSLAY`](../tools/cryptoslay.md); [`PipeSnoop`](../tools/pipesnoop.md); [`STAYSHANTE`](../tools/stayshante.md); [`SASHEYAWAY`](../tools/sasheyaway.md); [`VIROGREEN`](../tools/virogreen.md); [`TEMPLEDROP`](../tools/templedrop.md); [`TEMPLELOCK`](../tools/templelock.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#unc1860) (9 mapped tool row(s))
 - Evidence records: `EVD-001` / `CLM-UNC1860-001`; `EVD-008` / `CLM-UNC1860-002`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-MALPEDIA-UNC1860`, `SRC-MANDIANT-UNC1860`
@@ -428,9 +408,8 @@ The page is generated from repository CSV/register data. It is an analyst naviga
 - Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: None currently mapped.
-- Malware and tools: [`Liontail`](../tools/liontail.md) (Passive backdoor framework)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#scarred-manticore) (1 mapped tool row(s))
 - Tool detail pages: [`Liontail`](../tools/liontail.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#scarred-manticore) (1 mapped tool row(s))
 - Evidence records: `EVD-007` / `CLM-SCARRED-001`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-SCARRED-MANTICORE-2023`, `SRC-CP-VOID-2024`

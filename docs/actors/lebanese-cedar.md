@@ -12,9 +12,8 @@
 - Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: `SRC-CLEARSKY-LEBANESE-CEDAR` Webshell paths; malware references; vulnerable products
-- Malware and tools: [`Explosive RAT`](../tools/explosive-rat.md) (Remote Access Trojan); [`Caterpillar WebShell`](../tools/caterpillar-webshell.md) (Web Shell)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#lebanese-cedar) (2 mapped tool row(s))
 - Tool detail pages: [`Explosive RAT`](../tools/explosive-rat.md); [`Caterpillar WebShell`](../tools/caterpillar-webshell.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#lebanese-cedar) (2 mapped tool row(s))
 - Evidence records: `EVD-012` / `CLM-LEBANESECEDAR-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CLEARSKY-LEBANESE-CEDAR`

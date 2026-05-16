@@ -9,71 +9,74 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 ## Summary
 
-- Associated actor: [MuddyWater](../actors/muddywater.md)
-- Tool type: Backdoor
-- Confidence: Medium
-- Source: [`SRC-INCD-MUDDYWATER-PHISHING`](https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-IL-W-1947.pdf)
-- Source title: Israel National Cyber Directorate, Overview of Recent Phishing, 2025-12-04
+- Associated actor(s): [MuddyWater](../actors/muddywater.md)
+- Tool type(s): Backdoor
+- Confidence level(s): Medium
+- Source ID(s): `SRC-INCD-MUDDYWATER-PHISHING`
 
 ## Behavior
 
-Backdoor named in INCD MuddyWater phishing reporting.
+| Actor | Behavior Summary |
+| --- | --- |
+| [MuddyWater](../actors/muddywater.md) | Backdoor named in INCD MuddyWater phishing reporting. |
 
 ## Hash And IOC Status
 
-- Status: Hash not committed; use INCD source-linked IOCs.
-- Reference: `SRC-INCD-MUDDYWATER-PHISHING`
+| Actor | Status | Reference |
+| --- | --- | --- |
+| [MuddyWater](../actors/muddywater.md) | Hash not committed; use INCD source-linked IOCs. | `SRC-INCD-MUDDYWATER-PHISHING` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
 ## Defensive Hunting Notes
 
-Hunt fake-official phishing chains, unusual archives, and post-click endpoint execution.
+| Actor | Hunting Notes |
+| --- | --- |
+| [MuddyWater](../actors/muddywater.md) | Hunt fake-official phishing chains, unusual archives, and post-click endpoint execution. |
 
 ## Handling Notes
 
-Use source-linked IOCs and behavior only.
+| Actor | Handling Notes |
+| --- | --- |
+| [MuddyWater](../actors/muddywater.md) | Use source-linked IOCs and behavior only. |
 
 ## Crosslinks
 
-- Actor profile: [MuddyWater](../actors/muddywater.md)
-- Actor workbench: [MuddyWater](../navigation/actor-workbench.md#muddywater)
-- Tool matrix: [Malware And Tool Intelligence](../malware-tool-intelligence.md#muddywater)
+- MuddyWater: [profile](../actors/muddywater.md), [workbench](../navigation/actor-workbench.md#muddywater), [tool matrix](../malware-tool-intelligence.md#muddywater)
 - Detection status: [Detection Status Dashboard](../detection-engineering/detection-status-dashboard.md)
 - Hunt workflow: [Hunt Workflow](../threat-hunting/hunt-workflow.md)
 
-## Mapped ATT&CK Techniques For Actor
+## Mapped ATT&CK Techniques For Associated Actor(s)
 
-| Technique | Tactic | Mapping Quality | Source |
-| --- | --- | --- | --- |
-| [T1566](../navigation/ttp-detection-matrix.md#t1566) Phishing | Initial Access | M2 | `SRC-MITRE-G0069` |
-| [T1059.001](../navigation/ttp-detection-matrix.md#t1059001) PowerShell | Execution | M2 | `SRC-MITRE-G0069` |
-| [T1219](../navigation/ttp-detection-matrix.md#t1219) Remote Access Software | Command and Control | M3 | `SRC-MITRE-G0069` |
-| [T1567.002](../navigation/ttp-detection-matrix.md#t1567002) Exfiltration to Cloud Storage | Exfiltration | M2 | `SRC-THREAT-HUNTER-V3` |
+| Actor | Technique | Tactic | Mapping Quality | Source |
+| --- | --- | --- | --- | --- |
+| [MuddyWater](../actors/muddywater.md) | [T1566](../navigation/ttp-detection-matrix.md#t1566) Phishing | Initial Access | M2 | `SRC-MITRE-G0069` |
+| [MuddyWater](../actors/muddywater.md) | [T1059.001](../navigation/ttp-detection-matrix.md#t1059001) PowerShell | Execution | M2 | `SRC-MITRE-G0069` |
+| [MuddyWater](../actors/muddywater.md) | [T1219](../navigation/ttp-detection-matrix.md#t1219) Remote Access Software | Command and Control | M3 | `SRC-MITRE-G0069` |
+| [MuddyWater](../actors/muddywater.md) | [T1567.002](../navigation/ttp-detection-matrix.md#t1567002) Exfiltration to Cloud Storage | Exfiltration | M2 | `SRC-THREAT-HUNTER-V3` |
 
 ## Related Actor-Level Repository Detections
 
 These detections are mapped through the associated actor or scenario and are not automatically tool-specific. Promote a tool-specific detection only after the behavior is tied to telemetry and test evidence.
 
-| Detection | Release Status | DRL | Rule |
-| --- | --- | ---: | --- |
-| DET-002 - Suspicious RMM Installer Download From User Context | Pilot | 6 | [detections/sigma/suspicious-rmm-file-sharing-download.yml](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/suspicious-rmm-file-sharing-download.yml) |
-| DET-004 - Mail Click To Execution Correlation | Hunt | 4 | [detections/kql/mail-click-to-exec-correlation.kql](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) |
+| Actor | Detection | Release Status | DRL | Rule |
+| --- | --- | --- | ---: | --- |
+| [MuddyWater](../actors/muddywater.md) | DET-002 - Suspicious RMM Installer Download From User Context | Pilot | 6 | [detections/sigma/suspicious-rmm-file-sharing-download.yml](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/suspicious-rmm-file-sharing-download.yml) |
+| [MuddyWater](../actors/muddywater.md) | DET-004 - Mail Click To Execution Correlation | Hunt | 4 | [detections/kql/mail-click-to-exec-correlation.kql](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) |
 
 ## Related Actor-Level Hunts
 
 These hunts are mapped through the associated actor or scenario and may need narrowing before they are used for this specific tool.
 
-| Hunt | Hypothesis | Query |
-| --- | --- | --- |
-| HUNT-002 | If MuddyWater-style RMM abuse is active then unauthorized RMM execution will appear from user-controlled paths | [detections/kql/suspicious-rmm-file-sharing-download.kql](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/suspicious-rmm-file-sharing-download.kql) |
-| HUNT-004 | If VIP phishing is active then mail click events will correlate to risky sign-in or execution | [detections/kql/mail-click-to-exec-correlation.kql](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) |
+| Actor | Hunt | Hypothesis | Query |
+| --- | --- | --- | --- |
+| [MuddyWater](../actors/muddywater.md) | HUNT-002 | If MuddyWater-style RMM abuse is active then unauthorized RMM execution will appear from user-controlled paths | [detections/kql/suspicious-rmm-file-sharing-download.kql](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/suspicious-rmm-file-sharing-download.kql) |
+| [MuddyWater](../actors/muddywater.md) | HUNT-004 | If VIP phishing is active then mail click events will correlate to risky sign-in or execution | [detections/kql/mail-click-to-exec-correlation.kql](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) |
 
 ## Source Review
 
-- Source ID: `SRC-INCD-MUDDYWATER-PHISHING`
-- Reliability in source register: A
-- Source type: Government report
-- Last reviewed: 2026-05-14
+| Source | Publisher | Date | Reliability | Type | Last Reviewed |
+| --- | --- | --- | --- | --- | --- |
+| [`SRC-INCD-MUDDYWATER-PHISHING`](https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-IL-W-1947.pdf) | Israel National Cyber Directorate | 2025-12-04 | A | Government report | 2026-05-14 |
 
 If a source publishes a large or frequently changing IOC appendix, keep the current IOC list in the source system or TIP and store only the pointer here.

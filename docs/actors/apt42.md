@@ -12,9 +12,8 @@
 - Mapped detections: [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
 - Mapped hunts: [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
 - IOC reference sources: `SRC-MANDIANT-APT42` Domains; malware hashes; infrastructure; `SRC-PROOFPOINT-IRAN-CONFLICT-2026` Phishing infrastructure; lure domains; campaign indicators
-- Malware and tools: [`POWERPOST`](../tools/powerpost.md) (Script / collection tool); [`NICECURL`](../tools/nicecurl.md) (Backdoor / C2 tool); [`TAMECAT`](../tools/tamecat.md) (Backdoor / C2 tool)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#apt42) (3 mapped tool row(s))
 - Tool detail pages: [`POWERPOST`](../tools/powerpost.md); [`NICECURL`](../tools/nicecurl.md); [`TAMECAT`](../tools/tamecat.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#apt42) (3 mapped tool row(s))
 - Evidence records: `EVD-003` / `CLM-APT42-001`; `EVD-016` / `CLM-APT42-002`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-GOOGLE-APT42-PHISHING`, `SRC-MANDIANT-APT42`, `SRC-MITRE-G1044`, `SRC-PROOFPOINT-IRAN-CONFLICT-2026`

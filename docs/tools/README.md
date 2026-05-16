@@ -14,14 +14,36 @@ The repository does not store malware binaries, exploit code, credentials, or bu
 | Tool | Actor | Type | Confidence | Hash / IOC Status |
 | --- | --- | --- | --- | --- |
 | [`AridSpy`](aridspy.md) | [APT-C-23](../actors/arid-viper.md) | Mobile RAT | High | Hash not committed; use ESET mobile IOC appendix/current report. |
+| [`Desert Scorpion`](desert-scorpion.md) | [APT-C-23](../actors/arid-viper.md) | Mobile malware | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`FrozenCell`](frozencell.md) | [APT-C-23](../actors/arid-viper.md) | Mobile malware | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Micropsia`](micropsia.md) | [APT-C-23](../actors/arid-viper.md) | Backdoor | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Phenakite`](phenakite.md) | [APT-C-23](../actors/arid-viper.md) | Mobile malware | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`RedAlert.apk`](redalertapk.md) | [APT-C-23](../actors/arid-viper.md) | Mobile spyware / trojanized app | Low | Hash not committed; provisional until primary Acronis reporting is available. |
+| [`SpyC23`](spyc23.md) | [APT-C-23](../actors/arid-viper.md) | Mobile spyware | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`ANTAK / ASPXSPY`](antak-aspxspy.md) | [APT39](../actors/apt39.md) | Web shells | Medium | Hash not committed; use source-linked IOCs and local webroot baselines. |
+| [`Cadelspy`](cadelspy.md) | [APT39](../actors/apt39.md) | Backdoor | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`CrackMapExec`](crackmapexec.md) | [APT39](../actors/apt39.md) | Post-exploitation / credential validation tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`MechaFlounder`](mechaflounder.md) | [APT39](../actors/apt39.md) | Backdoor | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Mimikatz`](mimikatz.md) | [APT39](../actors/apt39.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`NBTscan`](nbtscan.md) | [APT39](../actors/apt39.md) | Network scanner | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`PsExec`](psexec.md) | [APT39](../actors/apt39.md) | Remote execution utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Remexi`](remexi.md) | [APT39](../actors/apt39.md) | Malware / collection tool | Medium | Hash not committed; use MITRE references and original vendor reports. |
+| [`Windows Credential Editor`](windows-credential-editor.md) | [APT39](../actors/apt39.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ftp`](ftp.md) | [APT39](../actors/apt39.md) | Living-off-the-land utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`pwdump`](pwdump.md) | [APT39](../actors/apt39.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`NICECURL`](nicecurl.md) | [APT42](../actors/apt42.md) | Backdoor / C2 tool | Medium | Hash not committed; retrieve current IOCs from linked source or vendor appendix. |
 | [`POWERPOST`](powerpost.md) | [APT42](../actors/apt42.md) | Script / collection tool | Medium | Hash not committed; source-linked behavior only. |
 | [`TAMECAT`](tamecat.md) | [APT42](../actors/apt42.md) | Backdoor / C2 tool | Medium | Hash not committed; retrieve current IOCs from linked source or vendor appendix. |
+| [`ASPXSpy`](aspxspy.md) | [Agrius](../actors/agrius.md) | Web shell | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Apostle`](apostle.md) | [Agrius](../actors/agrius.md) | Wiper / ransomware-like malware | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`BFG Agonizer`](bfg-agonizer.md) | [Agrius](../actors/agrius.md) | Wiper | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`BlackShadow`](blackshadow.md) | [Agrius](../actors/agrius.md) | Ransomware / persona | Medium | Hash not committed; persona claims require corroboration. |
+| [`DEADWOOD`](deadwood.md) | [Agrius](../actors/agrius.md) | Wiper | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`IPsec Helper`](ipsec-helper.md) | [Agrius](../actors/agrius.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Mimikatz`](mimikatz.md) | [Agrius](../actors/agrius.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Moneybird`](moneybird.md) | [Agrius](../actors/agrius.md) | Ransomware / destructive malware | Medium | Hash not committed; source IOC appendix should be used if needed. |
+| [`MultiLayer Wiper`](multilayer-wiper.md) | [Agrius](../actors/agrius.md) | Wiper | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`NBTscan`](nbtscan.md) | [Agrius](../actors/agrius.md) | Network scanner | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`WezRat`](wezrat.md) | [Cotton Sandstorm](../actors/cotton-sandstorm.md) | Modular infostealer / RAT | High | Hash not committed; use Check Point and government IOC references. |
 | [`Cyber Toufan supplier-access playbook`](cyber-toufan-supplier-access-playbook.md) | [Cyber Toufan](../actors/cyber-toufan.md) | Credential and admin-interface abuse | Medium | Not malware; no hash. Track claims and exposure indicators. |
 | [`IOControl`](iocontrol.md) | [CyberAv3ngers](../actors/cyberav3ngers.md) | OT/IoT malware | High | Hash not committed; use Claroty IOC appendix/current report. |
@@ -31,19 +53,89 @@ The repository does not store malware binaries, exploit code, credentials, or bu
 | [`StandardKeyboard`](standardkeyboard.md) | [Imperial Kitten](../actors/imperial-kitten.md) | Backdoor / C2 tool | Medium | Hash not committed; use CrowdStrike source if available. |
 | [`Caterpillar WebShell`](caterpillar-webshell.md) | [Lebanese Cedar](../actors/lebanese-cedar.md) | Web Shell | Medium | Hash not committed; use ClearSky report references. |
 | [`Explosive RAT`](explosive-rat.md) | [Lebanese Cedar](../actors/lebanese-cedar.md) | Remote Access Trojan | Medium | Hash not committed; use ClearSky report references. |
+| [`BITSAdmin`](bitsadmin.md) | [Lyceum](../actors/lyceum.md) | Living-off-the-land binary | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`DanBot`](danbot.md) | [Lyceum](../actors/lyceum.md) | Remote Access Trojan | Medium | Hash not committed; use MITRE references and primary reports. |
+| [`DnsSystem`](dnssystem.md) | [Lyceum](../actors/lyceum.md) | Backdoor | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Empire`](empire.md) | [Lyceum](../actors/lyceum.md) | Post-exploitation framework | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Kevin`](kevin.md) | [Lyceum](../actors/lyceum.md) | Backdoor | Low | Hash not committed; use MITRE references and primary reports. |
+| [`Milan`](milan.md) | [Lyceum](../actors/lyceum.md) | Backdoor | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Mimikatz`](mimikatz.md) | [Lyceum](../actors/lyceum.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Ping`](ping.md) | [Lyceum](../actors/lyceum.md) | Network utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`PoshC2`](poshc2.md) | [Lyceum](../actors/lyceum.md) | Post-exploitation framework | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Shark`](shark.md) | [Lyceum](../actors/lyceum.md) | Backdoor | Low | Hash not committed; use MITRE references and primary reports. |
+| [`ipconfig`](ipconfig.md) | [Lyceum](../actors/lyceum.md) | System discovery utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`netstat`](netstat.md) | [Lyceum](../actors/lyceum.md) | System discovery utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`CharmPower`](charmpower.md) | [Magic Hound](../actors/apt35.md) | PowerShell backdoor | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`DownPaper`](downpaper.md) | [Magic Hound](../actors/apt35.md) | Backdoor | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`FRP / Plink`](frp-plink.md) | [Magic Hound](../actors/apt35.md) | Dual-use tunneling / proxy tooling | Medium | No malware hash; dual-use binary monitoring and local allowlisting required. |
+| [`Impacket`](impacket.md) | [Magic Hound](../actors/apt35.md) | Python network protocol toolkit | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Mimikatz`](mimikatz.md) | [Magic Hound](../actors/apt35.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Mimikatz / SQLMap / Havij`](mimikatz-sqlmap-havij.md) | [Magic Hound](../actors/apt35.md) | Public offensive/security tooling | Medium | No stable actor-specific hash; use process, command-line, and control-plane telemetry. |
+| [`Net`](net.md) | [Magic Hound](../actors/apt35.md) | System administration utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Ping`](ping.md) | [Magic Hound](../actors/apt35.md) | Network utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`PowerLess`](powerless.md) | [Magic Hound](../actors/apt35.md) | Backdoor | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`PsExec`](psexec.md) | [Magic Hound](../actors/apt35.md) | Remote execution utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Pupy`](pupy.md) | [Magic Hound](../actors/apt35.md) | RAT / post-exploitation framework | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Systeminfo`](systeminfo.md) | [Magic Hound](../actors/apt35.md) | System discovery utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ipconfig`](ipconfig.md) | [Magic Hound](../actors/apt35.md) | System discovery utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`netsh`](netsh.md) | [Magic Hound](../actors/apt35.md) | Network configuration utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`BlackBeard`](blackbeard.md) | [MuddyWater](../actors/muddywater.md) | Backdoor | Medium | Hash not committed; use INCD source-linked IOCs. |
 | [`BugSleep`](bugsleep.md) | [MuddyWater](../actors/muddywater.md) | Backdoor | High | Hash not committed; use Check Point IOC appendix/current report. |
+| [`ConnectWise`](connectwise.md) | [MuddyWater](../actors/muddywater.md) | Remote monitoring and management tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`CrackMapExec`](crackmapexec.md) | [MuddyWater](../actors/muddywater.md) | Post-exploitation / credential validation tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`DCHSpy`](dchspy.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Dindoor`](dindoor.md) | [MuddyWater](../actors/muddywater.md) | Backdoor | Low | Hash not committed; use source-linked IOCs only. |
+| [`Empire`](empire.md) | [MuddyWater](../actors/muddywater.md) | Post-exploitation framework | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Fakeset`](fakeset.md) | [MuddyWater](../actors/muddywater.md) | Backdoor | Low | Hash not committed; use source-linked IOCs only. |
 | [`Fooder / MuddyViper`](fooder-muddyviper.md) | [MuddyWater](../actors/muddywater.md) | Loader and backdoor | Medium | Hash not committed; validate current ESET IOC availability before operational use. |
+| [`Koadic`](koadic.md) | [MuddyWater](../actors/muddywater.md) | Post-exploitation framework | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`LP-Notes`](lp-notes.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`LaZagne`](lazagne.md) | [MuddyWater](../actors/muddywater.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Mimikatz`](mimikatz.md) | [MuddyWater](../actors/muddywater.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Mori`](mori.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Out1`](out1.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`POWERSTATS`](powerstats.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`PowGoop`](powgoop.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`PowerSploit`](powersploit.md) | [MuddyWater](../actors/muddywater.md) | PowerShell post-exploitation framework | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Rclone`](rclone.md) | [MuddyWater](../actors/muddywater.md) | Cloud sync / exfiltration utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Remote Monitoring and Management tools`](remote-monitoring-and-management-tools.md) | [MuddyWater](../actors/muddywater.md) | Living-off-the-land tooling | High | No malware hash; inventory and signed binary allowlist required. |
+| [`RemoteUtilities`](remoteutilities.md) | [MuddyWater](../actors/muddywater.md) | Remote administration tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`RustyWater`](rustywater.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`SHARPSTATS`](sharpstats.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`STARWHALE`](starwhale.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Small Sieve`](small-sieve.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Tsundere Botnet`](tsundere-botnet.md) | [MuddyWater](../actors/muddywater.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`BONDUPDATER`](bondupdater.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Helminth`](helminth.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ISMInjector`](isminjector.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`LaZagne`](lazagne.md) | [OilRig](../actors/oilrig.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Mango`](mango.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Mimikatz`](mimikatz.md) | [OilRig](../actors/oilrig.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Net`](net.md) | [OilRig](../actors/oilrig.md) | System administration utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ODAgent`](odagent.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`OilBooster`](oilbooster.md) | [OilRig](../actors/oilrig.md) | Downloader | High | Hash not committed; use ESET IOC appendix/current source. |
+| [`OilCheck`](oilcheck.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`OopsIE`](oopsie.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`POWRUNER`](powruner.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`PowerExchange`](powerexchange.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`PsExec`](psexec.md) | [OilRig](../actors/oilrig.md) | Remote execution utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`QUADAGENT`](quadagent.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`RDAT`](rdat.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`RGDoor`](rgdoor.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Reg`](reg.md) | [OilRig](../actors/oilrig.md) | Registry utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`SEASHARPEE`](seasharpee.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Saitama`](saitama.md) | [OilRig](../actors/oilrig.md) | DNS-tunneling backdoor | High | Hash not committed; use Unit 42 IOC references if needed. |
+| [`SampleCheck5000`](samplecheck5000.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`SideTwist`](sidetwist.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Solar`](solar.md) | [OilRig](../actors/oilrig.md) | MITRE-listed software/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Systeminfo`](systeminfo.md) | [OilRig](../actors/oilrig.md) | System discovery utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Tasklist`](tasklist.md) | [OilRig](../actors/oilrig.md) | Process discovery utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ZeroCleare`](zerocleare.md) | [OilRig](../actors/oilrig.md) | Wiper | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`certutil`](certutil.md) | [OilRig](../actors/oilrig.md) | Living-off-the-land binary | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ftp`](ftp.md) | [OilRig](../actors/oilrig.md) | Living-off-the-land utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ipconfig`](ipconfig.md) | [OilRig](../actors/oilrig.md) | System discovery utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`netstat`](netstat.md) | [OilRig](../actors/oilrig.md) | System discovery utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ngrok`](ngrok.md) | [OilRig](../actors/oilrig.md) | Tunneling / proxy tooling | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`NGROK / Ligolo`](ngrok-ligolo.md) | [Pioneer Kitten](../actors/pioneer-kitten.md) | Tunneling / proxy tooling | High | No malware hash; monitor tool binary, process, account, and network usage against approved admin list. |
 | [`Liontail`](liontail.md) | [Scarred Manticore](../actors/scarred-manticore.md) | Passive backdoor framework | High | Hash not committed; use Check Point source report references. |
 | [`IronWind`](ironwind.md) | [TA402](../actors/ta402.md) | Initial access downloader / staged malware | High | Hash not committed; use Proofpoint IOC appendix/current report. |
@@ -58,6 +150,13 @@ The repository does not store malware binaries, exploit code, credentials, or bu
 | [`VIROGREEN`](virogreen.md) | [UNC1860](../actors/unc1860.md) | GUI exploitation / post-exploitation framework | High | Hash not committed; use Mandiant source and technical annex where accessible. |
 | [`SUGARUSH / SUGARDUMP`](sugarush-sugardump.md) | [UNC3890](../actors/unc3890.md) | Information stealer | Medium | Hash not committed; use Mandiant source references. |
 | [`BiBi / BiBi Wiper lineage`](bibi-bibi-wiper-lineage.md) | [Void Manticore / Handala](../actors/handala.md) | Wiper / destructive malware lineage | Medium | Hash not committed; use primary wiper reports for active IOCs. |
+| [`CHIMNEYSWEEP`](chimneysweep.md) | [Void Manticore / Handala](../actors/handala.md) | Wiper | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`Handala-linked destructive installer chains`](handala-linked-destructive-installer-chains.md) | [Void Manticore / Handala](../actors/handala.md) | Installer-led destructive chain | Medium | Hash not committed; chain behavior matters more than static IOCs. |
+| [`Impacket`](impacket.md) | [Void Manticore / Handala](../actors/handala.md) | Python network protocol toolkit | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`Mimikatz`](mimikatz.md) | [Void Manticore / Handala](../actors/handala.md) | Credential access tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ROADSWEEP`](roadsweep.md) | [Void Manticore / Handala](../actors/handala.md) | Wiper | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`RawDisk`](rawdisk.md) | [Void Manticore / Handala](../actors/handala.md) | Disk access driver/tool | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ZeroCleare`](zerocleare.md) | [Void Manticore / Handala](../actors/handala.md) | Wiper | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
+| [`ftp`](ftp.md) | [Void Manticore / Handala](../actors/handala.md) | Living-off-the-land utility | Medium | Hash not committed; use the linked MITRE references and original source reports for current IOCs. |
 | [`AshTag`](ashtag.md) | [WIRTE](../actors/wirte.md) | Modular .NET malware suite | High | Hash not committed; use Unit 42 report references. |
 | [`SameCoin`](samecoin.md) | [WIRTE](../actors/wirte.md) | Wiper | High | Hash not committed; use Check Point report references. |

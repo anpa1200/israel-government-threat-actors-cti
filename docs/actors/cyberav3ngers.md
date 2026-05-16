@@ -12,9 +12,8 @@
 - Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: `SRC-CISA-AA23-335A` IP; device exposure; affected product context
-- Malware and tools: [`Unitronics Vision PLC Web/HMI`](../tools/unitronics-vision-plc-webhmi.md) (Targeted technology); [`IOControl`](../tools/iocontrol.md) (OT/IoT malware)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#cyberav3ngers) (2 mapped tool row(s))
 - Tool detail pages: [`Unitronics Vision PLC Web/HMI`](../tools/unitronics-vision-plc-webhmi.md); [`IOControl`](../tools/iocontrol.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#cyberav3ngers) (2 mapped tool row(s))
 - Evidence records: `EVD-002` / `CLM-CYBERAV3NGERS-001`; `EVD-009` / `CLM-CYBERAV3NGERS-002`; `EVD-026` / `CLM-CYBERAV3NGERS-003`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CISA-AA23-335A`, `SRC-CISA-AA26-097A`, `SRC-CLAROTY-IOCONTROL-2024`

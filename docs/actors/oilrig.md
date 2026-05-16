@@ -12,9 +12,8 @@
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: `SRC-MITRE-G0049` Technique references
-- Malware and tools: [`OilBooster`](../tools/oilbooster.md) (Downloader); [`Saitama`](../tools/saitama.md) (DNS-tunneling backdoor)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#oilrig) (2 mapped tool row(s))
-- Tool detail pages: [`OilBooster`](../tools/oilbooster.md); [`Saitama`](../tools/saitama.md)
+- Tool detail pages: [`OilBooster`](../tools/oilbooster.md); [`Saitama`](../tools/saitama.md); [`BONDUPDATER`](../tools/bondupdater.md); [`certutil`](../tools/certutil.md); [`ftp`](../tools/ftp.md); [`Helminth`](../tools/helminth.md); [`ipconfig`](../tools/ipconfig.md); [`ISMInjector`](../tools/isminjector.md); [`LaZagne`](../tools/lazagne.md); [`Mango`](../tools/mango.md); [`Mimikatz`](../tools/mimikatz.md); [`Net`](../tools/net.md); [`netstat`](../tools/netstat.md); [`ngrok`](../tools/ngrok.md); [`ODAgent`](../tools/odagent.md); [`OilCheck`](../tools/oilcheck.md); [`OopsIE`](../tools/oopsie.md); [`PowerExchange`](../tools/powerexchange.md); [`POWRUNER`](../tools/powruner.md); [`PsExec`](../tools/psexec.md); [`QUADAGENT`](../tools/quadagent.md); [`RDAT`](../tools/rdat.md); [`Reg`](../tools/reg.md); [`RGDoor`](../tools/rgdoor.md); [`SampleCheck5000`](../tools/samplecheck5000.md); [`SEASHARPEE`](../tools/seasharpee.md); [`SideTwist`](../tools/sidetwist.md); [`Solar`](../tools/solar.md); [`Systeminfo`](../tools/systeminfo.md); [`Tasklist`](../tools/tasklist.md); [`ZeroCleare`](../tools/zerocleare.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#oilrig) (31 mapped tool row(s))
 - Evidence records: `EVD-013` / `CLM-OILRIG-001`; `EVD-014` / `CLM-OILRIG-002`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-ESET-OILRIG-ISRAEL`, `SRC-MITRE-G0049`, `SRC-UNIT42-OILRIG-DNS-TUNNELING`

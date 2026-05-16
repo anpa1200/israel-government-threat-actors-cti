@@ -12,12 +12,11 @@
 - Mapped detections: [DET-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) Intune Bulk Device Wipe Anomaly (Hunt, DRL-5); [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
 - Mapped hunts: [HUNT-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) If identity-plane destructive tradecraft is attempted then privileged role activation or bulk device actions will appear in audit logs; [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
 - IOC reference sources: `SRC-AP-HANDALA` IP/CIDR; hashes; URLs; actor channels; soft IOCs; `SRC-THREAT-HUNTER-V3` Domains; IPs; file names; driver names; behavioral IOCs
-- Malware and tools: [`BiBi / BiBi Wiper lineage`](../tools/bibi-bibi-wiper-lineage.md) (Wiper / destructive malware lineage); [`Handala-linked destructive installer chains`](../tools/handala-linked-destructive-installer-chains.md) (Installer-led destructive chain)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#void-manticore-handala) (2 mapped tool row(s))
-- Tool detail pages: [`BiBi / BiBi Wiper lineage`](../tools/bibi-bibi-wiper-lineage.md); [`Handala-linked destructive installer chains`](../tools/handala-linked-destructive-installer-chains.md)
+- Tool detail pages: [`BiBi / BiBi Wiper lineage`](../tools/bibi-bibi-wiper-lineage.md); [`Handala-linked destructive installer chains`](../tools/handala-linked-destructive-installer-chains.md); [`CHIMNEYSWEEP`](../tools/chimneysweep.md); [`ftp`](../tools/ftp.md); [`Impacket`](../tools/impacket.md); [`Mimikatz`](../tools/mimikatz.md); [`RawDisk`](../tools/rawdisk.md); [`ROADSWEEP`](../tools/roadsweep.md); [`ZeroCleare`](../tools/zerocleare.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#void-manticore-handala) (9 mapped tool row(s))
 - Evidence records: `EVD-005` / `CLM-HANDALA-001`; `EVD-006` / `CLM-HANDALA-002`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
-- Source IDs in structured data: `SRC-AP-HANDALA`, `SRC-PUSH-STRYKER-HANDALA`, `SRC-THREAT-HUNTER-V3`
+- Source IDs in structured data: `SRC-AP-HANDALA`, `SRC-MITRE-G1055`, `SRC-PUSH-STRYKER-HANDALA`, `SRC-THREAT-HUNTER-V3`
 
 <!-- ACTOR-NAVIGATION:END -->
 

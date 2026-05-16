@@ -25,6 +25,11 @@ Key changes:
 - Added generated per-tool detail pages under `docs/tools/`, with behavior,
   hash/IOC status, actor profile links, mapped ATT&CK techniques, mapped
   detections, mapped hunts, source-review metadata, and handling notes.
+- Expanded source-backed tool coverage from MITRE ATT&CK software mappings for
+  MuddyWater, OilRig, Magic Hound/APT35, Agrius, Arid Viper, Lyceum, APT39,
+  and VOID MANTICORE / Handala.
+- Changed actor profiles to use tool-page crosslinks rather than carrying full
+  tool behavior writeups inline.
 - Enriched UNC1860 tool coverage for TEMPLEDOOR, TEMPLEPLAY, CRYPTOSLAY,
   PipeSnoop, STAYSHANTE, SASHEYAWAY, VIROGREEN, TEMPLEDROP, and TEMPLELOCK
   based on Mandiant-linked and Malpedia reporting.

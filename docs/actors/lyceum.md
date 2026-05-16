@@ -15,9 +15,8 @@ sidebar_label: Lyceum
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: None currently mapped.
-- Malware and tools: [`DanBot`](../tools/danbot.md) (Remote Access Trojan); [`Kevin`](../tools/kevin.md) (Backdoor); [`Shark`](../tools/shark.md) (Backdoor)
-- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#lyceum) (3 mapped tool row(s))
-- Tool detail pages: [`DanBot`](../tools/danbot.md); [`Kevin`](../tools/kevin.md); [`Shark`](../tools/shark.md)
+- Tool detail pages: [`DanBot`](../tools/danbot.md); [`Kevin`](../tools/kevin.md); [`Shark`](../tools/shark.md); [`BITSAdmin`](../tools/bitsadmin.md); [`DnsSystem`](../tools/dnssystem.md); [`Empire`](../tools/empire.md); [`ipconfig`](../tools/ipconfig.md); [`Milan`](../tools/milan.md); [`Mimikatz`](../tools/mimikatz.md); [`netstat`](../tools/netstat.md); [`Ping`](../tools/ping.md); [`PoshC2`](../tools/poshc2.md)
+- Tool matrix: [all actor-linked tools](../malware-tool-intelligence.md#lyceum) (12 mapped tool row(s))
 - Evidence records: `EVD-021` / `CLM-LYCEUM-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1001`

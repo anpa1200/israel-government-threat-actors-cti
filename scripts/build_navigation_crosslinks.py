@@ -137,6 +137,18 @@ def tool_page_link(tool: dict[str, str], *, from_actor_or_navigation: bool) -> s
     return f"[`{tool['tool_name']}`]({prefix}{tool_slug(tool)}.md)"
 
 
+def actor_tool_page_links(tool_rows: list[dict[str, str]], *, from_actor_or_navigation: bool) -> list[str]:
+    seen: set[str] = set()
+    links: list[str] = []
+    for row in tool_rows:
+        slug = tool_slug(row)
+        if slug in seen:
+            continue
+        seen.add(slug)
+        links.append(tool_page_link(row, from_actor_or_navigation=from_actor_or_navigation))
+    return links
+
+
 def detection_link(row: dict[str, str]) -> str:
     return f"[{row['detection_id']}]({REPO_BLOB}/{row['rule_path']})"
 
@@ -178,7 +190,7 @@ def build_indexes() -> dict[str, object]:
     iocs_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     malware_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     tools_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
-    tools_by_name: dict[str, dict[str, str]] = {}
+    tool_lookup: dict[tuple[str, str], dict[str, str]] = {}
     evidence_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     intel_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
     detections_by_actor: dict[str, list[dict[str, str]]] = defaultdict(list)
@@ -192,7 +204,7 @@ def build_indexes() -> dict[str, object]:
         malware_by_actor[row["actor_id"]].append(row)
     for row in tool_intelligence:
         tools_by_actor[row["actor_id"]].append(row)
-        tools_by_name[row["tool_name"]] = row
+        tool_lookup[(row["actor_id"], row["tool_name"])] = row
     for row in evidence:
         evidence_by_actor[row["actor_id"]].append(row)
     for row in intel_candidates:
@@ -240,7 +252,7 @@ def build_indexes() -> dict[str, object]:
         "iocs_by_actor": iocs_by_actor,
         "malware_by_actor": malware_by_actor,
         "tools_by_actor": tools_by_actor,
-        "tools_by_name": tools_by_name,
+        "tool_lookup": tool_lookup,
         "evidence_by_actor": evidence_by_actor,
         "intel_by_actor": intel_by_actor,
         "detections_by_actor": detections_by_actor,
@@ -263,7 +275,7 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
     iocs_by_actor = indexes["iocs_by_actor"]
     malware_by_actor = indexes["malware_by_actor"]
     tools_by_actor = indexes["tools_by_actor"]
-    tools_by_name = indexes["tools_by_name"]
+    tool_lookup = indexes["tool_lookup"]
     evidence_by_actor = indexes["evidence_by_actor"]
     intel_by_actor = indexes["intel_by_actor"]
     detections_by_actor = indexes["detections_by_actor"]
@@ -307,7 +319,7 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
     ]
     malware_links = []
     for row in malware_rows[:6]:
-        tool_row = tools_by_name.get(row["malware_or_tool"])
+        tool_row = tool_lookup.get((actor_id, row["malware_or_tool"]))
         label = (
             tool_page_link(tool_row, from_actor_or_navigation=True)
             if tool_row
@@ -322,10 +334,9 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
         {row["source_id"] for row in ttp_rows + ioc_rows + malware_rows + tool_rows}
     )
     tool_matrix = "../malware-tool-intelligence.md"
-    tool_detail_links = [
-        tool_page_link(row, from_actor_or_navigation=True)
-        for row in tool_rows[:6]
-    ]
+    tool_detail_links = actor_tool_page_links(
+        tool_rows, from_actor_or_navigation=True
+    )
     intel_link = (
         f"[{len(intel_rows)} current candidate(s)](../intelligence-updates.md#actor-update-candidates)"
         if relative_to_actor
@@ -350,9 +361,8 @@ def actor_nav_block(actor_id: str, indexes: dict[str, object], *, relative_to_ac
         f"- Mapped detections: {bullet_links(detection_links)}",
         f"- Mapped hunts: {bullet_links(hunt_links)}",
         f"- IOC reference sources: {bullet_links(ioc_links)}",
-        f"- Malware and tools: {bullet_links(malware_links)}",
-        f"- Tool behaviors and hash/IOC status: [tool intelligence matrix]({tool_matrix}#{anchor(actor['primary_name'])}) ({len(tool_rows)} mapped tool row(s))",
         f"- Tool detail pages: {bullet_links(tool_detail_links)}",
+        f"- Tool matrix: [all actor-linked tools]({tool_matrix}#{anchor(actor['primary_name'])}) ({len(tool_rows)} mapped tool row(s))",
         f"- Evidence records: {bullet_links(evidence_links)}",
         f"- Intel update candidates: {intel_link if intel_rows else 'None in current feed pull.'}",
         f"- Source IDs in structured data: {', '.join(f'`{source_id}`' for source_id in source_ids) if source_ids else 'None currently mapped.'}",
@@ -735,11 +745,11 @@ def build_tool_detail_pages(indexes: dict[str, object]) -> None:
         "| --- | --- | --- | --- | --- |",
     ]
 
-    all_tools = sorted(
+    all_tool_rows = sorted(
         [tool for rows in tools_by_actor.values() for tool in rows],
         key=lambda row: (actors_by_id[row["actor_id"]]["primary_name"], row["tool_name"]),
     )
-    for tool in all_tools:
+    for tool in all_tool_rows:
         actor = actors_by_id[tool["actor_id"]]
         index_rows.append(
             "| "
@@ -752,78 +762,119 @@ def build_tool_detail_pages(indexes: dict[str, object]) -> None:
         "\n".join(index_rows).rstrip() + "\n", encoding="utf-8"
     )
 
-    for tool in all_tools:
-        actor_id = tool["actor_id"]
-        actor = actors_by_id[actor_id]
-        actor_slug = ACTOR_DOCS[actor_id]
-        source = sources_by_id.get(tool["source_id"], {})
-        source_title = source.get("title", tool["source_id"])
-        source_publisher = source.get("publisher", "")
-        source_date = source.get("publication_date", "")
-        source_url = source.get("url", "")
-        detection_rows = detections_by_actor.get(actor_id, [])
-        hunt_rows = hunts_by_actor.get(actor_id, [])
-        ttp_rows = ttps_by_actor.get(actor_id, [])
+    tools_by_slug: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for tool in all_tool_rows:
+        tools_by_slug[tool_slug(tool)].append(tool)
 
+    for slug, tool_rows in sorted(tools_by_slug.items()):
+        primary = tool_rows[0]
+        actor_ids = sorted({row["actor_id"] for row in tool_rows})
+        sources = sorted({row["source_id"] for row in tool_rows})
         page_rows = [
             "---",
-            f"title: {tool['tool_name']}",
-            f"sidebar_label: {tool['tool_name']}",
+            f"title: {primary['tool_name']}",
+            f"sidebar_label: {primary['tool_name']}",
             "---",
             "",
-            f"# {tool['tool_name']}",
+            f"# {primary['tool_name']}",
             "",
             "This is a defensive tool-intelligence page. It is intended for analyst navigation, source review, and hunt planning. It is not a malware-analysis report and does not contain sample code or binaries.",
             "",
             "## Summary",
             "",
-            f"- Associated actor: [{actor['primary_name']}](../actors/{actor_slug}.md)",
-            f"- Tool type: {tool['tool_type']}",
-            f"- Confidence: {tool['confidence']}",
-            f"- Source: [`{tool['source_id']}`]({source_url})",
-            f"- Source title: {source_publisher}, {source_title}, {source_date}",
+            f"- Associated actor(s): {bullet_links([actor_link(actor_id, actors_by_id) for actor_id in actor_ids])}",
+            f"- Tool type(s): {', '.join(sorted({row['tool_type'] for row in tool_rows}))}",
+            f"- Confidence level(s): {', '.join(sorted({row['confidence'] for row in tool_rows}))}",
+            f"- Source ID(s): {', '.join(f'`{source_id}`' for source_id in sources)}",
             "",
             "## Behavior",
             "",
-            tool["behavior_summary"],
-            "",
-            "## Hash And IOC Status",
-            "",
-            f"- Status: {tool['hash_or_ioc_status']}",
-            f"- Reference: `{tool['hash_or_ioc_reference']}`",
-            "",
-            "Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.",
-            "",
-            "## Defensive Hunting Notes",
-            "",
-            tool["detection_notes"],
-            "",
-            "## Handling Notes",
-            "",
-            tool["handling_notes"],
-            "",
-            "## Crosslinks",
-            "",
-            f"- Actor profile: [{actor['primary_name']}](../actors/{actor_slug}.md)",
-            f"- Actor workbench: [{actor['primary_name']}](../navigation/actor-workbench.md#{anchor(actor['primary_name'])})",
-            f"- Tool matrix: [Malware And Tool Intelligence](../malware-tool-intelligence.md#{anchor(actor['primary_name'])})",
-            "- Detection status: [Detection Status Dashboard](../detection-engineering/detection-status-dashboard.md)",
-            "- Hunt workflow: [Hunt Workflow](../threat-hunting/hunt-workflow.md)",
-            "",
-            "## Mapped ATT&CK Techniques For Actor",
-            "",
+            "| Actor | Behavior Summary |",
+            "| --- | --- |",
+        ]
+        for row in tool_rows:
+            page_rows.append(
+                f"| {actor_link(row['actor_id'], actors_by_id)} | {row['behavior_summary']} |"
+            )
+        page_rows.extend(
+            [
+                "",
+                "## Hash And IOC Status",
+                "",
+                "| Actor | Status | Reference |",
+                "| --- | --- | --- |",
+            ]
+        )
+        for row in tool_rows:
+            page_rows.append(
+                f"| {actor_link(row['actor_id'], actors_by_id)} | {row['hash_or_ioc_status']} | `{row['hash_or_ioc_reference']}` |"
+            )
+        page_rows.extend(
+            [
+                "",
+                "Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.",
+                "",
+                "## Defensive Hunting Notes",
+                "",
+                "| Actor | Hunting Notes |",
+                "| --- | --- |",
+            ]
+        )
+        for row in tool_rows:
+            page_rows.append(
+                f"| {actor_link(row['actor_id'], actors_by_id)} | {row['detection_notes']} |"
+            )
+        page_rows.extend(
+            [
+                "",
+                "## Handling Notes",
+                "",
+                "| Actor | Handling Notes |",
+                "| --- | --- |",
+            ]
+        )
+        for row in tool_rows:
+            page_rows.append(
+                f"| {actor_link(row['actor_id'], actors_by_id)} | {row['handling_notes']} |"
+            )
+        page_rows.extend(
+            [
+                "",
+                "## Crosslinks",
+                "",
+            ]
+        )
+        for actor_id in actor_ids:
+            actor = actors_by_id[actor_id]
+            actor_slug = ACTOR_DOCS[actor_id]
+            page_rows.append(
+                f"- {actor['primary_name']}: [profile](../actors/{actor_slug}.md), [workbench](../navigation/actor-workbench.md#{anchor(actor['primary_name'])}), [tool matrix](../malware-tool-intelligence.md#{anchor(actor['primary_name'])})"
+            )
+        page_rows.extend(
+            [
+                "- Detection status: [Detection Status Dashboard](../detection-engineering/detection-status-dashboard.md)",
+                "- Hunt workflow: [Hunt Workflow](../threat-hunting/hunt-workflow.md)",
+                "",
+                "## Mapped ATT&CK Techniques For Associated Actor(s)",
+                "",
+            ]
+        )
+        ttp_rows = [
+            (actor_id, row)
+            for actor_id in actor_ids
+            for row in ttps_by_actor.get(actor_id, [])
         ]
         if ttp_rows:
             page_rows.extend([
-                "| Technique | Tactic | Mapping Quality | Source |",
-                "| --- | --- | --- | --- |",
+                "| Actor | Technique | Tactic | Mapping Quality | Source |",
+                "| --- | --- | --- | --- | --- |",
             ])
-            for ttp in ttp_rows:
+            for actor_id, ttp in ttp_rows:
                 page_rows.append(
-                    f"| [{ttp['attack_id']}](../navigation/ttp-detection-matrix.md#{anchor(ttp['attack_id'])}) {ttp['technique']} | {ttp['tactic']} | {ttp['mapping_quality']} | `{ttp['source_id']}` |"
+                    f"| {actor_link(actor_id, actors_by_id)} | [{ttp['attack_id']}](../navigation/ttp-detection-matrix.md#{anchor(ttp['attack_id'])}) {ttp['technique']} | {ttp['tactic']} | {ttp['mapping_quality']} | `{ttp['source_id']}` |"
                 )
         else:
-            page_rows.append("No ATT&CK techniques are currently mapped for this actor in `data/ttps.csv`.")
+            page_rows.append("No ATT&CK techniques are currently mapped for the associated actor(s) in `data/ttps.csv`.")
 
         page_rows.extend(
             [
@@ -834,17 +885,22 @@ def build_tool_detail_pages(indexes: dict[str, object]) -> None:
                 "",
             ]
         )
-        if detection_rows:
+        detection_items = [
+            (actor_id, detection)
+            for actor_id in actor_ids
+            for detection in detections_by_actor.get(actor_id, [])
+        ]
+        if detection_items:
             page_rows.extend([
-                "| Detection | Release Status | DRL | Rule |",
-                "| --- | --- | ---: | --- |",
+                "| Actor | Detection | Release Status | DRL | Rule |",
+                "| --- | --- | --- | ---: | --- |",
             ])
-            for detection in detection_rows:
+            for actor_id, detection in detection_items:
                 page_rows.append(
-                    f"| {detection['detection_id']} - {detection['title']} | {detection['release_status']} | {detection['drl']} | {repo_link(detection['rule_path'], detection['rule_path'])} |"
+                    f"| {actor_link(actor_id, actors_by_id)} | {detection['detection_id']} - {detection['title']} | {detection['release_status']} | {detection['drl']} | {repo_link(detection['rule_path'], detection['rule_path'])} |"
                 )
         else:
-            page_rows.append("No repository detection is currently mapped to this actor. Use the hunting notes and source references as backlog input.")
+            page_rows.append("No repository detection is currently mapped to the associated actor(s). Use the hunting notes and source references as backlog input.")
 
         page_rows.extend(
             [
@@ -855,31 +911,41 @@ def build_tool_detail_pages(indexes: dict[str, object]) -> None:
                 "",
             ]
         )
-        if hunt_rows:
+        hunt_items = [
+            (actor_id, hunt)
+            for actor_id in actor_ids
+            for hunt in hunts_by_actor.get(actor_id, [])
+        ]
+        if hunt_items:
             page_rows.extend([
-                "| Hunt | Hypothesis | Query |",
-                "| --- | --- | --- |",
+                "| Actor | Hunt | Hypothesis | Query |",
+                "| --- | --- | --- | --- |",
             ])
-            for hunt in hunt_rows:
+            for actor_id, hunt in hunt_items:
                 page_rows.append(
-                    f"| {hunt['hunt_id']} | {hunt['hypothesis']} | {repo_link(hunt['query_path'], hunt['query_path'])} |"
+                    f"| {actor_link(actor_id, actors_by_id)} | {hunt['hunt_id']} | {hunt['hypothesis']} | {repo_link(hunt['query_path'], hunt['query_path'])} |"
                 )
         else:
-            page_rows.append("No repository hunt is currently mapped to this actor. Create a hunt from the behavior and telemetry notes before proposing a production detection.")
+            page_rows.append("No repository hunt is currently mapped to the associated actor(s). Create a hunt from the behavior and telemetry notes before proposing a production detection.")
 
         page_rows.extend([
             "",
             "## Source Review",
             "",
-            f"- Source ID: `{tool['source_id']}`",
-            f"- Reliability in source register: {source.get('reliability', 'Not recorded')}",
-            f"- Source type: {source.get('source_type', 'Not recorded')}",
-            f"- Last reviewed: {source.get('record_last_reviewed', 'Not recorded')}",
+            "| Source | Publisher | Date | Reliability | Type | Last Reviewed |",
+            "| --- | --- | --- | --- | --- | --- |",
+        ])
+        for source_id in sources:
+            source = sources_by_id.get(source_id, {})
+            page_rows.append(
+                f"| {source_link(source_id, sources_by_id)} | {source.get('publisher', 'Not recorded')} | {source.get('publication_date', 'Not recorded')} | {source.get('reliability', 'Not recorded')} | {source.get('source_type', 'Not recorded')} | {source.get('record_last_reviewed', 'Not recorded')} |"
+            )
+        page_rows.extend([
             "",
             "If a source publishes a large or frequently changing IOC appendix, keep the current IOC list in the source system or TIP and store only the pointer here.",
         ])
 
-        (tools_dir / f"{tool_slug(tool)}.md").write_text(
+        (tools_dir / f"{slug}.md").write_text(
             "\n".join(page_rows).rstrip() + "\n", encoding="utf-8"
         )
 
