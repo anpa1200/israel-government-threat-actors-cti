@@ -22,6 +22,7 @@ Use `sources/` as the analyst-facing scored source library:
 - Authored Medium research from this project owner: [andrey-medium-articles.md](andrey-medium-articles.md).
 - 2024-2026 escalation research intake: [2026-israel-critical-infrastructure-escalation.md](2026-israel-critical-infrastructure-escalation.md).
 - 2023-2026 source-download and validation intake: [resourses_research.md](resourses_research.md).
+- Actor-specific LLM research prompts: [actor-deep-research-prompts.md](actor-deep-research-prompts.md).
 - End-to-end CTI-to-detection examples: [worked-cases.md](worked-cases.md).
 - CI and build evidence: [ci-validation-evidence.md](ci-validation-evidence.md).
 - Versioned maturity notes: [release-notes.md](release-notes.md).

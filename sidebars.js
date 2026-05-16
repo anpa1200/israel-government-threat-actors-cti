@@ -125,6 +125,7 @@ const sidebars = {
         'reports/defensive-cti-threats-to-israeli-public-sector',
         'reports/israel-critical-infrastructure-escalation',
         'reports/resourses_research',
+        'reports/actor-deep-research-prompts',
         'reports/worked-cases',
         'reports/ci-validation-evidence',
         'reports/release-notes',
