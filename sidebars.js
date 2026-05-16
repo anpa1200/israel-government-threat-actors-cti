@@ -18,6 +18,7 @@ const sidebars = {
         'customer-environment-use',
         'connected-tips',
         'intelligence-updates',
+        'malware-tool-intelligence',
       ],
     },
     {

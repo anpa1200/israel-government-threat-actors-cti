@@ -12,7 +12,8 @@
 - Mapped detections: [DET-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) Mail Click To Execution Correlation (Hunt, DRL-4)
 - Mapped hunts: [HUNT-004](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/mail-click-to-exec-correlation.kql) If VIP phishing is active then mail click events will correlate to risky sign-in or execution
 - IOC reference sources: None currently mapped.
-- Malware and tools: None currently mapped.
+- Malware and tools: `FRP / Plink` (Dual-use tunneling / proxy tooling); `Mimikatz / SQLMap / Havij` (Public offensive/security tooling)
+- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#magic-hound) (2 mapped tool row(s))
 - Evidence records: `EVD-015` / `CLM-APT35-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G0059`

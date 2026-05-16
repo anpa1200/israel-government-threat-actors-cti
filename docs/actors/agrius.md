@@ -13,6 +13,7 @@
 - Mapped hunts: [HUNT-001](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/intune-bulk-device-wipe-anomaly.kql) If identity-plane destructive tradecraft is attempted then privileged role activation or bulk device actions will appear in audit logs
 - IOC reference sources: `SRC-MITRE-G1030` Technique references
 - Malware and tools: `Moneybird` (Ransomware / destructive malware); `BlackShadow` (Ransomware / persona)
+- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#agrius) (2 mapped tool row(s))
 - Evidence records: `EVD-017` / `CLM-AGRIUS-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1030`

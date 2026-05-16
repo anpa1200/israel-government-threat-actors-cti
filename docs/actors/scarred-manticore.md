@@ -1,3 +1,7 @@
+---
+title: Scarred Manticore
+sidebar_label: Scarred Manticore
+---
 
 <!-- ACTOR-NAVIGATION:START -->
 ## Repository Navigation
@@ -12,16 +16,12 @@
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: None currently mapped.
 - Malware and tools: `Liontail` (Passive backdoor framework)
+- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#scarred-manticore) (1 mapped tool row(s))
 - Evidence records: `EVD-007` / `CLM-SCARRED-001`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-SCARRED-MANTICORE-2023`, `SRC-CP-VOID-2024`
 
 <!-- ACTOR-NAVIGATION:END -->
-
----
-title: Scarred Manticore
-sidebar_label: Scarred Manticore
----
 
 # Scarred Manticore
 

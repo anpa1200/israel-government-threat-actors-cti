@@ -1,3 +1,7 @@
+---
+title: Pioneer Kitten
+sidebar_label: Pioneer Kitten
+---
 
 <!-- ACTOR-NAVIGATION:START -->
 ## Repository Navigation
@@ -12,16 +16,12 @@
 - Mapped hunts: [HUNT-002](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/suspicious-rmm-file-sharing-download.kql) If MuddyWater-style RMM abuse is active then unauthorized RMM execution will appear from user-controlled paths; [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: None currently mapped.
 - Malware and tools: `NGROK / Ligolo` (Tunneling / proxy tooling)
+- Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#pioneer-kitten) (1 mapped tool row(s))
 - Evidence records: `EVD-019` / `CLM-PIONEERKITTEN-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CISA-AA24-241A`
 
 <!-- ACTOR-NAVIGATION:END -->
-
----
-title: Pioneer Kitten
-sidebar_label: Pioneer Kitten
----
 
 # Pioneer Kitten
 

@@ -33,6 +33,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `docs/customer-environment-use.md` | How to use the project in a customer/SOC environment without overclaiming production readiness. |
 | `docs/connected-tips.md` | Connected CTI/TIP feed descriptions, commands, optional secrets, and promotion workflow. |
 | `docs/intelligence-updates.md` | Generated CTI feed update queue from no-key public sources. |
+| `docs/malware-tool-intelligence.md` | Actor-to-tool matrix with behavior summaries, hash/IOC status, source links, and detection notes. |
 | `examples/registers/` | PIR, SIR, evidence, persona-claim, scenario, hunt, detection, health, and metrics register templates. |
 | `examples/gates/` | Sample quality-gate evidence packs. |
 | `examples/drl-evidence-packs/` | Detection-specific DRL evidence packs. |
@@ -46,6 +47,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | `data/ttps.csv` | Actor-to-ATT&CK mapping table. |
 | `data/ioc-references.csv` | Pointers to public IOC locations. |
 | `data/malware-references.csv` | Malware/tool reference table without binaries. |
+| `data/tool-intelligence.csv` | Defensive tool intelligence table covering behaviors, hash/IOC availability, and actor-linked detection notes. |
 | `sources/` | Scored source library separated into Score A primary, Score B supporting, and Score C watchlist material. |
 | `detections/sigma/` | Defensive Sigma examples and hunting rules. |
 | `detections/kql/` | Microsoft Sentinel / Defender hunting examples. |
@@ -65,6 +67,8 @@ python3 scripts/validate_repo.py
 Review the starting threat model in [docs/israel-government-threat-model.md](docs/israel-government-threat-model.md), then work through [docs/actors/README.md](docs/actors/README.md).
 
 For practical click-through use, start with the [Actor Navigation Workbench](docs/navigation/actor-workbench.md), [TTP To Detection Matrix](docs/navigation/ttp-detection-matrix.md), or [Surface And Capability Matrix](docs/navigation/surface-capability-matrix.md).
+
+For actor-linked malware and tooling behavior, start with [Malware And Tool Intelligence](docs/malware-tool-intelligence.md).
 
 For CTI feed updates, start with [Connected TIPs And CTI Feeds](docs/connected-tips.md).
 
@@ -90,6 +94,7 @@ For end-to-end examples and proof artifacts, review:
 - [Customer environment use](docs/customer-environment-use.md)
 - [Connected TIPs and CTI feeds](docs/connected-tips.md)
 - [Intelligence update queue](docs/intelligence-updates.md)
+- [Malware and tool intelligence](docs/malware-tool-intelligence.md)
 - [Detection status dashboard](docs/detection-engineering/detection-status-dashboard.md)
 - [Actor navigation workbench](docs/navigation/actor-workbench.md)
 - [TTP to detection matrix](docs/navigation/ttp-detection-matrix.md)

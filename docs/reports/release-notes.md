@@ -16,6 +16,17 @@ intake. Still not a production SOC detection pack.
 Key changes:
 
 - Promoted the repository version to `v1.1`.
+- Added `data/tool-intelligence.csv` as a defensive actor-to-tool intelligence
+  layer with behavior summaries, hash/IOC status, source links, confidence, and
+  detection notes.
+- Added [Malware And Tool Intelligence](../malware-tool-intelligence.md), a
+  generated page that lets analysts click from actor profiles to associated
+  tools, behaviors, hash availability, and source-backed detection guidance.
+- Enriched UNC1860 tool coverage for TEMPLEDOOR, TEMPLEPLAY, CRYPTOSLAY,
+  PipeSnoop, STAYSHANTE, SASHEYAWAY, VIROGREEN, TEMPLEDROP, and TEMPLELOCK
+  based on Mandiant-linked and Malpedia reporting.
+- Updated generated actor navigation blocks to link every actor to the new
+  tool intelligence matrix.
 - Refreshed the connected-feed queue from MITRE ATT&CK Enterprise STIX, CISA
   KEV, and CISA Cybersecurity Advisories RSS.
 - Added [Connected TIPs And CTI Feeds](../connected-tips.md) with feed

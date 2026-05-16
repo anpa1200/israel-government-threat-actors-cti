@@ -64,6 +64,19 @@ CSV_HEADERS = {
         "source_id",
         "handling_notes",
     ],
+    "data/tool-intelligence.csv": [
+        "tool_id",
+        "tool_name",
+        "actor_id",
+        "tool_type",
+        "behavior_summary",
+        "hash_or_ioc_status",
+        "hash_or_ioc_reference",
+        "source_id",
+        "detection_notes",
+        "confidence",
+        "handling_notes",
+    ],
     "data/research-downloads.csv": [
         "source_id",
         "actor_or_topic",
@@ -313,6 +326,7 @@ def validate_references() -> None:
     ttps = read_csv_dicts(ROOT / "data/ttps.csv")
     iocs = read_csv_dicts(ROOT / "data/ioc-references.csv")
     malware = read_csv_dicts(ROOT / "data/malware-references.csv")
+    tool_intelligence = read_csv_dicts(ROOT / "data/tool-intelligence.csv")
     intel_feeds = read_csv_dicts(ROOT / "data/intel-feeds.csv")
     intel_candidates = read_csv_dicts(ROOT / "data/intel-update-candidates.csv")
     evidence = read_csv_dicts(ROOT / "examples/registers/evidence-register.csv")
@@ -352,6 +366,7 @@ def validate_references() -> None:
         "metric_id",
         "examples/registers/metrics.csv",
     )
+    validate_unique_ids(tool_intelligence, "tool_id", "data/tool-intelligence.csv")
 
     actor_ids = {row["actor_id"] for row in actors}
     source_ids = {row["source_id"] for row in sources}
@@ -374,6 +389,7 @@ def validate_references() -> None:
     for rel_path, rows in {
         "data/ioc-references.csv": iocs,
         "data/malware-references.csv": malware,
+        "data/tool-intelligence.csv": tool_intelligence,
     }.items():
         for row in rows:
             actor_id = row["actor_id"]
