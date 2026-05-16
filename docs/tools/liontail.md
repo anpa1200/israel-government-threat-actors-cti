@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [Scarred Manticore](../actors/scarred-manticore.md) | Scarred Manticore passive HTTP.sys / IIS-adjacent backdoor framework used for stealthy server-side access. |
+| [Scarred Manticore](../actors/scarred-manticore.md) | Check Point reports Liontail as Scarred Manticore passive server-side tooling using IIS/native-module or HTTP.sys-adjacent access patterns for stealthy inbound-controlled access rather than standard webshell request/response behavior. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [Scarred Manticore](../actors/scarred-manticore.md) | Hash not committed; use Check Point source report references. | `SRC-CP-SCARRED-MANTICORE-2023` |
+| [Scarred Manticore](../actors/scarred-manticore.md) | Hash not committed; use Check Point source report references and local IIS module baselines. | `SRC-CP-SCARRED-MANTICORE-2023` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [Scarred Manticore](../actors/scarred-manticore.md) | Hunt IIS/native-module integrity, HTTP.sys listener anomalies, and suspicious server DLL/service changes. |
+| [Scarred Manticore](../actors/scarred-manticore.md) | Hunt IIS/native-module integrity changes, appcmd module registration, unexpected DLLs in IIS paths, HTTP.sys listener anomalies, worker-process child processes, and suspicious server DLL/service changes. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [Scarred Manticore](../actors/scarred-manticore.md) | Do not store samples. |
+| [Scarred Manticore](../actors/scarred-manticore.md) | Do not conflate generic phantom-DLL hijacking with Liontail unless source-backed. |
 
 ## Crosslinks
 

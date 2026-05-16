@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [TA402](../actors/ta402.md) | TA402 downloader and infection chain used against Middle East government entities. |
+| [TA402](../actors/ta402.md) | Proofpoint reports IronWind as a TA402 infection chain using PPAM, XLL, RAR, cloud-link and actor-controlled C2 delivery; behavior includes staged downloader execution, geofencing/decoy delivery, and DLL side-loading in later related reporting. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [TA402](../actors/ta402.md) | Hash not committed; use Proofpoint IOC appendix/current report. | `SRC-PROOFPOINT-TA402-IRONWIND` |
+| [TA402](../actors/ta402.md) | Proofpoint-published SHA256 indicators include 9b2a16cbe5af12b486d31b68ef397d6bc48b2736e6b388ad8895b588f1831f47, 5d773e734290b93649a41ccda63772560b4fa25ba715b17df7b9f18883679160, 19f452239dadcd7544f055d26199cb482c1f6ae5486309bde1526174e926146a, A4bf96aee6284effb4c4fe0ccfee7b32d497e45408e253fb8e1199454e5c65a3, and 26cb6055be1ee503f87d040c84c0a7cacb245b4182445e3eee47ed6e073eca47; use full Proofpoint IOC list for operational use. | `SRC-PROOFPOINT-TA402-IRONWIND` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [TA402](../actors/ta402.md) | Hunt PPAM, XLL, RAR, DLL side-loading, and actor-controlled C2 pivots. |
+| [TA402](../actors/ta402.md) | Hunt PPAM/XLL/RAR lure execution, DLL side-loading from user-writable paths, cloud-link retrieval, geofenced decoy behavior, and actor-controlled C2 pivots. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [TA402](../actors/ta402.md) | Use behavior for defensive hunting. |
+| [TA402](../actors/ta402.md) | Use behavior for defensive hunting; keep hashes as historical triage pivots, not standalone attribution. |
 
 ## Crosslinks
 

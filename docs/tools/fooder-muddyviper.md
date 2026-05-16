@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [MuddyWater](../actors/muddywater.md) | MuddyWater loader/backdoor pair from ESET research intake focused on Israeli and regional critical-infrastructure targeting. |
+| [MuddyWater](../actors/muddywater.md) | ESET reports Fooder as a MuddyWater loader paired with MuddyViper; reported behavior includes in-memory payload loading, sandbox-delay logic, RMM-assisted access, and post-compromise collection against Israeli and regional critical-infrastructure targets. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [MuddyWater](../actors/muddywater.md) | Hash not committed; validate current ESET IOC availability before operational use. | `SRC-ESET-MUDDYWATER-SNAKES` |
+| [MuddyWater](../actors/muddywater.md) | Hash not committed; validate ESET IOC availability before IOC-level use. | `SRC-ESET-MUDDYWATER-SNAKES` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [MuddyWater](../actors/muddywater.md) | Hunt phishing delivery, in-memory loader behavior, RMM pairing, and unusual cloud-service C2. |
+| [MuddyWater](../actors/muddywater.md) | Hunt lure-to-RMM chains, new SimpleHelp/Atera/Level/PDQ installs outside IT inventory, in-memory loader behavior, sleep/delay loops before payload execution, and unusual cloud-service C2. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [MuddyWater](../actors/muddywater.md) | Research intake remains source-gated before production detections. |
+| [MuddyWater](../actors/muddywater.md) | Source-backed behavior can drive hunts; sample-level hashes require primary IOC verification. |
 
 ## Crosslinks
 

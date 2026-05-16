@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [Imperial Kitten](../actors/imperial-kitten.md) | IMAP-based command-and-control using legitimate or compromised email accounts; associated with Imperial Kitten / Yellow Liderc reporting. |
+| [Imperial Kitten](../actors/imperial-kitten.md) | PwC and related reporting describe IMAPLoader as an Imperial Kitten/Yellow Liderc .NET loader using legitimate or compromised email accounts for IMAP-based C2 after strategic web compromise or lure execution; it identifies target systems and can deploy follow-on payloads. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [Imperial Kitten](../actors/imperial-kitten.md) | Hash not committed; use PwC or vendor IOC appendix/current report. | `SRC-PWC-YELLOW-LIDERC-2023` |
+| [Imperial Kitten](../actors/imperial-kitten.md) | Hash not committed; use PwC or vendor IOC appendix/current report for current sample hashes and mail-account indicators. | `SRC-PWC-YELLOW-LIDERC-2023` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [Imperial Kitten](../actors/imperial-kitten.md) | Hunt non-mail-client IMAP/IMAPS egress, high-frequency mailbox polling, and Office/XLL to csc.exe chains. |
+| [Imperial Kitten](../actors/imperial-kitten.md) | Hunt non-mail-client IMAP/IMAPS egress, high-frequency mailbox polling, encoded attachment retrieval by unusual processes, and Office/XLL to csc.exe chains after maritime/logistics web compromise. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [Imperial Kitten](../actors/imperial-kitten.md) | Behavior must be locally allowlisted for legitimate IMAP apps. |
+| [Imperial Kitten](../actors/imperial-kitten.md) | Behavior must be locally allowlisted for legitimate IMAP applications. |
 
 ## Crosslinks
 

@@ -24,7 +24,7 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [UNC1860](../actors/unc1860.md) | Mandiant reports MD5 c517519097bff386dc1784d98ad93f9d for TEMPLEPLAY. | `SRC-MANDIANT-UNC1860` |
+| [UNC1860](../actors/unc1860.md) | Mandiant reports MD5 c517519097bff386dc1784d98ad93f9d for TEMPLEPLAY; VT enrichment returned not_found on 2026-05-16. | `SRC-MANDIANT-UNC1860` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -38,7 +38,7 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Handling Notes |
 | --- | --- |
-| [UNC1860](../actors/unc1860.md) | Do not run or store controller samples. |
+| [UNC1860](../actors/unc1860.md) | Do not run or store controller samples; absence in VT does not reduce confidence in Mandiant-published hash. |
 
 ## Crosslinks
 

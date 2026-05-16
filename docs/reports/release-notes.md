@@ -52,13 +52,27 @@ Key changes:
 - Added [Research Intake Upgrade Summary](research-intake-upgrade-summary.md)
   to show what was upgraded from the imported reports and which claims remain
   validation-gated.
+- Added VirusTotal as an optional hash-enrichment connector using `VT_API_KEY`
+  from the local environment only. The repository now tracks reviewed hash
+  seeds in `data/virustotal-hash-seeds.csv`, reviewed enrichment candidates in
+  `data/virustotal-enrichment-candidates.csv`, and the local
+  `npm run intel:vt` workflow without committing keys, raw VT JSON, samples, or
+  private telemetry.
+- Added [VirusTotal Malware Enrichment](../virustotal-enrichment.md) with
+  promotion rules and current reviewed enrichment for TEMPLEDOOR, TEMPLEPLAY,
+  TEMPLEDROP, IOCONTROL, OilBooster, OilCheck, and ODAgent.
+- Enriched tool behavior and hash/IOC status for BugSleep, Fooder/MuddyViper,
+  OilBooster, OilCheck, ODAgent, IOCONTROL, AridSpy, WezRat, IronWind,
+  SameCoin, AshTag, TEMPLEDOOR, TEMPLEPLAY, TEMPLEDROP, IMAPLoader, and
+  Liontail.
 
 Remaining production blockers:
 
 - Feed candidates are leads and must be reviewed before promotion.
 - No connected feed may create actor attribution by itself.
-- OTX, MISP, and OpenCTI require trusted local/community configuration before
-  use beyond documented connector targets.
+- OTX, VirusTotal, MISP, and OpenCTI require trusted local/community
+  configuration before use beyond documented connector targets.
+- VirusTotal verdicts are enrichment only and do not create actor attribution.
 - No detection is DRL-9.
 
 ## v0.1.7

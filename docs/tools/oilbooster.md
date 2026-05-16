@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [OilRig](../actors/oilrig.md) | OilRig downloader using Microsoft cloud-service APIs for command-and-control in public ESET reporting. |
+| [OilRig](../actors/oilrig.md) | ESET reports OilBooster as an OilRig downloader deployed against Israeli organizations; it uses attacker-controlled Microsoft cloud service accounts and APIs for C2 and data exchange rather than victim internal mail infrastructure. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [OilRig](../actors/oilrig.md) | Hash not committed; use ESET IOC appendix/current source. | `SRC-ESET-OILRIG-ISRAEL` |
+| [OilRig](../actors/oilrig.md) | Primary source confirms tool behavior; imported SHA1 seed 1B2FEDD5F2A37A0152231AE4099A13C8D4B73C9E returned VT not_found and remains unpromoted pending primary hash verification. | `SRC-ESET-OILRIG-ISRAEL` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [OilRig](../actors/oilrig.md) | Hunt Microsoft Graph, OneDrive, Outlook, or Exchange API use by non-standard processes. |
+| [OilRig](../actors/oilrig.md) | Hunt Microsoft Graph, OneDrive, Outlook, Exchange Online, or EWS API use by non-standard processes, especially on healthcare, local-government, or manufacturing hosts with prior OilRig exposure. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [OilRig](../actors/oilrig.md) | Prefer behavior over hash-only detection. |
+| [OilRig](../actors/oilrig.md) | Prefer cloud-API behavior over hash-only detection; do not block on unverified research-intake hashes. |
 
 ## Crosslinks
 

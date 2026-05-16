@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [APT-C-23](../actors/arid-viper.md) | Android spyware framework used by Arid Viper for call log, message, location, and audio collection. |
+| [APT-C-23](../actors/arid-viper.md) | ESET reports AridSpy as a multi-stage Android spyware family distributed through trojanized apps; behavior includes payload download/decryption, Firebase C2, HTTPS exfiltration, camera capture, audio recording, location tracking, SMS/contact/call-log collection, accessibility abuse, and WhatsApp/Facebook Messenger collection. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [APT-C-23](../actors/arid-viper.md) | Hash not committed; use ESET mobile IOC appendix/current report. | `SRC-ESET-ARIDSPY` |
+| [APT-C-23](../actors/arid-viper.md) | Representative ESET-published SHA1s include 797073511A15EB85C1E9D8584B26BAA3A0B14C9E, 5F0213BA62B84221C9628F7D0A0CF87F27A45A28, E71F1484B1E3ACB4C8E8525BA1F5F8822AB7238B, and 16C8725362D1EBC8443C97C5AB79A1B6428FF87D; use full ESET IOC table for current coverage. | `SRC-ESET-ARIDSPY` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [APT-C-23](../actors/arid-viper.md) | Hunt sideloaded APKs, unknown-source installs, abusive permissions, and suspicious mobile C2. |
+| [APT-C-23](../actors/arid-viper.md) | Hunt sideloaded APKs from dedicated lure sites, unknown-source installs, Google Play Services impersonation, Firebase C2, suspicious accessibility-service grants, data.zip staging, and mobile apps requesting SMS/contact/location/audio/camera permissions together. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [APT-C-23](../actors/arid-viper.md) | Use for MDM policy and mobile defense mapping. |
+| [APT-C-23](../actors/arid-viper.md) | Use for MDM policy and mobile defense mapping; avoid storing APKs or private mobile telemetry. |
 
 ## Crosslinks
 

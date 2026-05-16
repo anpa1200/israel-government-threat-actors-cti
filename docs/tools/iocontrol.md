@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [CyberAv3ngers](../actors/cyberav3ngers.md) | Custom OT/IoT malware linked by Claroty Team82 to CyberAv3ngers-aligned activity; reported behavior includes MQTT over 8883 and DoH. |
+| [CyberAv3ngers](../actors/cyberav3ngers.md) | Claroty Team82 reports IOCONTROL as custom OT/IoT malware linked to CyberAv3ngers-aligned IRGC activity; reported behavior includes Linux/ARM ELF deployment, device fingerprinting, MQTT over TLS on 8883, DoH use, router and fuel-management targeting, and command execution against OT/IoT devices. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [CyberAv3ngers](../actors/cyberav3ngers.md) | Hash not committed; use Claroty IOC appendix/current report. | `SRC-CLAROTY-IOCONTROL-2024` |
+| [CyberAv3ngers](../actors/cyberav3ngers.md) | Claroty-published SHA256 1b39f9b2b96a6586c4a11ab2fdbff8fdf16ba5a0ac7603149023d73f33b84498; VT enrichment found an ELF with public detections and label trojan.iocontrol/multiverze. | `SRC-CLAROTY-IOCONTROL-2024` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [CyberAv3ngers](../actors/cyberav3ngers.md) | Hunt OT/IoT devices with unusual MQTT/DoH, router persistence, and PLC/HMI manipulation indicators. |
+| [CyberAv3ngers](../actors/cyberav3ngers.md) | Hunt OT/IoT devices with unusual MQTT/8883, DoH, unexpected ARM ELF execution, router persistence, and PLC/HMI/fuel-controller manipulation indicators. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [CyberAv3ngers](../actors/cyberav3ngers.md) | Do not store samples; coordinate with OT owners. |
+| [CyberAv3ngers](../actors/cyberav3ngers.md) | Do not store samples; coordinate with OT owners and prioritize behavior over hash-only blocking. |
 
 ## Crosslinks
 

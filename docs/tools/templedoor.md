@@ -24,7 +24,7 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [UNC1860](../actors/unc1860.md) | Representative MD5s published by Mandiant for TEMPLEDOOR activity include c57e59314aee7422e626520e495effe0 and b219672bcd60ce9a81b900217b3b5864; use full source IOC list for current coverage. | `SRC-MANDIANT-UNC1860` |
+| [UNC1860](../actors/unc1860.md) | Representative Mandiant MD5s include c57e59314aee7422e626520e495effe0 and b219672bcd60ce9a81b900217b3b5864. VT enrichment found b219672bcd60ce9a81b900217b3b5864 as Win32 EXE/System.dll with 47 malicious public detections; c57e59314aee7422e626520e495effe0 returned VT not_found. | `SRC-MANDIANT-UNC1860` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [UNC1860](../actors/unc1860.md) | Hunt passive/listener implants on edge servers, unusual inbound-controlled HTTPS endpoints, proxy behavior from compromised servers, and RDP routed through DMZ hosts. |
+| [UNC1860](../actors/unc1860.md) | Hunt passive/listener implants on edge servers, unusual inbound-controlled HTTPS endpoints, magic-URI echo/ping testing, proxy behavior from compromised servers, and RDP routed through DMZ hosts. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [UNC1860](../actors/unc1860.md) | Hash-only matches are insufficient for attribution. |
+| [UNC1860](../actors/unc1860.md) | Hash-only matches are insufficient for attribution; Mandiant source context remains authoritative. |
 
 ## Crosslinks
 

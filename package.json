@@ -9,6 +9,7 @@
     "serve": "docusaurus serve --host 0.0.0.0",
     "clear": "docusaurus clear",
     "intel:update": "python3 scripts/fetch_intel_updates.py",
+    "intel:vt": "python3 scripts/enrich_virustotal_hashes.py",
     "validate": "python3 scripts/build_navigation_crosslinks.py && python3 scripts/validate_repo.py && python3 scripts/check_source_freshness.py && python3 scripts/run_detection_fixture_tests.py && python3 scripts/build_detection_dashboard.py && npm run build"
   },
   "dependencies": {

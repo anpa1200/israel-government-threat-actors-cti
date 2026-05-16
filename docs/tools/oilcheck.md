@@ -11,20 +11,20 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 - Associated actor(s): [OilRig](../actors/oilrig.md)
 - Tool type(s): MITRE-listed software/tool
-- Confidence level(s): Medium
-- Source ID(s): `SRC-MITRE-G0049`
+- Confidence level(s): High
+- Source ID(s): `SRC-ESET-OILRIG-ISRAEL`
 
 ## Behavior
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [OilRig](../actors/oilrig.md) | MITRE ATT&CK lists OilCheck as software used by this actor; track it as source-backed software use by the actor. |
+| [OilRig](../actors/oilrig.md) | OilCheck is an OilRig downloader in ESET reporting; it uses cloud-based email services for C2 communications and shares logic with other OilRig cloud-service-powered downloaders. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [OilRig](../actors/oilrig.md) | Hash not committed; use the linked MITRE references and original source reports for current IOCs. | `SRC-MITRE-G0049` |
+| [OilRig](../actors/oilrig.md) | Imported SHA1 seed 8D84D32DF5768B0D4D2AB8B1327C43F17F182001 returned VT not_found and remains unpromoted pending primary hash verification. | `SRC-ESET-OILRIG-ISRAEL` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [OilRig](../actors/oilrig.md) | Hunt for OilCheck execution or artifacts only in context: unusual parent process, unexpected host role, suspicious account, external staging, or proximity to the actor intrusion chain. |
+| [OilRig](../actors/oilrig.md) | Hunt cloud-mail API calls by unusual executables, unexpected Outlook/EWS traffic from non-mail clients, and OilRig downloader execution near prior SC5k or ODAgent activity. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [OilRig](../actors/oilrig.md) | Common or dual-use tools require local allowlisting and must not be used alone for actor attribution. |
+| [OilRig](../actors/oilrig.md) | Use behavior and ESET source context; do not promote unverified hash seeds to blocking controls. |
 
 ## Crosslinks
 
@@ -69,6 +69,6 @@ No repository hunt is currently mapped to the associated actor(s). Create a hunt
 
 | Source | Publisher | Date | Reliability | Type | Last Reviewed |
 | --- | --- | --- | --- | --- | --- |
-| [`SRC-MITRE-G0049`](https://attack.mitre.org/groups/G0049/) | MITRE ATT&CK | 2026-05-13 | A | Knowledge base | 2026-05-14 |
+| [`SRC-ESET-OILRIG-ISRAEL`](https://www.eset.com/sg/about/newsroom/press-releases1/awards/iran-linked-oilrig-attacks-israeli-organizations-with-cloud-service-powered-downloaders-eset-research-discovers/) | ESET Research | 2023-09-21 | A | Vendor CTI | 2026-05-14 |
 
 If a source publishes a large or frequently changing IOC appendix, keep the current IOC list in the source system or TIP and store only the pointer here.

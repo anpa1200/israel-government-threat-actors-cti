@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [WIRTE](../actors/wirte.md) | WIRTE-linked wiper used in disruptive activity against Israeli entities according to Check Point reporting. |
+| [WIRTE](../actors/wirte.md) | Check Point reports SameCoin as a WIRTE-linked multi-platform wiper used in disruptive Israeli campaigns; behavior includes INCD/ESET security-update impersonation, oref.org.il reachability/XOR guardrail, Active Directory propagation through scheduled tasks, file overwrite with random bytes, Android zero-fill/delete logic, and propaganda wallpaper/video artifacts. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [WIRTE](../actors/wirte.md) | Hash not committed; use Check Point report references. | `SRC-CP-WIRTE-2024` |
+| [WIRTE](../actors/wirte.md) | Check Point publishes lure hash b7c5af2d7e1eb7651b1fe3a224121d3461f3473d081990c02ef8ab4ace13f785; component hashes should be pulled from the primary Check Point/HarfangLab references before blocking. | `SRC-CP-WIRTE-2024` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [WIRTE](../actors/wirte.md) | Hunt destructive file operations, suspicious desktop modification, and post-compromise wiper staging. |
+| [WIRTE](../actors/wirte.md) | Hunt non-browser requests to oref.org.il from newly dropped binaries, fake INCD/ESET update execution, mass file overwrite, remote scheduled-task propagation, suspicious desktop changes, and Android security-update APK side-loads. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [WIRTE](../actors/wirte.md) | Do not store samples. |
+| [WIRTE](../actors/wirte.md) | Do not store samples; treat geofenced behavior as high-value defensive signal for Israeli environments. |
 
 ## Crosslinks
 

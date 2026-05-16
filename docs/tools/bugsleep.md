@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [MuddyWater](../actors/muddywater.md) | Backdoor deployed in recent MuddyWater campaigns according to Check Point reporting. |
+| [MuddyWater](../actors/muddywater.md) | Check Point reports BugSleep as a MuddyWater backdoor under active development; reported behavior includes victim fingerprinting, command execution, file upload/download, persistence-oriented check-ins, and follow-on C2 after phishing-led access. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [MuddyWater](../actors/muddywater.md) | Hash not committed; use Check Point IOC appendix/current report. | `SRC-CP-BUGSLEEP` |
+| [MuddyWater](../actors/muddywater.md) | Hash not committed from source page; use Check Point IOC appendix/current report if sample-level matching is required. | `SRC-CP-BUGSLEEP` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [MuddyWater](../actors/muddywater.md) | Hunt MuddyWater phishing-to-loader chains, suspicious scheduled tasks, and follow-on C2 from user endpoints. |
+| [MuddyWater](../actors/muddywater.md) | Hunt MuddyWater phishing-to-loader chains, new scheduled tasks or recurring check-ins, suspicious file transfer from user endpoints, and C2 from hosts that recently executed lure-delivered payloads. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [MuddyWater](../actors/muddywater.md) | Use primary source before adding IOC-level detections. |
+| [MuddyWater](../actors/muddywater.md) | Prefer behavior and source context; do not build actor attribution from BugSleep hash or family name alone. |
 
 ## Crosslinks
 

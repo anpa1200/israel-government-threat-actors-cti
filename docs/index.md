@@ -19,13 +19,14 @@ This documentation organizes public-source threat intelligence for defensive use
 5. [TTP To Detection Matrix](navigation/ttp-detection-matrix.md)
 6. [Surface And Capability Matrix](navigation/surface-capability-matrix.md)
 7. [Connected TIPs And CTI Feeds](connected-tips.md)
-8. [Intelligence Update Queue](intelligence-updates.md)
-9. [Report Index](reports/README.md)
-10. [CTI-to-Detection Operating Standard](methodology/operating-standard.md)
-11. [Threat Hunting Workflow](threat-hunting/hunt-workflow.md)
-12. [Detection Lifecycle](detection-engineering/detection-lifecycle.md)
-13. Scored source library in `sources/`
-14. Detection examples in `detections/sigma/` and `detections/kql/`
+8. [VirusTotal Malware Enrichment](virustotal-enrichment.md)
+9. [Intelligence Update Queue](intelligence-updates.md)
+10. [Report Index](reports/README.md)
+11. [CTI-to-Detection Operating Standard](methodology/operating-standard.md)
+12. [Threat Hunting Workflow](threat-hunting/hunt-workflow.md)
+13. [Detection Lifecycle](detection-engineering/detection-lifecycle.md)
+14. Scored source library in `sources/`
+15. Detection examples in `detections/sigma/` and `detections/kql/`
 
 ## Operating Rules
 

@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | Modular infostealer attributed to Emennet Pasargad and distributed in fake INCD phishing against Israeli organizations. |
+| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | Check Point reports WezRat as a modular infostealer/RAT distributed through fake INCD-themed phishing; behavior includes modular collection, command execution, screenshot or data theft capabilities depending on module, and Israeli security-update lure abuse. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | Hash not committed; use Check Point and government IOC references. | `SRC-CP-WEZRAT` |
+| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | Hash not committed; use Check Point and government IOC references for current sample hashes, lure senders, domains, and C2 paths. | `SRC-CP-WEZRAT` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | Hunt fake security updates, user-path execution, and modular infostealer C2. |
+| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | Hunt fake INCD/security-update lures, sender/domain impersonation, user-path execution after download, modular infostealer staging, and unusual outbound C2 after security-themed attachments. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | Do not store payloads. |
+| [Cotton Sandstorm](../actors/cotton-sandstorm.md) | Do not store payloads; treat lure reuse and persona context through evidence and persona-claim workflow. |
 
 ## Crosslinks
 

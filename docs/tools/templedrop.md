@@ -24,7 +24,7 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [UNC1860](../actors/unc1860.md) | Mandiant reports related Sheed AV MD5 0c93cac9854831da5f761ee98bb40c37 and WINTAPIX/TOFUDRV hashes in the same report. | `SRC-MANDIANT-UNC1860` |
+| [UNC1860](../actors/unc1860.md) | Mandiant reports related Sheed AV MD5 0c93cac9854831da5f761ee98bb40c37 and WINTAPIX/TOFUDRV MD5s 286bd9c2670215d3cb4790aac4552f22 and b4b1e285b9f666ae7304a456da01545e in the same report; VT enrichment found the Sheed AV reference as signed and not malicious by public verdicts. | `SRC-MANDIANT-UNC1860` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,13 +32,13 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [UNC1860](../actors/unc1860.md) | Hunt unexpected filter drivers, driver load events, protected file behavior, and kernel-mode artifacts on edge or telecom servers. |
+| [UNC1860](../actors/unc1860.md) | Hunt unexpected filter drivers, driver load events, protected file behavior, WINTAPIX/TOFUDRV artifacts, and kernel-mode tampering on edge or telecom servers. |
 
 ## Handling Notes
 
 | Actor | Handling Notes |
 | --- | --- |
-| [UNC1860](../actors/unc1860.md) | Driver handling requires isolated malware-analysis processes outside this repo. |
+| [UNC1860](../actors/unc1860.md) | Driver verdicts require source context; benign-looking signed driver metadata can still be relevant when repurposed. |
 
 ## Crosslinks
 

@@ -18,13 +18,13 @@ This is a defensive tool-intelligence page. It is intended for analyst navigatio
 
 | Actor | Behavior Summary |
 | --- | --- |
-| [WIRTE](../actors/wirte.md) | Ashen Lepus / WIRTE malware suite including loader, stager, orchestrator, and module-based collection behavior. |
+| [WIRTE](../actors/wirte.md) | Unit 42 reports AshTag as a WIRTE/Ashen Lepus modular .NET malware suite with AshenLoader, AshenStager, AshenOrchestrator, and modules; behavior includes DLL side-loading, HTML tag payload retrieval, AES/XOR-protected staging, modular collection, and Rclone exfiltration. |
 
 ## Hash And IOC Status
 
 | Actor | Status | Reference |
 | --- | --- | --- |
-| [WIRTE](../actors/wirte.md) | Hash not committed; use Unit 42 report references. | `SRC-UNIT42-ASHTAG-2025` |
+| [WIRTE](../actors/wirte.md) | Representative Unit 42 SHA256s include f554c43707f5d87625a3834116a2d22f551b1d9a5aff1e446d24893975c431bc, 739a5199add1d970ba22d69cc10b4c3a13b72136be6d45212429e8f0969af3dc, 6bd3d05aef89cd03d6b49b20716775fe92f0cf8a3c2747094404ef98f96e9376, 30490ba95c42cefcca1d0328ea740e61c26eaf606a98f68d26c4a519ce918c99, and 66ab29d2d62548faeaeadaad9dd62818163175872703fda328bb1b4894f5e69e; use full Unit 42 IOC table for coverage. | `SRC-UNIT42-ASHTAG-2025` |
 
 Hashes and IOCs on this page are source pointers or representative public indicators. They SHOULD be refreshed from the linked source before operational use and MUST NOT be used alone for actor attribution.
 
@@ -32,7 +32,7 @@ Hashes and IOCs on this page are source pointers or representative public indica
 
 | Actor | Hunting Notes |
 | --- | --- |
-| [WIRTE](../actors/wirte.md) | Hunt DLL side-loading, HTML-staged payload retrieval, modular C2, and Rclone exfiltration. |
+| [WIRTE](../actors/wirte.md) | Hunt DLL side-loading of dwampi.dll, wtsapi32.dll, srvcli.dll, or netutils.dll from unexpected paths, HTML-staged payload retrieval, AES/XOR decoding artifacts, modular C2, and Rclone execution after collection. |
 
 ## Handling Notes
 

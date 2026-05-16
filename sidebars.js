@@ -17,6 +17,7 @@ const sidebars = {
         'known-limitations',
         'customer-environment-use',
         'connected-tips',
+        'virustotal-enrichment',
         'intelligence-updates',
         'malware-tool-intelligence',
       ],

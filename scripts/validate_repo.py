@@ -115,6 +115,41 @@ CSV_HEADERS = {
         "status",
         "review_notes",
     ],
+    "data/virustotal-hash-seeds.csv": [
+        "seed_id",
+        "tool_id",
+        "tool_name",
+        "actor_id",
+        "hash_type",
+        "hash",
+        "source_id",
+        "source_context",
+        "status",
+        "notes",
+    ],
+    "data/virustotal-enrichment-candidates.csv": [
+        "candidate_id",
+        "seed_id",
+        "tool_id",
+        "tool_name",
+        "actor_id",
+        "hash_type",
+        "hash",
+        "vt_status",
+        "vt_meaningful_name",
+        "vt_type_description",
+        "vt_malicious",
+        "vt_suspicious",
+        "vt_undetected",
+        "vt_harmless",
+        "vt_suggested_threat_label",
+        "vt_tags",
+        "vt_gui_url",
+        "queried_at",
+        "recommended_action",
+        "status",
+        "notes",
+    ],
     "examples/registers/pir-register.csv": [
         "pir_id",
         "decision_owner",
@@ -329,6 +364,8 @@ def validate_references() -> None:
     tool_intelligence = read_csv_dicts(ROOT / "data/tool-intelligence.csv")
     intel_feeds = read_csv_dicts(ROOT / "data/intel-feeds.csv")
     intel_candidates = read_csv_dicts(ROOT / "data/intel-update-candidates.csv")
+    vt_seeds = read_csv_dicts(ROOT / "data/virustotal-hash-seeds.csv")
+    vt_candidates = read_csv_dicts(ROOT / "data/virustotal-enrichment-candidates.csv")
     evidence = read_csv_dicts(ROOT / "examples/registers/evidence-register.csv")
     persona_claims = read_csv_dicts(
         ROOT / "examples/registers/persona-claims-register.csv"
@@ -346,6 +383,10 @@ def validate_references() -> None:
     validate_unique_ids(intel_feeds, "feed_id", "data/intel-feeds.csv")
     validate_unique_ids(
         intel_candidates, "candidate_id", "data/intel-update-candidates.csv"
+    )
+    validate_unique_ids(vt_seeds, "seed_id", "data/virustotal-hash-seeds.csv")
+    validate_unique_ids(
+        vt_candidates, "candidate_id", "data/virustotal-enrichment-candidates.csv"
     )
     validate_unique_ids(evidence, "evidence_id", "examples/registers/evidence-register.csv")
     validate_unique_ids(evidence, "claim_id", "examples/registers/evidence-register.csv")
@@ -371,6 +412,8 @@ def validate_references() -> None:
     actor_ids = {row["actor_id"] for row in actors}
     source_ids = {row["source_id"] for row in sources}
     feed_ids = {row["feed_id"] for row in intel_feeds}
+    tool_ids = {row["tool_id"] for row in tool_intelligence}
+    vt_seed_ids = {row["seed_id"] for row in vt_seeds}
     evidence_ids = {row["evidence_id"] for row in evidence}
     scenario_ids = {row["scenario_id"] for row in scenarios}
     detection_ids = {row["detection_id"] for row in detection_backlog}
@@ -426,6 +469,37 @@ def validate_references() -> None:
                 "data/intel-update-candidates.csv "
                 f"references unknown actor_id: {actor_id}"
             )
+
+    for row in vt_seeds:
+        seed_id = row["seed_id"]
+        actor_id = row["actor_id"]
+        source_id = row["source_id"]
+        tool_id = row["tool_id"]
+        hash_type = row["hash_type"]
+        hash_value = row["hash"]
+        if actor_id not in actor_ids:
+            fail(f"data/virustotal-hash-seeds.csv {seed_id} references unknown actor_id: {actor_id}")
+        if source_id not in source_ids:
+            fail(f"data/virustotal-hash-seeds.csv {seed_id} references unknown source_id: {source_id}")
+        if tool_id not in tool_ids:
+            fail(f"data/virustotal-hash-seeds.csv {seed_id} references unknown tool_id: {tool_id}")
+        if hash_type not in {"MD5", "SHA1", "SHA256"}:
+            fail(f"data/virustotal-hash-seeds.csv {seed_id} has invalid hash_type: {hash_type}")
+        expected_lengths = {"MD5": 32, "SHA1": 40, "SHA256": 64}
+        if len(hash_value) != expected_lengths[hash_type] or not re.fullmatch(r"[A-Fa-f0-9]+", hash_value):
+            fail(f"data/virustotal-hash-seeds.csv {seed_id} has invalid {hash_type} hash: {hash_value}")
+
+    for row in vt_candidates:
+        candidate_id = row["candidate_id"]
+        seed_id = row["seed_id"]
+        tool_id = row["tool_id"]
+        actor_id = row["actor_id"]
+        if seed_id not in vt_seed_ids:
+            fail(f"data/virustotal-enrichment-candidates.csv {candidate_id} references unknown seed_id: {seed_id}")
+        if tool_id not in tool_ids:
+            fail(f"data/virustotal-enrichment-candidates.csv {candidate_id} references unknown tool_id: {tool_id}")
+        if actor_id not in actor_ids:
+            fail(f"data/virustotal-enrichment-candidates.csv {candidate_id} references unknown actor_id: {actor_id}")
 
     for row in hunts:
         scenario_id = row["scenario_id"]
