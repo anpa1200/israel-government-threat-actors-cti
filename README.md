@@ -19,6 +19,7 @@ This repository is intentionally blue-team only. It contains source references, 
 | --- | --- |
 | `docs/actors/` | Actor and persona profiles with aliases, relevance, TTPs, and source notes. |
 | `docs/navigation/` | Generated actor and surface cross-reference pages for analyst navigation. |
+| `docs/tools/` | Generated malicious-tool detail pages with behavior, hash/IOC status, actor links, hunts, detections, and source review context. |
 | `docs/reports/` | Report index and source collection guidance. |
 | `docs/reports/andrey-medium-articles.md` | Relevant Medium articles from `@1200km` included as authored CTI or methodology references. |
 | `docs/reports/2026-israel-critical-infrastructure-escalation.md` | Research intake report on Israeli critical infrastructure and geopolitical escalation. |
@@ -68,7 +69,7 @@ Review the starting threat model in [docs/israel-government-threat-model.md](doc
 
 For practical click-through use, start with the [Actor Navigation Workbench](docs/navigation/actor-workbench.md), [TTP To Detection Matrix](docs/navigation/ttp-detection-matrix.md), or [Surface And Capability Matrix](docs/navigation/surface-capability-matrix.md).
 
-For actor-linked malware and tooling behavior, start with [Malware And Tool Intelligence](docs/malware-tool-intelligence.md).
+For actor-linked malware and tooling behavior, start with [Malware And Tool Intelligence](docs/malware-tool-intelligence.md) or the generated [Malicious Tools Index](docs/tools/README.md).
 
 For CTI feed updates, start with [Connected TIPs And CTI Feeds](docs/connected-tips.md).
 
@@ -95,6 +96,7 @@ For end-to-end examples and proof artifacts, review:
 - [Connected TIPs and CTI feeds](docs/connected-tips.md)
 - [Intelligence update queue](docs/intelligence-updates.md)
 - [Malware and tool intelligence](docs/malware-tool-intelligence.md)
+- [Malicious tools index](docs/tools/README.md)
 - [Detection status dashboard](docs/detection-engineering/detection-status-dashboard.md)
 - [Actor navigation workbench](docs/navigation/actor-workbench.md)
 - [TTP to detection matrix](docs/navigation/ttp-detection-matrix.md)

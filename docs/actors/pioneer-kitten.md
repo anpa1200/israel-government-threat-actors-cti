@@ -15,8 +15,9 @@ sidebar_label: Pioneer Kitten
 - Mapped detections: [DET-002](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/suspicious-rmm-file-sharing-download.yml) Suspicious RMM Installer Download From User Context (Pilot, DRL-6); [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-002](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/kql/suspicious-rmm-file-sharing-download.kql) If MuddyWater-style RMM abuse is active then unauthorized RMM execution will appear from user-controlled paths; [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: None currently mapped.
-- Malware and tools: `NGROK / Ligolo` (Tunneling / proxy tooling)
+- Malware and tools: [`NGROK / Ligolo`](../tools/ngrok-ligolo.md) (Tunneling / proxy tooling)
 - Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#pioneer-kitten) (1 mapped tool row(s))
+- Tool detail pages: [`NGROK / Ligolo`](../tools/ngrok-ligolo.md)
 - Evidence records: `EVD-019` / `CLM-PIONEERKITTEN-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CISA-AA24-241A`

@@ -15,8 +15,9 @@ sidebar_label: DarkBit
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: None currently mapped.
-- Malware and tools: `DarkBit ransomware` (Pseudo-ransomware / destructive malware)
+- Malware and tools: [`DarkBit ransomware`](../tools/darkbit-ransomware.md) (Pseudo-ransomware / destructive malware)
 - Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#darkbit) (1 mapped tool row(s))
+- Tool detail pages: [`DarkBit ransomware`](../tools/darkbit-ransomware.md)
 - Evidence records: `EVD-020` / `CLM-DARKBIT-001`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-INCD-DARKBIT-MUDDYWATER-2023`, `SRC-MS-MERCURY-DEV1084-2023`

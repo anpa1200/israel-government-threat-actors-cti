@@ -15,8 +15,9 @@ sidebar_label: APT39
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: None currently mapped.
-- Malware and tools: `Remexi` (Malware / collection tool); `ANTAK / ASPXSPY` (Web shells)
+- Malware and tools: [`Remexi`](../tools/remexi.md) (Malware / collection tool); [`ANTAK / ASPXSPY`](../tools/antak-aspxspy.md) (Web shells)
 - Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#apt39) (2 mapped tool row(s))
+- Tool detail pages: [`Remexi`](../tools/remexi.md); [`ANTAK / ASPXSPY`](../tools/antak-aspxspy.md)
 - Evidence records: `EVD-027` / `CLM-APT39-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G0087`

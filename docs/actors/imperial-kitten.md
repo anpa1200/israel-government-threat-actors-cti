@@ -15,8 +15,9 @@ sidebar_label: Imperial Kitten
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: None currently mapped.
-- Malware and tools: `IMAPLoader` (.NET downloader / loader); `StandardKeyboard` (Backdoor / C2 tool)
+- Malware and tools: [`IMAPLoader`](../tools/imaploader.md) (.NET downloader / loader); [`StandardKeyboard`](../tools/standardkeyboard.md) (Backdoor / C2 tool)
 - Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#imperial-kitten) (2 mapped tool row(s))
+- Tool detail pages: [`IMAPLoader`](../tools/imaploader.md); [`StandardKeyboard`](../tools/standardkeyboard.md)
 - Evidence records: `EVD-018` / `CLM-IMPERIALKITTEN-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CS-IMPERIAL-KITTEN-2023`, `SRC-PWC-YELLOW-LIDERC-2023`

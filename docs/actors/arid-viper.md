@@ -12,8 +12,9 @@
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: `SRC-META-ARIDVIPER` Domains; apps; mobile indicators; `SRC-CYBERNEWS-REDALERT-2026` App names; package references; domains from secondary coverage; `SRC-S1-ISRAEL-HAMAS-CYBER-2023` Actor context; mobile and social-engineering references
-- Malware and tools: `AridSpy` (Mobile RAT); `RedAlert.apk` (Mobile spyware / trojanized app)
+- Malware and tools: [`AridSpy`](../tools/aridspy.md) (Mobile RAT); [`RedAlert.apk`](../tools/redalertapk.md) (Mobile spyware / trojanized app)
 - Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#apt-c-23) (2 mapped tool row(s))
+- Tool detail pages: [`AridSpy`](../tools/aridspy.md); [`RedAlert.apk`](../tools/redalertapk.md)
 - Evidence records: `EVD-011` / `CLM-ARIDVIPER-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-CYBERNEWS-REDALERT-2026`, `SRC-ESET-ARIDSPY`, `SRC-META-ARIDVIPER`, `SRC-S1-ISRAEL-HAMAS-CYBER-2023`

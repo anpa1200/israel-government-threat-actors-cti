@@ -15,8 +15,9 @@ sidebar_label: Scarred Manticore
 - Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: None currently mapped.
-- Malware and tools: `Liontail` (Passive backdoor framework)
+- Malware and tools: [`Liontail`](../tools/liontail.md) (Passive backdoor framework)
 - Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#scarred-manticore) (1 mapped tool row(s))
+- Tool detail pages: [`Liontail`](../tools/liontail.md)
 - Evidence records: `EVD-007` / `CLM-SCARRED-001`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-CP-SCARRED-MANTICORE-2023`, `SRC-CP-VOID-2024`

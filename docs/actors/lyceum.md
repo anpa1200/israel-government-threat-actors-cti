@@ -15,8 +15,9 @@ sidebar_label: Lyceum
 - Mapped detections: None currently mapped.
 - Mapped hunts: None currently mapped.
 - IOC reference sources: None currently mapped.
-- Malware and tools: `DanBot` (Remote Access Trojan); `Kevin` (Backdoor); `Shark` (Backdoor)
+- Malware and tools: [`DanBot`](../tools/danbot.md) (Remote Access Trojan); [`Kevin`](../tools/kevin.md) (Backdoor); [`Shark`](../tools/shark.md) (Backdoor)
 - Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#lyceum) (3 mapped tool row(s))
+- Tool detail pages: [`DanBot`](../tools/danbot.md); [`Kevin`](../tools/kevin.md); [`Shark`](../tools/shark.md)
 - Evidence records: `EVD-021` / `CLM-LYCEUM-001`
 - Intel update candidates: [1 current candidate(s)](../intelligence-updates.md#actor-update-candidates)
 - Source IDs in structured data: `SRC-MITRE-G1001`

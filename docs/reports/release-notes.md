@@ -22,11 +22,14 @@ Key changes:
 - Added [Malware And Tool Intelligence](../malware-tool-intelligence.md), a
   generated page that lets analysts click from actor profiles to associated
   tools, behaviors, hash availability, and source-backed detection guidance.
+- Added generated per-tool detail pages under `docs/tools/`, with behavior,
+  hash/IOC status, actor profile links, mapped ATT&CK techniques, mapped
+  detections, mapped hunts, source-review metadata, and handling notes.
 - Enriched UNC1860 tool coverage for TEMPLEDOOR, TEMPLEPLAY, CRYPTOSLAY,
   PipeSnoop, STAYSHANTE, SASHEYAWAY, VIROGREEN, TEMPLEDROP, and TEMPLELOCK
   based on Mandiant-linked and Malpedia reporting.
 - Updated generated actor navigation blocks to link every actor to the new
-  tool intelligence matrix.
+  tool intelligence matrix and individual tool detail pages where mapped.
 - Refreshed the connected-feed queue from MITRE ATT&CK Enterprise STIX, CISA
   KEV, and CISA Cybersecurity Advisories RSS.
 - Added [Connected TIPs And CTI Feeds](../connected-tips.md) with feed

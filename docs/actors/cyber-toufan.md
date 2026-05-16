@@ -12,8 +12,9 @@
 - Mapped detections: [DET-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) Unitronics PLC HMI Web Interface Access (Hunt, DRL-4)
 - Mapped hunts: [HUNT-003](https://github.com/anpa1200/israel-government-threat-actors-cti/blob/main/detections/sigma/unitronics-plc-hmi-web-access.yml) If exposed PLC/HMI surfaces are targeted then OT management paths or ports will show external access
 - IOC reference sources: None currently mapped.
-- Malware and tools: `Cyber Toufan supplier-access playbook` (Credential and admin-interface abuse)
+- Malware and tools: [`Cyber Toufan supplier-access playbook`](../tools/cyber-toufan-supplier-access-playbook.md) (Credential and admin-interface abuse)
 - Tool behaviors and hash/IOC status: [tool intelligence matrix](../malware-tool-intelligence.md#cyber-toufan) (1 mapped tool row(s))
+- Tool detail pages: [`Cyber Toufan supplier-access playbook`](../tools/cyber-toufan-supplier-access-playbook.md)
 - Evidence records: `EVD-023` / `CLM-CYBERTOUFAN-001`
 - Intel update candidates: None in current feed pull.
 - Source IDs in structured data: `SRC-MS-IRAN-HAMAS`, `SRC-OPI-CYBER-TOUFAN`
