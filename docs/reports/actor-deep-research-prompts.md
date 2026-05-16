@@ -53,9 +53,51 @@ Output sections:
 Do not speculate beyond available evidence. Where evidence is insufficient, mark Gap and explain what source would be needed.
 ```
 
+## Tag Index
+
+Use these tags to choose the right actor prompt by defender need, sector, or research task.
+
+### Government / Public Sector {#tag-government-public-sector}
+
+[MuddyWater](#muddywater), [OilRig](#oilrig), [Magic Hound / APT35](#magic-hound--apt35), [APT42](#apt42), [Agrius](#agrius), [Pioneer Kitten](#pioneer-kitten), [APT39](#apt39), [APT-C-23 / Arid Viper](#apt-c-23--arid-viper), [TA402](#ta402), [UNC1860](#unc1860), [Scarred Manticore](#scarred-manticore), [Void Manticore / Handala](#void-manticore--handala).
+
+### Medical / Healthcare {#tag-medical-healthcare}
+
+[Agrius](#agrius), [DarkBit](#darkbit), [Void Manticore / Handala](#void-manticore--handala), [Lebanese Cedar](#lebanese-cedar).
+
+### Financial / Extortion / Ransomware-Adjacent {#tag-financial-extortion}
+
+[Agrius](#agrius), [DarkBit](#darkbit), [Pioneer Kitten](#pioneer-kitten), [Void Manticore / Handala](#void-manticore--handala), [Cyber Toufan](#cyber-toufan).
+
+### Telecom / ISP / Communications {#tag-telecom}
+
+[OilRig](#oilrig), [Lyceum](#lyceum), [APT39](#apt39), [Cyber Toufan](#cyber-toufan), [UNC1860](#unc1860), [Scarred Manticore](#scarred-manticore), [Lebanese Cedar](#lebanese-cedar).
+
+### OT / ICS / Critical Infrastructure {#tag-ot-ics}
+
+[CyberAv3ngers](#cyberav3ngers), [Cyber Toufan](#cyber-toufan), [Lyceum](#lyceum), [MuddyWater](#muddywater), [UNC1860](#unc1860). Route technical questions through the [Surface And Capability Matrix](../navigation/surface-capability-matrix.md#ot-plc).
+
+### Identity / Cloud / Mailbox {#tag-identity-cloud}
+
+[APT42](#apt42), [Magic Hound / APT35](#magic-hound--apt35), [Pioneer Kitten](#pioneer-kitten), [Void Manticore / Handala](#void-manticore--handala), [OilRig](#oilrig), [Imperial Kitten](#imperial-kitten). Route detections through the [TTP To Detection Matrix](../navigation/ttp-detection-matrix.md).
+
+### IOC / Tooling / Hash Review {#tag-ioc-tooling}
+
+All actor prompts link to actor-specific sections in the [Malware And Tool Intelligence Matrix](../malware-tool-intelligence.md) and individual [tool pages](../tools/README.md).
+
+### Persona Claims / Hack-And-Leak {#tag-persona-claims}
+
+[Void Manticore / Handala](#void-manticore--handala), [Cyber Toufan](#cyber-toufan), [DarkBit](#darkbit), [Cotton Sandstorm](#cotton-sandstorm). Record outputs in the persona-claims workflow when claims are not independently verified.
+
+### Supplier / Third Party / Edge Access {#tag-supplier-third-party}
+
+[Imperial Kitten](#imperial-kitten), [Pioneer Kitten](#pioneer-kitten), [Cyber Toufan](#cyber-toufan), [UNC1860](#unc1860), [Scarred Manticore](#scarred-manticore), [OilRig](#oilrig).
+
 ## MuddyWater
 
 Profile: [MuddyWater](../actors/muddywater.md). Tool matrix: [MuddyWater tools](../malware-tool-intelligence.md#muddywater).
+
+Tags: [Government / Public Sector](#tag-government-public-sector), [OT / ICS](#tag-ot-ics), [IOC / Tooling](../malware-tool-intelligence.md#muddywater), [Hunting](../navigation/actor-workbench.md#muddywater).
 
 ```text
 Use the Common Research Contract.
@@ -79,6 +121,8 @@ Special checks:
 
 Profile: [OilRig](../actors/oilrig.md). Tool matrix: [OilRig tools](../malware-tool-intelligence.md#oilrig).
 
+Tags: [Government / Public Sector](#tag-government-public-sector), [Telecom](#tag-telecom), [Identity / Cloud](#tag-identity-cloud), [Supplier / Third Party](#tag-supplier-third-party), [IOC / Tooling](../malware-tool-intelligence.md#oilrig).
+
 ```text
 Use the Common Research Contract.
 
@@ -101,6 +145,8 @@ Special checks:
 
 Profile: [Magic Hound / APT35](../actors/apt35.md). Tool matrix: [Magic Hound tools](../malware-tool-intelligence.md#magic-hound).
 
+Tags: [Government / Public Sector](#tag-government-public-sector), [Identity / Cloud](#tag-identity-cloud), [IOC / Tooling](../malware-tool-intelligence.md#magic-hound), [Hunting](../navigation/actor-workbench.md#magic-hound).
+
 ```text
 Use the Common Research Contract.
 
@@ -121,6 +167,8 @@ Special checks:
 ## APT42
 
 Profile: [APT42](../actors/apt42.md). Tool matrix: [APT42 tools](../malware-tool-intelligence.md#apt42).
+
+Tags: [Government / Public Sector](#tag-government-public-sector), [Identity / Cloud](#tag-identity-cloud), [IOC / Tooling](../malware-tool-intelligence.md#apt42), [Hunting](../navigation/actor-workbench.md#apt42).
 
 ```text
 Use the Common Research Contract.
@@ -143,6 +191,8 @@ Special checks:
 
 Profile: [Agrius](../actors/agrius.md). Tool matrix: [Agrius tools](../malware-tool-intelligence.md#agrius).
 
+Tags: [Government / Public Sector](#tag-government-public-sector), [Medical / Healthcare](#tag-medical-healthcare), [Financial / Extortion](#tag-financial-extortion), [IOC / Tooling](../malware-tool-intelligence.md#agrius), [Hunting](../navigation/actor-workbench.md#agrius).
+
 ```text
 Use the Common Research Contract.
 
@@ -163,6 +213,8 @@ Special checks:
 ## CyberAv3ngers
 
 Profile: [CyberAv3ngers](../actors/cyberav3ngers.md). Tool matrix: [CyberAv3ngers tools](../malware-tool-intelligence.md#cyberav3ngers).
+
+Tags: [OT / ICS](#tag-ot-ics), [Critical Infrastructure](../navigation/surface-capability-matrix.md#ot-plc), [IOC / Tooling](../malware-tool-intelligence.md#cyberav3ngers), [Hunting](../navigation/actor-workbench.md#cyberav3ngers).
 
 ```text
 Use the Common Research Contract.
@@ -185,6 +237,8 @@ Special checks:
 
 Profile: [Imperial Kitten](../actors/imperial-kitten.md). Tool matrix: [Imperial Kitten tools](../malware-tool-intelligence.md#imperial-kitten).
 
+Tags: [Supplier / Third Party](#tag-supplier-third-party), [Identity / Cloud](#tag-identity-cloud), [Transportation / Logistics](../navigation/surface-capability-matrix.md), [IOC / Tooling](../malware-tool-intelligence.md#imperial-kitten).
+
 ```text
 Use the Common Research Contract.
 
@@ -205,6 +259,8 @@ Special checks:
 ## Pioneer Kitten
 
 Profile: [Pioneer Kitten](../actors/pioneer-kitten.md). Tool matrix: [Pioneer Kitten tools](../malware-tool-intelligence.md#pioneer-kitten).
+
+Tags: [Government / Public Sector](#tag-government-public-sector), [Financial / Extortion](#tag-financial-extortion), [Identity / Cloud](#tag-identity-cloud), [Supplier / Third Party](#tag-supplier-third-party), [IOC / Tooling](../malware-tool-intelligence.md#pioneer-kitten).
 
 ```text
 Use the Common Research Contract.
@@ -227,6 +283,8 @@ Special checks:
 
 Profile: [DarkBit](../actors/darkbit.md). Tool matrix: [DarkBit tools](../malware-tool-intelligence.md#darkbit).
 
+Tags: [Medical / Healthcare](#tag-medical-healthcare), [Financial / Extortion](#tag-financial-extortion), [Persona Claims](#tag-persona-claims), [IOC / Tooling](../malware-tool-intelligence.md#darkbit).
+
 ```text
 Use the Common Research Contract.
 
@@ -247,6 +305,8 @@ Special checks:
 ## Lyceum
 
 Profile: [Lyceum](../actors/lyceum.md). Tool matrix: [Lyceum tools](../malware-tool-intelligence.md#lyceum).
+
+Tags: [Telecom](#tag-telecom), [OT / ICS](#tag-ot-ics), [Energy](../navigation/surface-capability-matrix.md), [IOC / Tooling](../malware-tool-intelligence.md#lyceum).
 
 ```text
 Use the Common Research Contract.
@@ -269,6 +329,8 @@ Special checks:
 
 Profile: [Cotton Sandstorm](../actors/cotton-sandstorm.md). Tool matrix: [Cotton Sandstorm tools](../malware-tool-intelligence.md#cotton-sandstorm).
 
+Tags: [Government / Public Sector](#tag-government-public-sector), [Financial / Extortion](#tag-financial-extortion), [Persona Claims](#tag-persona-claims), [IOC / Tooling](../malware-tool-intelligence.md#cotton-sandstorm).
+
 ```text
 Use the Common Research Contract.
 
@@ -290,6 +352,8 @@ Special checks:
 
 Profile: [APT39](../actors/apt39.md). Tool matrix: [APT39 tools](../malware-tool-intelligence.md#apt39).
 
+Tags: [Government / Public Sector](#tag-government-public-sector), [Telecom](#tag-telecom), [Financial / Travel Data](#tag-financial-extortion), [IOC / Tooling](../malware-tool-intelligence.md#apt39).
+
 ```text
 Use the Common Research Contract.
 
@@ -310,6 +374,8 @@ Special checks:
 ## APT-C-23 / Arid Viper
 
 Profile: [APT-C-23 / Arid Viper](../actors/arid-viper.md). Tool matrix: [APT-C-23 tools](../malware-tool-intelligence.md#apt-c-23).
+
+Tags: [Government / Public Sector](#tag-government-public-sector), [Identity / Cloud](#tag-identity-cloud), [Mobile / MDM](../navigation/actor-workbench.md#apt-c-23), [IOC / Tooling](../malware-tool-intelligence.md#apt-c-23).
 
 ```text
 Use the Common Research Contract.
@@ -333,6 +399,8 @@ Special checks:
 
 Profile: [UNC3890](../actors/unc3890.md). Tool matrix: [UNC3890 tools](../malware-tool-intelligence.md#unc3890).
 
+Tags: [Government / Public Sector](#tag-government-public-sector), [Supplier / Third Party](#tag-supplier-third-party), [Transportation / Maritime](../navigation/actor-workbench.md#unc3890), [IOC / Tooling](../malware-tool-intelligence.md#unc3890).
+
 ```text
 Use the Common Research Contract.
 
@@ -352,6 +420,8 @@ Special checks:
 ## Cyber Toufan
 
 Profile: [Cyber Toufan](../actors/cyber-toufan.md). Tool matrix: [Cyber Toufan tools](../malware-tool-intelligence.md#cyber-toufan).
+
+Tags: [Telecom](#tag-telecom), [OT / ICS](#tag-ot-ics), [Financial / Extortion](#tag-financial-extortion), [Supplier / Third Party](#tag-supplier-third-party), [Persona Claims](#tag-persona-claims), [IOC / Tooling](../malware-tool-intelligence.md#cyber-toufan).
 
 ```text
 Use the Common Research Contract.
@@ -374,6 +444,8 @@ Special checks:
 
 Profile: [Void Manticore / Handala](../actors/handala.md). Tool matrix: [Void Manticore / Handala tools](../malware-tool-intelligence.md#void-manticore-handala).
 
+Tags: [Government / Public Sector](#tag-government-public-sector), [Medical / Healthcare](#tag-medical-healthcare), [Financial / Extortion](#tag-financial-extortion), [Identity / Cloud](#tag-identity-cloud), [Persona Claims](#tag-persona-claims), [IOC / Tooling](../malware-tool-intelligence.md#void-manticore-handala).
+
 ```text
 Use the Common Research Contract.
 
@@ -395,6 +467,8 @@ Special checks:
 
 Profile: [Lebanese Cedar](../actors/lebanese-cedar.md). Tool matrix: [Lebanese Cedar tools](../malware-tool-intelligence.md#lebanese-cedar).
 
+Tags: [Medical / Healthcare](#tag-medical-healthcare), [Telecom](#tag-telecom), [Government / Public Sector](#tag-government-public-sector), [IOC / Tooling](../malware-tool-intelligence.md#lebanese-cedar).
+
 ```text
 Use the Common Research Contract.
 
@@ -414,6 +488,8 @@ Special checks:
 ## WIRTE
 
 Profile: [WIRTE](../actors/wirte.md). Tool matrix: [WIRTE tools](../malware-tool-intelligence.md#wirte).
+
+Tags: [Government / Public Sector](#tag-government-public-sector), [Identity / Cloud](#tag-identity-cloud), [Persona Claims](#tag-persona-claims), [IOC / Tooling](../malware-tool-intelligence.md#wirte).
 
 ```text
 Use the Common Research Contract.
@@ -435,6 +511,8 @@ Special checks:
 
 Profile: [TA402](../actors/ta402.md). Tool matrix: [TA402 tools](../malware-tool-intelligence.md#ta402).
 
+Tags: [Government / Public Sector](#tag-government-public-sector), [Identity / Cloud](#tag-identity-cloud), [IOC / Tooling](../malware-tool-intelligence.md#ta402), [Hunting](../navigation/actor-workbench.md#ta402).
+
 ```text
 Use the Common Research Contract.
 
@@ -453,6 +531,8 @@ Special checks:
 ## UNC1860
 
 Profile: [UNC1860](../actors/unc1860.md). Tool matrix: [UNC1860 tools](../malware-tool-intelligence.md#unc1860).
+
+Tags: [Government / Public Sector](#tag-government-public-sector), [Telecom](#tag-telecom), [OT / ICS](#tag-ot-ics), [Supplier / Third Party](#tag-supplier-third-party), [IOC / Tooling](../malware-tool-intelligence.md#unc1860).
 
 ```text
 Use the Common Research Contract.
@@ -474,6 +554,8 @@ Special checks:
 ## Scarred Manticore
 
 Profile: [Scarred Manticore](../actors/scarred-manticore.md). Tool matrix: [Scarred Manticore tools](../malware-tool-intelligence.md#scarred-manticore).
+
+Tags: [Government / Public Sector](#tag-government-public-sector), [Telecom](#tag-telecom), [Supplier / Third Party](#tag-supplier-third-party), [IOC / Tooling](../malware-tool-intelligence.md#scarred-manticore), [Hunting](../navigation/actor-workbench.md#scarred-manticore).
 
 ```text
 Use the Common Research Contract.
