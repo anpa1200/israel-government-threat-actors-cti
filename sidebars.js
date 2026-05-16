@@ -126,6 +126,7 @@ const sidebars = {
         'reports/israel-critical-infrastructure-escalation',
         'reports/resourses_research',
         'reports/actor-deep-research-prompts',
+        'reports/additional-research-gemeni',
         'reports/worked-cases',
         'reports/ci-validation-evidence',
         'reports/release-notes',
