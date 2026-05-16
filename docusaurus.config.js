@@ -69,6 +69,20 @@ const config = {
             label: 'Docs',
           },
           {
+            to: '/ecosystem',
+            label: 'Ecosystem',
+            position: 'left',
+          },
+          {
+            label: 'CTI Books',
+            position: 'right',
+            items: [
+              {label: 'Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
+              {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
+              {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
+            ],
+          },
+          {
             href: 'https://github.com/anpa1200/israel-government-threat-actors-cti',
             label: 'GitHub',
             position: 'right',
@@ -93,6 +107,14 @@ const config = {
                 label: 'Report Index',
                 to: '/reports/',
               },
+            ],
+          },
+          {
+            title: 'CTI Ecosystem',
+            items: [
+              {label: 'Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
+              {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
+              {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
             ],
           },
           {

@@ -8,6 +8,11 @@ const sidebars = {
       label: 'Overview',
     },
     {
+      type: 'doc',
+      id: 'ecosystem',
+      label: 'CTI Project Ecosystem',
+    },
+    {
       type: 'category',
       label: 'Foundations',
       collapsed: false,
