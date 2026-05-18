@@ -58,8 +58,8 @@ const config = {
       navbar: {
         title: 'Israel CTI',
         logo: {
-          alt: 'Israel CTI shield',
-          src: 'img/logo.svg',
+          alt: '1200km',
+          src: 'img/logo.png',
         },
         items: [
           {
