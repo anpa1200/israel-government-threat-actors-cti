@@ -71,3 +71,10 @@ Threat Scenario Priority Score = Likelihood + Impact + Exposure + Detection Gap 
 
 Only DRL-9 detections MAY be described as production coverage.
 
+## Cross-Links
+
+- [CTI Analyst Field Manual — Source Reliability](https://anpa1200.github.io/cti-analyst-field-manual/docs/cti-foundations/source-reliability/) — full Admiralty Code tables with A-F and 1-6 calibration
+- [CTI Analyst Field Manual — Confidence Language](https://anpa1200.github.io/cti-analyst-field-manual/docs/cti-foundations/confidence-language/) — High/Medium/Low criteria with evidence quality examples
+- [CTI Analyst Field Manual — Detection Readiness Levels](https://anpa1200.github.io/cti-analyst-field-manual/docs/cti-to-detection/detection-readiness-levels/) — DRL scale with validation artifacts and DRL-9 evidence pack requirements
+- [Operating Standard](operating-standard.md) — mandatory rules and claim-to-action chain
+
