@@ -82,8 +82,14 @@ const config = {
               {label: 'Operation Desert Hydra', href: 'https://anpa1200.github.io/operation-desert-hydra/'},
               {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
               {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
+              {label: 'AI vs Defense', href: 'https://anpa1200.github.io/ai-vs-defense/'},
               {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'},
             ],
+          },
+          {
+            href: 'https://medium.com/@1200km',
+            label: 'Medium',
+            position: 'right',
           },
           {
             href: 'https://github.com/anpa1200/israel-government-threat-actors-cti',
@@ -126,24 +132,20 @@ const config = {
               {label: 'Operation Desert Hydra', href: 'https://anpa1200.github.io/operation-desert-hydra/'},
               {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
               {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
+              {label: 'AI vs Defense', href: 'https://anpa1200.github.io/ai-vs-defense/'},
               {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'},
             ],
           },
           {
-            title: 'Repository',
+            title: 'Author',
             items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/anpa1200/israel-government-threat-actors-cti',
-              },
-              {
-                label: 'Issues',
-                href: 'https://github.com/anpa1200/israel-government-threat-actors-cti/issues',
-              },
+              {label: 'Medium', href: 'https://medium.com/@1200km'},
+              {label: 'GitHub', href: 'https://github.com/anpa1200'},
+              {label: 'LinkedIn', href: 'https://www.linkedin.com/in/andrey-pautov/'},
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Andrey Pautov. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Andrey Pautov. Israel Government Threat Actors CTI — defensive public-source knowledge base.`,
       },
       prism: {
         additionalLanguages: ['bash', 'json', 'yaml', 'powershell'],

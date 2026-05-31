@@ -1,3 +1,9 @@
+---
+id: ecosystem
+title: Ecosystem
+sidebar_label: Ecosystem
+---
+
 # CTI Project Ecosystem
 
 ## Purpose
@@ -13,6 +19,7 @@ This page connects the Israel Government Threat Actors CTI knowledge base to the
 | [Operation Desert Hydra](https://anpa1200.github.io/operation-desert-hydra/) | Complete CTI-to-detection pipeline on MuddyWater | Worked detection pipeline for an actor tracked in this knowledge base — source gathering to lab-validated Kibana rules |
 | [Customer-Driven AI CTI Project](https://anpa1200.github.io/customer-driven-ai-cti-project/) | Delivery methodology and customer engagement operating model | Quality gates, project phases, acceptance criteria, detection readiness, replay and reporting workflow |
 | [Israel Government Threat Actors CTI](https://anpa1200.github.io/israel-government-threat-actors-cti/) | Sector and actor knowledge base | Israeli public-sector threat model, actors, tools, TTPs, detections, hunts, source tracking, and evidence mapping |
+| [AI vs Defense](https://anpa1200.github.io/ai-vs-defense/) | Practitioner guide: AI-era threat model and SOC adaptation | How AI-assisted adversary capabilities affect the Israeli sector threat model, detection strategy, and CTI program requirements |
 | [HexStrike AI](https://github.com/0x4m4/hexstrike-ai) | AI-powered offensive security automation platform | MCP agent-based tool orchestration, 150+ security tools, AI-driven penetration testing, adversarial validation of detection coverage |
 
 ## How This Project Fits
@@ -42,6 +49,7 @@ Start with the [Israel Government Threat Model](israel-government-threat-model.m
 - [Operation Desert Hydra repository](https://github.com/anpa1200/operation-desert-hydra)
 - [Customer-Driven AI CTI Project repository](https://github.com/anpa1200/customer-driven-ai-cti-project)
 - [Israel Government Threat Actors CTI repository](https://github.com/anpa1200/israel-government-threat-actors-cti)
+- [AI vs Defense repository](https://github.com/anpa1200/ai-vs-defense)
 - [HexStrike AI repository](https://github.com/0x4m4/hexstrike-ai)
 
 ## Boundary
