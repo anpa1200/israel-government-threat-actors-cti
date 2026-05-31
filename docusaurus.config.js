@@ -10,6 +10,26 @@ const config = {
 
   organizationName: 'anpa1200',
   projectName: 'israel-government-threat-actors-cti',
+
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        async: 'true',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-TMTG21RVHM',
+      },
+    },
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TMTG21RVHM');
+      `,
+    },
+  ],
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
@@ -77,7 +97,7 @@ const config = {
             label: 'Projects',
             position: 'right',
             items: [
-              {label: 'Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
+              {label: 'CTI Analyst Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
               {label: 'CTI as a Code', href: 'https://anpa1200.github.io/CTI_as_a_Code/'},
               {label: 'Operation Desert Hydra', href: 'https://anpa1200.github.io/operation-desert-hydra/'},
               {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
@@ -98,7 +118,7 @@ const config = {
           },
           {
             href: 'https://anpa1200.github.io/',
-            label: 'All Projects',
+            label: 'Main Page',
             position: 'right',
             className: 'navbar-portfolio-btn',
           },
@@ -127,7 +147,7 @@ const config = {
           {
             title: 'Ecosystem',
             items: [
-              {label: 'Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
+              {label: 'CTI Analyst Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
               {label: 'CTI as a Code', href: 'https://anpa1200.github.io/CTI_as_a_Code/'},
               {label: 'Operation Desert Hydra', href: 'https://anpa1200.github.io/operation-desert-hydra/'},
               {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
