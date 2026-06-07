@@ -104,6 +104,7 @@ const config = {
               {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
               {label: 'AI vs Defense', href: 'https://anpa1200.github.io/ai-vs-defense/'},
               {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'},
+              {label: 'ThreatMapper Docs', href: 'https://anpa1200.github.io/threatmapper-docs/'},
             ],
           },
           {
@@ -154,6 +155,7 @@ const config = {
               {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
               {label: 'AI vs Defense', href: 'https://anpa1200.github.io/ai-vs-defense/'},
               {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'},
+              {label: 'ThreatMapper Docs', href: 'https://anpa1200.github.io/threatmapper-docs/'},
             ],
           },
           {
