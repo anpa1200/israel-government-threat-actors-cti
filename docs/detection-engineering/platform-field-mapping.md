@@ -49,9 +49,9 @@ Before moving from hunt starter to pilot:
 
 - [Detection Lifecycle](detection-lifecycle.md)
 - [Detection Status Dashboard](detection-status-dashboard.md)
-- [CTI Analyst Field Manual — Telemetry Requirements](https://anpa1200.github.io/cti-analyst-field-manual/docs/08-cti-to-detection/telemetry-requirements) — field-level tables for Windows Security Event Log, Sysmon, EDR, DNS, proxy, identity provider, and cloud audit logs
-- [CTI Analyst Field Manual — Sigma/KQL/SPL Examples](https://anpa1200.github.io/cti-analyst-field-manual/docs/08-cti-to-detection/sigma-kql-spl-examples) — two DRL-4 detection candidates with Sigma, KQL (MDE), and SPL (Sysmon) variants
-- [CTI Analyst Field Manual — Detection Readiness Levels](https://anpa1200.github.io/cti-analyst-field-manual/docs/08-cti-to-detection/detection-readiness-levels) — DRL model that promotion requirements reference
+- [CTI Analyst Field Manual — Telemetry Requirements](https://1200km.com/cti-analyst-field-manual/docs/08-cti-to-detection/telemetry-requirements) — field-level tables for Windows Security Event Log, Sysmon, EDR, DNS, proxy, identity provider, and cloud audit logs
+- [CTI Analyst Field Manual — Sigma/KQL/SPL Examples](https://1200km.com/cti-analyst-field-manual/docs/08-cti-to-detection/sigma-kql-spl-examples) — two DRL-4 detection candidates with Sigma, KQL (MDE), and SPL (Sysmon) variants
+- [CTI Analyst Field Manual — Detection Readiness Levels](https://1200km.com/cti-analyst-field-manual/docs/08-cti-to-detection/detection-readiness-levels) — DRL model that promotion requirements reference
 
 ## References
 

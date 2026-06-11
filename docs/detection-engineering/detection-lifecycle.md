@@ -5,7 +5,7 @@ sidebar_label: Detection Lifecycle
 
 # Detection Lifecycle
 
-Detection engineering in this repository uses CTI as input, but production deployment requires engineering evidence. This lifecycle aligns with the Field Manual [Intelligence to Detection](https://anpa1200.github.io/cti-analyst-field-manual/docs/cti-to-detection/intelligence-to-detection/) method and the Customer project [delivery gates](https://anpa1200.github.io/customer-driven-ai-cti-project/docs/methodology/foundations/).
+Detection engineering in this repository uses CTI as input, but production deployment requires engineering evidence. This lifecycle aligns with the Field Manual [Intelligence to Detection](https://1200km.com/cti-analyst-field-manual/docs/cti-to-detection/intelligence-to-detection/) method and the Customer project [delivery gates](https://1200km.com/customer-driven-ai-cti-project/docs/methodology/foundations/).
 
 ## Lifecycle
 

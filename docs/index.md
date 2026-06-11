@@ -8,14 +8,14 @@ sidebar_position: 1
 
 # Israel Government Threat Actors CTI
 
-This documentation organizes [public-source threat intelligence](https://anpa1200.github.io/cti-analyst-field-manual/docs/cti-foundations/what-is-cti/) for defensive use by Israeli government and public-sector defenders.
+This documentation organizes [public-source threat intelligence](https://1200km.com/cti-analyst-field-manual/docs/cti-foundations/what-is-cti/) for defensive use by Israeli government and public-sector defenders.
 
 ## CTI Ecosystem
 
 This knowledge base is the Israel-focused actor and sector layer of a three-book CTI ecosystem. Use [CTI Project Ecosystem](ecosystem.md) to navigate between the books.
 
-- [CTI Analyst Field Manual](https://anpa1200.github.io/cti-analyst-field-manual/) provides general CTI tradecraft for evidence, attribution, infrastructure pivoting, and CTI-to-detection work.
-- [Customer-Driven AI CTI Project](https://anpa1200.github.io/customer-driven-ai-cti-project/) provides the gated delivery methodology for turning this intelligence into customer-ready outcomes.
+- [CTI Analyst Field Manual](https://1200km.com/cti-analyst-field-manual/) provides general CTI tradecraft for evidence, attribution, infrastructure pivoting, and CTI-to-detection work.
+- [Customer-Driven AI CTI Project](https://1200km.com/customer-driven-ai-cti-project/) provides the gated delivery methodology for turning this intelligence into customer-ready outcomes.
 
 ## Reading Order
 
@@ -37,7 +37,7 @@ This knowledge base is the Israel-focused actor and sector layer of a three-book
 
 ## Operating Rules
 
-- Analysts MUST distinguish [source facts from analytic inference](https://anpa1200.github.io/cti-analyst-field-manual/docs/cti-foundations/evidence-labels/).
+- Analysts MUST distinguish [source facts from analytic inference](https://1200km.com/cti-analyst-field-manual/docs/cti-foundations/evidence-labels/).
 - Analysts SHOULD cite at least one source record for every actor claim.
 - Detections MUST be validated against local telemetry before production deployment.
 - IOC matches SHOULD be treated as leads, not final attribution.

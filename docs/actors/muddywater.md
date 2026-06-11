@@ -38,7 +38,7 @@ MuddyWater is high priority for Israeli government and regional public-sector de
 
 ## Field Manual Cross-Reference
 
-Full public-source case study with PIR/SIR decomposition, alias table, sponsor assessment, ATT&CK mapping with quality levels, telemetry requirements, and DRL-1 hunt hypotheses: [CTI Analyst Field Manual — MuddyWater Worked Example](https://anpa1200.github.io/cti-analyst-field-manual/docs/worked-examples/actor-research).
+Full public-source case study with PIR/SIR decomposition, alias table, sponsor assessment, ATT&CK mapping with quality levels, telemetry requirements, and DRL-1 hunt hypotheses: [CTI Analyst Field Manual — MuddyWater Worked Example](https://1200km.com/cti-analyst-field-manual/docs/worked-examples/actor-research).
 
 ## Detection Ideas
 

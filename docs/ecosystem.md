@@ -14,20 +14,20 @@ This page connects the Israel Government Threat Actors CTI knowledge base to the
 
 | Project | Role | Use When You Need |
 | --- | --- | --- |
-| [CTI Analyst Field Manual](https://anpa1200.github.io/cti-analyst-field-manual/) | General CTI tradecraft and analyst operating manual | Evidence labels, source reliability, attribution discipline, infrastructure pivoting, actor research, CTI-to-detection method |
-| [CTI as a Code](https://anpa1200.github.io/CTI_as_a_Code/) | Lab platform and training framework | Applying this sector intelligence in hands-on exercises — the A05–A08 NDSA assignments are directly grounded in the Israeli government threat model documented here |
-| [Operation Desert Hydra](https://anpa1200.github.io/operation-desert-hydra/) | Complete CTI-to-detection pipeline on MuddyWater | Worked detection pipeline for an actor tracked in this knowledge base — source gathering to lab-validated Kibana rules |
-| [Customer-Driven AI CTI Project](https://anpa1200.github.io/customer-driven-ai-cti-project/) | Delivery methodology and customer engagement operating model | Quality gates, project phases, acceptance criteria, detection readiness, replay and reporting workflow |
-| [Israel Government Threat Actors CTI](https://anpa1200.github.io/israel-government-threat-actors-cti/) | Sector and actor knowledge base | Israeli public-sector threat model, actors, tools, TTPs, detections, hunts, source tracking, and evidence mapping |
-| [AI vs Defense](https://anpa1200.github.io/ai-vs-defense/) | Practitioner guide: AI-era threat model and SOC adaptation | How AI-assisted adversary capabilities affect the Israeli sector threat model, detection strategy, and CTI program requirements |
-| [ThreatMapper](https://anpa1200.github.io/threatmapper-docs/) | Self-hosted AI threat intelligence platform | AI-driven ATT&CK extraction from incident reports, Jaccard-based APT group attribution against 174+ ATT&CK groups, Navigator heatmap for comparing actor technique overlap, and PDF reporting — useful when analyzing new reports about actors tracked here |
+| [CTI Analyst Field Manual](https://1200km.com/cti-analyst-field-manual/) | General CTI tradecraft and analyst operating manual | Evidence labels, source reliability, attribution discipline, infrastructure pivoting, actor research, CTI-to-detection method |
+| [CTI as a Code](https://1200km.com/CTI_as_a_Code/) | Lab platform and training framework | Applying this sector intelligence in hands-on exercises — the A05–A08 NDSA assignments are directly grounded in the Israeli government threat model documented here |
+| [Operation Desert Hydra](https://1200km.com/operation-desert-hydra/) | Complete CTI-to-detection pipeline on MuddyWater | Worked detection pipeline for an actor tracked in this knowledge base — source gathering to lab-validated Kibana rules |
+| [Customer-Driven AI CTI Project](https://1200km.com/customer-driven-ai-cti-project/) | Delivery methodology and customer engagement operating model | Quality gates, project phases, acceptance criteria, detection readiness, replay and reporting workflow |
+| [Israel Government Threat Actors CTI](https://1200km.com/israel-government-threat-actors-cti/) | Sector and actor knowledge base | Israeli public-sector threat model, actors, tools, TTPs, detections, hunts, source tracking, and evidence mapping |
+| [AI vs Defense](https://1200km.com/ai-vs-defense/) | Practitioner guide: AI-era threat model and SOC adaptation | How AI-assisted adversary capabilities affect the Israeli sector threat model, detection strategy, and CTI program requirements |
+| [ThreatMapper](https://1200km.com/threatmapper-docs/) | Self-hosted AI threat intelligence platform | AI-driven ATT&CK extraction from incident reports, Jaccard-based APT group attribution against 174+ ATT&CK groups, Navigator heatmap for comparing actor technique overlap, and PDF reporting — useful when analyzing new reports about actors tracked here |
 | [HexStrike AI](https://github.com/0x4m4/hexstrike-ai) | AI-powered offensive security automation platform | MCP agent-based tool orchestration, 150+ security tools, AI-driven penetration testing, adversarial validation of detection coverage |
 
 ## How This Project Fits
 
 This project is the sector and actor knowledge base. It provides practical CTI material for Israeli government, municipal, telecom, critical infrastructure, defense-adjacent, and supplier exposure.
 
-Use the [CTI Analyst Field Manual](https://anpa1200.github.io/cti-analyst-field-manual/) to understand the tradecraft behind evidence labels, attribution, ATT&CK mapping, and CTI-to-detection logic. Use the [Customer-Driven AI CTI Project](https://anpa1200.github.io/customer-driven-ai-cti-project/) when this knowledge base must become a structured customer delivery or internal program.
+Use the [CTI Analyst Field Manual](https://1200km.com/cti-analyst-field-manual/) to understand the tradecraft behind evidence labels, attribution, ATT&CK mapping, and CTI-to-detection logic. Use the [Customer-Driven AI CTI Project](https://1200km.com/customer-driven-ai-cti-project/) when this knowledge base must become a structured customer delivery or internal program.
 
 ## Cross-Project Workflows
 
