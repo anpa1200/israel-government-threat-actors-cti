@@ -21,6 +21,16 @@
 
 <!-- ACTOR-NAVIGATION:END -->
 
+## Background
+
+OilRig (APT34) is one of Iran's most operationally prolific cyber espionage groups, active since approximately 2014. The group's primary mandate is long-duration espionage against government, energy, financial services, telecommunications, and technology organizations in the Middle East and beyond. Iran-nexus attribution is consistent across MITRE, Unit 42, ESET, Symantec, and Mandiant; specific organizational attribution within the Iranian intelligence apparatus varies by source, with MOIS being the most commonly assessed sponsor in synthesis reporting.
+
+OilRig's tradecraft is distinctive for its heavy investment in custom tooling — the group has an extensive portfolio of backdoors, downloaders, and credential harvesting utilities developed over a decade. Key tool families include POWRUNER and BONDUPDATER (PowerShell-based), OopsIE and QUADAGENT (C#-based), Saitama (DNS-abusing .NET backdoor), and OilBooster (cloud-service C2 using OneDrive and Microsoft Graph API). A recurring fingerprint is the use of DNS tunneling and cloud-service communications for C2, enabling the actor to blend into legitimate organizational traffic.
+
+Initial access methods center on exploitation of internet-facing servers — particularly web applications, Exchange, and IIS — with subsequent webshell implantation (SEASHARPEE, RGDoor) as a persistent fallhold. The group uses credential harvesting tools (Mimikatz, LaZagne) and native Windows binaries for lateral movement, and has demonstrated the ability to maintain access across large enterprise environments for months to years.
+
+In an Israeli and regional government context, ESET's reporting on OilRig's OilBooster campaign and Unit 42's DNS tunneling analysis are the primary anchors. The repository's deep research intakes synthesize claims from ESET, Kaspersky ICS, and Brandefense; analysts should apply the source rating before using synthesis claims in executive reporting.
+
 Aliases: APT34, Helix Kitten, Hazel Sandstorm, COBALT GYPSY, Crambus.
 
 Assessed sponsor: Iran state-linked in public reporting.
@@ -45,3 +55,21 @@ OilRig is high priority for Israeli government exposure because public reporting
 Sources: `SRC-MITRE-G0049`, `SRC-ESET-OILRIG-ISRAEL`, `SRC-UNIT42-OILRIG-DNS-TUNNELING`, `SRC-KASPERSKY-ICS-H2-2023`, `SRC-BRANDEFENSE-OILRIG-2025`.
 
 Source note: ESET and Unit 42 are the preferred anchors for OilBooster/cloud-service and DNS-tunneling claims. Kaspersky ICS and Brandefense are supporting synthesis sources.
+
+## Public Reports
+
+**Own ecosystem:**
+
+- [Deep Research Intake: OilRig and Magic Hound](../reports/oilrig-magic-hound-deep-research.md) — Internal repository synthesis. High-priority, requires source validation.
+- [Deep Research Intake: APT35 and OilRig Israel](../reports/apt35-oilrig-israel-deep-research.md) — Internal repository synthesis covering Israel-specific reporting. High-priority, requires source validation.
+
+**MITRE ATT&CK:**
+
+- [MITRE ATT&CK G0049 — OilRig](https://attack.mitre.org/groups/G0049/) — Technique mappings, software associations, and alias registry. Primary reference for cross-vendor technique mapping.
+
+**Primary vendor reporting:**
+
+- ESET Research, "OilRig's Persistent Footholds on Israeli Organizations Using OilBooster" — 2023. Primary source for cloud-service C2 via Microsoft Graph API, targeting of Israeli organizations. Source ID `SRC-ESET-OILRIG-ISRAEL`.
+- Unit 42 / Palo Alto Networks, "OilRig Targets Middle Eastern Telecommunications Organization" — DNS tunneling C2 via custom subdomain patterns. Source ID `SRC-UNIT42-OILRIG-DNS-TUNNELING`.
+- Symantec / Broadcom, Crambus (APT34) reporting — Coverage of PowerShell tooling evolution and Middle East government targeting.
+- Mandiant, APT34 group profile — Historical coverage of initial OilRig campaigns and toolset documentation.

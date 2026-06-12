@@ -21,6 +21,16 @@
 
 <!-- ACTOR-NAVIGATION:END -->
 
+## Background
+
+Agrius emerged in public reporting around 2020-2021 as an Iran-aligned destructive threat actor targeting Israeli and Israeli-adjacent organizations. Unlike Iran's traditional espionage groups, Agrius specializes in destructive operations framed with ransomware aesthetics — deploying fake ransomware that is actually a wiper, and in some cases following up with extortion claims via the BlackShadow persona.
+
+SentinelLabs documented "Operation Dreams Come True" (2021), identifying Apostle — malware initially observed behaving as a wiper before a later version was modified to function as actual ransomware, providing cover for destructive intent. The group also deployed DEADWOOD (a standalone wiper) and in 2022-2023 pivoted to BFG Agonizer and MultiLayer Wiper variants analyzed by Unit 42 under the "Agonizing Serpens" designation. Targeted sectors have included Israel's diamond industry, hospitality, and information technology firms — industries where operational disruption and data loss create compounding business impact.
+
+A consistent pattern is initial access via internet-facing web application exploitation (ASPXSpy webshells), followed by credential theft (Mimikatz), internal reconnaissance (NBTscan), and then wiper deployment. The ransom note and extortion persona are assessed as cover for destructive intent rather than genuine financially-motivated ransomware. The BlackShadow persona was used to publish claimed stolen data to pressure victims and generate media attention.
+
+The Ziv Hospital incident reported in Israeli media in 2023 has been mentioned alongside Agrius in some secondary reporting; primary-source technical confirmation from INCD/IDF/ISA remains absent as of repository review. Analysts should treat media-reported victim attributions as provisional until primary government or incident-response reporting is available.
+
 Aliases: Pink Sandstorm, AMERICIUM, Agonizing Serpens, BlackShadow.
 
 Assessed sponsor: Iran-aligned (assessed by some sources as MOIS-linked; firm MOIS attribution not established in primary reporting). SentinelLabs, Unit 42, and Microsoft use "Iran-aligned" or "Iran-nexus" language without confirming a specific Iranian intelligence service. Use evidence label `Assessed-by-source` rather than `Source-reported` for any MOIS claim.
@@ -45,3 +55,18 @@ Agrius is high priority because public reporting links the actor to ransomware a
 Sources: `SRC-MITRE-G1030`, `SRC-S1-AGRIUS-WIPER`, `SRC-S1-APOSTLE`, `SRC-UNIT42-AGRIUS`, `SRC-ISRAELHAYOM-ZIV-2023`, `SRC-TOI-ZIV-2023`, `SRC-CENTRIPETAL-PREPOSITIONED-2025`, `SRC-ANVILOGIC-IRAN-CI-2026`.
 
 Source note: Ziv Hospital and camera/BDA-related claims are not promoted here as high-confidence Agrius facts. Treat the news and supporting vendor sources as context until primary INCD/IDF/ISA or source telemetry is available.
+
+## Public Reports
+
+**MITRE ATT&CK:**
+
+- [MITRE ATT&CK G1030 — Agrius](https://attack.mitre.org/groups/G1030/) — Technique mappings, software associations (Apostle, Moneybird, BFG Agonizer, DEADWOOD, MultiLayer Wiper), and alias registry.
+
+**Primary vendor reporting:**
+
+- SentinelLabs, "Agrius Targets the Israeli Higher Education and Technology Sectors" — 2022. Documents Fantasy wiper campaigns targeting Israeli sectors. Source ID `SRC-S1-AGRIUS-WIPER`.
+- SentinelLabs, "Apostle: A Ransomware-Posing Wiper" — 2021. Original analysis of Apostle's dual wiper/ransomware functionality and its role in Agrius operations. Source ID `SRC-S1-APOSTLE`.
+- Unit 42 / Palo Alto Networks, "Agonizing Serpens (Agrius) Targeting Israeli Organizations" — 2023. Documents expanded toolset including BFG Agonizer and MultiLayer Wiper, analysis of destructive campaign chains. Source ID `SRC-UNIT42-AGRIUS`.
+- Microsoft, "Pink Sandstorm / AMERICIUM" — Attribution and technical analysis from Microsoft's actor tracking program.
+- Centripetal, Iran cyber prepositioned 2025 reporting. Source ID `SRC-CENTRIPETAL-PREPOSITIONED-2025`.
+- Anvilogic, Iranian cyber 2026 context. Source ID `SRC-ANVILOGIC-IRAN-CI-2026`.

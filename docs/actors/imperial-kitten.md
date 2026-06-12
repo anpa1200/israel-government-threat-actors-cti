@@ -26,6 +26,16 @@ sidebar_label: Imperial Kitten
 
 # Imperial Kitten
 
+## Background
+
+Imperial Kitten (Tortoiseshell) was first publicly documented by Symantec in 2019, targeting IT companies serving the Saudi Aramco supply chain — an early indicator of the group's pattern of compromising trusted third parties to reach high-value ultimate targets. The IRGC attribution assessment is based on targeting patterns, operational tempo, and infrastructure overlap with IRGC-affiliated clusters; reviewed primary sources do not resolve the actor to IRGC-CEC or IRGC-IO specifically.
+
+The group's defining technical characteristic is its use of strategic web compromise combined with IMAP-based command and control. IMAPLoader — documented by CrowdStrike in October 2023 — is a .NET downloader that retrieves tasking and delivers payloads via legitimate or compromised email accounts using IMAP. This technique makes C2 traffic difficult to distinguish from normal email connectivity, particularly in environments that permit direct IMAP access from servers and workstations. The complementary StandardKeyboard malware uses a similar mail-protocol C2 model, and CrowdStrike also documented use of a Discord API-based RAT in some campaigns.
+
+A second distinctive technique is AppDomain Manager Injection — loading malicious managed-code assemblies into .NET processes via AppDomain manager configuration, enabling execution under the context of a legitimate application without direct DLL injection or process hollowing. This was documented in conjunction with XLL-based delivery chains targeting Israeli logistics and transportation websites in 2023.
+
+For Israeli defenders, CrowdStrike's October 2023 report directly describes watering-hole and spearphishing campaigns against Israeli transportation, shipping, and logistics firms — sectors with direct public-sector dependencies through customs, ports, emergency services logistics, and supply chain operations. The group's combination of strategic web compromise (broad initial access) and targeted spearphishing suggests they are well-oriented to Israel's sector exposure.
+
 Aliases: Imperial Kitten (CrowdStrike), Yellow Liderc (PwC), Tortoiseshell / Tortoise Shell (Symantec / Microsoft reporting), TA456 (Proofpoint), CURIUM / Crimson Sandstorm (Microsoft / MITRE ATT&CK).
 
 Assessed sponsor: IRGC-aligned in public reporting. The current repository assessment does not resolve the actor to IRGC-CEC or IRGC-IO because reviewed primary public reporting does not support a branch-level sponsor call.
@@ -65,3 +75,16 @@ Current primary-source review supports strong 2022-2023 Israeli transportation/l
 - `SRC-CS-IMPERIAL-KITTEN-2023`: CrowdStrike Imperial Kitten reporting.
 - `SRC-PWC-YELLOW-LIDERC-2023`: PwC Yellow Liderc / IMAPLoader reporting.
 - `SRC-MITRE-G1012`: MITRE ATT&CK CURIUM / Crimson Sandstorm profile.
+
+## Public Reports
+
+**MITRE ATT&CK:**
+
+- [MITRE ATT&CK G1012 — CURIUM](https://attack.mitre.org/groups/G1012/) — Technique mappings, software associations (IMAPLoader, StandardKeyboard), alias registry across CrowdStrike/PwC/Microsoft/Proofpoint naming conventions.
+
+**Primary vendor reporting:**
+
+- CrowdStrike Intelligence, "Imperial Kitten Deploys Novel Malware Families" — October 2023. Primary source for Israeli transportation/logistics targeting, IMAPLoader analysis, AppDomain Manager Injection, and XLL delivery chains. Source ID `SRC-CS-IMPERIAL-KITTEN-2023`.
+- PwC Threat Intelligence, "Yellow Liderc: IMAPLoader and Strategic Web Compromises" — 2023. Complementary analysis of IMAPLoader and mail-protocol C2 tradecraft. Source ID `SRC-PWC-YELLOW-LIDERC-2023`.
+- Symantec / Broadcom, "Tortoiseshell: New Iranian Threat Actor Targets IT Providers" — 2019. Original disclosure documenting supply chain compromise targeting Saudi Aramco IT vendors.
+- Proofpoint, TA456 reporting — Social engineering and persona-based campaigns attributed to the Imperial Kitten cluster (note vendor taxonomy before cross-referencing).

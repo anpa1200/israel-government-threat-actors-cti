@@ -26,6 +26,14 @@ sidebar_label: APT39
 
 # APT39
 
+## Background
+
+APT39 (Chafer) has been active since approximately 2014, with operations documented across the Middle East, North Africa, Europe, and North America. The group is assessed as operating under the Iranian Ministry of Intelligence and Security (MOIS) through the front company Rana Intelligence Computing Company — a connection formally established through U.S. Treasury OFAC sanctions and a DOJ indictment unsealed in August 2020, which named nine Rana employees including senior leadership.
+
+APT39's primary operational focus is bulk collection of identity-rich data: subscriber records from telecom operators, passenger name records from travel and hospitality firms, personnel data from government agencies, and credentials from IT service providers. This surveillance mandate distinguishes APT39 from Iran's destructive actors — the group is characterized by long-dwell access and mass data collection rather than rapid impact operations. Mandiant and FireEye tracking prior to the 2020 sanctions documented campaigns spanning at least 30 countries.
+
+The 2020 U.S. law enforcement actions (OFAC sanctions, DOJ indictment, FBI flash) represented significant visibility into the group's organizational structure. Following the public exposure of the Rana Intelligence Computing connection, APT39/Chafer/Remix Kitten activity under these specific vendor labels became less visible in public incident reporting, likely reflecting operational security adjustments. Current analyst guidance is to maintain detection coverage based on established TTPs while explicitly marking recent operational evidence as limited until new primary reporting emerges.
+
 Aliases: APT39, Chafer, Remix Kitten, ITG07. U.S. government and MITRE reporting connect APT39 activity to Rana Intelligence Computing.
 
 Assessed sponsor: Iran MOIS via Rana Intelligence Computing in U.S. Treasury / DOJ and MITRE ATT&CK reporting.
@@ -58,3 +66,20 @@ Current primary-source review did not identify high-confidence 2023-2025 inciden
 - `SRC-MITRE-G0087`: MITRE ATT&CK APT39 group profile.
 - `SRC-US-TREASURY-RANA-2020`: U.S. Treasury sanctions announcement.
 - `SRC-US-DOJ-RANA-2020`: U.S. DOJ Rana Intelligence Computing announcement.
+
+## Public Reports
+
+**MITRE ATT&CK:**
+
+- [MITRE ATT&CK G0087 — APT39](https://attack.mitre.org/groups/G0087/) — Technique mappings, software associations (Remexi, MechaFlounder, Cadelspy), alias registry, and related campaigns.
+
+**Government and law enforcement:**
+
+- U.S. Department of Treasury OFAC, Rana Intelligence Computing Sanctions Designation — September 2020. Formally links Rana Intelligence Computing to MOIS and APT39 cluster. Source ID `SRC-US-TREASURY-RANA-2020`.
+- U.S. Department of Justice, Indictment of Rana Intelligence Computing Employees — August 2020. Names nine individuals and details MOIS-tasked cyber operations. Source ID `SRC-US-DOJ-RANA-2020`.
+
+**Primary vendor reporting:**
+
+- Mandiant / FireEye, "APT39: An Iranian Cyber Espionage Group Focused on Personal Information" — 2019. Foundational profile documenting telecom, travel, and identity-data targeting across 30+ countries.
+- Symantec / Broadcom, "Chafer" reporting — Technical analysis of Remexi RAT campaigns targeting Middle East organizations.
+- Deep Research Intake: [APT39, Arid Viper, UNC3890, Cyber Toufan](../reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research.md) — Internal repository synthesis. Medium priority, requires source validation.

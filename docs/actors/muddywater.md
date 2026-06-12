@@ -21,6 +21,16 @@
 
 <!-- ACTOR-NAVIGATION:END -->
 
+## Background
+
+MuddyWater has been active since approximately 2017, and is one of the most consistently documented Iranian cyber espionage groups in public reporting. CISA explicitly stated in advisory AA22-055A that MuddyWater is "a subordinate element within the Iranian Ministry of Intelligence and Security (MOIS)," making it one of the few Iranian actors with firm organizational attribution in a U.S. government advisory. The group targets government, local government, telecommunications, defense, and oil and gas organizations across the Middle East, Europe, Asia, and North America.
+
+The group's operational evolution is well-documented. Early campaigns (2017–2019) relied on POWERSTATS — a PowerShell-based backdoor — distributed through malicious macro-embedded Office documents. By 2020–2022, MuddyWater shifted toward living-off-the-land approaches using PowerSploit, Empire, Koadic, and legitimate remote access tools. From 2022 onward, the group substantially expanded its abuse of commercial remote monitoring and management (RMM) tools — including Atera, ConnectWise, AnyDesk, and RemoteUtilities — delivered via phishing emails to serve as persistent C2 channels without deploying custom malware.
+
+Two developments mark MuddyWater's 2023–2025 trajectory. First, Check Point's July 2024 BugSleep analysis documented a new custom implant replacing RMM abuse in some operations, with modular task-based execution and direct C2. Second, Microsoft attributed the February 2023 Technion University incident to MERCURY (the retired MuddyWater designator) acting together with DEV-1084 (Storm-1084) — a destructive affiliate that deployed the DarkBit ransomware persona. This indicates MuddyWater-linked activity can precede or enable destructive operations conducted by associated subgroups, not only persistent espionage.
+
+For Israeli government defenders, the Israel National Cyber Directorate (INCD) issued a MuddyWater-specific advisory in 2024 documenting campaigns against Israeli entities using phishing and RMM tool abuse, making this the highest-confidence Israeli-targeting documentation in the primary source set.
+
 Aliases: Mango Sandstorm, Boggy Serpens (Microsoft, current), Static Kitten, Seedworm, MERCURY (Microsoft, retired April 2023), TEMP.Zagros, TA450 (Proofpoint), Earth Vetala (Trend Micro).
 
 Assessed sponsor: Iran MOIS-aligned in public reporting.
@@ -49,3 +59,26 @@ Full public-source case study with PIR/SIR decomposition, alias table, sponsor a
 Sources: `SRC-MITRE-G0069`, `SRC-CISA-AA22-055A`, `SRC-INCD-MUDDYWATER-2024`, `SRC-INCD-MUDDYWATER-PHISHING`, `SRC-ESET-MUDDYWATER-SNAKES`, `SRC-CP-BUGSLEEP`, `SRC-KASPERSKY-ICS-Q4-2025`, `SRC-BRANDEFENSE-MUDDYWATER-2025`, `SRC-AP-MUDDYWATER`.
 
 Source note: Kaspersky ICS and Brandefense are Score B synthesis sources in this repository. Use them for collection planning and cross-checking, then anchor high-impact claims to ESET, INCD, CISA, MITRE, or Check Point.
+
+## Public Reports
+
+**Own ecosystem — read first:**
+
+- [CTI Research: MuddyWater / Seedworm / Mango Sandstorm](https://medium.com/@1200km/cti-research-muddywater-seedworm-mango-sandstorm-ebf6af5ba061) — Andrey Pautov / 1200km. Defensive CTI profile with ATT&CK mapping, alias table, toolset analysis, and SOC-relevant IOC guidance. Source ID `SRC-AP-MUDDYWATER`.
+- [CTI Analyst Field Manual — MuddyWater Worked Example](https://1200km.com/cti-analyst-field-manual/docs/worked-examples/actor-research) — 1200km CTI Analyst Field Manual. Full case study with PIR/SIR decomposition, sponsor assessment, ATT&CK quality levels, telemetry requirements, and DRL-1 hunt hypotheses.
+- [Deep Research Intake: MuddyWater](../reports/muddywater-deep-research.md) — Internal repository research synthesis. High-priority intake requiring source validation.
+
+**Government advisories:**
+
+- [CISA Advisory AA22-055A — MuddyWater](https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a) — CISA/CNMF/NCSC-UK/DC3, February 2022. Establishes MOIS attribution, describes TTPs, and provides IOCs. Source ID `SRC-CISA-AA22-055A`.
+- INCD MuddyWater Advisory 2024 — Israel National Cyber Directorate. Israeli-facing campaign documentation with IOCs and phishing infrastructure. Source ID `SRC-INCD-MUDDYWATER-2024`.
+
+**MITRE ATT&CK:**
+
+- [MITRE ATT&CK G0069 — MuddyWater](https://attack.mitre.org/groups/G0069/) — Comprehensive technique mappings, software associations, and alias registry.
+
+**Primary vendor reporting:**
+
+- Check Point Research, "BugSleep: A New MuddyWater Backdoor" — July 2024. Analysis of post-RMM custom implant. Source ID `SRC-CP-BUGSLEEP`.
+- ESET Research, "MuddyWater: New Snakes in the Mud" — Technical analysis of updated toolset and campaign evolution. Source ID `SRC-ESET-MUDDYWATER-SNAKES`.
+- Microsoft MSTIC, "MERCURY and DEV-1084: Destructive Attack on Hybrid Environment" — April 2023. Documents MuddyWater/Storm-1084 joint destructive operation. Source ID `SRC-MS-MERCURY-DEV1084-2023`.

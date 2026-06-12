@@ -26,6 +26,16 @@ sidebar_label: Lyceum
 
 # Lyceum
 
+## Background
+
+Lyceum (HEXANE) emerged in public reporting in 2019 through Secureworks and MITRE analysis of targeted campaigns against telecommunications operators in Africa and the Middle East. The group's initial campaigns were distinguished by domain generation algorithm (DGA)-style DNS tunneling C2 using the DanBot remote access trojan — a relatively unique technique that stood out against the landscape of HTTP/HTTPS-based C2. Oil and gas companies in Kuwait and Saudi Arabia were also documented targets in this early period.
+
+By 2021, ClearSky's "Siamesekitten" report documented a shift in targeting focus: Israeli-facing campaigns using fake job offer lures impersonating Israeli technology and defense-adjacent firms. The fake recruitment persona is a common Iranian threat actor technique (also seen in APT35, APT42, and Imperial Kitten), suggesting shared operational playbooks across the broader Iranian threat ecosystem. This campaign used C# backdoors and malicious Excel documents rather than the DNS-tunneling toolset of earlier HEXANE activity, prompting some vendors to treat Siamesekitten and HEXANE/Lyceum as overlapping but potentially distinct sub-clusters.
+
+The actor's relationship to OilRig/APT34 is debated across vendors. Some ESET reporting groups Lyceum-associated activity under the broader OilRig ecosystem based on tooling and infrastructure overlaps; MITRE ATT&CK maintains a separate G1001 profile for Lyceum/HEXANE. Analysts should anchor claims to specific source reports rather than assuming inter-vendor grouping is consistent.
+
+For Israeli public-sector defenders, the Siamesekitten 2021 campaign is directly relevant: fake Israeli IT/defense sector recruiting personas were used to target Israeli employees, and IT service providers remain a known Lyceum interest based on the 2019-2020 HEXANE campaigns. Supply-chain access through Israeli IT providers serving government customers is the priority risk surface.
+
 Aliases: Lyceum, HEXANE, Spirlin, Siamesekitten. Some reporting places Lyceum within an OilRig-related subgroup or adjacent ecosystem.
 
 Assessed sponsor: Iranian state-sponsored, likely OilRig/MOIS-adjacent based on current public source synthesis. Sponsor confidence is lower than core OilRig because public reporting has historically used cautious language and vendor taxonomies differ.
@@ -62,3 +72,16 @@ Lyceum is high priority for Israeli telecom, ISP, energy, and supplier environme
 - `SRC-MITRE-G1001`: MITRE ATT&CK HEXANE / Lyceum group profile.
 - `SRC-CLEARSKY-SIAMESEKITTEN-2021`: ClearSky Siamesekitten / Pay2Kitten reporting.
 - `SRC-ESET-OILRIG-ISRAEL`: ESET OilRig downloader reporting used for adjacent OilRig subgroup context.
+
+## Public Reports
+
+**MITRE ATT&CK:**
+
+- [MITRE ATT&CK G1001 — Lyceum](https://attack.mitre.org/groups/G1001/) — Technique mappings, software associations (DanBot, Kevin, Shark, Milan), and alias registry. Note the vendor-naming caveat for Siamesekitten and HEXANE cross-references.
+
+**Primary vendor reporting:**
+
+- ClearSky Cyber Security, "Siamesekitten / Pay2Kitten: Iranian Cyber Espionage Campaign Targeting Israeli Companies" — 2021. Documents Israeli-facing recruiting persona campaigns, C# backdoor delivery, and supply-chain access targeting. Source ID `SRC-CLEARSKY-SIAMESEKITTEN-2021`.
+- Secureworks Counter Threat Unit, "HEXANE: A New Threat Group Targeting Oil and Telecommunications" — 2019. Original HEXANE public disclosure documenting DGA-based DNS tunneling C2 and DanBot campaigns against telecom and oil/gas in Africa and the Middle East.
+- Kaspersky, HEXANE / Lyceum analysis — Technical analysis of DanBot evolution and Kevin/Shark toolset variants.
+- ESET Research, OilRig adjacent reporting — Context for Lyceum subgroup framing within the broader OilRig ecosystem. Source ID `SRC-ESET-OILRIG-ISRAEL`.

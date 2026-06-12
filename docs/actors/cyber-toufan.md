@@ -21,6 +21,14 @@
 
 <!-- ACTOR-NAVIGATION:END -->
 
+## Background
+
+Cyber Toufan emerged publicly in October-November 2023, immediately following Hamas's October 7 attack on Israel. Within weeks, the group claimed to have compromised dozens of Israeli organizations and began publishing stolen data on a Telegram channel. At its peak activity, the group claimed over 100 victim organizations — an implausibly large number for a short timeframe that signals either pre-positioning, opportunistic exploitation of weakly defended systems, or claim inflation. The name "Toufan" (Arabic: flood) is a direct reference to Hamas's "Al-Aqsa Flood" operation naming.
+
+OP Innovate's incident response analysis — the primary technical report for this actor — documented a consistent playbook: exploitation of internet-exposed systems (typically through compromised vendor or hosting credentials), lateral movement via SMB admin shares using credential-stuffing or harvested credentials, bulk data exfiltration, and Telegram publication of data dumps formatted with inflammatory messaging. The combination of stolen data, defacement claims, and coordinated Telegram amplification is consistent with the influence operation model seen across other Iran-affiliated conflict-period personas.
+
+Attribution confidence for Cyber Toufan is assessed as medium. Consistent tooling, claim patterns, and operational tempo across the persona suggest coordination beyond a spontaneous hacktivist collective; some security researchers have noted infrastructure and operational timing overlaps with known Iran-affiliated infrastructure. However, as of repository review, no primary government or law enforcement attribution document has been published formally linking Cyber Toufan to a specific Iranian intelligence body. Analysts should apply `Assessed-by-source` labeling rather than `Confirmed` for any Iran agency-specific attribution.
+
 Assessed sponsor: Iran-aligned persona / hacktivist persona in public reporting.
 
 ## Relevance
@@ -46,3 +54,15 @@ Attribution confidence is medium or lower unless supported by independent techni
 ## Associated Detection Content
 
 The KQL hunt `detections/kql/smb-admin-share-lateral-movement-anomaly.kql` covers the native SMB lateral movement pattern described in the OP Innovate playbook.
+
+## Public Reports
+
+**Own ecosystem:**
+
+- [Deep Research Intake: APT39, Arid Viper, UNC3890, Cyber Toufan](../reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research.md) — Internal repository synthesis. High-priority, requires source validation.
+
+**Primary vendor reporting:**
+
+- OP Innovate, "Cyber Toufan: Analysis of a Prolific Threat Actor" — Primary playbook analysis documenting initial access, lateral movement via SMB admin shares, data exfiltration, and Telegram operations. Source ID `SRC-OPI-CYBER-TOUFAN`.
+- Microsoft Threat Intelligence, "Iran and Hamas: Cyber-Enabled Influence Operations" — Conflict-period context for Iran-aligned hacktivist and influence personas including patterns consistent with Cyber Toufan operations. Source ID `SRC-MS-IRAN-HAMAS`.
+- SentinelLabs, "The Cyber Dimension of the Israel-Hamas Conflict" — Comprehensive overview of Iran-aligned and Hamas-affiliated cyber operations during the October 2023 conflict period, providing context for Cyber Toufan's emergence and operational patterns.

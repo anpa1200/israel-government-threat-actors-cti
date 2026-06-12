@@ -21,6 +21,16 @@
 
 <!-- ACTOR-NAVIGATION:END -->
 
+## Background
+
+Lebanese Cedar (Volatile Cedar) is a Hezbollah-affiliated cyber espionage group active since approximately 2012. Check Point's 2015 "Volatile Cedar" report was the first major public disclosure, documenting multi-year persistent access to telecommunications companies, defense contractors, media organizations, and educational institutions primarily in the Middle East, Europe, and North America. The group's alignment with Hezbollah places it in a distinct threat category from Iran's IRGC or MOIS actors — Hezbollah is an Iranian-backed Lebanese proxy with its own strategic intelligence mandate covering Israeli military, diplomatic, and logistical intelligence collection.
+
+The group's technical signature is web-based initial access followed by long-lived passive persistence. Distinctive tools include Explosive RAT — a custom remote access trojan — and the Caterpillar WebShell, a JSP-based web shell that functions as a file browser and command execution interface. ClearSky's January 2021 report documented a campaign wave exploiting CVE-2019-3396 (Atlassian Confluence) and CVE-2019-2725 (Oracle WebLogic) against hosting providers, ISPs, and telecommunications companies in Israel, the United States, Egypt, Jordan, Saudi Arabia, and the United Kingdom.
+
+The 2021 campaign's targeting of hosting providers and ISPs is strategically significant: compromise of these organizations enables passive access to communications, DNS records, hosting customer data, and potentially upstream network positions from which secondary targets can be identified or accessed. For Israeli government and public-sector defenders, any supplier dependency on hosting providers or ISPs with Lebanese Cedar exposure is a potential lateral access risk.
+
+Lebanese Cedar is typically characterized by patient, low-noise operations oriented toward intelligence collection rather than destructive impact. Long-dwell access is a consistent pattern — the 2021 ClearSky report noted some implants had persisted undetected for extended periods across the targeted organizations.
+
 Aliases: Volatile Cedar.
 
 Assessed sponsor: Lebanon-linked / Hezbollah-linked in public reporting.
@@ -49,3 +59,11 @@ Lebanese Cedar is relevant as a regional espionage threat with public reporting 
 - `SRC-CLEARSKY-LEBANESE-CEDAR`: ClearSky primary research — Volatile Cedar / Lebanese Cedar, covering Explosive RAT, Caterpillar WebShell, and compromised web servers (January 2021).
 - `SRC-CP-VOLATILE-CEDAR-2015`: Check Point Volatile Cedar technical report retrieved from a public Kaspersky-hosted mirror after the original Check Point PDF URL returned 404.
 - `SRC-ISRAELHAYOM-ZIV-2023` and `SRC-TOI-ZIV-2023`: secondary coverage of Israeli government statements about the Ziv Hospital incident. Use as context only until a primary government technical report is available.
+
+## Public Reports
+
+**Primary vendor reporting:**
+
+- ClearSky Cyber Security, "Lebanese Cedar APT: Sophisticated Persistent Actors Targeting Global Telecom and Hosting" — January 2021. Primary source for 2021 campaign wave including Confluence and WebLogic exploitation, Caterpillar WebShell deployment, and victim list spanning ISPs and hosting providers. Source ID `SRC-CLEARSKY-LEBANESE-CEDAR`.
+- Check Point Research, "Volatile Cedar" — 2015. Original public disclosure of the group's Explosive RAT campaigns and long-running telecom espionage operations. Source ID `SRC-CP-VOLATILE-CEDAR-2015`.
+- Recorded Future and other vendors have tracked Lebanese Cedar activity under various designations; cross-reference vendor-specific naming with the ClearSky/Check Point reporting for consistent attribution baseline.

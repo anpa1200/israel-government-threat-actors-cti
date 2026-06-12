@@ -21,6 +21,14 @@
 
 <!-- ACTOR-NAVIGATION:END -->
 
+## Background
+
+Void Manticore emerged publicly in October 2023, immediately following Hamas's attack on Israel, operating primarily through the "Handala Hack" and "Karma" public personas. The cluster is assessed in public reporting as Iran MOIS-linked, and follows a documented pattern of influence-enabled intrusion: compromise, destructive or data-theft action, public claim announcement on Telegram, and sustained narrative amplification. The name "Handala" references a Palestinian political cartoon symbol — a deliberate framing choice emphasizing psychological effect alongside technical operations.
+
+The actor's most visible destructive tool is the BiBi Wiper family, first analyzed by Security Joes in October 2023. BiBi-Linux and BiBi-Windows variants were deployed against Israeli organizations in the weeks following the October 7 attack, overwriting files and corrupting master boot records. Subsequent Check Point research documented an operational handoff model: Scarred Manticore provides initial access through webshell implantation on edge systems, then transfers that access to Void Manticore for destructive and leak operations. This division of labor is analytically significant — Scarred Manticore indicators on an Israeli network should be treated as a potential pre-destruction precursor.
+
+Beyond destructive operations, Void Manticore operates psychological pressure campaigns through Telegram leak channels, claiming victim data, hosting stolen files, and timing announcements to maximize public impact. The cluster has also been linked to Homeland Justice, the persona used against Albania in 2022 that disrupted Albanian government services with ROADSWEEP ransomware and CHIMNEYSWEEP backdoor. The Push Security "Stryker" case (March 2026) documented Global Administrator account compromise leading to mass Intune remote device wipe — a cloud-plane destructive pattern consistent with the overall cluster's escalation trajectory.
+
 Primary cluster: Void Manticore.
 
 Public personas and aliases: Handala Hack, Karma, Karma Below (Karmabelow80), Homeland Justice, Storm-0842, BANISHED KITTEN, Dune, COBALT MYSTIQUE, Red Sandstorm.
@@ -66,3 +74,21 @@ Use low-to-medium confidence unless a primary technical source ties the persona 
 - `SRC-CP-MOIS-CRIME`: Check Point Research analysis of MOIS-linked actors and criminal ecosystem convergence (March 2026).
 - `SRC-PUSH-STRYKER-HANDALA`: Push Security Stryker incident analysis — Intune Remote Wipe via compromised Global Administrator credentials (March 2026).
 - `SRC-AP-HANDALA`: authored CTI assessment with SOC defensive guidance — rated B, trace primary references for operational decisions.
+
+## Public Reports
+
+**Own ecosystem — read first:**
+
+- [CTI Research: Handala Hack Group aka Handala Hack Team](https://medium.com/@1200km/cti-research-handala-hack-group-aka-handala-hack-team-ddbdd294cfb8) — Andrey Pautov / 1200km. Defensive CTI assessment with IOC synthesis, actor mapping, alias table, and SOC guidance. Source ID `SRC-AP-HANDALA`.
+- [CTI Kill Chain: An Analyst Guide With Real-World Evidence](https://infosecwriteups.com/cti-kill-chain-an-analyst-guide-with-real-world-evidence-c3bef6fd2979) — 1200km on Infosec Write-ups. Methodology reference for converting threat actor evidence into defensive decisions, applicable to Handala cluster analysis.
+
+**MITRE ATT&CK:**
+
+- [MITRE ATT&CK G1055 — Void Manticore](https://attack.mitre.org/groups/G1055/) — Authoritative alias registry, technique mappings, software references, and sub-group relationships including Handala Hack, Karma, Homeland Justice, BANISHED KITTEN, and Storm-0842.
+
+**Primary vendor reporting:**
+
+- Check Point Research, "Void Manticore's Destructive Operations Against Israel" (Bad Karma No Justice) — May 2024. Primary source for Scarred Manticore → Void Manticore handoff model, Karma persona, and wiper deployment sequences. Source ID `SRC-CP-VOID-2024`.
+- Check Point Research, "Handala Modus Operandi" — March 2026. Updated operational profile. Source ID `SRC-CP-HANDALA-2026`.
+- Check Point Research, "MOIS-Linked Actors and Criminal Ecosystem Convergence" — March 2026. Source ID `SRC-CP-MOIS-CRIME`.
+- Push Security, "Stryker: Intune Remote Wipe via Compromised Global Administrator" — March 2026. Cloud-plane destructive pattern. Source ID `SRC-PUSH-STRYKER-HANDALA`.

@@ -21,6 +21,16 @@
 
 <!-- ACTOR-NAVIGATION:END -->
 
+## Background
+
+APT42 was designated as a distinct cluster by Mandiant in 2022, formally separating it from the broader APT35/Magic Hound ecosystem it overlaps with. Like APT35, the group is attributed to the IRGC-IO (Islamic Revolutionary Guard Corps Intelligence Organisation) by Mandiant, Proofpoint, and U.S. Treasury OFAC. APT42's primary mandate is domestic and international surveillance — targeting Iranian civil society, dual nationals, journalists, opposition figures, and foreign governments with interest to the IRGC.
+
+The group's technical signature is cloud-focused credential theft and collection. Rather than heavy custom malware deployment, APT42 typically builds elaborate social engineering relationships, delivers spearphishing links to fake Google/Microsoft/OneDrive login portals, and then immediately harvests cloud-service credentials for persistent access. Once inside M365 or Google Workspace, the group focuses on email exfiltration and SharePoint/Drive data collection. Mandiant's 2022 comprehensive APT42 report documented tools including POWERPOST, NICECURL, and TAMECAT, used in campaigns where credential theft alone was insufficient.
+
+Google's Threat Analysis Group documented APT42 extensively through the "Uncharmed" 2023 report and a 2024 blog post on targeting of US presidential campaigns — both Google-authenticated sources that establish the group's scale and methodology. Notably, Google TAG observed APT42 using trojanized legitimate software packages (NordVPN, Cisco AnyConnect) to deliver malware while maintaining plausible deniability.
+
+In an Israel-specific context, Check Point's "Educated Manticore" reporting describes campaigns targeting Israeli academic and policy research environments with credential-phishing lures themed around regional conferences and public policy events — a pattern consistent with APT42's mandate to surveil individuals with access to strategic information.
+
 Aliases: UNC788 (Mandiant), Yellow Garuda (Recorded Future), Damselfly (Symantec), CharmingCypress (Volexity), Educated Manticore (Check Point), ITG18 (IBM, overlapping with APT35).
 
 Assessed sponsor: IRGC-IO (Islamic Revolutionary Guard Corps Intelligence Organisation) per Mandiant, Proofpoint, and U.S. Treasury designations.
@@ -45,3 +55,18 @@ APT42 is high priority because MITRE and Mandiant describe cyber espionage and s
 - New OAuth grants or suspicious cloud application consent.
 
 Sources: `SRC-MITRE-G1044`, `SRC-MANDIANT-APT42`, `SRC-GOOGLE-APT42-UNCHARMED`, `SRC-GOOGLE-APT42-PHISHING`, `SRC-GOOGLE-AI-MISUSE`, `SRC-GOOGLE-AI-TRACKER`, `SRC-PROOFPOINT-IRAN-CONFLICT-2026`.
+
+## Public Reports
+
+**MITRE ATT&CK:**
+
+- [MITRE ATT&CK G1044 — APT42](https://attack.mitre.org/groups/G1044/) — Technique mappings, software associations (POWERPOST, NICECURL, TAMECAT), and alias registry. Note that TA453 / Charming Kitten vendor naming caveats apply; check the vendor taxonomy used by each source before attributing.
+
+**Primary vendor reporting:**
+
+- Mandiant, "APT42: Crooked Charms, Cons, and Compromises" — 2022. Foundational profile documenting IRGC-IO attribution, targeting scope, tools, and operational patterns. Source ID `SRC-MANDIANT-APT42`.
+- Google Threat Analysis Group, "Spear-Phishing Campaign Targets Gmail Users Affiliated with US Government" — Documents APT42 targeting US government-affiliated targets including presidential campaign staff. Source ID `SRC-GOOGLE-APT42-PHISHING`.
+- Google Threat Analysis Group, "Uncharmed: Untangling Iran's APT42 Operations" — 2023. Analysis of trojanized VPN and security software packages used for initial access. Source ID `SRC-GOOGLE-APT42-UNCHARMED`.
+- Check Point Research, "Educated Manticore" — Israel-targeted campaigns using regional conference and policy research lures. Source IDs `SRC-CP-EDUCATED-2023`, `SRC-CP-EDUCATED-2025`.
+- Proofpoint, Iran Conflict reporting — Campaign-level phishing infrastructure and lure analysis including Israel-facing operations. Source ID `SRC-PROOFPOINT-IRAN-CONFLICT-2026`.
+- Volexity, "CharmingCypress" — Documents TA453-mapped activity using multi-persona phishing and malicious NPM packages. Note vendor taxonomy caveat.

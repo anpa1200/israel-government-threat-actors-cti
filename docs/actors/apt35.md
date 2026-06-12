@@ -21,6 +21,16 @@
 
 <!-- ACTOR-NAVIGATION:END -->
 
+## Background
+
+Magic Hound (APT35) has been active since approximately 2014 and is among the most extensively reported Iranian threat actors in public vendor literature. The group's operational mandate centers on long-running surveillance and espionage targeting academics, journalists, human rights activists, think-tank researchers, policy makers, diplomatic officials, and regional political opponents of the Iranian government. U.S. Treasury OFAC and DOJ indictments, alongside multiple vendor attributions, tie the group to the Islamic Revolutionary Guard Corps Intelligence Organisation (IRGC-IO).
+
+The group's initial public exposure came through iSIGHT Partners' 2014 "Newscaster" report, which documented an extensive network of fake journalist personas used to build trust with targets before credential theft or malware delivery. This persona-based, long-duration social engineering approach remains the group's signature even as the technical tooling has evolved. Notable campaigns include: spearphishing against U.S. defense contractors and State Department officials (2016-2018); the HBO phishing campaign that resulted in "Game of Thrones" script theft (2017); and a DOJ-attributed campaign against the 2020 U.S. presidential election infrastructure.
+
+Microsoft's "Mint Sandstorm" reporting (2022-2023) documented the group's expansion into targeting critical infrastructure and healthcare organizations, as well as researchers connected to Middle East policy. The group has exploited Log4j vulnerabilities (CVE-2021-44228) and used CharmPower, a PowerShell-based backdoor, as part of this wave. ESET's "Ballistic Bobcat" reporting provides complementary coverage of simultaneous phishing infrastructure operations.
+
+For Israeli government and regional diplomacy defenders, APT35 represents a persistent credential-theft and persona-based intelligence collection threat against senior officials, academics, and security researchers. The group's patience — running multiple-month persona relationships before deploying technical operations — means traditional phishing-indicator detection alone is insufficient.
+
 Aliases: Charming Kitten, COBALT ILLUSION, Phosphorus, Newscaster, Mint Sandstorm, ITG18 (IBM), Ballistic Bobcat (ESET), Group 83.
 
 Assessed sponsor: IRGC-IO (Islamic Revolutionary Guard Corps Intelligence Organisation) per Proofpoint, Mandiant, and U.S. Treasury designations.
@@ -45,3 +55,25 @@ APT35-related reporting is highly relevant to Israeli government because the act
 - Lookalike domains targeting ministries, public agencies, or suppliers.
 
 Sources: `SRC-MITRE-G0059`, `SRC-MS-MINT-SANDSTORM`, `SRC-MS-MINT-PROFILE`, `SRC-CP-EDUCATED-2023`, `SRC-CP-EDUCATED-2025`.
+
+## Public Reports
+
+**Own ecosystem:**
+
+- [Deep Research Intake: APT35 and OilRig Israel](../reports/apt35-oilrig-israel-deep-research.md) — Internal repository synthesis covering Israeli-specific targeting context. High-priority, requires source validation.
+- [Deep Research Intake: OilRig and Magic Hound](../reports/oilrig-magic-hound-deep-research.md) — Internal research intake with adjacent actor mapping.
+
+**MITRE ATT&CK:**
+
+- [MITRE ATT&CK G0059 — Magic Hound](https://attack.mitre.org/groups/G0059/) — Technique mappings, alias registry, and software associations. Note the TA453 alias caveat in the vendor naming section above.
+
+**Government and law enforcement:**
+
+- Microsoft Security Blog, "New Mint Sandstorm Campaign Targeting High-Profile Individuals" — 2023. Documents targeting of researchers, journalists, and government officials via social engineering and Log4j exploitation. Source ID `SRC-MS-MINT-SANDSTORM`.
+
+**Primary vendor reporting:**
+
+- Check Point Research, "Educated Manticore" — 2023 and 2025 campaigns targeting Israeli and regional academic and policy researchers. Source IDs `SRC-CP-EDUCATED-2023`, `SRC-CP-EDUCATED-2025`.
+- ESET Research, "Ballistic Bobcat" — Credential-phishing infrastructure and spearphishing campaign analysis complementing the APT35 profile.
+- Proofpoint, historical TA453 reporting — Credential phishing via lookalike domains and tailored lure content; note vendor taxonomy caveat before applying TA453 claims to this profile.
+- iSIGHT Partners, "Newscaster" — 2014 original disclosure documenting persona-based espionage network.

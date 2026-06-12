@@ -26,6 +26,14 @@ sidebar_label: DarkBit
 
 # DarkBit
 
+## Background
+
+DarkBit is not a stable independent threat group — it is a single-campaign ransomware persona used in the February 2023 Technion University incident. Microsoft's April 2023 report documented that MERCURY (MuddyWater) conducted initial access and staged the environment, while DEV-1084 (Storm-1084) executed the destructive payload using DarkBit ransomware — a deliberate hybrid of a politically-motivated wiper and a ransomware extortion tool.
+
+The Technion incident is significant beyond its technical details. Technion is Israel's leading technology university and a strategic national asset with ties to defense research, cybersecurity, and Israel's technology sector pipeline. A 80 BTC ransom demand and an embedded anti-Israeli political message in the ransom note ("down with Israel") signaled that the operation's primary purpose was disruption, embarrassment, and psychological impact rather than financial return. The 4TB data theft claim and "RECOVERY_DARKBIT" note followed standard ransomware aesthetics to frame the incident as criminal rather than state-directed.
+
+The broader pattern — MERCURY establishing initial access, a secondary team deploying destructive capability — is consistent with how MuddyWater appears to operate as an access broker enabling other MOIS-affiliated units to escalate from espionage to impact. Microsoft documented the same handoff model independently for MERCURY and DEV-1084. As of primary-source review, DarkBit has not reappeared as a distinct ransomware persona after 2023, supporting the assessment that this was a tailored persona for a specific operation rather than a reusable ransomware-as-a-service brand.
+
 DarkBit is tracked here as a destructive extortion persona / pseudo-ransomware operation rather than a stable independent ransomware group.
 
 Aliases and relationships: DarkBit persona; MuddyWater / MERCURY / Mango Sandstorm association in public reporting; DEV-1084 / Storm-1084 association in Microsoft reporting on destructive activity.
@@ -64,3 +72,16 @@ Current primary-source review did not identify strong public evidence that DarkB
 - `SRC-INCD-DARKBIT-MUDDYWATER-2023`: INCD MuddyWater / Technion reporting.
 - `SRC-MS-MERCURY-DEV1084-2023`: Microsoft MERCURY and DEV-1084 destructive-operations reporting.
 - `SRC-UNIT42-BOGGY-SERPENS-2026`: Unit 42 Boggy Serpens assessment.
+
+## Public Reports
+
+**Own ecosystem:**
+
+- [Deep Research Intake: MuddyWater](../reports/muddywater-deep-research.md) — Internal synthesis covering the MuddyWater/Storm-1084 ecosystem. DarkBit is documented as a tool within that cluster's destructive operations.
+- [Actor Profile: MuddyWater](./muddywater.md) — Cross-reference for the parent cluster responsible for DarkBit's deployment context.
+
+**Primary vendor reporting:**
+
+- Microsoft MSTIC, "MERCURY and DEV-1084: Destructive Attack on Hybrid Environment" — April 2023. Documents the MERCURY (MuddyWater) initial access and DEV-1084 (Storm-1084) destructive handoff, including Exchange Web Services abuse, Azure AD Connect credential theft, and DarkBit deployment. Source ID `SRC-MS-MERCURY-DEV1084-2023`.
+- INCD (Israel National Cyber Directorate), MuddyWater / Technion reporting — 2023. Israeli government reporting on the Technion incident and MuddyWater cluster activity in Israel. Source ID `SRC-INCD-DARKBIT-MUDDYWATER-2023`.
+- Unit 42 / Palo Alto Networks, "Boggy Serpens" — 2026 reassessment of MuddyWater cluster under updated Microsoft naming. Source ID `SRC-UNIT42-BOGGY-SERPENS-2026`.
