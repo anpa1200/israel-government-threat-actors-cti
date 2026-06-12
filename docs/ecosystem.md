@@ -20,7 +20,7 @@ This page connects the Israel Government Threat Actors CTI knowledge base to the
 | [Customer-Driven AI CTI Project](https://1200km.com/customer-driven-ai-cti-project/) | Delivery methodology and customer engagement operating model | Quality gates, project phases, acceptance criteria, detection readiness, replay and reporting workflow |
 | [Israel Government Threat Actors CTI](https://1200km.com/israel-government-threat-actors-cti/) | Sector and actor knowledge base | Israeli public-sector threat model, actors, tools, TTPs, detections, hunts, source tracking, and evidence mapping |
 | [AI vs Defense](https://1200km.com/ai-vs-defense/) | Practitioner guide: AI-era threat model and SOC adaptation | How AI-assisted adversary capabilities affect the Israeli sector threat model, detection strategy, and CTI program requirements |
-| [ThreatMapper](https://1200km.com/threatmapper-docs/) | Self-hosted AI threat intelligence platform | AI-driven ATT&CK extraction from incident reports, Jaccard-based APT group attribution against 174+ ATT&CK groups, Navigator heatmap for comparing actor technique overlap, and PDF reporting — useful when analyzing new reports about actors tracked here |
+| [ThreatMapper AI CTI workbench](https://1200km.com/threatmapper/) | Public Web workspace plus self-hosted Docker platform | Evidence-backed ATT&CK mapping candidates, group-profile TTP-overlap leads, coverage-gap analysis, and PDF reporting for analyst review |
 | [HexStrike AI](https://github.com/0x4m4/hexstrike-ai) | AI-powered offensive security automation platform | MCP agent-based tool orchestration, 150+ security tools, AI-driven penetration testing, adversarial validation of detection coverage |
 
 ## How This Project Fits
