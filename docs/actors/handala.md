@@ -1,3 +1,7 @@
+---
+description: "Void Manticore (Handala Hack) is a MOIS-linked destructive actor targeting Israeli organizations through data theft, wiper deployment, and Telegram-amplified influence operations since October 2023."
+---
+
 # Void Manticore / Handala
 
 <!-- ACTOR-NAVIGATION:START -->

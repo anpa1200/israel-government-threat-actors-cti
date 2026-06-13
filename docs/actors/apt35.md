@@ -1,3 +1,7 @@
+---
+description: "Magic Hound (APT35) is an IRGC-IO-attributed cyber espionage group targeting academics, journalists, diplomats, and Israeli government entities through persona-based spearphishing and credential theft."
+---
+
 # Magic Hound / APT35
 
 <!-- ACTOR-NAVIGATION:START -->

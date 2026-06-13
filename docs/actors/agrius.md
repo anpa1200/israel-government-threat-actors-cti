@@ -1,3 +1,7 @@
+---
+description: "Agrius is an Iran-aligned destructive threat actor targeting Israeli organizations with wiper malware disguised as ransomware, operating through the BlackShadow and Moneybird personas."
+---
+
 # Agrius
 
 <!-- ACTOR-NAVIGATION:START -->

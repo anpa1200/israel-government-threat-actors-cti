@@ -1,3 +1,7 @@
+---
+description: "WIRTE is a Hamas-affiliated threat actor that evolved from espionage to destructive operations, deploying the SameCoin wiper against Israeli financial institutions and hospitals in 2024."
+---
+
 # WIRTE
 
 <!-- ACTOR-NAVIGATION:START -->

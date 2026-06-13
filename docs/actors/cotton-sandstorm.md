@@ -1,3 +1,7 @@
+---
+description: "Cotton Sandstorm (Emennet Pasargad / ASA) is an IRGC-affiliated influence operations actor combining intrusion, data theft, and media messaging campaigns targeting Israel and Western audiences."
+---
+
 # Cotton Sandstorm
 
 <!-- ACTOR-NAVIGATION:START -->

@@ -1,3 +1,7 @@
+---
+description: "OilRig (APT34) is one of Iran's most prolific espionage groups, active since 2014 targeting Middle Eastern government, energy, telecom, and financial sectors with custom backdoors and cloud-service C2."
+---
+
 # OilRig
 
 <!-- ACTOR-NAVIGATION:START -->

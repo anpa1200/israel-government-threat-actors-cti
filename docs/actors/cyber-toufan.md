@@ -1,3 +1,7 @@
+---
+description: "Cyber Toufan emerged in October 2023 conducting data theft and wiper operations against Israeli organizations, claiming 100+ victims following Hamas's October 7 attack."
+---
+
 # Cyber Toufan
 
 <!-- ACTOR-NAVIGATION:START -->

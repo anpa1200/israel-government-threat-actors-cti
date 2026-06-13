@@ -1,3 +1,7 @@
+---
+description: "APT42 is an IRGC-IO-attributed surveillance cluster targeting journalists, civil society, government officials, and foreign policy researchers via persona-based social engineering and credential theft."
+---
+
 # APT42
 
 <!-- ACTOR-NAVIGATION:START -->

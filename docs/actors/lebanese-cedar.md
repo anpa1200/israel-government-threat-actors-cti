@@ -1,3 +1,7 @@
+---
+description: "Lebanese Cedar (Volatile Cedar) is a Hezbollah-affiliated espionage group with multi-year persistent access to telecom, defense, media, and education organizations in the Middle East and Europe."
+---
+
 # Lebanese Cedar
 
 <!-- ACTOR-NAVIGATION:START -->

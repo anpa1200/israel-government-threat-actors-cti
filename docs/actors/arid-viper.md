@@ -1,3 +1,7 @@
+---
+description: "APT-C-23 (Arid Viper) is a Hamas-affiliated mobile threat actor deploying Android spyware (AridSpy) against Israeli military, Palestinian civil society, and Egyptian political targets."
+---
+
 # APT-C-23 / Arid Viper
 
 <!-- ACTOR-NAVIGATION:START -->

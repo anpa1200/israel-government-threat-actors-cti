@@ -1,3 +1,7 @@
+---
+description: "MuddyWater is a MOIS-attributed Iranian cyber espionage group explicitly designated by CISA advisory AA22-055A, active since 2017 targeting Israeli government, defense, and critical infrastructure."
+---
+
 # MuddyWater
 
 <!-- ACTOR-NAVIGATION:START -->
