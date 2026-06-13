@@ -3,7 +3,7 @@
 const config = {
   title: 'Israel Government Threat Actors CTI',
   tagline: 'Defensive CTI for Israeli government and public-sector exposure',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo.png',
 
   url: 'https://1200km.com',
   baseUrl: '/israel-government-threat-actors-cti/',
