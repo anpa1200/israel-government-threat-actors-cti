@@ -35,7 +35,7 @@ Aliases: Charming Kitten, COBALT ILLUSION, Phosphorus, Newscaster, Mint Sandstor
 
 Assessed sponsor: IRGC-IO (Islamic Revolutionary Guard Corps Intelligence Organisation) per Proofpoint, Mandiant, and U.S. Treasury designations.
 
-**Vendor naming caveat — TA453:** MITRE G0059 lists TA453 as a Magic Hound / APT35 alias. However, Proofpoint (2023), Volexity (2024), and Recorded Future map TA453 as roughly equivalent to APT42 rather than APT35. Analysts should note which vendor's taxonomy their source uses before attributing TA453 activity to this profile. See also the APT42 profile.
+**Vendor naming caveat — TA453:** MITRE G0059 lists TA453 as a Magic Hound / APT35 alias. However, Proofpoint (2023), Volexity (2024), and Recorded Future map TA453 as roughly equivalent to APT42 rather than APT35. Analysts should note which vendor's taxonomy their source uses before attributing TA453 activity to this profile. See also the [APT42 profile](./apt42.md).
 
 ## Relevance
 

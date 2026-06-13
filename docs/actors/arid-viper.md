@@ -75,3 +75,7 @@ Source note: Cybernews/Acronis RedAlert coverage is Score B secondary reporting 
 - SentinelLabs, "The Cyber Dimension of the Israel-Hamas Conflict" — 2023. Actor context and mobile threat landscape overview for conflict-period operations. Source ID `SRC-S1-ISRAEL-HAMAS-CYBER-2023`.
 - Cisco Talos, Micropsia analysis — Technical analysis of Android malware campaign targeting Israeli military-adjacent users.
 - Kaspersky, "Desert Falcon" — 2015 original disclosure. Documents earliest known APT-C-23 operations and targeting patterns.
+
+## Related Actors
+
+- [WIRTE](./wirte.md) — Parallel Hamas-affiliated threat cluster; compare mobile-centric (Arid Viper) versus Windows-enterprise (WIRTE) capability profiles. Both operate within the same adversarial ecosystem targeting Israel.

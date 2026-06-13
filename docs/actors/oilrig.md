@@ -73,3 +73,8 @@ Source note: ESET and Unit 42 are the preferred anchors for OilBooster/cloud-ser
 - Unit 42 / Palo Alto Networks, "OilRig Targets Middle Eastern Telecommunications Organization" — DNS tunneling C2 via custom subdomain patterns. Source ID `SRC-UNIT42-OILRIG-DNS-TUNNELING`.
 - Symantec / Broadcom, Crambus (APT34) reporting — Coverage of PowerShell tooling evolution and Middle East government targeting.
 - Mandiant, APT34 group profile — Historical coverage of initial OilRig campaigns and toolset documentation.
+
+## Related Actors
+
+- [Lyceum / HEXANE](./lyceum.md) — Assessed as a subgroup or parallel cluster within the broader OilRig/APT34 ecosystem; shares targeting of Middle Eastern telecommunications and energy organizations and overlapping C2 infrastructure patterns.
+- [APT35 / Magic Hound](./apt35.md) — Parallel IRGC-attributed cluster with overlapping vendor naming (Crambus alias occasionally conflated); compare targeting and toolset divergence.

@@ -97,6 +97,7 @@ Scarred Manticore should not be used as a default label for every Iranian-linked
 **Own ecosystem:**
 
 - [Actor Profile: Void Manticore / Handala](./handala.md) — Cross-reference for the downstream destructive actor that Scarred Manticore hands off access to.
+- [Actor Profile: UNC1860](./unc1860.md) — Comparable MOIS-affiliated IIS-persistence and passive-access actor; compare Liontail family versus TEMPLEDOOR/TEMPLEPLAY toolsets and prioritize detection engineering across both clusters.
 
 **MITRE ATT&CK:**
 

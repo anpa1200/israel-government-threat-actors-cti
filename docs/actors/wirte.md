@@ -65,3 +65,8 @@ Sources: `SRC-CP-WIRTE-2024`, `SRC-PROOFPOINT-TA402-IRONWIND`, `SRC-UNIT42-ASHTA
 - Unit 42 / Palo Alto Networks, "AshTag: New Python-Based Backdoor in WIRTE Operations" — October 2025. Analysis of modular Python backdoor with encrypted C2, documenting continued WIRTE technical development. Source ID `SRC-UNIT42-ASHTAG-2025`.
 - SentinelLabs, "The Cyber Dimension of the Israel-Hamas Conflict" — 2023. Actor context for WIRTE within the Palestinian-affiliated threat landscape. Source ID `SRC-S1-ISRAEL-HAMAS-CYBER-2023`.
 - Proofpoint, TA402/IronWind reporting — Context for the broader Hamas-affiliated phishing ecosystem that overlaps with WIRTE's operational environment. Source ID `SRC-PROOFPOINT-TA402-IRONWIND`.
+
+## Related Actors
+
+- [Arid Viper / APT-C-23](./arid-viper.md) — Parallel Hamas-affiliated cluster with mobile-focused (Android malware) capability profile, operating alongside WIRTE's Windows-enterprise tradecraft within the same adversarial ecosystem.
+- [TA402](./ta402.md) — Hamas-affiliated phishing actor with overlapping operational environment; compare IronWind toolchain with WIRTE's SameCoin wiper and AshTag backdoor tradecraft.
