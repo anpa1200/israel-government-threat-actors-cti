@@ -20,7 +20,7 @@ This page connects the Israel Government Threat Actors CTI knowledge base to the
 | [Customer-Driven AI CTI Project](https://1200km.com/customer-driven-ai-cti-project/) | Delivery methodology and customer engagement operating model | Quality gates, project phases, acceptance criteria, detection readiness, replay and reporting workflow |
 | [Israel Government Threat Actors CTI](https://1200km.com/israel-government-threat-actors-cti/) | Sector and actor knowledge base | Israeli public-sector threat model, actors, tools, TTPs, detections, hunts, source tracking, and evidence mapping |
 | [AI vs Defense](https://1200km.com/ai-vs-defense/) | Practitioner guide: AI-era threat model and SOC adaptation | How AI-assisted adversary capabilities affect the Israeli sector threat model, detection strategy, and CTI program requirements |
-| [ThreatMapper AI CTI workbench](https://1200km.com/threatmapper/) | Public Web workspace plus self-hosted Docker platform | Evidence-backed ATT&CK mapping candidates, group-profile TTP-overlap leads, coverage-gap analysis, and PDF reporting for analyst review |
+| [AdversaryGraph AI CTI workbench](https://1200km.com/adversarygraph/) | Public Web workspace plus self-hosted Docker platform | Evidence-backed ATT&CK mapping candidates, group-profile TTP-overlap leads, coverage-gap analysis, and PDF reporting for analyst review |
 | [HexStrike AI](https://github.com/0x4m4/hexstrike-ai) | AI-powered offensive security automation platform | MCP agent-based tool orchestration, 150+ security tools, AI-driven penetration testing, adversarial validation of detection coverage |
 
 ## How This Project Fits
@@ -51,7 +51,7 @@ Start with the [Israel Government Threat Model](israel-government-threat-model.m
 - [Customer-Driven AI CTI Project repository](https://github.com/anpa1200/customer-driven-ai-cti-project)
 - [Israel Government Threat Actors CTI repository](https://github.com/anpa1200/israel-government-threat-actors-cti)
 - [AI vs Defense repository](https://github.com/anpa1200/ai-vs-defense)
-- [ThreatMapper repository](https://github.com/anpa1200/threatmapper)
+- [AdversaryGraph repository](https://github.com/anpa1200/adversarygraph)
 - [HexStrike AI repository](https://github.com/0x4m4/hexstrike-ai)
 
 ## Boundary
