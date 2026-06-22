@@ -55,6 +55,11 @@ The `Intel Update Check` workflow runs on a weekday schedule and can be started
 manually. It uploads the generated update queue as an artifact. It does not
 auto-commit or auto-promote feed data.
 
+Public feed outages, blocks, and transient parse errors are recorded in the
+generated queue and emitted as workflow warnings. They do not fail the scheduled
+check by default. Set `INTEL_UPDATE_STRICT_FEEDS=true` when you need a manual
+run to fail on any feed error.
+
 ## Promotion Workflow
 
 1. Review the candidate in [Intelligence Update Queue](intelligence-updates.md).

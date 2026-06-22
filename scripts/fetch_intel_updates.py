@@ -26,6 +26,7 @@ OUT_PATH = ROOT / "data/intel-update-candidates.csv"
 DOC_PATH = ROOT / "docs/intelligence-updates.md"
 USER_AGENT = "israel-government-threat-actors-cti/0.1 (+public-defensive-research)"
 AMBIGUOUS_MITRE_TERMS = {"karma"}
+TRUE_ENV_VALUES = {"1", "true", "yes", "on", "strict"}
 
 HEADER = [
     "candidate_id",
@@ -118,6 +119,14 @@ def normalize(value: str) -> str:
 
 def stable_suffix(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()[:10]
+
+
+def env_flag(name: str) -> bool:
+    return os.environ.get(name, "").strip().lower() in TRUE_ENV_VALUES
+
+
+def feed_error_exit_code(errors: list[str]) -> int:
+    return 2 if errors and env_flag("INTEL_UPDATE_STRICT_FEEDS") else 0
 
 
 def terms_for_actor(row: dict[str, str]) -> list[str]:
@@ -561,7 +570,9 @@ def main() -> int:
     print(f"wrote {DOC_PATH.relative_to(ROOT)}")
     if errors:
         print("feed_errors=" + " | ".join(errors))
-    return 0 if not errors else 2
+        for error in errors:
+            print(f"::warning title=Intel feed unavailable::{error}")
+    return feed_error_exit_code(errors)
 
 
 if __name__ == "__main__":

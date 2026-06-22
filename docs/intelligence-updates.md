@@ -9,7 +9,7 @@ This page summarizes the latest no-key public CTI feed pull. It is a review queu
 
 Feed candidates must be reviewed before they are promoted into `data/sources.csv`, actor profiles, evidence records, TTP mappings, hunts, or detections.
 
-Generated: `2026-05-16`
+Generated: `2026-06-22`
 
 ## Connected Feeds
 
@@ -23,14 +23,14 @@ Generated: `2026-05-16`
 
 | Metric | Value |
 | --- | ---: |
-| Total candidates | 32 |
-| `FEED-CISA-ADVISORIES` candidates | 13 |
+| Total candidates | 29 |
+| `FEED-CISA-ADVISORIES` candidates | 10 |
 | `FEED-CISA-KEV` candidates | 1 |
 | `FEED-MISP-OPTIONAL` candidates | 1 |
 | `FEED-MITRE-ATTACK-ENTERPRISE` candidates | 15 |
 | `FEED-OPENCTI-OPTIONAL` candidates | 1 |
 | `FEED-OTX-OPTIONAL` candidates | 1 |
-| `Needs analyst review` | 28 |
+| `Needs analyst review` | 25 |
 | `Needs exposure review` | 1 |
 | `Not configured` | 3 |
 
@@ -65,29 +65,26 @@ Generated: `2026-05-16`
 
 | Candidate Type | Candidates | Feeds | Matched terms |
 | --- | ---: | --- | --- |
-| Government advisory | 13 | `FEED-CISA-ADVISORIES` | f5, hmi, ivanti, microsoft exchange, palo alto, plc |
-| Known exploited vulnerability | 1 | `FEED-CISA-KEV` | microsoft exchange |
+| Government advisory | 10 | `FEED-CISA-ADVISORIES` | check point, fortinet, hmi, ivanti, rockwell |
+| Known exploited vulnerability | 1 | `FEED-CISA-KEV` | ivanti |
 | Optional connector status | 3 | `FEED-MISP-OPTIONAL`, `FEED-OPENCTI-OPTIONAL`, `FEED-OTX-OPTIONAL` | None |
 
 ## Current Candidates
 
 | Candidate | Feed | Actor | Type | Title | Date | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `UPD-CISA-ADV-SURFACE-55b87a3084` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [ABB AC500 V3 Multiple Vulnerabilities](https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-03) | Tue, 12 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-9ca9b26be0` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [ABB AC500 V3 Stack Buffer Overflow in Cryptographic Message Syntax](https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-05) | Tue, 12 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-43e003f77f` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [ABB Automation Builder Gateway for Windows](https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-04) | Tue, 12 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-ea26b4b278` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [ABB WebPro SNMP Card PowerValue Multiple Vulnerabilities](https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-06) | Tue, 12 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-8f5dc67818` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/05/15/cisa-adds-one-known-exploited-vulnerability-catalog) | Fri, 15 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-acf8a28800` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/05/07/cisa-adds-one-known-exploited-vulnerability-catalog) | Thu, 07 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-c2651eadf6` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/05/06/cisa-adds-one-known-exploited-vulnerability-catalog) | Wed, 06 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-51f61e1dc4` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Siemens Ruggedcom Rox](https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-12) | Thu, 14 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-2fb9ad63bb` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Siemens Ruggedcom Rox](https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-11) | Thu, 14 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-c2c9316d00` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Siemens Ruggedcom Rox](https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-02) | Thu, 14 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-5bb347d672` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Siemens SIMATIC](https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-10) | Thu, 14 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-5860784a6e` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Siemens SIMATIC](https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-07) | Thu, 14 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-CISA-ADV-SURFACE-ff7824dc56` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Siemens SIMATIC S7 PLC Web Server](https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-15) | Thu, 14 May 26 12:00:00 +0000 | Needs analyst review |
-| `UPD-KEV-CVE-2026-42897` | `FEED-CISA-KEV` | Surface | Known exploited vulnerability | [CVE-2026-42897 - Microsoft Exchange Server Cross-Site Scripting Vulnerability](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | 2026-05-15 | Needs exposure review |
-| `UPD-CONNECTOR-FEED-MISP-OPTIONAL` | `FEED-MISP-OPTIONAL` | Surface | Optional connector status | [MISP events](https://www.misp-project.org/openapi/) | 2026-05-16 | Not configured |
+| `UPD-CISA-ADV-SURFACE-b687e1a326` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [CISA Adds One Known Exploited Vulnerability to Catalog](https://www.cisa.gov/news-events/alerts/2026/06/11/cisa-adds-one-known-exploited-vulnerability-catalog) | Thu, 11 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-CISA-ADV-SURFACE-718ab308d6` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [CISA Adds Two Known Exploited Vulnerabilities to Catalog](https://www.cisa.gov/news-events/alerts/2026/06/08/cisa-adds-two-known-exploited-vulnerabilities-catalog) | Mon, 08 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-CISA-ADV-SURFACE-ca68a80872` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure](https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure) | Thu, 18 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-CISA-ADV-SURFACE-d277e9bf8c` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Rockwell Automation CompactLogix](https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-04) | Tue, 16 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-CISA-ADV-SURFACE-59af5c3f01` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Rockwell Automation FLEX I/O EtherNet/IP Adapters](https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-05) | Tue, 16 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-CISA-ADV-SURFACE-0d2a248ba7` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Rockwell Automation FactoryTalk Analytics PavilionX](https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-01) | Tue, 16 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-CISA-ADV-SURFACE-b230769980` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Rockwell Automation FactoryTalk Historian Site Edition](https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-03) | Thu, 18 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-CISA-ADV-SURFACE-790a63ac4c` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP](https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03) | Tue, 16 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-CISA-ADV-SURFACE-a532b41623` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Rockwell Automation RSLinx ](https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-02) | Tue, 16 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-CISA-ADV-SURFACE-a4eb115e85` | `FEED-CISA-ADVISORIES` | Surface | Government advisory | [Schneider Electric Modicon Network Managed Switches](https://www.cisa.gov/news-events/ics-advisories/icsa-26-160-01) | Tue, 09 Jun 26 12:00:00 +0000 | Needs analyst review |
+| `UPD-KEV-CVE-2026-10520` | `FEED-CISA-KEV` | Surface | Known exploited vulnerability | [CVE-2026-10520 - Ivanti Sentry OS Command Injection Vulnerability](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | 2026-06-11 | Needs exposure review |
+| `UPD-CONNECTOR-FEED-MISP-OPTIONAL` | `FEED-MISP-OPTIONAL` | Surface | Optional connector status | [MISP events](https://www.misp-project.org/openapi/) | 2026-06-22 | Not configured |
 | `UPD-MITRE-G0049-60c08f71f0` | `FEED-MITRE-ATTACK-ENTERPRISE` | G0049 | ATT&CK intrusion-set taxonomy update | [OilRig](https://attack.mitre.org/groups/G0049) | 2026-05-12 | Needs analyst review |
 | `UPD-MITRE-G0059-2eecb5256c` | `FEED-MITRE-ATTACK-ENTERPRISE` | G0059 | ATT&CK intrusion-set taxonomy update | [Magic Hound](https://attack.mitre.org/groups/G0059) | 2026-05-12 | Needs analyst review |
 | `UPD-MITRE-G0069-03689cb0da` | `FEED-MITRE-ATTACK-ENTERPRISE` | G0069 | ATT&CK intrusion-set taxonomy update | [MuddyWater](https://attack.mitre.org/groups/G0069) | 2026-05-12 | Needs analyst review |
@@ -103,8 +100,8 @@ Generated: `2026-05-16`
 | `UPD-MITRE-TA402-976749cc0a` | `FEED-MITRE-ATTACK-ENTERPRISE` | TA402 | ATT&CK intrusion-set taxonomy update | [Frankenstein](https://attack.mitre.org/groups/G0101) | 2025-04-18 | Needs analyst review |
 | `UPD-MITRE-TA402-65b917d7e7` | `FEED-MITRE-ATTACK-ENTERPRISE` | TA402 | ATT&CK intrusion-set taxonomy update | [Molerats](https://attack.mitre.org/groups/G0021) | 2024-11-17 | Needs analyst review |
 | `UPD-MITRE-WIRTE-7cc1aa86db` | `FEED-MITRE-ATTACK-ENTERPRISE` | WIRTE | ATT&CK intrusion-set taxonomy update | [WIRTE](https://attack.mitre.org/groups/G0090) | 2026-04-23 | Needs analyst review |
-| `UPD-CONNECTOR-FEED-OPENCTI-OPTIONAL` | `FEED-OPENCTI-OPTIONAL` | Surface | Optional connector status | [OpenCTI indicators and reports](https://docs.opencti.io/latest/reference/api/) | 2026-05-16 | Not configured |
-| `UPD-CONNECTOR-FEED-OTX-OPTIONAL` | `FEED-OTX-OPTIONAL` | Surface | Optional connector status | [AlienVault OTX pulses](https://otx.alienvault.com/api/v1/pulses/subscribed) | 2026-05-16 | Not configured |
+| `UPD-CONNECTOR-FEED-OPENCTI-OPTIONAL` | `FEED-OPENCTI-OPTIONAL` | Surface | Optional connector status | [OpenCTI indicators and reports](https://docs.opencti.io/latest/reference/api/) | 2026-06-22 | Not configured |
+| `UPD-CONNECTOR-FEED-OTX-OPTIONAL` | `FEED-OTX-OPTIONAL` | Surface | Optional connector status | [AlienVault OTX pulses](https://otx.alienvault.com/api/v1/pulses/subscribed) | 2026-06-22 | Not configured |
 
 Machine-readable queue: `data/intel-update-candidates.csv`.
 
