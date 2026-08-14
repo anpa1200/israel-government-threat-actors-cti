@@ -5,12 +5,14 @@
   "description": "Docusaurus documentation site for defensive CTI on threat actors relevant to Israeli government and public-sector exposure.",
   "scripts": {
     "start": "docusaurus start --host 0.0.0.0",
+    "prebuild": "node scripts/generate-seo-descriptions.mjs",
     "build": "docusaurus build",
     "serve": "docusaurus serve --host 0.0.0.0",
     "clear": "docusaurus clear",
     "intel:update": "python3 scripts/fetch_intel_updates.py",
     "intel:vt": "python3 scripts/enrich_virustotal_hashes.py",
-    "validate": "python3 scripts/build_navigation_crosslinks.py && python3 scripts/validate_repo.py && python3 scripts/check_source_freshness.py && python3 scripts/run_detection_fixture_tests.py && python3 scripts/build_detection_dashboard.py && npm run build"
+    "check:seo": "node scripts/check-seo.mjs https://1200km.com/israel-government-threat-actors-cti/",
+    "validate": "python3 scripts/build_navigation_crosslinks.py && python3 scripts/validate_repo.py && python3 scripts/check_source_freshness.py && python3 scripts/run_detection_fixture_tests.py && python3 scripts/build_detection_dashboard.py && npm run build && npm run check:seo"
   },
   "dependencies": {
     "@docusaurus/core": "^3.8.1",
