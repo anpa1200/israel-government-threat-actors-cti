@@ -1,7 +1,7 @@
 // @ts-check
 
 const config = {
-  title: 'Israel Government Threat Actors CTI',
+  title: '1200km',
   tagline: 'Defensive CTI for Israeli government and public-sector exposure',
   favicon: 'img/logo.png',
 
@@ -37,8 +37,12 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/anpa1200/israel-government-threat-actors-cti/edit/main/',
+          showLastUpdateTime: true,
         },
         blog: false,
+        sitemap: {
+          lastmod: 'date',
+        },
         gtag: {trackingID: 'G-TMTG21RVHM', anonymizeIP: true},
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -52,6 +56,10 @@ const config = {
     ({
       image: 'img/social-card.svg',
       metadata: [
+        {
+          property: 'og:site_name',
+          content: '1200km — Andrey Pautov Security Research',
+        },
         {
           name: 'keywords',
           content:
@@ -86,7 +94,7 @@ const config = {
               {label: 'Customer-Driven AI CTI', href: 'https://1200km.com/customer-driven-ai-cti-project/'},
               {label: 'Israel Threat Actors CTI', href: 'https://1200km.com/israel-government-threat-actors-cti/'},
               {label: 'AI vs Defense', href: 'https://1200km.com/ai-vs-defense/'},
-              {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'},
+              {label: 'HexStrike AI (upstream project)', href: 'https://github.com/0x4m4/hexstrike-ai'},
               {label: 'AdversaryGraph Docs', href: 'https://1200km.com/adversarygraph-docs/'},
             ],
           },
@@ -137,7 +145,7 @@ const config = {
               {label: 'Customer-Driven AI CTI', href: 'https://1200km.com/customer-driven-ai-cti-project/'},
               {label: 'Israel Threat Actors CTI', href: 'https://1200km.com/israel-government-threat-actors-cti/'},
               {label: 'AI vs Defense', href: 'https://1200km.com/ai-vs-defense/'},
-              {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'},
+              {label: 'HexStrike AI (upstream project)', href: 'https://github.com/0x4m4/hexstrike-ai'},
               {label: 'AdversaryGraph Docs', href: 'https://1200km.com/adversarygraph-docs/'},
             ],
           },

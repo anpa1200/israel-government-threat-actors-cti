@@ -21,7 +21,7 @@ This page connects the Israel Government Threat Actors CTI knowledge base to the
 | [Israel Government Threat Actors CTI](https://1200km.com/israel-government-threat-actors-cti/) | Sector and actor knowledge base | Israeli public-sector threat model, actors, tools, TTPs, detections, hunts, source tracking, and evidence mapping |
 | [AI vs Defense](https://1200km.com/ai-vs-defense/) | Practitioner guide: AI-era threat model and SOC adaptation | How AI-assisted adversary capabilities affect the Israeli sector threat model, detection strategy, and CTI program requirements |
 | [AdversaryGraph AI CTI workbench](https://1200km.com/adversarygraph/) | Public Web workspace plus self-hosted Docker platform | Evidence-backed ATT&CK mapping candidates, group-profile TTP-overlap leads, coverage-gap analysis, and PDF reporting for analyst review |
-| [HexStrike AI](https://github.com/0x4m4/hexstrike-ai) | AI-powered offensive security automation platform | MCP agent-based tool orchestration, 150+ security tools, AI-driven penetration testing, adversarial validation of detection coverage |
+| [HexStrike AI (upstream project)](https://github.com/0x4m4/hexstrike-ai) | AI-powered offensive security automation platform | MCP agent-based tool orchestration, 150+ security tools, AI-driven penetration testing, adversarial validation of detection coverage |
 
 ## How This Project Fits
 
@@ -52,8 +52,8 @@ Start with the [Israel Government Threat Model](israel-government-threat-model.m
 - [Israel Government Threat Actors CTI repository](https://github.com/anpa1200/israel-government-threat-actors-cti)
 - [AI vs Defense repository](https://github.com/anpa1200/ai-vs-defense)
 - [AdversaryGraph repository](https://github.com/anpa1200/adversarygraph)
-- [HexStrike AI repository](https://github.com/0x4m4/hexstrike-ai)
+- [HexStrike AI (upstream project)](https://github.com/0x4m4/hexstrike-ai) repository
 
 ## Boundary
 
-The CTI documentation projects (Field Manual, Customer project, Israel CTI) are defensive and public-source oriented. They do not include malware source code, exploit instructions, leaked data, credentials, or unauthorized-access guidance. HexStrike AI is an authorized offensive security and penetration testing platform; use it only in authorized engagements.
+The CTI documentation projects (Field Manual, Customer project, Israel CTI) are defensive and public-source oriented. They do not include malware source code, exploit instructions, leaked data, credentials, or unauthorized-access guidance. The linked HexStrike AI upstream project is an authorized offensive security and penetration testing platform; use it only in authorized engagements.
