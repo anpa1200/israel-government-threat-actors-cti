@@ -1,0 +1,67 @@
+{
+  "release": "19.1",
+  "framework": "MITRE ATT&CK",
+  "domain": "enterprise-attack",
+  "source_url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-19.1.json",
+  "sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+  "reviewed_on": "2026-09-09",
+  "records": [
+    {
+      "id": "T1132.001",
+      "name": "Standard Encoding",
+      "domain": [
+        "enterprise-attack"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "url": "https://attack.mitre.org/techniques/T1132/001",
+      "object_version": "1.1"
+    },
+    {
+      "id": "T1505.003",
+      "name": "Web Shell",
+      "domain": [
+        "enterprise-attack"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "url": "https://attack.mitre.org/techniques/T1505/003",
+      "object_version": "1.5"
+    },
+    {
+      "id": "T1059.001",
+      "name": "PowerShell",
+      "domain": [
+        "enterprise-attack"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "url": "https://attack.mitre.org/techniques/T1059/001",
+      "object_version": "1.5"
+    },
+    {
+      "id": "T1505.004",
+      "name": "IIS Components",
+      "domain": [
+        "enterprise-attack"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "url": "https://attack.mitre.org/techniques/T1505/004",
+      "object_version": "1.1"
+    },
+    {
+      "id": "T1059.003",
+      "name": "Windows Command Shell",
+      "domain": [
+        "enterprise-attack"
+      ],
+      "revoked": false,
+      "deprecated": false,
+      "url": "https://attack.mitre.org/techniques/T1059/003",
+      "object_version": "1.5"
+    }
+  ],
+  "unresolved_citation_count": 180,
+  "original_report_sha256": "0c1c775e4ba4f7ffe6d412f62d723359c1feff8e4e172ca67c8200603b293e56"
+}
