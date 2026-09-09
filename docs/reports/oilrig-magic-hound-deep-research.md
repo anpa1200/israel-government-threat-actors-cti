@@ -1,6 +1,6 @@
 ---
-title: OilRig And Magic Hound Deep Research Intake
-description: Imported actor research requiring claim and citation review, with documented ATT&CK taxonomy corrections.
+title: OilRig and Magic Hound — sourced core and research intake
+description: Two sourced campaign examples and reviewed procedure mappings, followed by a preserved unresolved research intake. Experimental and unverified overall.
 last_update:
   date: 2026-09-09
   author: Andrey Pautov
@@ -9,8 +9,63 @@ sidebar_label: OilRig / Magic Hound Research
 
 # OilRig and Magic Hound research intake
 
-:::caution Analyst validation required
-This page is an imported research intake, not a verified actor assessment. Numbered source references in the imported sections cannot currently be resolved to their original documents. Every claim associated with an “unverified source” label requires source recovery and human review; confidence labels, actor equivalences, attribution, IOC values, and detection assertions in those sections are the original unverified author judgments. Do not use them as operational evidence. The correction record below is the only material reviewed on 2026-09-09.
+*Two sourced campaign examples, with an explicit boundary around the original research intake.*
+
+This report has a **source-reviewed core and an unresolved appendix**. The combined page remains experimental, unverified overall, and currentness-unknown. The review below was performed on 2026-09-09; it establishes support for these bounded claims, not the accuracy of the original intake or present-day actor activity. See the existing [editorial policy](https://1200km.com/cyber-knowledge/editorial-policy/).
+
+## Contents
+
+- [Actor identity and naming boundaries](#actor-identity-and-naming-boundaries)
+- [Sourced campaign examples](#sourced-campaign-examples)
+- [Procedure review and defensive use](#procedure-review-and-defensive-use)
+- [Limitations and conclusion](#limitations-and-conclusion)
+- [Core source register](#core-source-register)
+- [Unresolved intake appendix](#unresolved-intake-appendix)
+
+## Actor identity and naming boundaries
+
+**C01 — Framework identity.** MITRE tracks OilRig as **G0049** and Magic Hound as **G0059**. Its OilRig record explains the historical consolidation of APT34 and OilRig based on additional reporting. These are framework groupings; an associated-name list is not proof that every vendor campaign has identical membership or scope. [MITRE OilRig](https://attack.mitre.org/groups/G0049/), [MITRE Magic Hound](https://attack.mitre.org/groups/G0059/).
+
+**C02 — Attribution boundary.** For the second example, retain Proofpoint's campaign label **TA453**. Proofpoint assesses support for IRGC-IO and describes overlap with other vendors' clusters, while noting that it cannot connect individual IRGC members to TA453. This core does not collapse APT35, APT42, TA453, and Magic Hound into universally interchangeable aliases. [Proofpoint, 2024](https://www.proofpoint.com/uk/blog/threat-insight/best-laid-plans-ta453-targets-religious-figure-fake-podcast-invite-delivering).
+
+## Sourced campaign examples
+
+**C03 — OilRig / RGDoor.** Unit 42 describes a native IIS module backdoor discovered during investigation of uploads through TwoFace. The module exports `RegisterModule` and handles a Cookie field containing `RGSESSIONID`. The report separates its own test interactions from unavailable actor HTTP logs; its example installation command demonstrates a laboratory installation, not a confirmed attacker command line. [Unit 42, RGDoor](https://unit42.paloaltonetworks.com/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/).
+
+**C04 — TA453 podcast lure.** Proofpoint reports a July 2024 attempt against a prominent Jewish religious figure: a fake podcast invitation progressed to document-sharing links and an attempted ZIP/LNK delivery chain involving BlackSmith and the PowerShell backdoor AnvilEcho. Treat this as the report's observed and analyzed delivery chain; it does not establish successful end-to-end compromise of that recipient. [Proofpoint, 2024](https://www.proofpoint.com/uk/blog/threat-insight/best-laid-plans-ta453-targets-religious-figure-fake-podcast-invite-delivering).
+
+## Procedure review and defensive use
+
+The identifier/name checks below use **Enterprise ATT&CK 19.1**, pinned by the SHA-256 in the repository's `data/editorial-attack-19.1.json`. A valid identifier alone does not validate a procedure. These mappings are editorial interpretations of the cited behavior, separate from MITRE's own group-to-technique relationships.
+
+| Claim | Procedure evidence | Reviewed mapping and rationale | Boundary |
+| --- | --- | --- | --- |
+| C03 | Native module loaded into IIS; Unit 42 report above | **T1505.004 — IIS Components**: the persistent component is an IIS module | Does not make every webshell an IIS component; TwoFace remains a separate component |
+| C04 | Malicious delivery links in the reported lure; Proofpoint report above | **T1566.002 — Spearphishing Link**: the link is part of targeted phishing delivery | An opened link alone does not prove execution |
+| C04 | AnvilEcho analyzed as PowerShell; Proofpoint report above | **T1059.001 — PowerShell**: identifies the reported interpreter | Does not imply **T1059.003 — Windows Command Shell** or successful execution on the recipient |
+
+**I01 — Defensive inference, not a validated rule.** Review changes to IIS module registration against an approved baseline. Unit 42's test found Cookie visibility dependent on logging configuration; assess the privacy and retention consequences before collecting those fields. Correlate available evidence rather than treating a module name as attribution. [Unit 42](https://unit42.paloaltonetworks.com/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/).
+
+**I02 — Defensive inference, not measured coverage.** For a link-to-script hypothesis, first confirm that mail, download, and process records can be joined in the authorized test environment. Missing telemetry is a visibility gap. An isolated PowerShell event does not identify TA453. Exercise the evidence boundary with the site's [benign event validation example](https://1200km.com/learning-paths/command-shell-validation/); it tests a different, deliberately narrow synthetic rule.
+
+## Limitations and conclusion
+
+This core supports two bounded examples and three procedure interpretations. It does not independently reproduce vendor malware analysis, validate all historical aliases, confirm current targeting, or establish production detection performance. No malware was downloaded or executed for this review. Operational decisions require corroboration from the relevant environment.
+
+The original authored file, `deep-research-report (1).md`, contains numbered citation artifacts and **no source URLs**. The import history does not recover their document mapping. The **171 existing unverified-source occurrences** remain in the appendix; they are occurrences, not distinct facts. Their numbers have not been reassigned to the sources above.
+
+**2026-09-09 source-recovery record:** added independently cited C01–C04 and explicitly analytical I01–I02; reviewed three procedure mappings; preserved the earlier taxonomy correction history, including the withdrawal of the email-exfiltration/T1132.001 mapping. Original sponsor assertions, alias equivalences, campaign details, IOC values, and detection claims remain unresolved wherever the appendix carries an unverified-source label. This is a scoped source review, not a complete editorial-review date for the intake.
+
+## Core source register
+
+- **MITRE**, *OilRig (G0049)* and *Magic Hound (G0059)*, live group records accessed 2026-09-09; associated names are framework context. Links are attached to C01. Technique names/IDs are checked separately against the repository's hashed Enterprise ATT&CK 19.1 manifest.
+- **Robert Falcone, Palo Alto Networks Unit 42**, *OilRig uses RGDoor IIS Backdoor on Targets in the Middle East*, **2018-01-25**, accessed 2026-09-09. Supports C03 and provides the observation underlying I01; the latter remains an inference.
+- **Joshua Miller, Georgi Mladenov, Andrew Northern, Greg Lesnewich, and the Proofpoint Threat Research Team**, *The Best Laid Plans: TA453 Targets Religious Figure with Fake Podcast Invite Delivering New BlackSmith Malware Toolset*, **2024-08-20**, accessed 2026-09-09. Supports C02 and C04. Links are attached to those claims.
+
+## Unresolved intake appendix
+
+:::caution Preserved research intake — not operational evidence
+Everything below this notice, through the original correction history, is the preserved intake. Original confidence labels are unverified author judgments. Existing section anchors and source-marker provenance remain available. The sourced core above does not validate these fragments.
 :::
 
 ## OilRig (APT34 / Helix Kitten / Earth Simnavaz etc)
@@ -214,3 +269,8 @@ On 2026-09-09, taxonomy was checked against **Enterprise ATT&CK 19.1**, using th
 ## Follow My Work
 
 - [Website](https://1200km.com/) · [Medium](https://medium.com/@1200km) · [LinkedIn](https://www.linkedin.com/in/andrey-pautov/) · [GitHub](https://github.com/anpa1200) · [Contact](mailto:1200km@gmail.com)
+
+
+## Follow My Work
+
+[1200km research and practical learning](https://1200km.com/) · [Research RSS](https://1200km.com/feed.xml) · [About the author](https://1200km.com/about.html).
