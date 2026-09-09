@@ -7,9 +7,18 @@ function walk(dir=''){return readdirSync(join(root,dir),{withFileTypes:true}).fl
 const legacy=JSON.parse(readFileSync('data/editorial-artifact-baseline.json','utf8'));
 let existing=0;const failures=[];
 for(const file of walk()){
+ const source = readFileSync(file, 'utf8');
+ if (/\[unverified source\b/i.test(source) && /^(?:evidence_level|evidence_status|verification_status|status):\s*["']?(?:verified|source-backed)\b/im.test(source)) failures.push(file + ': unresolved intake cannot have verified/source-backed overall status');
+
  const artifacts=citationArtifacts(readFileSync(file,'utf8'));if(!artifacts.length)continue;
  const baseline=legacy[file] || [];const counts=new Map();for(const token of baseline)counts.set(token,(counts.get(token)||0)+1);
  for(const token of artifacts){if(counts.get(token)>0){existing++;counts.set(token,counts.get(token)-1)}else failures.push(file+': unexplained citation artifact '+token)}
 }
 if(failures.length)throw Error(failures.join('\n'));
 console.log(`Editorial artifact check passed; ${existing} unchanged legacy artifacts remain outside the scoped repair. Intentional fenced/inline code examples are excluded.`);
+// Mixed intake remains unverified overall even after a bounded core review.
+const core = JSON.parse(readFileSync('data/editorial-core-claims.json', 'utf8'));
+const intake = readFileSync('docs/reports/oilrig-magic-hound-deep-research.md', 'utf8');
+if (/\[unverified source\b/.test(intake) && core.overall_evidence_level !== 'unverified') throw Error('Unresolved intake cannot be promoted to source-backed/verified overall');
+if ((intake.match(/\[unverified source\b/g) || []).length !== core.original.preserved_unverified_occurrences) throw Error('Update the explicit source-recovery record when resolving intake occurrences');
+console.log('Mixed-intake evidence boundary agrees with the scoped source-review record; this check does not perform semantic review.');

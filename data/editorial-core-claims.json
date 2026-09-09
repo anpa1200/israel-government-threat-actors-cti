@@ -1,0 +1,110 @@
+{
+  "overall_evidence_level": "unverified",
+  "overall_status": "experimental",
+  "currentness": "unknown",
+  "core_review_date": "2026-09-09",
+  "review_kind": "scoped source and procedure review; not complete intake review",
+  "original": {
+    "filename": "deep-research-report (1).md",
+    "sha256": "ff65215d75940017e7dec99a216aa735b8387cfcc390298e04051795ad901d9e",
+    "source_urls": 0,
+    "preserved_unverified_occurrences": 171,
+    "number_mapping": "not recovered; no number assigned to a plausible URL"
+  },
+  "sources": [
+    {
+      "id": "U42",
+      "url": "https://unit42.paloaltonetworks.com/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/",
+      "title": "OilRig uses RGDoor IIS Backdoor on Targets in the Middle East",
+      "publisher": "Palo Alto Networks Unit 42",
+      "author": "Robert Falcone",
+      "published": "2018-01-25",
+      "accessed": "2026-09-09"
+    },
+    {
+      "id": "PP",
+      "url": "https://www.proofpoint.com/uk/blog/threat-insight/best-laid-plans-ta453-targets-religious-figure-fake-podcast-invite-delivering",
+      "publisher": "Proofpoint",
+      "published": "2024-08-20",
+      "accessed": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "kind": "framework identity context",
+      "sources": [
+        "https://attack.mitre.org/groups/G0049/",
+        "https://attack.mitre.org/groups/G0059/"
+      ],
+      "boundary": "No universal vendor alias equivalence inferred."
+    },
+    {
+      "id": "C02",
+      "kind": "source-reported attribution assessment",
+      "sources": [
+        "https://www.proofpoint.com/uk/blog/threat-insight/best-laid-plans-ta453-targets-religious-figure-fake-podcast-invite-delivering"
+      ],
+      "boundary": "TA453 and Proofpoint assessment retained; no individual attribution."
+    },
+    {
+      "id": "C03",
+      "kind": "source-reported technical analysis",
+      "sources": [
+        "https://unit42.paloaltonetworks.com/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/"
+      ],
+      "boundary": "Tested module behavior separated from unavailable actor HTTP logs.",
+      "mapping": {
+        "id": "T1505.004",
+        "name": "IIS Components",
+        "release": "19.1",
+        "rationale": "Native HTTP module loaded into IIS, not merely a generic webshell."
+      }
+    },
+    {
+      "id": "C04",
+      "kind": "source-reported delivery attempt and payload analysis",
+      "sources": [
+        "https://www.proofpoint.com/uk/blog/threat-insight/best-laid-plans-ta453-targets-religious-figure-fake-podcast-invite-delivering"
+      ],
+      "boundary": "Does not prove recipient execution.",
+      "mappings": [
+        {
+          "id": "T1566.002",
+          "name": "Spearphishing Link",
+          "release": "19.1",
+          "rationale": "Targeted phishing links in the reported delivery chain."
+        },
+        {
+          "id": "T1059.001",
+          "name": "PowerShell",
+          "release": "19.1",
+          "rationale": "AnvilEcho analyzed as a PowerShell backdoor; no cmd.exe inference."
+        }
+      ]
+    },
+    {
+      "id": "I01",
+      "kind": "analytical inference",
+      "sources": [
+        "https://unit42.paloaltonetworks.com/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/"
+      ],
+      "boundary": "Proposed module-change/logging review; not a validated detection."
+    },
+    {
+      "id": "I02",
+      "kind": "analytical inference",
+      "sources": [
+        "https://www.proofpoint.com/uk/blog/threat-insight/best-laid-plans-ta453-targets-religious-figure-fake-podcast-invite-delivering"
+      ],
+      "boundary": "Proposed telemetry joining check; not measured coverage or actor attribution."
+    }
+  ],
+  "unresolved_categories": [
+    "original numbered source-to-document mapping",
+    "original alias and sponsor assertions",
+    "historical campaign and targeting details",
+    "IOC values",
+    "unreviewed procedure mappings and detection hypotheses"
+  ]
+}

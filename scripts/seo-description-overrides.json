@@ -58,7 +58,7 @@
   "@site/docs/reports/ci-validation-evidence.md": "Record public workflow evidence for data generation, schema checks, links, rules, and site builds without treating configured jobs as proof of a passing run.",
   "@site/docs/reports/defensive-cti-threats-to-israeli-public-sector.md": "Review public-source research on threats to Israeli government environments, with actor context, defensive priorities, source caveats, and validation needs.",
   "@site/docs/reports/muddywater-deep-research.md": "Review imported evidence on a MOIS-linked intrusion cluster, then validate aliases, targeting, access methods, tooling, indicators, techniques, and detections.",
-  "@site/docs/reports/oilrig-magic-hound-deep-research.md": "Review imported evidence on two Iranian espionage clusters, then verify sponsor, targeting, tool, IOC, ATT&CK, hunt, and detection claims at source.",
+  "@site/docs/reports/oilrig-magic-hound-deep-research.md": "Read two sourced campaign examples and reviewed procedure mappings alongside the preserved unresolved intake, with explicit evidence limits and review scope.",
   "@site/docs/reports/pioneer-kitten-deep-research.md": "Review imported evidence on an Iranian edge-access cluster, then validate aliases, exploited appliances, targeting, handoffs, indicators, and hunt ideas.",
   "@site/docs/reports/release-notes.md": "Track repository maturity changes, new data and navigation layers, validation improvements, known gaps, and the explicit boundary around production use.",
   "@site/docs/reports/research-intake-upgrade-summary.md": "See how imported research was routed into review queues and candidate upgrades without silently promoting unverified LLM claims into authoritative CTI.",
