@@ -1,5 +1,14 @@
 # Israel Government Threat Actors CTI
 
+## Reviewer starting point
+
+**Public-source CTI and detection evidence.** Andrey Pautov organizes public-source actor/tool research into source registers, confidence notes, ATT&CK mappings, worked cases and defensive detection examples. Attribution claims originate in cited reporting and require source review; they are not independent proof of state sponsorship.
+
+**Role relevance:** CTI research, source evaluation, hypothesis design, detection evidence and stakeholder delivery.
+
+[Run the safe local demo and review validation scope](PORTFOLIO.md) · [Recorded local validation](validation.md)
+
+
 [![Validate CTI Repository](https://github.com/anpa1200/israel-government-threat-actors-cti/actions/workflows/validate.yml/badge.svg)](https://github.com/anpa1200/israel-government-threat-actors-cti/actions/workflows/validate.yml)
 
 Defensive cyber threat intelligence repository focused on public-source reporting about threat actors, personas, malware families, TTPs, and detection opportunities relevant to Israeli government, public-sector, municipal, critical infrastructure, and adjacent suppliers.
