@@ -24,7 +24,7 @@ sidebar_label: Lyceum
 
 <!-- ACTOR-NAVIGATION:END -->
 
-# Lyceum
+## Lyceum
 
 ## Background
 

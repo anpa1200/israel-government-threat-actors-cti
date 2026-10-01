@@ -24,7 +24,7 @@ sidebar_label: APT39
 
 <!-- ACTOR-NAVIGATION:END -->
 
-# APT39
+## APT39
 
 ## Background
 

@@ -6,9 +6,9 @@ sidebar_label: Overview
 sidebar_position: 1
 ---
 
-# Israel Government Threat Actors CTI
+# Threat actor research for Israeli public-sector defense {#israel-government-threat-actors-cti}
 
-This documentation organizes [public-source threat intelligence](https://1200km.com/cti-analyst-field-manual/docs/cti-foundations/what-is-cti/) for defensive use by Israeli government and public-sector defenders.
+Use this threat actor research to examine [public-source intelligence](https://1200km.com/cti-analyst-field-manual/docs/cti-foundations/what-is-cti/) relevant to Israeli government and public-sector defense. Follow actor profiles, tools, evidence, TTPs, and detection context while preserving source and confidence boundaries.
 
 ## CTI Ecosystem
 

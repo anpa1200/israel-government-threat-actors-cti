@@ -1,6 +1,8 @@
+const applyTechnicalSitemap = require('./technical-seo-sitemap.cjs');
 // @ts-check
 
 const config = {
+  plugins: ['./technical-seo-plugin.cjs'],
   title: '1200km',
   tagline: 'Defensive CTI for Israeli government and public-sector exposure',
   favicon: 'img/logo.png',
@@ -171,4 +173,5 @@ const config = {
     }),
 };
 
+applyTechnicalSitemap(config);
 module.exports = config;

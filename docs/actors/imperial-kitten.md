@@ -24,7 +24,7 @@ sidebar_label: Imperial Kitten
 
 <!-- ACTOR-NAVIGATION:END -->
 
-# Imperial Kitten
+## Imperial Kitten
 
 ## Background
 

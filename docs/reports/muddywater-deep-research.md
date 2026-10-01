@@ -7,17 +7,17 @@ sidebar_label: MuddyWater Deep Research
 This page is an imported deep-research artifact. Treat it as lead-generation material until claims, citations, URLs, hashes, and detection logic are validated against primary public sources and repository evidence standards.
 :::
 
-# 1. Executive Summary  
+## 1. Executive Summary
 MuddyWater (aka Mango Sandstorm/Seedworm/TA450, etc.) remains an **Iranian state–aligned cyberespionage group**, widely assessed to operate under Iran’s Ministry of Intelligence (MOIS)【5†L231-L237】【13†L52-L54】.  In late 2024 and early 2025 it conducted **spearphishing campaigns** against Israel and neighboring countries using RMM tools, custom loaders/backdoors, and credential stealers. Recent campaigns (Sep 2024–Mar 2025) targeted Israeli critical infrastructure (technology, engineering, manufacturing, local government, education, utilities) and at least one Egyptian organization【15†L106-L114】【46†L181-L189】.  Attackers used PDF lures linking to free file–sharing URLs (OneHub, Mega, etc.) to drop remote-management software (Atera, Level, PDQ, SimpleHelp) and then deploy custom backdoors. New tools “Fooder” (a Snake‐game–masquerading loader) and its payload “MuddyViper” have been documented【21†L79-L88】【25†L257-L264】, as well as browser–stealer CE‑Notes, credential stealer LP‑Notes, and go‑socks5 reverse‐tunnels【21†L91-L93】【25†L278-L284】.  Other custom implants identified include *BugSleep* and *Blackout* backdoors, *AnchorRat/CannonRat* RATs, and components of the Sad C2 framework (BlackPearl/Phenix/C&C)【28†L572-L580】【35†L1265-L1274】.  Notably, MuddyWater has begun using **novel C2 channels**: in late 2025–early 2026 it leveraged Starlink satellite internet for C2【13†L59-L63】, and Israeli analysis found use of Iran–developed Sad C2 and the public Havoc C2 frameworks【26†L7-L10】【33†L1392-L1399】. 
 
 For Israeli defenders, MuddyWater represents a mature MOIS‐aligned APT with a stable “playbook” but advancing toolset【21†L79-L88】【46†L174-L182】. Recent campaigns were more targeted and stealthy (avoiding interactive sessions【21†L98-L102】【46†L174-L182】) than earlier noisy phishing waves.  Detection strategies should focus on its **spearphishing entry (PDF→RMM)**, its characteristic tool execution (PowerShell, new backdoors, CNG-based crypto), and its persistence patterns (scheduled tasks, registry/CAC hijack). Key observables include the specific RMM executables, the “Fooder” loader behavior, and known IoCs from recent publications【38†L152-L160】【39†L38-L42】. Several hunting hypotheses (listed below) and mapped ATT&CK techniques can guide telemetry monitoring. 
 
-# 2. Actor Identity  
+## 2. Actor Identity
 **Name/Aliases:** MuddyWater (primary) is strongly linked to Iran, with numerous tracked aliases.  Public synonyms include *Mango Sandstorm*, *Seedworm*, *Static Kitten*, *Boggy Serpens*, *COBALT ULSTER*, *Earth Vetala*, *ATK51*, *TA450*, *MuddyKrill*, *TEMP.Zagros*, *Mercury* (retired Microsoft name), *G0069*, *TEMP.Zagros*, etc【11†L17-L21】【13†L72-L75】.  ESET and others note “MuddyWater (also Mango Sandstorm or TA450)”【21†L79-L83】.  Malware wikis list the alias MERCURY (now retired by MS), Static Kitten, etc.  **Vendor taxonomy:** FireEye/Recorded Future call it TA450; Microsoft’s old designation was MERCURY; Palo Alto/Unit42 refer to it as Seedworm or Boggy Serpens; CrowdStrike simply “MuddyWater”.  No major conflicts: MITRE ATT&CK uses “MuddyWater (G0069)” for all these names【13†L50-L58】. 
 
 **Characteristics:** The group has evolved from basic PowerShell backdoors to custom native code tools. Attacks are characterized by script‐based tooling (PowerShell, Go) with custom loaders and backdoors【25†L253-L260】. Early public reports date it to ~2017 (Unit42 2017), continuing through 2025【5†L231-L237】【21†L121-L129】.  MITRE describes it as “cyber espionage, subordinate element of MOIS”【13†L52-L54】.  It prefers Middle Eastern victims but has struck in Europe/NA occasionally【13†L55-L63】【17†L34-L40】.  
 
-# 3. Sponsor and Command Structure  
+## 3. Sponsor and Command Structure
 All authoritative sources assess MuddyWater as **Iran–aligned**.  MITRE states it is “assessed to be a subordinate element within Iran’s Ministry of Intelligence and Security (MOIS)”【13†L52-L54】 (supporting “state-sponsored” label).  ESET’s profile likewise notes links to Iran’s intelligence ministry【21†L123-L131】 (“Ministry of Intelligence and National Security of Iran”).  Trellix calls it “believed to be affiliated with the Iranian MOIS”【9†L392-L396】.  Israeli NCD reports explicitly say “operating under MOIS since 2017”【5†L231-L237】. We found no credible indications of affiliation to IRGC or other branches – all point to Iran’s civilian intelligence (MOIS).  No public evidence of non-state mercenary or criminal status; it is treated as a state threat actor.  The group appears centralized (no known proxy identity or contractor owner).  There is some indication it may share access with or hand off to fellow Iran-linked APTs (e.g. overlap with Lyceum/OilRig in 2025【15†L168-L174】【46†L181-L189】), but this is cooperation among Iran-aligned groups, not evidence of a separate sponsor. 
 
 *Source quotes:*  
@@ -25,7 +25,7 @@ All authoritative sources assess MuddyWater as **Iran–aligned**.  MITRE states
 - “MuddyWater, also known as Seedworm/Mango Sandstorm, is a threat actor believed to be affiliated with the Iranian MOIS”【9†L392-L396】 (Trellix).  
 - “MuddyWater is assessed to be a subordinate element within Iran’s Ministry of Intelligence and Security”【13†L52-L54】 (MITRE).
 
-# 4. Israel/Region Relevance  
+## 4. Israel/Region Relevance
 **Known Israeli/adjacent victims (2023–2026):** We identified *multiple primary reports* of MuddyWater activity affecting Israel or neighbors since 2023. Israeli sources and CTI note sustained targeting of Israeli gov’t and critical infrastructure. An official Israeli report (NCD) observed that after Israel’s “Iron Swords” war in late 2023, MuddyWater **increased operations in Israel**【5†L249-L257】. ESET/WeLiveSecurity documented a **new campaign targeting Israel and Egypt** in late 2024–early 2025: “primarily targeting organizations in Israel, with one confirmed target in Egypt”, in sectors including *technology, engineering, manufacturing, local government, education, transportation, utilities, and universities*【15†L106-L114】【46†L181-L189】.  
 - **Israel:** Victims span public-sector and industrial sectors. ESET found Israeli targets in local government, education, manufacturing, tech and a utilities firm【15†L106-L114】【46†L181-L189】. SecurityAffairs confirms Israel organizations (Sep 2024–Mar 2025) plus one in Egypt【46†L181-L189】. Earlier, “Operation Quicksand” (2020) was also Israel-focused【21†L135-L142】. The group has repeatedly targeted Israel according to both vendors and Israeli cyber authorities【5†L249-L257】【21†L135-L142】. Confidence in Israel victimology is high.  
 - **Egypt:** The 2025 ESET/SecurityAffairs campaign included “one confirmed target in Egypt”【15†L106-L114】【46†L181-L189】 (likely telecom or CNI, but not fully detailed). This is source-reported by ESET. No other specific Egyptian victims are confirmed, but at least one is.  
@@ -33,7 +33,7 @@ All authoritative sources assess MuddyWater as **Iran–aligned**.  MITRE states
 - **Incident dates:** Key confirmed Israel-targeting phases: *Oct 2023 onward* (post-war); *Sep 2024–Mar 2025* (ESET campaign); also past campaigns (Quicksand 2020). Other sources suggest ongoing phishing waves, but confirmed major campaigns are these.  All Israeli victim reports are from **publicly cited vendor/official sources** (ESET, Israeli NCD) – we found no unverified media claims with no source.  
 - **Confidence:** High that MuddyWater is active against Israeli targets (multiple independent vendor and government reports). The one Egypt case is confirmed by ESET. There is no public confirmation of Iranian domestic or IRGC-connected victims. 
 
-# 5. Targeting & Intrusion Lifecycle  
+## 5. Targeting & Intrusion Lifecycle
 
 - **Initial Access:**  MuddyWater’s typical entry vector is *spear-phishing*.  Recent campaigns used emails with malicious PDF attachments that contained links to free file-sharing sites. These links downloaded legitimate remote-management tools (Atera, Level, PDQ, SimpleHelp) which the attackers then controlled as initial access【25†L257-L264】【39†L26-L34】. For example, ESET reports PDFs linking to installers on OneHub/Mega that dropped RMM executables【25†L257-L264】. Other campaigns have used SMTP spearphish or watering-hole docs (Operation Quicksand 2020).  In Android space, Lookout found distribution of a VPN/Spyware app (DCHSpy) via Telegram, leveraging political lures around Starlink【17†L25-L33】, indicating social-engineering via messaging as another access path.  
 - **Execution:**  After initial payloads install (often RMM), MuddyWater runs custom backdoors. These often include **PowerShell** and **compiled executables**. New payloads (MuddyViper backdoor) are reflectively loaded via the Fooder loader【25†L311-L319】. The group frequently uses Windows command-line and PowerShell: e.g. MuddyViper can launch PowerShell scripts and provide a reverse shell【32†L984-L992】. Execution also involves standard installers (the RMM tools run as services).  
@@ -46,7 +46,7 @@ All authoritative sources assess MuddyWater as **Iran–aligned**.  MITRE states
 - **Exfiltration:**  Data is exfiltrated via the C2 channels (HTTP, DNS, or tunnels). MuddyViper compresses stolen browser data using PowerShell’s Compress-Archive【32†L1062-L1071】. Many custom tools have file-upload commands (e.g. Blackout’s /awards/, BlackPearl’s HTTP/DNS)【28†L648-L659】【35†L1289-L1296】. Data staging on disk is done by stealers (CE-Notes/Blub/LP-Notes drop creds and browser data)【32†L1061-L1070】.  
 - **Impact:** Public sources focus on espionage (credential theft, data collection) and initial access facilitation. No known destructive “wiper” activity has been confirmed for MuddyWater. The primary impact is credential and data theft. One ESET analysis suggests MuddyWater may have been acting as an **initial-access broker** for Lyceum/OilRig attacks【15†L168-L174】, implying broader impact beyond immediate theft.  
 
-# 6. MITRE ATT&CK Mapping  
+## 6. MITRE ATT&CK Mapping
 
 | Technique ID | Technique Name                      | Tactic              | Evidence (Source)                            | Evid. Label | Quality |
 |-------------|--------------------------------------|---------------------|----------------------------------------------|-------------|---------|
@@ -66,7 +66,7 @@ All authoritative sources assess MuddyWater as **Iran–aligned**.  MITRE states
 
 *Quality M1:* Technique directly confirmed by source (e.g. ESET blog). *M2:* Analyst assessment (MITRE’s entry). *M3:* Logical inference from vendor data. All above are either **source-reported** or **assessed-by-source**; none are unsupported speculation.
 
-# 7. Associated Families and Tools  
+## 7. Associated Families and Tools
 
 - **Fooder (loader)** – *Custom loader (C/C++)*. Used to reflectively load the MuddyViper backdoor in memory. Several variants masquerade as the classic Snake game to evade detection【25†L294-L301】【25†L307-L315】. Example: “OsUpdater.exe” is a known Fooder sample (SHA1 in ESET report)【39†L38-L42】. *Confidence:* Confirmed (ESET). *Detection:* Look for “Snake” game executables, unusual loader behavior (high sleep loops), or the specific AES decryption key pattern noted in ESET【25†L343-L350】. *Handling:* Collect and analyze via memory for reflective load.  
 - **MuddyViper (backdoor)** – *C/C++ backdoor*. Loaded by Fooder, performs system info theft, remote command execution, file upload/download, Windows credential capture. Uses CNG crypto and frequent sleep calls【21†L79-L88】【25†L302-L310】. *Confidence:* Confirmed (ESET). *Detection:* Monitor creation of scheduled task “ManageOnDriveUpdater” or unexpected child PowerShell/CMD processes. Check for processes with high AES/CNG usage (unique for this group)【15†L139-L147】. *Handling:* Hash ESET-provided MuddyViper samples; network anomalies on its C2 traffic.  
@@ -88,7 +88,7 @@ All authoritative sources assess MuddyWater as **Iran–aligned**.  MITRE states
 
 Each of the above tools is documented in public CTI (citations given). Hashes/IOCs are published in source appendices (see Sec.8). Handling involves collecting samples (many in cited blogs) and deploying detections for known artifacts or behavior (e.g. filepaths, mutexes, encryption keys【25†L343-L350】).
 
-# 8. Public IOCs  
+## 8. Public IOCs
 From published reports, notable IOCs include:  
 
 - **MuddyViper/Fooder:** SHA1 *76632910CF67697BF5D7285FAE38BFCF438EC082* (OsUpdater.exe, MuddyWater “Fooder” loader)【39†L38-L42】.  
@@ -101,7 +101,7 @@ From published reports, notable IOCs include:
 
 All above are source-published IOCs. For defense, ingest hashes into AV/EDR, block listed domains, and alert on relevant network connections.
 
-# 9. Detection & Hunting Hypotheses  
+## 9. Detection & Hunting Hypotheses
 Defenders should pursue layered detection: email/URL filtering, endpoint/EDR monitoring, and network telemetry. Key hunts include: 
 
 1. **Phishing‐RMM Campaigns (T1566.002):** Look for *spearphishing emails with PDF attachments linking to free file shares*.  Data needed: email gateway logs, web proxy logs. Fields: sender, subject, URL. Lookback: 60–90 days. Observable: Emails containing PDF→OneHub/Mega/Egnyte URLs. Correlate with endpoint logs showing exe downloads (Atera/Level/PDQ/SimpleHelp). False positives: Legitimate file-share usage; but focus on combos (e.g. a PDF linking to an RMM EXE). Escalate if email recipients match known sectors or if RMM executables are downloaded. *ATT&CK:* T1566.002, T1204.002.  
@@ -115,7 +115,7 @@ Defenders should pursue layered detection: email/URL filtering, endpoint/EDR mon
 
 Each hunt should be tuned to reduce false positives (e.g., correlating with known admins). Escalation criteria include confirmed phishing payload execution, credential disclosure, or lateral spread. Most hunts leverage endpoint logs and network telemetry. 
 
-# 10. Source Register Updates  
+## 10. Source Register Updates
 
 | ID | Publisher / Source           | Title (or Site)                                    | Date       | Accessed  | URL                                              | Superseded? | Reliability |
 |----|------------------------------|----------------------------------------------------|------------|-----------|--------------------------------------------------|-------------|-------------|
@@ -139,7 +139,7 @@ Each hunt should be tuned to reduce false positives (e.g., correlating with know
 
 (Note: S10–S13 are example CTI sources mentioned via references in MITRE. They are not directly cited above, but reflect “vendor naming caveats.”  We include them as context but mark as well-known from MITRE link.)  
 
-# 11. Evidence Register Updates  
+## 11. Evidence Register Updates
 
 | Claim ID | Actor       | Source(s)      | Quote / Paraphrase                                            | Label         | Reliability | Credibility | Confidence | Comments / Gaps                  |
 |----------|-------------|----------------|---------------------------------------------------------------|---------------|-------------|-------------|------------|---------------------------------|
@@ -159,7 +159,7 @@ Each hunt should be tuned to reduce false positives (e.g., correlating with know
 
 *(Evidence labels: Source-reported means explicitly stated; Assessed-by-source means the source analytically concluded it; Inferred means our combination/logic.)*  
 
-# 12. Tool-Intelligence Updates  
+## 12. Tool-Intelligence Updates
 
 The following tools (novel to MuddyWater since 2023) should be added or expanded in the tool database with these attributes:
 
@@ -186,7 +186,7 @@ The following tools (novel to MuddyWater since 2023) should be added or expanded
 
 Each row can feed into *tool-intel.csv* with fields (name,type,actor_confidence,...).  Detection notes highlight distinguishing behaviors or IoCs. 
 
-# 13. Navigation / Crosslink Recommendations  
+## 13. Navigation / Crosslink Recommendations
 
 - **Actor Page:** Update MuddyWater profile page with new aliases (Earth Vetala, BlackPearl family, DCHSpy link) and MOIS sponsor. Link to current report.  
 - **Tool Pages:** Create/expand pages for new tools: *MuddyViper, Fooder, VAX‑One, CE‑Notes/LP‑Notes, DCHSpy, BugSleep, Blackout, AnchorRat, CannonRat, BlackPearl, TreasureBox, Phoenix, CC_HTTP_NA*. Each should note MuddyWater connection and cite ESET/NCD.  
@@ -199,7 +199,7 @@ Each row can feed into *tool-intel.csv* with fields (name,type,actor_confidence,
 - **Tools Matrix:** Connect each new tool to its Tool page.  
 - **Persona Overlap:** Note that public synthesis often confuses MuddyWater with OilRig or Fox Kitten – clarify distinctions.  
 
-# 14. Gaps & Follow-up Plan  
+## 14. Gaps & Follow-up Plan
 
 - **Gaps:** No public disclosures conclusively explain *why* MuddyWater activity jumped post-Oct 2023, beyond general “conflict reaction.” The **“Iron Swords”** reference suggests geo-politics but needs corroboration. Official naming of MOIS (vs. Iranian Intelligence Ministry) differs in sources – verifying exact government chain (FOA vs. Fars Intelligence, etc.) would require either internal logs or confirmation from MI/foreign intel. The contractor/proxy question (internal MOIS cyber unit vs. outsourced group) remains unaddressed. We lack open-source proof of influence by IRGC. Also, while many new custom tools are documented, some (e.g. VAX-One, DCHSpy variants) are not fully reverse-engineered publicly. We have only started collecting IOCs from Israeli report – some tools (e.g. Anchorrat/CannonRat) were summarized but not fully catalogued, so IOC coverage is incomplete.  
 - **Follow-up:** Collect technical reports or telemetry from Israeli CERT/NCSC for 2024–26 incidents (the gov.il report likely has appendices). Seek samples via sandbox (for Fooder/MuddyViper/other). Share IOC hashes from NCD’s full report (if accessible) into detection tools. Liaise with mobile threat intel teams for MuddyWater’s Android campaigns (possibly expand hunting to Iranian networks). Search vendor blogs (ESET, CrowdStrike, etc.) for any 2026 updates beyond May to catch late-breaking tools (e.g. any STARLINK-specific C2 developments). Engage with regional CERTs (IL-ISA, SA-NSA) for anonymized attack logs.

@@ -1,0 +1,1492 @@
+{
+  "prefix": "/israel-government-threat-actors-cti/",
+  "pages": {
+    "/israel-government-threat-actors-cti/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 192,
+      "title": "Threat Actor Research — Israel-Focused CTI | 1200km",
+      "description": "Review public-source actor intelligence for Israeli public-sector defense, including tools, evidence, TTPs, hunting context, and detection readiness.",
+      "h1": "Threat actor research for Israeli public-sector defense",
+      "intro": "Use this threat actor research to examine public-source intelligence relevant to Israeli government and public-sector defense. Follow actor profiles, tools, evidence, TTPs, and detection context while preserving source and confidence boundaries."
+    },
+    "/israel-government-threat-actors-cti/actors/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 349,
+      "title": "Actor Index — Threat Actor Evidence | 1200km",
+      "description": "Browse actor profiles joined to TTPs, IOC references, malware, tools, hunts, detections, exposed surfaces, evidence records, and source-review status."
+    },
+    "/israel-government-threat-actors-cti/actors/agrius/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 674,
+      "title": "Agrius — Threat Actor Evidence | 1200km",
+      "description": "Review an Iran-aligned destructive cluster targeting Israeli organizations with wipers disguised as ransomware and BlackShadow or Moneybird personas."
+    },
+    "/israel-government-threat-actors-cti/actors/apt35/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 754,
+      "title": "Magic Hound / APT35 — Threat Actor Evidence | 1200km",
+      "description": "Review Magic Hound as an IRGC-IO-attributed espionage group using persona-led spearphishing and credential theft against government and civil targets."
+    },
+    "/israel-government-threat-actors-cti/actors/apt39/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 722,
+      "title": "APT39 — Threat Actor Evidence | 1200km",
+      "description": "Assess a MOIS-linked espionage cluster focused on long-dwell access and bulk collection from telecom, travel, government, and identity-rich systems."
+    },
+    "/israel-government-threat-actors-cti/actors/apt42/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 751,
+      "title": "APT42 — Threat Actor Evidence | 1200km",
+      "description": "Assess an IRGC-IO-attributed surveillance cluster using persona-based deception and credential theft against officials, journalists and researchers."
+    },
+    "/israel-government-threat-actors-cti/actors/arid-viper/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 733,
+      "title": "APT-C-23 / Arid Viper | 1200km",
+      "description": "Review Arid Viper as a Hamas-affiliated mobile threat actor using Android spyware against Israeli military, civil-society, and regional political targets."
+    },
+    "/israel-government-threat-actors-cti/actors/cotton-sandstorm/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 652,
+      "title": "Cotton Sandstorm — Threat Actor Evidence | 1200km",
+      "description": "Assess an IRGC-affiliated influence actor combining intrusion, data theft, account creation, phishing, and messaging against Israeli and Western audiences."
+    },
+    "/israel-government-threat-actors-cti/actors/cyber-toufan/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 624,
+      "title": "Cyber Toufan — Threat Actor Evidence | 1200km",
+      "description": "Review an October 2023 persona associated with data theft, wiper operations, supplier access, public leak claims, and targeting of Israeli organizations."
+    },
+    "/israel-government-threat-actors-cti/actors/cyberav3ngers/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 784,
+      "title": "CyberAv3ngers — Threat Actor Evidence | 1200km",
+      "description": "Assess the IRGC-linked persona targeting exposed ICS, SCADA, water-treatment, PLC, and HMI systems through device access and parameter manipulation."
+    },
+    "/israel-government-threat-actors-cti/actors/darkbit/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 754,
+      "title": "DarkBit — Threat Actor Evidence | 1200km",
+      "description": "Review the single-campaign pseudo-ransomware persona used in the 2023 Technion incident and its reported MuddyWater access-to-impact handoff model."
+    },
+    "/israel-government-threat-actors-cti/actors/handala/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 1049,
+      "title": "Void Manticore / Handala | 1200km",
+      "description": "Review Void Manticore as a MOIS-linked destructive cluster combining data theft, wipers, cloud-account abuse, and public influence claims against Israel."
+    },
+    "/israel-government-threat-actors-cti/actors/imperial-kitten/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 870,
+      "title": "Imperial Kitten — Threat Actor Evidence | 1200km",
+      "description": "Assess an IRGC-aligned cluster using strategic web compromise, IMAP-based command and control and managed-code injection against Israeli logistics targets."
+    },
+    "/israel-government-threat-actors-cti/actors/lebanese-cedar/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 661,
+      "title": "Lebanese Cedar — Threat Actor Evidence | 1200km",
+      "description": "Review a Hezbollah-affiliated espionage group using public-server compromise, web shells and persistence against telecom and government suppliers."
+    },
+    "/israel-government-threat-actors-cti/actors/lyceum/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 785,
+      "title": "Lyceum — Threat Actor Evidence | 1200km",
+      "description": "Assess an Iranian espionage cluster targeting telecom, energy, and IT providers through recruiting lures, DNS-based C2, backdoors, and credential access."
+    },
+    "/israel-government-threat-actors-cti/actors/muddywater/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 886,
+      "title": "MuddyWater — Threat Actor Evidence | 1200km",
+      "description": "Review a MOIS-attributed espionage group targeting Israeli government and critical infrastructure through phishing, scripting, RMM abuse and malware."
+    },
+    "/israel-government-threat-actors-cti/actors/oilrig/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 725,
+      "title": "OilRig — Threat Actor Evidence | 1200km",
+      "description": "Assess a prolific Iranian espionage cluster using phishing, PowerShell, DNS tunneling, cloud-service C2 and custom backdoors across Middle Eastern sectors."
+    },
+    "/israel-government-threat-actors-cti/actors/pioneer-kitten/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 893,
+      "title": "Pioneer Kitten — Threat Actor Evidence | 1200km",
+      "description": "Review an Iranian edge-exploitation specialist that gains appliance access for espionage or handoff to ransomware affiliates, including Israeli targets."
+    },
+    "/israel-government-threat-actors-cti/actors/scarred-manticore/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 1060,
+      "title": "Scarred Manticore — Threat Actor Evidence | 1200km",
+      "description": "Assess a MOIS-linked access cluster using passive IIS backdoors against government and telecom networks, with reported handoff to destructive operators."
+    },
+    "/israel-government-threat-actors-cti/actors/ta402/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 608,
+      "title": "TA402 — Threat Actor Evidence | 1200km",
+      "description": "Review a Palestinian-aligned espionage group using political lures, staged downloaders, geofencing and custom implants against regional government targets."
+    },
+    "/israel-government-threat-actors-cti/actors/unc1860/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 862,
+      "title": "UNC1860 — Threat Actor Evidence | 1200km",
+      "description": "Assess a likely MOIS-affiliated access-enablement cluster using passive web-server backdoors and custom tools for persistent footholds and actor handoffs."
+    },
+    "/israel-government-threat-actors-cti/actors/unc3890/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 526,
+      "title": "UNC3890 — Threat Actor Evidence | 1200km",
+      "description": "Review an Iran-linked cluster targeting Israeli shipping, aviation, healthcare, and government organizations through watering holes and credential theft."
+    },
+    "/israel-government-threat-actors-cti/actors/wirte/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 705,
+      "title": "WIRTE — Threat Actor Evidence | 1200km",
+      "description": "Assess a Hamas-affiliated cluster that evolved from espionage to disruptive activity, including a multi-platform wiper used against Israeli organizations."
+    },
+    "/israel-government-threat-actors-cti/connected-tips/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 512,
+      "title": "Connected TIPs And CTI Feeds | 1200km",
+      "description": "Use free public CTI connectors to create review candidates, then validate provenance, relevance, freshness, and evidence before promoting any feed item."
+    },
+    "/israel-government-threat-actors-cti/customer-environment-use/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 339,
+      "title": "Customer Environment Use | 1200km",
+      "description": "Adapt public CTI and hunt starters to a real environment by collecting asset, identity, telemetry, platform, ownership, and false-positive context first."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/backend-conversion-results/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 152,
+      "title": "Backend Conversion Results | 1200km",
+      "description": "Review local Sigma conversion evidence for Splunk and Elasticsearch backends, including commands, per-rule outcomes, limitations, and validation scope."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/detection-lifecycle/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 309,
+      "title": "Detection Lifecycle — CTI Research | 1200km",
+      "description": "Move CTI-derived logic from requirement and evidence through telemetry mapping, testing, pilot review, production approval, monitoring, and retirement."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/detection-status-dashboard/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 518,
+      "title": "Detection Status Dashboard | 1200km",
+      "description": "Inspect repository detections by release status, readiness level, platform, owner, validation evidence, known blockers and production-coverage boundary.",
+      "links": [
+        {
+          "href": "/threat-matrix/techniques/T1562.007/",
+          "label": "Disable or Modify Cloud Firewall (T1562.007)"
+        },
+        {
+          "href": "/threat-matrix/techniques/T1562.009/",
+          "label": "Safe Mode Boot (T1562.009)"
+        },
+        {
+          "href": "/threat-matrix/techniques/T1562.010/",
+          "label": "Downgrade Attack (T1562.010)"
+        },
+        {
+          "href": "/threat-matrix/techniques/T1562.011/",
+          "label": "Spoof Security Alerting (T1562.011)"
+        },
+        {
+          "href": "/threat-matrix/techniques/T1562.012/",
+          "label": "Disable or Modify Linux Audit System (T1562.012)"
+        }
+      ]
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/drl-evidence-packs/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 280,
+      "title": "DRL Evidence Packs — CTI Research | 1200km",
+      "description": "Review conservative readiness evidence packs that record test scope, results, untested conditions, blockers, and proof required before production claims."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/platform-field-mapping/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 322,
+      "title": "Platform Field Mapping | 1200km",
+      "description": "Map portable hunt concepts to real platform tables, indexes, fields, parsers, retention, and test evidence before calling a query deployment-ready."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/platform-query-variants/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 188,
+      "title": "Platform Query Variants | 1200km",
+      "description": "Track backend-specific query variants separately from portable logic, with field mappings, test data, expected results, owners, and validation status."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/quality-gates/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 165,
+      "title": "Quality Gates — CTI Research | 1200km",
+      "description": "Require a defensible PIR, evidence, ATT&CK precision, telemetry, false-positive analysis, testing, ownership, and approval before detection promotion."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/replay-datasets/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 126,
+      "title": "Replay Datasets — CTI Research | 1200km",
+      "description": "Use synthetic replay data to check parsers, walkthroughs, positive matches, and benign boundaries without treating lab examples as production performance."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/sigma-validation-results/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 122,
+      "title": "Sigma Validation Results | 1200km",
+      "description": "Review local sigma-cli semantic validation across repository rules, including the command, backend-independent checks, outcomes, and remaining limitations."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/soc-handoff-packet/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 335,
+      "title": "SOC Handoff Packet — CTI Research | 1200km",
+      "description": "Inspect a pilot handoff for suspicious RMM downloads, with threat context, logic, telemetry, triage, false positives, evidence and ownership."
+    },
+    "/israel-government-threat-actors-cti/detection-engineering/soc-triage-playbooks/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 419,
+      "title": "SOC Triage Playbooks — CTI Research | 1200km",
+      "description": "Use first-response playbooks for destructive activity, cloud administration abuse, RMM misuse, phishing chains and exposed OT interfaces in analyst triage."
+    },
+    "/israel-government-threat-actors-cti/detection-status-dashboard/": {
+      "classification": "Excluded",
+      "reason": "HTTP 404; URL retained, not a sitemap candidate",
+      "word_count": 34,
+      "title": "1200km — CTI Research | 1200km",
+      "description": ""
+    },
+    "/israel-government-threat-actors-cti/ecosystem/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 484,
+      "title": "Ecosystem — CTI Research | 1200km",
+      "description": "Connect the Israel-focused actor knowledge base to the field manual for CTI tradecraft and the customer project for governed delivery and acceptance gates."
+    },
+    "/israel-government-threat-actors-cti/fact-correlation/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 364,
+      "title": "Cross-Project Facts — Actor Evidence Ownership | 1200km",
+      "description": "Keep actor facts and TTP navigation aligned with the ecosystem's canonical tradecraft and delivery rules while preventing conflicting readiness claims."
+    },
+    "/israel-government-threat-actors-cti/intelligence-updates/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 792,
+      "title": "Intelligence Update Queue | 1200km",
+      "description": "Review unverified candidates from no-key public feeds, including ATT&CK and CISA KEV updates, before promoting them into sources, profiles, or detections."
+    },
+    "/israel-government-threat-actors-cti/israel-government-threat-model/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 284,
+      "title": "Threat Model — CTI Research | 1200km",
+      "description": "Model espionage, disruption, credential theft, destructive operations, and influence risks across Israeli identity, email, web, endpoint, cloud, and OT assets."
+    },
+    "/israel-government-threat-actors-cti/known-limitations/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 275,
+      "title": "Known Limitations — CTI Research | 1200km",
+      "description": "Understand gaps in public evidence, claim-level coverage, local telemetry, detection validation, IOC freshness, and external review before operational use."
+    },
+    "/israel-government-threat-actors-cti/malware-tool-intelligence/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 9466,
+      "title": "Malware And Tool Intelligence | 1200km",
+      "description": "Navigate defensive malware and tool records by actor, behavior, IOC status, source, confidence, ATT&CK mappings, hunting notes, and handling limitations."
+    },
+    "/israel-government-threat-actors-cti/methodology/artifact-contracts/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 229,
+      "title": "Artifact Contracts — CTI Research | 1200km",
+      "description": "Define mandatory fields for reusable PIR, source, evidence, actor, TTP, hunt, detection, validation, and SOC handoff artifacts across the repository."
+    },
+    "/israel-government-threat-actors-cti/methodology/operating-standard/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 510,
+      "title": "CTI-To-Detection Operating Standard | 1200km",
+      "description": "Apply evidence, source, confidence, freshness, ATT&CK, IOC, hunt, validation, and production-readiness rules across the CTI-to-detection workflow."
+    },
+    "/israel-government-threat-actors-cti/methodology/scoring-models/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 414,
+      "title": "Scoring Models — CTI Research | 1200km",
+      "description": "Keep source reliability, information credibility, analyst confidence, threat priority, and detection readiness as distinct, reviewable scoring systems."
+    },
+    "/israel-government-threat-actors-cti/methodology/source-freshness/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 213,
+      "title": "Source Freshness — CTI Research | 1200km",
+      "description": "Track publication, access, publisher-update, and repository-review dates so public reporting and indicators do not silently become stale assumptions."
+    },
+    "/israel-government-threat-actors-cti/navigation/actor-workbench/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 3167,
+      "title": "Actor Navigation Workbench | 1200km",
+      "description": "Pivot from each actor to structured TTPs, IOC sources, malware, tools, hunts, detections, surfaces, evidence records, and unresolved coverage gaps.",
+      "links": [
+        {
+          "href": "/threat-matrix/actors/G1028/",
+          "label": "APT-C-23 (G1028) — actor evidence"
+        },
+        {
+          "href": "/threat-matrix/actors/G1042/",
+          "label": "RedEcho (G1042) — actor evidence"
+        },
+        {
+          "href": "/threat-matrix/actors/G1049/",
+          "label": "AppleJeus (G1049) — actor evidence"
+        },
+        {
+          "href": "/threat-matrix/actors/G1050/",
+          "label": "Water Galura (G1050) — actor evidence"
+        }
+      ]
+    },
+    "/israel-government-threat-actors-cti/navigation/surface-capability-matrix/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 495,
+      "title": "Surface And Capability Matrix | 1200km",
+      "description": "Start with an exposed surface or defensive capability, then route to relevant actors, attack behaviors, telemetry fields, hunts, and detection candidates."
+    },
+    "/israel-government-threat-actors-cti/navigation/ttp-detection-matrix/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 1786,
+      "title": "TTP To Detection Matrix | 1200km",
+      "description": "Pivot from an ATT&CK technique to source-backed actors, mapping quality, repository hunts, detections, readiness status, and missing defensive coverage.",
+      "links": [
+        {
+          "href": "/threat-matrix/techniques/T1562.007/",
+          "label": "Disable or Modify Cloud Firewall (T1562.007)"
+        },
+        {
+          "href": "/threat-matrix/techniques/T1562.009/",
+          "label": "Safe Mode Boot (T1562.009)"
+        },
+        {
+          "href": "/threat-matrix/techniques/T1562.010/",
+          "label": "Downgrade Attack (T1562.010)"
+        },
+        {
+          "href": "/threat-matrix/techniques/T1562.011/",
+          "label": "Spoof Security Alerting (T1562.011)"
+        },
+        {
+          "href": "/threat-matrix/techniques/T1562.012/",
+          "label": "Disable or Modify Linux Audit System (T1562.012)"
+        }
+      ]
+    },
+    "/israel-government-threat-actors-cti/reports/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 332,
+      "title": "Report Index — CTI Research | 1200km",
+      "description": "Navigate scored source research, imported intake artifacts, worked cases, validation evidence, release notes, and the machine-readable source register."
+    },
+    "/israel-government-threat-actors-cti/reports/actor-deep-research-prompts/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 3662,
+      "title": "Actor Deep Research Prompts | 1200km",
+      "description": "Use constrained research prompts to refresh public actor, tool, ATT&CK, hunt, and detection records without bypassing source and evidence validation.",
+      "links": [
+        {
+          "href": "/threat-matrix/actors/G0017/",
+          "label": "DragonOK (G0017) — actor evidence"
+        },
+        {
+          "href": "/threat-matrix/actors/G0030/",
+          "label": "Lotus Blossom (G0030) — actor evidence"
+        },
+        {
+          "href": "/threat-matrix/actors/G0055/",
+          "label": "NEODYMIUM (G0055) — actor evidence"
+        },
+        {
+          "href": "/threat-matrix/actors/G0097/",
+          "label": "Bouncing Golf (G0097) — actor evidence"
+        }
+      ]
+    },
+    "/israel-government-threat-actors-cti/reports/additional-research-gemeni/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 3971,
+      "title": "Additional Gemini Research Intake | 1200km",
+      "description": "Review imported Gemini research as research leads, then verify its claims, citations, indicators, actor mappings and detection ideas independently."
+    },
+    "/israel-government-threat-actors-cti/reports/andrey-medium-articles/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 253,
+      "title": "Andrey Pautov Medium Articles | 1200km",
+      "description": "Trace relevant author articles used for CTI and methodology context while returning to their cited primary sources for attribution or operational decisions."
+    },
+    "/israel-government-threat-actors-cti/reports/apt35-oilrig-israel-deep-research/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 2824,
+      "title": "APT35 And OilRig Israel Deep Research Intake | 1200km",
+      "description": "Review imported research on Magic Hound and OilRig activity affecting Israel, then validate actor, campaign, tool, IOC, TTP and detection claims at source."
+    },
+    "/israel-government-threat-actors-cti/reports/apt39-arid-viper-unc3890-cyber-toufan-deep-research/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 6125,
+      "title": "Four Threat Clusters — CTI Research Intake | 1200km",
+      "description": "Review imported evidence on four regional clusters, then verify their aliases, targeting, tools, indicators, techniques, and defensive recommendations."
+    },
+    "/israel-government-threat-actors-cti/reports/ci-validation-evidence/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 240,
+      "title": "CI Validation Evidence | 1200km",
+      "description": "Record public workflow evidence for data generation, schema checks, links, rules, and site builds without treating configured jobs as proof of a passing run."
+    },
+    "/israel-government-threat-actors-cti/reports/defensive-cti-threats-to-israeli-public-sector/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 2100,
+      "title": "Israeli Public-Sector Threats — Defensive CTI | 1200km",
+      "description": "Review public-source research on threats to Israeli government environments, with actor context, defensive priorities, source caveats and validation needs."
+    },
+    "/israel-government-threat-actors-cti/reports/israel-critical-infrastructure-escalation/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 1794,
+      "title": "Israeli Infrastructure Threats — CTI Research | 1200km",
+      "description": "Review a defensive assessment of geopolitical escalation risks to Israeli critical infrastructure, with threat scenarios, evidence limits, and priorities."
+    },
+    "/israel-government-threat-actors-cti/reports/muddywater-deep-research/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 5871,
+      "title": "MuddyWater Deep Research Intake | 1200km",
+      "description": "Review imported evidence on a MOIS-linked intrusion cluster, validate aliases, targeting, access methods, tooling, indicators, techniques and detections."
+    },
+    "/israel-government-threat-actors-cti/reports/oilrig-magic-hound-deep-research/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 6707,
+      "title": "OilRig and Magic Hound — Evidence and Intake | 1200km",
+      "description": "Read two sourced campaign examples and reviewed procedure mappings alongside the preserved unresolved intake, with evidence limits and review scope."
+    },
+    "/israel-government-threat-actors-cti/reports/pioneer-kitten-deep-research/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 3875,
+      "title": "Pioneer Kitten Deep Research Intake | 1200km",
+      "description": "Review imported evidence on an Iranian edge-access cluster, then validate aliases, exploited appliances, targeting, handoffs, indicators, and hunt ideas."
+    },
+    "/israel-government-threat-actors-cti/reports/release-notes/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 1225,
+      "title": "Release Notes — CTI Research | 1200km",
+      "description": "Track repository maturity changes, new data and navigation layers, validation improvements, known gaps, and the explicit boundary around production use."
+    },
+    "/israel-government-threat-actors-cti/reports/research-intake-upgrade-summary/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 637,
+      "title": "Research Intake Upgrade Summary | 1200km",
+      "description": "See how imported research was routed into review queues and candidate upgrades without silently promoting unverified LLM claims into authoritative CTI."
+    },
+    "/israel-government-threat-actors-cti/reports/resourses_research/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 2243,
+      "title": "Resources Research — CTI Research | 1200km",
+      "description": "Review the supplied research collection map with its mix of primary reporting, secondary synthesis, taxonomy shortcuts, and claims requiring corroboration."
+    },
+    "/israel-government-threat-actors-cti/reports/worked-cases/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 1495,
+      "title": "Worked Cases — CTI Research | 1200km",
+      "description": "Follow public reporting through evidence review, actor context, behavior extraction, hunting hypotheses, readiness labels, and defensive handoff examples.",
+      "links": [
+        {
+          "href": "/threat-matrix/actors/G1028/",
+          "label": "APT-C-23 (G1028) — actor evidence"
+        },
+        {
+          "href": "/threat-matrix/actors/G1042/",
+          "label": "RedEcho (G1042) — actor evidence"
+        },
+        {
+          "href": "/threat-matrix/actors/G1049/",
+          "label": "AppleJeus (G1049) — actor evidence"
+        },
+        {
+          "href": "/threat-matrix/actors/G1050/",
+          "label": "Water Galura (G1050) — actor evidence"
+        }
+      ]
+    },
+    "/israel-government-threat-actors-cti/source-rating/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 294,
+      "title": "Source Rating — CTI Research | 1200km",
+      "description": "Rate source reliability separately from claim credibility using Admiralty-style scales, examples, corroboration rules, freshness, and confidence guidance."
+    },
+    "/israel-government-threat-actors-cti/threat-hunting/hunt-workflow/": {
+      "classification": "Thin",
+      "reason": "Short supporting page under 300 measured main-content words; retain content and URL",
+      "word_count": 220,
+      "title": "Threat Hunting Workflow | 1200km",
+      "description": "Run a hunt from PIR and falsifiable hypothesis through telemetry, query, expected outcomes, execution evidence, conclusion, and detection or gap handoff."
+    },
+    "/israel-government-threat-actors-cti/tools/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 3071,
+      "title": "Malicious Tools Index | 1200km",
+      "description": "Browse defensive software records linked to actors, behavior summaries, IOC status, sources, confidence, ATT&CK mappings, hunts, and handling caveats."
+    },
+    "/israel-government-threat-actors-cti/tools/antak-aspxspy/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 351,
+      "title": "ANTAK / ASPXSPY — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence web shell record for APT39 across delivery and execution behavior, persistence signals, source provenance, and hunt limits."
+    },
+    "/israel-government-threat-actors-cti/tools/apostle/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "Apostle — Tool Intelligence | 1200km",
+      "description": "MITRE ATT&CK lists the software as used by Agrius; track it as destructive or ransomware-like impact behavior (SRC-MITRE-G1030; medium confidence)."
+    },
+    "/israel-government-threat-actors-cti/tools/aridspy/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 410,
+      "title": "AridSpy — Tool Intelligence | 1200km",
+      "description": "Review high-confidence ESET reporting on multi-stage Android spyware using trojanized apps, Firebase C2, HTTPS exfiltration, sensor and data access."
+    },
+    "/israel-government-threat-actors-cti/tools/ashtag/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 462,
+      "title": "AshTag — Tool Intelligence | 1200km",
+      "description": "Assess a high-confidence WIRTE modular .NET suite using DLL side-loading, HTML payload retrieval, staging, modular collection, and Rclone exfiltration."
+    },
+    "/israel-government-threat-actors-cti/tools/aspxspy/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 383,
+      "title": "ASPXSpy — Tool Intelligence | 1200km",
+      "description": "MITRE ATT&CK lists the software as used by Agrius; track it as server-side web shell persistence, recorded at medium confidence under SRC-MITRE-G1030."
+    },
+    "/israel-government-threat-actors-cti/tools/bfg-agonizer/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 386,
+      "title": "BFG Agonizer — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence wiper record for Agrius, focusing on wiping or encryption signals, source context and response priorities under SRC-MITRE-G1030."
+    },
+    "/israel-government-threat-actors-cti/tools/bibi-bibi-wiper-lineage/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 461,
+      "title": "BiBi / BiBi Wiper lineage | 1200km",
+      "description": "Hunt extension renaming, destructive writes, VSS deletion, backup tampering, and ransom-note decoy behavior (SRC-AP-HANDALA; medium confidence)."
+    },
+    "/israel-government-threat-actors-cti/tools/bitsadmin/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 386,
+      "title": "BITSAdmin — Tool Intelligence | 1200km",
+      "description": "Review baseline exceptions, execution signals, source provenance and response guidance in medium-confidence living-off-the-land binary entry for Lyceum."
+    },
+    "/israel-government-threat-actors-cti/tools/blackbeard/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 389,
+      "title": "BlackBeard — Tool Intelligence | 1200km",
+      "description": "Backdoor named in INCD MuddyWater phishing reporting. Hunt fake-official phishing chains, unusual archives, and post-click endpoint execution."
+    },
+    "/israel-government-threat-actors-cti/tools/blackshadow/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 347,
+      "title": "BlackShadow — Tool Intelligence | 1200km",
+      "description": "Agrius-linked destructive extortion persona and malware reference depending on source context. Treat persona claims through the persona-claims register."
+    },
+    "/israel-government-threat-actors-cti/tools/bondupdater/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "BONDUPDATER — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence MITRE-listed software record for OilRig across source traceability, technique context, IOC limits, and confidence rationale."
+    },
+    "/israel-government-threat-actors-cti/tools/bugsleep/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 447,
+      "title": "BugSleep — Tool Intelligence | 1200km",
+      "description": "Review a high-confidence MuddyWater backdoor with victim fingerprinting, execution, file transfer, recurring check-ins and post-phishing C2 behavior."
+    },
+    "/israel-government-threat-actors-cti/tools/cadelspy/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 381,
+      "title": "Cadelspy — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence backdoor entry associated with APT39; review command execution, persistence paths, network activity, and source caveats."
+    },
+    "/israel-government-threat-actors-cti/tools/caterpillar-webshell/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 359,
+      "title": "Caterpillar WebShell — Tool Intelligence | 1200km",
+      "description": "Modified JSP file browser and web shell used by Lebanese Cedar for persistence on public-facing servers. Use behavior and webroot integrity monitoring."
+    },
+    "/israel-government-threat-actors-cti/tools/certutil/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 384,
+      "title": "certutil — Tool Intelligence | 1200km",
+      "description": "Trace medium-confidence living-off-the-land binary record for OilRig across user and host context, command arguments, telemetry quality and review scope."
+    },
+    "/israel-government-threat-actors-cti/tools/charmpower/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 393,
+      "title": "CharmPower — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence PowerShell backdoor record for Magic Hound across execution ancestry, recurring access, outbound traffic, and triage scope."
+    },
+    "/israel-government-threat-actors-cti/tools/chimneysweep/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 490,
+      "title": "CHIMNEYSWEEP — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence wiper entry associated with Void Manticore or Handala; review impact behavior, recovery risks, indicators, and response hunts."
+    },
+    "/israel-government-threat-actors-cti/tools/connectwise/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 439,
+      "title": "ConnectWise — Tool Intelligence | 1200km",
+      "description": "Trace medium-confidence remote monitoring and management tool record for MuddyWater across connection behavior, approved-use baselines and hunt limits."
+    },
+    "/israel-government-threat-actors-cti/tools/crackmapexec/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 556,
+      "title": "CrackMapExec — Tool Intelligence | 1200km",
+      "description": "Review a medium-confidence post-exploitation tool linked to MuddyWater and APT39, with credential validation, lateral movement and dual-use caveats."
+    },
+    "/israel-government-threat-actors-cti/tools/cryptoslay/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 391,
+      "title": "CRYPTOSLAY — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence malware family entry associated with UNC1860; review loader or implant behavior, command channels, mappings, and validation."
+    },
+    "/israel-government-threat-actors-cti/tools/cyber-toufan-supplier-access-playbook/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 376,
+      "title": "Cyber Toufan supplier-access playbook | 1200km",
+      "description": "Assess a medium-confidence credential and admin-interface abuse entry associated with Cyber Toufan; review access behavior, IOCs, mappings and hunts."
+    },
+    "/israel-government-threat-actors-cti/tools/danbot/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 347,
+      "title": "DanBot — Tool Intelligence | 1200km",
+      "description": "Lyceum and HEXANE-associated backdoor family referenced in MITRE and public reporting. Validate sample-level claims before detection engineering."
+    },
+    "/israel-government-threat-actors-cti/tools/darkbit-ransomware/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 362,
+      "title": "DarkBit ransomware — Tool Intelligence | 1200km",
+      "description": "Trace medium-confidence pseudo-ransomware or destructive malware record for DarkBit across impact behavior, recovery risks, indicators and response hunts."
+    },
+    "/israel-government-threat-actors-cti/tools/dchspy/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "DCHSpy — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence MITRE-listed software record for MuddyWater across source validation, actor association, mapped techniques, and hunt evidence."
+    },
+    "/israel-government-threat-actors-cti/tools/deadwood/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 381,
+      "title": "DEADWOOD — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence wiper entry associated with Agrius; review impact techniques, local telemetry, source provenance, and response guidance."
+    },
+    "/israel-government-threat-actors-cti/tools/desert-scorpion/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "Desert Scorpion — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence mobile malware entry associated with APT-C-23; review malware staging, command handling, file transfer, and detection evidence."
+    },
+    "/israel-government-threat-actors-cti/tools/dindoor/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 393,
+      "title": "Dindoor — Tool Intelligence | 1200km",
+      "description": "Hunt unusual Deno runtime execution, user-path staging, and network egress not tied to development hosts (SRC-THREAT-HUNTER-V3; low confidence)."
+    },
+    "/israel-government-threat-actors-cti/tools/dnssystem/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 383,
+      "title": "DnsSystem — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence backdoor entry associated with Lyceum; review initial delivery, follow-on commands, persistence evidence, and hunt boundaries."
+    },
+    "/israel-government-threat-actors-cti/tools/downpaper/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 393,
+      "title": "DownPaper — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence backdoor record for Magic Hound across execution, persistence, C2 behavior, IOC handling, and defensive hunt context."
+    },
+    "/israel-government-threat-actors-cti/tools/empire/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 546,
+      "title": "Empire — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence post-exploitation framework entry associated with MuddyWater and Lyceum; review access behavior, IOCs, mappings and hunts."
+    },
+    "/israel-government-threat-actors-cti/tools/explosive-rat/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 352,
+      "title": "Explosive RAT — Tool Intelligence | 1200km",
+      "description": "Custom RAT associated with Lebanese Cedar or Volatile Cedar reporting. Hunt Java web compromise leading to RAT staging and long-lived outbound access."
+    },
+    "/israel-government-threat-actors-cti/tools/fakeset/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 389,
+      "title": "Fakeset — Tool Intelligence | 1200km",
+      "description": "Assess a low-confidence backdoor entry associated with MuddyWater; review command execution, persistence paths, network activity, and source caveats."
+    },
+    "/israel-government-threat-actors-cti/tools/fooder-muddyviper/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 435,
+      "title": "Fooder / MuddyViper — Tool Intelligence | 1200km",
+      "description": "Assess a MuddyWater loader and backdoor pairing using in-memory payloads, sandbox-delay logic, RMM-assisted access, and post-compromise collection."
+    },
+    "/israel-government-threat-actors-cti/tools/frozencell/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 384,
+      "title": "FrozenCell — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence mobile malware entry associated with APT-C-23; review implant delivery, host changes, C2 signals, and defensive validation."
+    },
+    "/israel-government-threat-actors-cti/tools/frp-plink/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 375,
+      "title": "FRP / Plink — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence dual-use tunneling or proxy tooling record for Magic Hound across connection behavior, approved-use baselines and hunt limits."
+    },
+    "/israel-government-threat-actors-cti/tools/ftp/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 719,
+      "title": "ftp — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence living-off-the-land utility record for OilRig and APT39 across process context, local baselines, mappings, and hunt limits."
+    },
+    "/israel-government-threat-actors-cti/tools/handala-linked-destructive-installer-chains/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 460,
+      "title": "Handala-linked destructive installer chains | 1200km",
+      "description": "Archive or installer-centered destructive chains used as a defensive first-30-minute response model. Validate against original technical references."
+    },
+    "/israel-government-threat-actors-cti/tools/helminth/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "Helminth — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence MITRE-listed software entry associated with OilRig; review source provenance, actor mappings, IOC caveats, and hunt context."
+    },
+    "/israel-government-threat-actors-cti/tools/imaploader/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 416,
+      "title": "IMAPLoader — Tool Intelligence | 1200km",
+      "description": "Review a high-confidence Imperial Kitten .NET loader using email accounts for IMAP-based C2, target discovery and payload delivery."
+    },
+    "/israel-government-threat-actors-cti/tools/impacket/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 657,
+      "title": "Impacket — Tool Intelligence | 1200km",
+      "description": "Review a medium-confidence Python protocol toolkit linked to Magic Hound and Void Manticore, with SMB, credential-access, and lateral-movement behavior."
+    },
+    "/israel-government-threat-actors-cti/tools/iocontrol/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 407,
+      "title": "IOControl — Tool Intelligence | 1200km",
+      "description": "Assess a high-confidence OT/IoT malware entry associated with CyberAv3ngers; review loader or implant behavior, command channels, mappings, and validation."
+    },
+    "/israel-government-threat-actors-cti/tools/ipconfig/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 617,
+      "title": "ipconfig — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence use of the system discovery utility by OilRig and Magic Hound, focusing on network configuration discovery and admin baselines."
+    },
+    "/israel-government-threat-actors-cti/tools/ipsec-helper/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 389,
+      "title": "IPsec Helper — Tool Intelligence | 1200km",
+      "description": "Review source validation, actor association, mapped techniques, and hunt evidence in this medium-confidence MITRE-listed software entry for Agrius."
+    },
+    "/israel-government-threat-actors-cti/tools/ironwind/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 395,
+      "title": "IronWind — Tool Intelligence | 1200km",
+      "description": "Review high-confidence TA402 reporting on a staged downloader using PPAM, XLL, or RAR lures, DLL side-loading, cloud retrieval, geofencing, and C2."
+    },
+    "/israel-government-threat-actors-cti/tools/isminjector/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "ISMInjector — Tool Intelligence | 1200km",
+      "description": "Review source traceability, technique context, IOC limits, and confidence rationale in this medium-confidence MITRE-listed software entry for OilRig."
+    },
+    "/israel-government-threat-actors-cti/tools/kevin/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 341,
+      "title": "Kevin — Tool Intelligence | 1200km",
+      "description": "Lyceum-associated backdoor line referenced by public reporting. Use as enrichment term for Lyceum hunting until behavior is source-backed locally."
+    },
+    "/israel-government-threat-actors-cti/tools/koadic/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 436,
+      "title": "Koadic — Tool Intelligence | 1200km",
+      "description": "Review execution and credential context, source quality and detection limitations in medium-confidence post-exploitation framework entry for MuddyWater."
+    },
+    "/israel-government-threat-actors-cti/tools/lazagne/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 546,
+      "title": "LaZagne — Tool Intelligence | 1200km",
+      "description": "Review tooling behavior, identity signals, ATT&CK context and triage guidance in medium-confidence credential access tool entry for OilRig and MuddyWater."
+    },
+    "/israel-government-threat-actors-cti/tools/liontail/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 427,
+      "title": "Liontail — Tool Intelligence | 1200km",
+      "description": "Assess high-confidence Scarred Manticore server tooling that uses IIS native modules or HTTP.sys-adjacent patterns for stealthy inbound-controlled access."
+    },
+    "/israel-government-threat-actors-cti/tools/lp-notes/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "LP-Notes — Tool Intelligence | 1200km",
+      "description": "For MuddyWater, use this medium-confidence MITRE-listed software entry to examine source-backed linkage, mapped techniques, IOC status, and review scope."
+    },
+    "/israel-government-threat-actors-cti/tools/mango/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "Mango — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence reporting that links OilRig to this MITRE-listed software; the entry covers actor linkage, source scope, IOCs, mappings and hunts."
+    },
+    "/israel-government-threat-actors-cti/tools/mechaflounder/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 384,
+      "title": "MechaFlounder — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence reporting that links APT39 to this backdoor; the entry covers sourced capabilities, host behavior, C2 and defensive priorities."
+    },
+    "/israel-government-threat-actors-cti/tools/micropsia/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 383,
+      "title": "Micropsia — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence reporting that links APT-C-23 to this backdoor; covering implant delivery, host changes, C2 signals and defensive validation."
+    },
+    "/israel-government-threat-actors-cti/tools/milan/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 381,
+      "title": "Milan — Tool Intelligence | 1200km",
+      "description": "Review this medium-confidence backdoor record for Lyceum, focusing on execution, persistence, C2, indicators, and hunt scope under SRC-MITRE-G1001."
+    },
+    "/israel-government-threat-actors-cti/tools/mimikatz-sqlmap-havij/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 373,
+      "title": "Mimikatz / SQLMap / Havij | 1200km",
+      "description": "MITRE reports Magic Hound use of public tools with Mimikatz, sqlmap, Havij, Metasploit and Plink. Do not infer actor identity from common public tools."
+    },
+    "/israel-government-threat-actors-cti/tools/mimikatz/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 1337,
+      "title": "Mimikatz — Tool Intelligence | 1200km",
+      "description": "Review a medium-confidence credential-dumping record spanning seven tracked actors, via LSASS context, process ancestry, IOCs and attribution caveats."
+    },
+    "/israel-government-threat-actors-cti/tools/moneybird/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 353,
+      "title": "Moneybird — Tool Intelligence | 1200km",
+      "description": "Review destructive execution, backup risk, telemetry evidence and incident scope in medium-confidence ransomware or destructive malware entry for Agrius."
+    },
+    "/israel-government-threat-actors-cti/tools/mori/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "Mori — Tool Intelligence | 1200km",
+      "description": "The medium-confidence MITRE-listed software record for MuddyWater supports review of source-backed linkage, mapped techniques, IOC status and review scope."
+    },
+    "/israel-government-threat-actors-cti/tools/multilayer-wiper/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "MultiLayer Wiper — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence wiper record for Agrius across execution and impact signals, recovery safeguards, source limits, and validation needs."
+    },
+    "/israel-government-threat-actors-cti/tools/nbtscan/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 497,
+      "title": "NBTscan — Tool Intelligence | 1200km",
+      "description": "Review local usage patterns, suspicious invocation, mapping quality and hunt boundaries in medium-confidence network scanner entry for APT39 and Agrius."
+    },
+    "/israel-government-threat-actors-cti/tools/net/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 512,
+      "title": "Net — Tool Intelligence | 1200km",
+      "description": "Review process context, local baselines, mappings and hunt limits in medium-confidence Windows administration utility entry for OilRig and Magic Hound."
+    },
+    "/israel-government-threat-actors-cti/tools/netsh/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 394,
+      "title": "netsh — Tool Intelligence | 1200km",
+      "description": "Review approved operations, anomalous execution, IOC caveats and hunt planning in medium-confidence network configuration utility entry for Magic Hound."
+    },
+    "/israel-government-threat-actors-cti/tools/netstat/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 495,
+      "title": "netstat — Tool Intelligence | 1200km",
+      "description": "Review approved operations, anomalous execution, IOC caveats and hunt planning in medium-confidence system discovery utility entry for OilRig and Lyceum."
+    },
+    "/israel-government-threat-actors-cti/tools/ngrok-ligolo/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 413,
+      "title": "NGROK / Ligolo — Tool Intelligence | 1200km",
+      "description": "Dual-use tunneling tools used after edge compromise in Pioneer Kitten or Fox Kitten reporting, recorded at high confidence under SRC-CISA-AA24-241A."
+    },
+    "/israel-government-threat-actors-cti/tools/ngrok/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 383,
+      "title": "ngrok — Tool Intelligence | 1200km",
+      "description": "Review remote-access behavior, enterprise inventory, telemetry and defensive hunt limits in medium-confidence tunneling or proxy tooling entry for OilRig."
+    },
+    "/israel-government-threat-actors-cti/tools/nicecurl/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 357,
+      "title": "NICECURL — Tool Intelligence | 1200km",
+      "description": "Hunt uncommon HTTPS egress from user-path executables after credential phishing or social-engineering lures (SRC-MITRE-G1044; medium confidence)."
+    },
+    "/israel-government-threat-actors-cti/tools/odagent/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 379,
+      "title": "ODAgent — Tool Intelligence | 1200km",
+      "description": "Review ESET's high-confidence record of an OilRig cloud-service-powered downloader found in an Israeli manufacturer network and used to maintain access."
+    },
+    "/israel-government-threat-actors-cti/tools/oilbooster/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 393,
+      "title": "OilBooster — Tool Intelligence | 1200km",
+      "description": "Assess an OilRig downloader reported against Israeli organizations using attacker-controlled Microsoft cloud accounts and APIs for C2 and data exchange."
+    },
+    "/israel-government-threat-actors-cti/tools/oilcheck/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 384,
+      "title": "OilCheck — Tool Intelligence | 1200km",
+      "description": "Review a high-confidence OilRig downloader using cloud-based email services for C2 and sharing logic with the actor's other cloud-powered downloaders."
+    },
+    "/israel-government-threat-actors-cti/tools/oopsie/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "OopsIE — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence MITRE-listed software entry associated with OilRig; review confidence rationale, sources, technique links and IOC limits."
+    },
+    "/israel-government-threat-actors-cti/tools/out1/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "Out1 — Tool Intelligence | 1200km",
+      "description": "For MuddyWater, use this medium-confidence MITRE-listed software entry to examine association evidence, ATT&CK context, indicators, and validation gaps."
+    },
+    "/israel-government-threat-actors-cti/tools/phenakite/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 382,
+      "title": "Phenakite — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence mobile malware record for APT-C-23 across execution ancestry, recurring access, outbound traffic, and triage scope."
+    },
+    "/israel-government-threat-actors-cti/tools/ping/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 508,
+      "title": "Ping — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence use of the network utility by Magic Hound and Lyceum, with host-discovery behavior, local admin baselines and source-linked hunts."
+    },
+    "/israel-government-threat-actors-cti/tools/pipesnoop/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 384,
+      "title": "PipeSnoop — Tool Intelligence | 1200km",
+      "description": "Use as a research pivot term for UNC1860 tooling; require source-backed behavior before detection logic (SRC-MALPEDIA-UNC1860; low confidence)."
+    },
+    "/israel-government-threat-actors-cti/tools/poshc2/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 383,
+      "title": "PoshC2 — Tool Intelligence | 1200km",
+      "description": "Review credential collection, execution context, IOC handling and escalation criteria in medium-confidence post-exploitation framework entry for Lyceum."
+    },
+    "/israel-government-threat-actors-cti/tools/powerexchange/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "PowerExchange — Tool Intelligence | 1200km",
+      "description": "The medium-confidence MITRE-listed software entry for OilRig supports review of association confidence, sources, mapped behaviors and hunt boundaries."
+    },
+    "/israel-government-threat-actors-cti/tools/powerless/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 391,
+      "title": "PowerLess — Tool Intelligence | 1200km",
+      "description": "Review delivery and execution behavior, persistence signals, source provenance, and hunt limits in this medium-confidence backdoor entry for Magic Hound."
+    },
+    "/israel-government-threat-actors-cti/tools/powerpost/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 364,
+      "title": "POWERPOST — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence script or collection tool entry associated with APT42; review behavior, source scope, IOCs, mappings, and defensive hunts."
+    },
+    "/israel-government-threat-actors-cti/tools/powersploit/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 435,
+      "title": "PowerSploit — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence MuddyWater use of a PowerShell post-exploitation framework, with offensive module execution, dual-use caveats and hunt context."
+    },
+    "/israel-government-threat-actors-cti/tools/powerstats/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "POWERSTATS — Tool Intelligence | 1200km",
+      "description": "Explore association evidence, ATT&CK context, indicators and validation gaps for MITRE-listed software, associated with MuddyWater at medium confidence."
+    },
+    "/israel-government-threat-actors-cti/tools/powgoop/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "PowGoop — Tool Intelligence | 1200km",
+      "description": "MuddyWater is linked at medium confidence to MITRE-listed software; review evidence provenance, behavior mappings, indicator caveats and hunt planning."
+    },
+    "/israel-government-threat-actors-cti/tools/powruner/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "POWRUNER — Tool Intelligence | 1200km",
+      "description": "Use MITRE-listed software record to review OilRig's medium-confidence linkage and reported software use, evidence quality, IOC status and detection gaps."
+    },
+    "/israel-government-threat-actors-cti/tools/psexec/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 620,
+      "title": "PsExec — Tool Intelligence | 1200km",
+      "description": "Assess medium-confidence use of a remote execution utility by OilRig and Magic Hound, focusing on service-based lateral movement and admin baselines."
+    },
+    "/israel-government-threat-actors-cti/tools/pupy/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 394,
+      "title": "Pupy — Tool Intelligence | 1200km",
+      "description": "Review delivery chain, endpoint behavior, C2 patterns and response guidance in medium-confidence RAT or post-exploitation framework entry for Magic Hound."
+    },
+    "/israel-government-threat-actors-cti/tools/pwdump/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 384,
+      "title": "pwdump — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence credential tool entry associated with APT39; review access evidence, process ancestry, credential telemetry and review scope."
+    },
+    "/israel-government-threat-actors-cti/tools/quadagent/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "QUADAGENT — Tool Intelligence | 1200km",
+      "description": "Explore evidence lineage, actor context, technique coverage and validation needs for MITRE-listed software, associated with OilRig at medium confidence."
+    },
+    "/israel-government-threat-actors-cti/tools/rawdisk/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 496,
+      "title": "RawDisk — Tool Intelligence | 1200km",
+      "description": "Trace medium-confidence disk access driver or tool record for Void Manticore or Handala across behavior, source scope, IOCs, mappings and defensive hunts."
+    },
+    "/israel-government-threat-actors-cti/tools/rclone/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "Rclone — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence MuddyWater use of a cloud sync utility for storage and exfiltration, with approved baselines, connections and hunt scope."
+    },
+    "/israel-government-threat-actors-cti/tools/rdat/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "RDAT — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence MITRE-listed software association with OilRig; use the page for source provenance, actor mappings, IOC caveats, and hunt context."
+    },
+    "/israel-government-threat-actors-cti/tools/redalertapk/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 354,
+      "title": "RedAlert.apk — Tool Intelligence | 1200km",
+      "description": "Hunt smishing delivery, sideloaded alert apps, OTP and SMS access permissions, and spoofed app identities (SRC-CYBERNEWS-REDALERT-2026; low confidence)."
+    },
+    "/israel-government-threat-actors-cti/tools/reg/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 383,
+      "title": "Reg — Tool Intelligence | 1200km",
+      "description": "Review administrative context, invocation patterns, source quality and alert limits in medium-confidence Windows configuration utility entry for OilRig."
+    },
+    "/israel-government-threat-actors-cti/tools/remexi/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 356,
+      "title": "Remexi — Tool Intelligence | 1200km",
+      "description": "MITRE reports APT39 use of the software for system owner/user discovery and related collection behavior (SRC-MITRE-G0087; medium confidence)."
+    },
+    "/israel-government-threat-actors-cti/tools/remote-monitoring-and-management-tools/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 408,
+      "title": "Remote Monitoring and Management tools | 1200km",
+      "description": "Compare RMM binaries, installation paths, remote URLs, and parents against approved enterprise inventory (SRC-MITRE-G0069; high confidence)."
+    },
+    "/israel-government-threat-actors-cti/tools/remoteutilities/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "RemoteUtilities — Tool Intelligence | 1200km",
+      "description": "Review command execution, approved workflows, indicator limits and telemetry needs in medium-confidence remote administration tool entry for MuddyWater."
+    },
+    "/israel-government-threat-actors-cti/tools/rgdoor/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "RGDoor — Tool Intelligence | 1200km",
+      "description": "Examine evidence linking OilRig to MITRE-listed software at medium confidence, with attention to actor linkage, source scope, IOCs, mappings and hunts."
+    },
+    "/israel-government-threat-actors-cti/tools/roadsweep/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 490,
+      "title": "ROADSWEEP — Tool Intelligence | 1200km",
+      "description": "Trace this medium-confidence wiper record for Void Manticore or Handala across file-system damage, recovery artifacts, mappings, and escalation criteria."
+    },
+    "/israel-government-threat-actors-cti/tools/rustywater/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "RustyWater — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence MITRE record linking MuddyWater to this software, with parent-process, host-role, account, staging, and intrusion-chain context."
+    },
+    "/israel-government-threat-actors-cti/tools/saitama/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 346,
+      "title": "Saitama — Tool Intelligence | 1200km",
+      "description": "Hunt high-entropy subdomains, long query names, and high-frequency single-domain DNS from one host (SRC-UNIT42-OILRIG-DNS-TUNNELING; high confidence)."
+    },
+    "/israel-government-threat-actors-cti/tools/samecoin/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 481,
+      "title": "SameCoin — Tool Intelligence | 1200km",
+      "description": "Assess a high-confidence WIRTE multi-platform wiper using fake security updates, Active Directory propagation, file overwrite and Android wiping."
+    },
+    "/israel-government-threat-actors-cti/tools/samplecheck5000/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "SampleCheck5000 — Tool Intelligence | 1200km",
+      "description": "Review a medium-confidence MITRE software association with OilRig, with Web Shell and network-connection discovery mappings, IOC caveats and source scope."
+    },
+    "/israel-government-threat-actors-cti/tools/sasheyaway/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 395,
+      "title": "SASHEYAWAY — Tool Intelligence | 1200km",
+      "description": "Mandiant reports the software as a low-detection dropper that can enable execution of full passive backdoors such as TEMPLEDOOR, FACEFACE, and SPARKLOAD."
+    },
+    "/israel-government-threat-actors-cti/tools/seasharpee/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "SEASHARPEE — Tool Intelligence | 1200km",
+      "description": "Assess medium-confidence reporting associating OilRig with this software; prioritize web-shell persistence, connection discovery, IOC renewal, and context."
+    },
+    "/israel-government-threat-actors-cti/tools/shark/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 341,
+      "title": "Shark — Tool Intelligence | 1200km",
+      "description": "Review low-confidence backdoor record for Lyceum, focusing on implant behavior, actor association, IOC context and telemetry needs under SRC-MITRE-G1001."
+    },
+    "/israel-government-threat-actors-cti/tools/sharpstats/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "SHARPSTATS — Tool Intelligence | 1200km",
+      "description": "Review a medium-confidence MITRE software link to MuddyWater, with phishing, PowerShell, remote-access, cloud-exfiltration, and contextual hunt evidence."
+    },
+    "/israel-government-threat-actors-cti/tools/sidetwist/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "SideTwist — Tool Intelligence | 1200km",
+      "description": "Trace a medium-confidence MITRE association with OilRig through Web Shell persistence, network-connection discovery, source provenance, and IOC limits."
+    },
+    "/israel-government-threat-actors-cti/tools/small-sieve/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 440,
+      "title": "Small Sieve — Tool Intelligence | 1200km",
+      "description": "Assess a medium-confidence MuddyWater software entry via its phishing, PowerShell, remote-access and cloud-exfiltration mappings to frame defensive review."
+    },
+    "/israel-government-threat-actors-cti/tools/solar/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 385,
+      "title": "Solar — Tool Intelligence | 1200km",
+      "description": "Use the medium-confidence OilRig software record to assess Web Shell persistence and connection discovery preserving source, IOC and attribution caveats."
+    },
+    "/israel-government-threat-actors-cti/tools/spyc23/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 384,
+      "title": "SpyC23 — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence APT-C-23 mobile spyware reporting on surveillance, malicious-file execution, phishing delivery, staging context, and IOC currency."
+    },
+    "/israel-government-threat-actors-cti/tools/standardkeyboard/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 361,
+      "title": "StandardKeyboard — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence vendor reporting linking Imperial Kitten to email-based C2, while preserving evidence gaps and avoiding unsupported claims."
+    },
+    "/israel-government-threat-actors-cti/tools/starwhale/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 437,
+      "title": "STARWHALE — Tool Intelligence | 1200km",
+      "description": "Examine the medium-confidence MuddyWater software link through phishing, PowerShell, remote-access, cloud-exfiltration, source and IOC handling context."
+    },
+    "/israel-government-threat-actors-cti/tools/stayshante/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 407,
+      "title": "STAYSHANTE — Tool Intelligence | 1200km",
+      "description": "Review a high-confidence UNC1860 web shell on compromised servers, controlled through VIROGREEN and reported in 2024 activity against Israeli sectors."
+    },
+    "/israel-government-threat-actors-cti/tools/sugarush-sugardump/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 331,
+      "title": "SUGARUSH / SUGARDUMP — Tool Intelligence | 1200km",
+      "description": "Assess medium-confidence UNC3890 information-stealer reporting for Israeli shipping and logistics, covering browser data, credentials, IOCs and collection."
+    },
+    "/israel-government-threat-actors-cti/tools/systeminfo/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 504,
+      "title": "Systeminfo — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence host discovery associated with OilRig and Magic Hound, using process ancestry, host role, account, staging, and source context."
+    },
+    "/israel-government-threat-actors-cti/tools/tamecat/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 360,
+      "title": "TAMECAT — Tool Intelligence | 1200km",
+      "description": "Assess medium-confidence APT42 backdoor reporting on script execution, discovery commands, encrypted sessions, lure context, provenance, and IOC handling."
+    },
+    "/israel-government-threat-actors-cti/tools/tasklist/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 382,
+      "title": "Tasklist — Tool Intelligence | 1200km",
+      "description": "Review medium-confidence OilRig process discovery using parent process, host role, account, staging and intrusion context to limit admin false positives."
+    },
+    "/israel-government-threat-actors-cti/tools/templedoor/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 428,
+      "title": "TEMPLEDOOR — Tool Intelligence | 1200km",
+      "description": "Assess a high-confidence UNC1860 passive backdoor supporting command execution, file transfer, endpoint selection, HTTP proxying, and RDP reachability."
+    },
+    "/israel-government-threat-actors-cti/tools/templedrop/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 428,
+      "title": "TEMPLEDROP — Tool Intelligence | 1200km",
+      "description": "Review a high-confidence UNC1860 implant that repurposes a legitimate Iranian antivirus file-system driver to protect deployed files from modification."
+    },
+    "/israel-government-threat-actors-cti/tools/templelock/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 400,
+      "title": "TEMPLELOCK — Tool Intelligence | 1200km",
+      "description": "Assess a high-confidence UNC1860 .NET utility used with foothold tools and passive implants to stop or restart Windows Event Log service operation."
+    },
+    "/israel-government-threat-actors-cti/tools/templeplay/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 408,
+      "title": "TEMPLEPLAY — Tool Intelligence | 1200km",
+      "description": "Review a high-confidence UNC1860 .NET controller supporting command execution, file transfer, HTTP proxying, endpoint selection and passive-backdoor tests."
+    },
+    "/israel-government-threat-actors-cti/tools/tsundere-botnet/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 440,
+      "title": "Tsundere Botnet — Tool Intelligence | 1200km",
+      "description": "Trace medium-confidence MITRE reporting linking MuddyWater to software through phishing, PowerShell, remote access, cloud exfiltration and source limits."
+    },
+    "/israel-government-threat-actors-cti/tools/unitronics-vision-plc-webhmi/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 356,
+      "title": "Unitronics Vision PLC Web/HMI | 1200km",
+      "description": "Assess high-confidence CyberAv3ngers targeting of Unitronics PLCs through HMI inventory, password controls, restricted access, and defacement monitoring."
+    },
+    "/israel-government-threat-actors-cti/tools/virogreen/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 393,
+      "title": "VIROGREEN — Tool Intelligence | 1200km",
+      "description": "Assess a high-confidence UNC1860 framework for scanning and exploiting SharePoint servers, then controlling payloads, backdoors, and command execution."
+    },
+    "/israel-government-threat-actors-cti/tools/wezrat/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 416,
+      "title": "WezRat — Tool Intelligence | 1200km",
+      "description": "Review high-confidence reporting on a infostealer and RAT delivered through fake INCD phishing, with command, screenshot and data-theft capabilities."
+    },
+    "/israel-government-threat-actors-cti/tools/windows-credential-editor/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 390,
+      "title": "Windows Credential Editor | 1200km",
+      "description": "Review medium-confidence APT39 credential-access reporting through LSASS memory, execution context, host role, account use, source scope and IOC caveats."
+    },
+    "/israel-government-threat-actors-cti/tools/zerocleare/": {
+      "classification": "Priority",
+      "reason": "Substantive practitioner content or established navigation entry point",
+      "word_count": 604,
+      "title": "ZeroCleare — Tool Intelligence | 1200km",
+      "description": "Assess medium-confidence tooling linked to OilRig and Void Manticore, covering raw-disk wiping, data destruction, recovery inhibition, and response hunts."
+    },
+    "/israel-government-threat-actors-cti/virustotal-enrichment/": {
+      "classification": "Supporting",
+      "reason": "Substantive supporting reference or documentation",
+      "word_count": 355,
+      "title": "VirusTotal Malware Enrichment | 1200km",
+      "description": "Use VirusTotal only to enrich source-backed hashes with public metadata while avoiding sample retrieval, attribution from labels, and benign assumptions."
+    }
+  },
+  "gitHistory": true,
+  "person": {
+    "@type": "Person",
+    "@id": "https://1200km.com/#person",
+    "name": "Andrey Pautov",
+    "url": "https://1200km.com/",
+    "sameAs": [
+      "https://github.com/anpa1200",
+      "https://medium.com/@1200km",
+      "https://www.linkedin.com/in/andrey-pautov/",
+      "https://infosecwriteups.com/@1200km"
+    ]
+  },
+  "website": {
+    "@type": "WebSite",
+    "@id": "https://1200km.com/#website",
+    "url": "https://1200km.com/",
+    "name": "1200km Security Research",
+    "publisher": {
+      "@id": "https://1200km.com/#person"
+    }
+  }
+}

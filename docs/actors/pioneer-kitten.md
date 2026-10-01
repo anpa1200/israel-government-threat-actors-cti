@@ -24,7 +24,7 @@ sidebar_label: Pioneer Kitten
 
 <!-- ACTOR-NAVIGATION:END -->
 
-# Pioneer Kitten
+## Pioneer Kitten
 
 ## Background
 

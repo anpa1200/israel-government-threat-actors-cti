@@ -24,7 +24,7 @@ sidebar_label: Scarred Manticore
 
 <!-- ACTOR-NAVIGATION:END -->
 
-# Scarred Manticore
+## Scarred Manticore
 
 ## Background
 

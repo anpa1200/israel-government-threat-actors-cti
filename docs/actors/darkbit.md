@@ -24,7 +24,7 @@ sidebar_label: DarkBit
 
 <!-- ACTOR-NAVIGATION:END -->
 
-# DarkBit
+## DarkBit
 
 ## Background
 
